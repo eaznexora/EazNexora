@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eaz Nexora | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --brand-blue: #3b82f6;
+            --brand-purple: #8b5cf6;
+            --brand-dark: #111827;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #374151;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, var(--brand-blue), var(--brand-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(to right, var(--brand-blue), var(--brand-purple));
+        }
+        
+        #navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            color: #4b5563; /* Darker text for light navbar */
+        }
+        
+        #navbar.top .nav-link {
+             color: #d1d5db; /* Lighter text for hero section */
+        }
+
+        #navbar.top .nav-link:hover, #navbar.scrolled .nav-link:hover {
+            color: var(--brand-purple);
+        }
+        
+        #navbar.top #eaz-nexora-title {
+            color: white;
+        }
+        
+        #navbar.scrolled #eaz-nexora-title {
+            color: var(--brand-dark);
+        }
+
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: linear-gradient(to right, var(--brand-blue), var(--brand-purple));
+            transition: width 0.3s ease;
+        }
+
+        .nav-link.active::after, .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .page {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .page-hero {
+            position: relative;
+            padding: 8rem 0;
+            color: white;
+            text-align: center;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            background-color: var(--brand-dark);
+            opacity: 0.5;
+            z-index: -1;
+        }
+         .page-hero-bg {
+             background-image: url('https://placehold.co/1920x1080/111827/3b82f6?text=');
+         }
+        
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 top">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <a href="#home" class="flex items-center space-x-2 page-link" data-page="home">
+                    <img src="logo.jpg" alt="Eaz Nexora Logo" class="h-10 w-auto">
+                    <span id="eaz-nexora-title" class="text-xl font-bold transition-colors duration-300">Eaz Nexora</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link page-link active" data-page="home">Home</a>
+                    <a href="#services" class="nav-link page-link" data-page="services">Services</a>
+                    <a href="#work" class="nav-link page-link" data-page="work">Our Work</a>
+                    <a href="#team" class="nav-link page-link" data-page="team">Team</a>
+                    <a href="#contact" class="nav-link page-link" data-page="contact">Contact</a>
+                </div>
+                <a href="#contact" data-page="contact" class="hidden md:inline-block page-link px-5 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+                    Contact Us
+                </a>
+                <button id="mobile-menu-button" class="md:hidden">
+                    <i data-lucide="menu" id="mobile-menu-icon" class="text-white"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#home" class="block py-3 px-4 text-gray-600 hover:bg-gray-100 page-link" data-page="home">Home</a>
+            <a href="#services" class="block py-3 px-4 text-gray-600 hover:bg-gray-100 page-link" data-page="services">Services</a>
+            <a href="#work" class="block py-3 px-4 text-gray-600 hover:bg-gray-100 page-link" data-page="work">Our Work</a>
+            <a href="#team" class="block py-3 px-4 text-gray-600 hover:bg-gray-100 page-link" data-page="team">Team</a>
+            <a href="#contact" class="block py-3 px-4 text-gray-600 hover:bg-gray-100 page-link" data-page="contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <!-- Hero Section -->
+            <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-beautiful-technology-website-business-poster-background-template-image_148436.jpg')"></div>
+                <div class="absolute inset-0 bg-black/60 z-0"></div>
+                
+                <div class="container mx-auto px-4 text-center z-10">
+                    <div class="fade-in-section">
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 uppercase tracking-wider">
+                           Innovating The Next
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                           We craft stunning, high-performance websites and applications that drive growth. From hosting to custom digital business cards, we provide complete solutions for your online presence.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a href="#services" data-page="services" class="page-link w-full sm:w-auto px-8 py-3 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-105">
+                                Explore Services
+                            </a>
+                            <a href="#work" data-page="work" class="page-link w-full sm:w-auto px-8 py-3 rounded-md text-gray-800 bg-white font-semibold hover:bg-gray-200 transition-all duration-300">
+                                View Our Work
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Why Choose Us Section -->
+            <div class="py-20 md:py-28 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16 fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Why Choose Eaz Nexora?</h2>
+                        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">We combine creativity with technology to deliver exceptional digital solutions that help your business thrive in the digital age.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="fade-in-section text-center p-8 bg-white rounded-lg card-hover-effect">
+                            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-100 text-blue-500">
+                                <i data-lucide="code-2" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Modern Development</h3>
+                            <p class="text-gray-500">Built with cutting-edge technologies for optimal performance.</p>
+                        </div>
+                        <div class="fade-in-section text-center p-8 bg-white rounded-lg card-hover-effect" style="transition-delay: 100ms;">
+                            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-purple-100 text-purple-500">
+                                <i data-lucide="smartphone" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Responsive Design</h3>
+                            <p class="text-gray-500">Perfect experience across all devices and screen sizes.</p>
+                        </div>
+                        <div class="fade-in-section text-center p-8 bg-white rounded-lg card-hover-effect" style="transition-delay: 200ms;">
+                            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-100 text-blue-500">
+                                <i data-lucide="zap" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Fast Performance</h3>
+                            <p class="text-gray-500">Lightning-fast loading speeds and seamless user experience.</p>
+                        </div>
+                        <div class="fade-in-section text-center p-8 bg-white rounded-lg card-hover-effect" style="transition-delay: 300ms;">
+                           <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-purple-100 text-purple-500">
+                                <i data-lucide="shield-check" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Secure & Reliable</h3>
+                            <p class="text-gray-500">Enterprise-grade security with 99.9% uptime guarantee.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="py-16 gradient-bg">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+                        <div class="fade-in-section">
+                            <h3 class="text-4xl font-bold">500+</h3>
+                            <p class="opacity-80 mt-1">Projects Completed</p>
+                        </div>
+                        <div class="fade-in-section">
+                            <h3 class="text-4xl font-bold">200+</h3>
+                            <p class="opacity-80 mt-1">Happy Clients</p>
+                        </div>
+                        <div class="fade-in-section">
+                            <h3 class="text-4xl font-bold">5+</h3>
+                            <p class="opacity-80 mt-1">Years Experience</p>
+                        </div>
+                        <div class="fade-in-section">
+                            <h3 class="text-4xl font-bold">24/7</h3>
+                            <p class="opacity-80 mt-1">Support Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Services Preview -->
+            <div class="py-20 md:py-28">
+                <div class="container mx-auto px-4">
+                     <div class="text-center mb-16 fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Services</h2>
+                        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Complete digital solutions for your business growth.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Website Development</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Custom responsive websites built with modern technologies.</p>
+                            <div class="text-2xl font-bold gradient-text">Starting from ₹14,995</div>
+                        </div>
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 100ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Mobile App Development</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Native and cross-platform mobile applications.</p>
+                            <div class="text-2xl font-bold gradient-text">Starting from ₹25,995</div>
+                        </div>
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 200ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Hosting + Domain</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Reliable hosting solutions with free domain registration.</p>
+                            <div class="text-2xl font-bold gradient-text">Starting from ₹2,000/year</div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12 fade-in-section">
+                        <a href="#services" data-page="services" class="page-link inline-block px-8 py-3 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">View All Services</a>
+                    </div>
+                </div>
+            </div>
+            
+             <!-- CTA Section -->
+            <div class="bg-gray-50">
+                <div class="container mx-auto px-4 py-16 text-center">
+                     <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to Transform Your Business?</h2>
+                     <p class="text-gray-500 max-w-2xl mx-auto mb-8">Let's discuss your project and create something amazing together. Our team is ready to bring your vision to life.</p>
+                     <a href="#contact" data-page="contact" class="page-link inline-block px-8 py-3 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-105">Get Started Today</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Services Page -->
+        <section id="services" class="page">
+            <div class="page-hero page-hero-bg">
+                <h1 class="text-4xl md:text-5xl font-bold">Our Services</h1>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Complete digital solutions to accelerate your business growth and online presence.</p>
+            </div>
+            <div class="py-20 md:py-28">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Service Cards -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Website Development</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Custom responsive websites built with modern technologies.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹15,000</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Responsive Design</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>SEO Optimized</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Fast Loading</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Mobile Friendly</li>
+                            </ul>
+                            <a href="#contact" data-page="contact" class="page-link mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 100ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Mobile App Development</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Native and cross-platform mobile applications.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹25,000</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>iOS & Android</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Cross Platform</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Native Performance</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Cloud Integration</li>
+                            </ul>
+                            <a href="#contact" data-page="contact" class="page-link mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 200ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Hosting + Domain</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Reliable hosting solutions with free domain registration.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹2,000/year</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>99.9% Uptime</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>SSL Certificate</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Daily Backups</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>24/7 Support</li>
+                            </ul>
+                            <a href="#contact" data-page="contact" class="page-link mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 300ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce Solutions</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Complete online store setup with payment integration.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹20,000</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Payment Gateway</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Inventory Management</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Order Tracking</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Admin Panel</li>
+                            </ul>
+                            <a href="#contact" data-page="contact" class="page-link mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 400ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">QR Business Cards</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Digital business cards with QR codes and link management.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹500</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Custom Design</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Analytics</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Social Links</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Contact Management</li>
+                            </ul>
+                            <a href="#contact" data-page="contact" class="page-link mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 500ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Full Customization</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Tailored solutions for unique business requirements.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Custom Quote</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Custom Features</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>API Integration</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Third-party Tools</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Scalable Architecture</li>
+                            </ul>
+                            <a href="#contact" data-page="contact" class="page-link mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <!-- Our Process Section -->
+            <div class="py-20 md:py-28 bg-gray-50">
+                <div class="container mx-auto px-4">
+                     <div class="text-center mb-16 fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Process</h2>
+                        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Simple, transparent, and effective approach to deliver your project.</p>
+                    </div>
+                    <div class="relative grid md:grid-cols-4 gap-8 text-center">
+                        <div class="absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 transform -translate-y-1/2 hidden md:block"></div>
+                        <div class="absolute top-1/2 left-0 w-full h-0.5 gradient-bg transform -translate-y-1/2 hidden md:block" style="width: calc(100% * 3 / 4 - 2rem);"></div>
+                         <div class="fade-in-section relative">
+                             <div class="mx-auto w-16 h-16 mb-4 rounded-full gradient-bg text-white flex items-center justify-center text-2xl font-bold">1</div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-2">Discovery</h3>
+                             <p class="text-gray-500">We understand your requirements and goals.</p>
+                         </div>
+                         <div class="fade-in-section relative" style="transition-delay: 150ms;">
+                             <div class="mx-auto w-16 h-16 mb-4 rounded-full gradient-bg text-white flex items-center justify-center text-2xl font-bold">2</div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-2">Planning</h3>
+                             <p class="text-gray-500">We create a detailed project roadmap.</p>
+                         </div>
+                         <div class="fade-in-section relative" style="transition-delay: 300ms;">
+                             <div class="mx-auto w-16 h-16 mb-4 rounded-full gradient-bg text-white flex items-center justify-center text-2xl font-bold">3</div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-2">Development</h3>
+                             <p class="text-gray-500">We build your solution with precision.</p>
+                         </div>
+                         <div class="fade-in-section relative" style="transition-delay: 450ms;">
+                             <div class="mx-auto w-16 h-16 mb-4 rounded-full gradient-bg text-white flex items-center justify-center text-2xl font-bold">4</div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-2">Launch</h3>
+                             <p class="text-gray-500">We deploy and support your project.</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Work Page -->
+        <section id="work" class="page">
+             <div class="page-hero page-hero-bg">
+                <h1 class="text-4xl md:text-5xl font-bold">Our Work</h1>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Showcasing our finest digital solutions that have transformed businesses and delivered exceptional results.</p>
+            </div>
+             <div class="py-20 md:py-28">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16 fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Featured Projects</h2>
+                        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Our top 3 projects that showcase our expertise and creativity.</p>
+                    </div>
+                    <div class="space-y-20">
+                        <!-- Featured Project 1 -->
+                        <div class="flex flex-col md:flex-row items-center gap-8 fade-in-section">
+                            <div class="md:w-1/2">
+                                <img src="https://placehold.co/600x400/e0e7ff/3730a3?text=E-commerce" alt="E-commerce Platform" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div class="md:w-1/2">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mb-2">Web Development</span>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">E-commerce Platform</h3>
+                                <p class="text-gray-500 mb-4">Modern online store with advanced features including payment integration, inventory management, and analytics dashboard.</p>
+                                <div class="mb-4">
+                                    <h4 class="font-semibold mb-2">Technologies Used:</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded">React</span>
+                                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded">Node.js</span>
+                                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded">MongoDB</span>
+                                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded">Stripe</span>
+                                    </div>
+                                </div>
+                                <a href="#" target="_blank" class="inline-flex items-center font-semibold text-blue-600 hover:text-blue-800">
+                                    View Project Live <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Featured Project 2 -->
+                        <div class="flex flex-col md:flex-row-reverse items-center gap-8 fade-in-section">
+                            <div class="md:w-1/2">
+                                <img src="https://placehold.co/600x400/ede9fe/5b21b6?text=Restaurant+App" alt="Restaurant Management App" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div class="md:w-1/2">
+                                <span class="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full mb-2">Mobile App</span>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Restaurant Management App</h3>
+                                <p class="text-gray-500 mb-4">Complete restaurant management solution with order tracking, inventory control, and customer engagement features.</p>
+                                <div class="mb-4">
+                                    <h4 class="font-semibold mb-2">Technologies Used:</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded">React Native</span>
+                                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded">Firebase</span>
+                                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded">Node.js</span>
+                                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-1 rounded">Express</span>
+                                    </div>
+                                </div>
+                                <a href="#" target="_blank" class="inline-flex items-center font-semibold text-blue-600 hover:text-blue-800">
+                                    View Project Live <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-20 fade-in-section">
+                        <button id="show-more-projects-btn" class="px-8 py-3 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">
+                            Show More Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Projects Page -->
+        <section id="all-projects" class="page">
+             <div class="page-hero page-hero-bg">
+                <h1 class="text-4xl md:text-5xl font-bold">All Projects</h1>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Explore our complete portfolio of digital solutions and innovative projects.</p>
+            </div>
+             <div class="py-20 md:py-28">
+                <div class="container mx-auto px-4">
+                    <!-- Filter Buttons -->
+                    <div class="flex justify-center flex-wrap gap-2 md:gap-4 mb-12 fade-in-section">
+                        <button class="project-filter-btn active" data-filter="all">All</button>
+                        <button class="project-filter-btn" data-filter="web">Web Development</button>
+                        <button class="project-filter-btn" data-filter="app">Mobile App</button>
+                        <button class="project-filter-btn" data-filter="ecommerce">E-commerce</button>
+                    </div>
+                    
+                    <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Projects will be injected here by JS -->
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Team Page -->
+        <section id="team" class="page">
+             <div class="page-hero page-hero-bg">
+                <h1 class="text-4xl md:text-5xl font-bold">Our Team</h1>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Meet the talented professionals who bring your digital visions to life.</p>
+            </div>
+             <div class="py-20 md:py-28">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16 fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Meet Our Experts</h2>
+                        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Experienced professionals dedicated to your success.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Team Member Cards -->
+                        <div class="team-card-container text-center bg-white rounded-lg overflow-hidden card-hover-effect fade-in-section" data-member="alex">
+                            <img src="https://placehold.co/300x300/c7d2fe/312e81?text=AJ" alt="Rehan" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800">Rehan</h3>
+                                <p class="gradient-text font-semibold mb-4">Frontend Developer + Lead Developer & Founder</p>
+                                <div class="flex justify-around text-sm text-gray-500 border-t pt-4">
+                                    <div><span class="font-bold text-gray-800">10+</span> Yrs Exp</div>
+                                    <div><span class="font-bold text-gray-800">200+</span> Projects</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-card-container text-center bg-white rounded-lg overflow-hidden card-hover-effect fade-in-section" style="transition-delay: 100ms;" data-member="jane">
+                            <img src="https://raw.githubusercontent.com/angroupofindustry/AN-WEB/refs/heads/main/images/about-me.jpg" alt="Nafis" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800">Nafis</h3>
+                                <p class="gradient-text font-semibold mb-4">Prototype Engineer + Lead Develope & Cybersecurity Experts</p>
+                                <div class="flex justify-around text-sm text-gray-500 border-t pt-4">
+                                    <div><span class="font-bold text-gray-800">8+</span> Yrs Exp</div>
+                                    <div><span class="font-bold text-gray-800">150+</span> Projects</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-card-container text-center bg-white rounded-lg overflow-hidden card-hover-effect fade-in-section" style="transition-delay: 200ms;" data-member="sam">
+                           <img src="https://ameensarguroh.com/wp-content/uploads/2025/09/Ameen.png" alt="Ameen" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800">Ameen</h3>
+                                <p class="gradient-text font-semibold mb-4">UI/UX Designer + Project Manager & CEO</p>
+                                <div class="flex justify-around text-sm text-gray-500 border-t pt-4">
+                                    <div><span class="font-bold text-gray-800">6+</span> Yrs Exp</div>
+                                    <div><span class="font-bold text-gray-800">120+</span> Projects</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-card-container text-center bg-white rounded-lg overflow-hidden card-hover-effect fade-in-section" style="transition-delay: 300ms;" data-member="emily">
+                            <img src="https://placehold.co/300x300/ddd6fe/4c1d95?text=EW" alt="Emily White" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800">Adarsh</h3>
+                                <p class="gradient-text font-semibold mb-4">Backend Developer + Marketing Specialist & CFO</p>
+                                <div class="flex justify-around text-sm text-gray-500 border-t pt-4">
+                                    <div><span class="font-bold text-gray-800">7+</span> Yrs Exp</div>
+                                    <div><span class="font-bold text-gray-800">180+</span> Projects</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+             <div class="page-hero page-hero-bg">
+                <h1 class="text-4xl md:text-5xl font-bold">Contact Us</h1>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Ready to start your next project? Get in touch with us today and let's create something amazing together.</p>
+            </div>
+             <div class="py-20 md:py-28">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+                        <div class="fade-in-section">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                            <p class="text-gray-500 mb-6">Get in touch with us through any of the following channels. We're here to help bring your vision to life.</p>
+                            <div class="space-y-4">
+                                <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"><i data-lucide="phone"></i></div>
+                                    <div class="ml-4"><p class="font-semibold text-gray-800">+91 7039233801</p></div>
+                                </div>
+                                 <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"><i data-lucide="mail"></i></div>
+                                    <div class="ml-4"><p class="font-semibold text-gray-800">contact@eaznexora.com</p></div>
+                                </div>
+                                 <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"><i data-lucide="map-pin"></i></div>
+                                    <div class="ml-4"><p class="font-semibold text-gray-800">Mumbai, Maharashtra, India</p></div>
+                                </div>
+                            </div>
+                             <div class="mt-8 pt-8 border-t">
+                                <p class="text-gray-500 mb-4">Prefer to chat directly? Click below to start a WhatsApp conversation:</p>
+                                <a href="https://wa.me/917039233801" target="_blank" class="inline-flex items-center justify-center w-full px-6 py-3 rounded-md text-white font-semibold bg-green-500 hover:bg-green-600 transition-colors duration-300">
+                                    <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i> Chat on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white p-8 rounded-lg shadow-lg fade-in-section" style="transition-delay: 100ms;">
+                             <h3 class="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
+                             <form id="contact-form" class="space-y-4">
+                                <div>
+                                    <label for="fullName" class="text-sm font-medium text-gray-700">Full Name</label>
+                                    <input type="text" id="fullName" name="fullName" required class="mt-1 w-full border-gray-300 rounded-md py-2 px-4 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="email" class="text-sm font-medium text-gray-700">Email Address</label>
+                                    <input type="email" id="email" name="email" required class="mt-1 w-full border-gray-300 rounded-md py-2 px-4 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="phone" class="text-sm font-medium text-gray-700">Phone Number (Optional)</label>
+                                    <input type="tel" id="phone" name="phone" class="mt-1 w-full border-gray-300 rounded-md py-2 px-4 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="details" class="text-sm font-medium text-gray-700">Project Details</label>
+                                    <textarea id="details" name="details" rows="4" required class="mt-1 w-full border-gray-300 rounded-md py-2 px-4 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+                                </div>
+                                <button type="submit" class="w-full px-6 py-3 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">Send Via WhatsApp</button>
+                             </form>
+                        </div>
+                    </div>
+                    
+                     <!-- Map Section -->
+                    <div class="mt-20 fade-in-section">
+                        <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Find Us</h3>
+                        <div class="h-96 rounded-lg overflow-hidden shadow-lg">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609904218!2d72.74109715764491!3d19.0821978385312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1694000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+    </main>
+    
+    <!-- Team Member Modal -->
+    <div id="team-modal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="team-modal-content" class="bg-white rounded-lg max-w-2xl w-full p-8 relative transform scale-95 transition-all duration-300">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div id="modal-body">
+                <!-- Content will be injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                 <a href="#home" class="flex items-center justify-center space-x-2 page-link mb-4" data-page="home">
+                    <img src="logo.jpg" alt="Eaz Nexora Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">Eaz Nexora</span>
+                </a>
+                <p class="max-w-xl mx-auto text-sm mt-4">We craft stunning, high-performance websites and applications that drive growth. From hosting to custom digital business cards, we provide complete solutions for your online presence.</p>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                 <p class="text-gray-400 text-sm">&copy; 2025 Eaz Nexora. All Rights Reserved. Professionally crafted for innovation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // --- Navbar Logic ---
+            const navbar = document.getElementById('navbar');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('top');
+                    mobileMenuIcon.classList.remove('text-white');
+                    mobileMenuIcon.classList.add('text-gray-800');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.add('top');
+                    mobileMenuIcon.classList.add('text-white');
+                    mobileMenuIcon.classList.remove('text-gray-800');
+                }
+            });
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Page Navigation ---
+            const pageLinks = document.querySelectorAll('.page-link');
+            const pages = document.querySelectorAll('.page');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function showPage(pageId) {
+                // Close mobile menu on navigation
+                mobileMenu.classList.add('hidden');
+
+                pages.forEach(page => page.classList.remove('active'));
+                const activePage = document.getElementById(pageId);
+                if (activePage) {
+                    activePage.classList.add('active');
+                    window.scrollTo(0, 0);
+                }
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.page === pageId) link.classList.add('active');
+                });
+                
+                if (pageId === 'all-projects') {
+                     document.querySelector('.nav-link[data-page="work"]').classList.add('active');
+                }
+                
+                // Trigger fade-in for the new page's sections
+                const sectionsToAnimate = activePage.querySelectorAll('.fade-in-section');
+                sectionsToAnimate.forEach(section => {
+                     // Use a small timeout to re-trigger intersection observer
+                     setTimeout(() => observer.observe(section), 50);
+                });
+            }
+
+            pageLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = link.dataset.page;
+                    showPage(pageId);
+                });
+            });
+
+            // --- Our Work Page Logic ---
+            const showMoreProjectsBtn = document.getElementById('show-more-projects-btn');
+            showMoreProjectsBtn.addEventListener('click', () => showPage('all-projects'));
+
+            // --- All Projects Grid & Filter ---
+            const projectsGrid = document.getElementById('projects-grid');
+            const filterButtons = document.querySelectorAll('.project-filter-btn');
+            const projectsData = [
+                ...Array.from({ length: 8 }, (_, i) => ({ id: i + 1, title: `Web Project ${i + 1}`, category: 'web' })),
+                ...Array.from({ length: 8 }, (_, i) => ({ id: i + 9, title: `App Project ${i + 1}`, category: 'app' })),
+                ...Array.from({ length: 9 }, (_, i) => ({ id: i + 17, title: `E-commerce Project ${i + 1}`, category: 'ecommerce' }))
+            ];
+            
+            function renderProjects(filter = 'all') {
+                projectsGrid.innerHTML = '';
+                const filteredProjects = filter === 'all' ? projectsData : projectsData.filter(p => p.category === filter);
+                
+                filteredProjects.forEach((project, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'group bg-white rounded-lg overflow-hidden fade-in-section card-hover-effect';
+                    card.style.transitionDelay = `${index * 50}ms`;
+                    card.innerHTML = `
+                        <img src="https://placehold.co/600x400/${'e0e7ff'}/${'3730a3'}?text=${encodeURIComponent(project.title)}" alt="${project.title}" class="w-full h-56 object-cover transition-transform duration-300">
+                        <div class="p-6">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2 capitalize">${project.category}</span>
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">${project.title}</h3>
+                            <a href="#" target="_blank" class="font-semibold text-sm text-blue-600 hover:text-blue-800">View Project</a>
+                        </div>
+                    `;
+                    projectsGrid.appendChild(card);
+                    setTimeout(() => card.classList.add('is-visible'), 50);
+                });
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    renderProjects(button.dataset.filter);
+                });
+            });
+
+            if (document.getElementById('all-projects')) {
+                 renderProjects();
+            }
+            
+            // --- Team Modal Logic ---
+            const teamMembers = {
+                 alex: {
+                    name: "Rehan",
+                    role: "Frontend Developer + Lead Developer & Founder",
+                    img: "https://placehold.co/300x300/c7d2fe/312e81?text=AJ",
+                    exp: "10+ Years",
+                    projects: "200+",
+                    desc: "Visionary leader with a passion for innovation. Alex drives the company's strategic direction, ensuring we stay at the forefront of technology to deliver exceptional value to our clients.",
+                    skills: ["Strategic Planning", "Business Development", "Team Leadership", "Digital Innovation"]
+                },
+                jane: {
+                    name: "Nafis",
+                    role: "Prototype Engineer + Lead Develope & Cybersecurity Experts",
+                    img: "https://raw.githubusercontent.com/angroupofindustry/Personal-Portfolio/refs/heads/main/linkedinprofile.jpg",
+                    exp: "8+ Years",
+                    projects: "150+",
+                    desc: "Expert full-stack developer specializing in modern web and mobile technologies. Jane leads our development team to build robust, scalable, and high-performance applications.",
+                    skills: ["React/Next.js", "Node.js", "Cloud Architecture", "Team Management"]
+                },
+                sam: {
+                    name: "Ameen",
+                    role: "UI/UX Designer + Project Manager & CEO",
+                    img: "https://ameensarguroh.com/wp-content/uploads/2025/09/Ameen.png",
+                    exp: "6+ Years",
+                    projects: "120+",
+                    desc: "Creative designer with a keen eye for user-centric interfaces. Sam translates complex requirements into intuitive, beautiful, and engaging digital experiences.",
+                    skills: ["UI/UX Design", "Figma", "Prototyping", "User Research"]
+                },
+                emily: {
+                    name: "Adarsh",
+                    role: "Backend Developer + Marketing Specialist & CFO",
+                    img: "https://placehold.co/300x300/ddd6fe/4c1d95?text=EW",
+                    exp: "7+ Years",
+                    projects: "180+",
+                    desc: "Dedicated project manager ensuring seamless delivery from concept to launch. Emily excels in agile methodologies, client communication, and keeping projects on track.",
+                    skills: ["Agile/Scrum", "Project Planning", "Client Relations", "Risk Management"]
+                }
+            };
+            
+            const teamCards = document.querySelectorAll('.team-card-container');
+            const teamModal = document.getElementById('team-modal');
+            const teamModalContent = document.getElementById('team-modal-content');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const modalBody = document.getElementById('modal-body');
+
+            teamCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const memberId = card.dataset.member;
+                    const member = teamMembers[memberId];
+                    
+                    modalBody.innerHTML = `
+                        <div class="text-center">
+                            <img src="${member.img}" alt="${member.name}" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                            <h3 class="text-2xl font-bold text-gray-800">${member.name}</h3>
+                            <p class="gradient-text font-semibold">${member.role}</p>
+                            <p class="text-gray-500 my-4">${member.desc}</p>
+                            <div class="flex justify-center gap-4 my-4">
+                                <div class="text-center px-4"><div class="font-bold text-lg text-gray-800">${member.exp}</div><div class="text-sm text-gray-500">Experience</div></div>
+                                <div class="text-center px-4 border-l border-r"><div class="font-bold text-lg text-gray-800">${member.projects}</div><div class="text-sm text-gray-500">Projects</div></div>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mt-6 mb-2">Skills & Expertise</h4>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                ${member.skills.map(skill => `<span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">${skill}</span>`).join('')}
+                            </div>
+                            <div class="flex justify-center gap-4 mt-8">
+                                <a href="mailto:contact@eaznexora.com" class="px-6 py-2 rounded-md text-white font-semibold gradient-bg">Send Email</a>
+                                <a href="#" class="px-6 py-2 rounded-md text-gray-800 font-semibold bg-gray-200 hover:bg-gray-300">LinkedIn</a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    teamModal.classList.remove('opacity-0', 'pointer-events-none');
+                    teamModalContent.classList.remove('scale-95');
+                    teamModalContent.classList.add('scale-100');
+                });
+            });
+
+            function closeModal() {
+                teamModalContent.classList.remove('scale-100');
+                teamModalContent.classList.add('scale-95');
+                teamModal.classList.add('opacity-0', 'pointer-events-none');
+            }
+            closeModalBtn.addEventListener('click', closeModal);
+            teamModal.addEventListener('click', (e) => {
+                if (e.target === teamModal) closeModal();
+            });
+
+            // --- Contact Form WhatsApp Logic ---
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const details = document.getElementById('details').value;
+
+                let message = `Hello Eaz Nexora,\n\n`;
+                message += `*Name:* ${fullName}\n`;
+                message += `*Email:* ${email}\n`;
+                if(phone) message += `*Phone:* ${phone}\n`;
+                message += `*Project Details:*\n${details}`;
+
+                const whatsappUrl = `https://wa.me/917039233801?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+            
+            // --- Fade-in on Scroll Animation ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Style for project filter buttons
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .project-filter-btn {
+                    padding: 8px 20px;
+                    border-radius: 9999px;
+                    font-weight: 500;
+                    color: #4b5563;
+                    background-color: #f3f4f6;
+                    border: 1px solid #e5e7eb;
+                    transition: all 0.3s ease;
+                }
+                .project-filter-btn:hover {
+                    background-color: #e5e7eb;
+                }
+                .project-filter-btn.active {
+                    background: linear-gradient(to right, var(--brand-blue), var(--brand-purple));
+                    color: white;
+                    border-color: transparent;
+                }
+            `;
+            document.head.appendChild(style);
+
+
+        });
+    </script>
+</body>
+</html>
+
