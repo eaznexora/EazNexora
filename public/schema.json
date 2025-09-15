@@ -3,7 +3,7 @@
   "@type": "Organization",
   "name": "Eaz Nexora",
   "url": "https://www.eaznexora.com",
-  "logo": "https://www.eaznexora.com/logo.jpg",
+  "logo": "https://www.eaznexora.com/N.png",
   "description": "We craft stunning, high-performance websites and applications that drive growth. From hosting to custom digital business cards, we provide complete solutions for your online presence.",
   "sameAs": [
     "https://www.instagram.com/eaznexora",
@@ -90,3 +90,4 @@
     }
   ]
 }
+
