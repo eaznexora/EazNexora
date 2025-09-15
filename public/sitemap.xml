@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.eaznexora.com/</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services Pages -->
+  <url>
+    <loc>https://www.eaznexora.com/services/website-development</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.eaznexora.com/services/whatsapp-store</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.eaznexora.com/services/mobile-app-development</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.eaznexora.com/services/ui-ux-design</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.eaznexora.com/services/ecommerce-solutions</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.eaznexora.com/services/hosting-domain</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.eaznexora.com/services/qr-business-cards</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.eaznexora.com/services/maintenance-support</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.eaznexora.com/services/custom-solutions</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.eaznexora.com/contact</loc>
+    <lastmod>2025-09-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
