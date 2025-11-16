@@ -164,7 +164,7 @@ body.dark-mode .card-hover-effect:hover {
     z-index: -1;
 }
 .page-hero-bg {
-     background-image: url('https://raw.githubusercontent.com/eaznexora/EazNexora/68310cf6471fd1cb53ac9f75fbed0bae05b0020d/assets/banner.png');
+     background-image: url('assets/banner.png');
 }
 /* Fix for page hero banner image visibility */
 .page-hero.page-hero-bg {
