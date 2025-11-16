@@ -164,11 +164,11 @@ body.dark-mode .card-hover-effect:hover {
     z-index: -1;
 }
 .page-hero-bg {
-     background-image: url('bac.avif');
+     background-image: url('banner.png');
 }
 /* Fix for page hero banner image visibility */
 .page-hero.page-hero-bg {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('assets/bac.avif');
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('assets/banner.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
