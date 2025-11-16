@@ -1,0 +1,131 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Eaz Nexora",
+    "url": "https://www.eaznexora.com",
+    "logo": "https://www.eaznexora.com/N.png",
+    "description": "We craft stunning, high-performance websites and applications that drive growth. From hosting to custom digital business cards, we provide complete solutions for your online presence.",
+    "sameAs": [
+      "https://www.instagram.com/eaznexora",
+      "https://twitter.com/eaznexora",
+      "https://www.youtube.com/@eaznexora"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-7039233801",
+      "contactType": "customer support",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Website Development",
+        "price": 14995,
+        "priceCurrency": "INR",
+        "description": "Custom responsive websites built with modern technologies."
+      },
+      {
+        "@type": "Offer",
+        "name": "WhatsApp Store",
+        "price": 7995,
+        "priceCurrency": "INR",
+        "description": "Setup and manage your business on WhatsApp."
+      },
+      {
+        "@type": "Offer",
+        "name": "Mobile App Development",
+        "price": 25995,
+        "priceCurrency": "INR",
+        "description": "Native and cross-platform mobile applications."
+      },
+      {
+        "@type": "Offer",
+        "name": "UI/UX Design",
+        "price": 12995,
+        "priceCurrency": "INR",
+        "description": "Professional, user-friendly interface and experience design."
+      },
+      {
+        "@type": "Offer",
+        "name": "E-commerce Solutions",
+        "price": 20995,
+        "priceCurrency": "INR",
+        "description": "Complete online store setup with payment integration."
+      },
+      {
+        "@type": "Offer",
+        "name": "Hosting + Domain",
+        "price": 2000,
+        "priceCurrency": "INR",
+        "description": "Reliable hosting solutions with free domain registration."
+      },
+      {
+        "@type": "Offer",
+        "name": "QR Business Cards",
+        "price": 695,
+        "priceCurrency": "INR",
+        "description": "Digital business cards with QR codes and link management."
+      },
+      {
+        "@type": "Offer",
+        "name": "Maintenance & Support",
+        "price": 545,
+        "priceCurrency": "INR",
+        "description": "Ongoing updates, bug fixes, and 24/7 technical support.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": 545,
+          "priceCurrency": "INR",
+          "billingDuration": "P1M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Full Customization",
+        "price": 0,
+        "priceCurrency": "INR",
+        "description": "Tailored solutions for unique business requirements. (Custom Quote)"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does Eaz Nexora provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide website development, mobile app development, e-commerce solutions, UI/UX design, WhatsApp stores, hosting with domain, QR business cards, and ongoing maintenance & support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Eaz Nexora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach us at +91-7039233801 or through our website contact page. We support English and Hindi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Eaz Nexora offer hosting and domain services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide reliable hosting solutions along with free domain registration to get your business online quickly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of a website from Eaz Nexora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our website development services start at INR 14,995. We also offer custom quotes for unique business requirements."
+        }
+      }
+    ]
+  }
+]

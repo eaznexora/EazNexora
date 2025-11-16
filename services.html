@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="buoMQSkh_C-CbigslAmFhx3ceg6bKyxY61nzbj033II" />
+
+  <!-- Title & Meta Description -->
+  <title>Eaz Nexora Services | Web, App & Hosting Solutions</title>
+  <meta name="description" content="Explore our full range of services from website development and mobile apps to e-commerce, hosting, QR business cards, and more.">
+  <meta name="keywords" content="web development, mobile app development, e-commerce, UI/UX design, hosting, QR business cards, digital solutions, Eaz Nexora, professional web design, IT services, software development, custom solutions">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.eaznexora.com/services.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.jpg" type="image/jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.eaznexora.com/services.html">
+  <meta property="og:title" content="Eaz Nexora Services | Web, App & Hosting Solutions">
+  <meta property="og:description" content="Explore our full range of services from website development and mobile apps to e-commerce, hosting, QR business cards, and more.">
+  <meta property="og:image" content="https://www.eaznexora.com/logo.jpg">
+  <meta property="og:image:alt" content="Eaz Nexora Logo">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.eaznexora.com/services.html">
+  <meta name="twitter:title" content="Eaz Nexora Services | Web, App & Hosting Solutions">
+  <meta name="twitter:description" content="Explore our full range of services from website development and mobile apps to e-commerce, hosting, QR business cards, and more.">
+  <meta name="twitter:image" content="https://www.eaznexora.com/logo.jpg">
+  <meta name="twitter:image:alt" content="Eaz Nexora Logo">
+
+  <!-- Styles & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+  <canvas id="particle-canvas"></canvas>
+
+    <!-- Header -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 top">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="assets/N.png" alt="Eaz Nexora Logo" class="h-10 w-auto">
+                    <span id="eaz-nexora-title" class="text-xl font-bold transition-colors duration-300">Eaz Nexora</span>
+                </a>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="work.html" class="nav-link">Our Work</a>
+                        <a href="team.html" class="nav-link">Team</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                    <button id="dark-mode-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i data-lucide="sun" id="sun-icon" class="text-gray-600 dark:text-gray-300"></i>
+                        <i data-lucide="moon" id="moon-icon" class="text-gray-600 dark:text-gray-300 hidden"></i>
+                    </button>
+                    <a href="contact.html" class="hidden md:inline-block px-5 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+                        Contact Us
+                    </a>
+                    <button id="mobile-menu-button" class="md:hidden">
+                        <i data-lucide="menu" id="mobile-menu-icon" class="text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+                <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-card shadow-lg">
+           <a href="index.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Home</a>
+           <a href="services.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Services</a>
+           <a href="work.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Our Work</a>
+           <a href="team.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Team</a>
+           <a href="contact.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Contact</a>
+       </div>
+    </header>
+
+    <main>
+        <section id="services">
+            <div class="page-hero page-hero-bg py-24 md:py-32">
+                <h1 class="text-4xl md:text-5xl font-bold">Our Services</h1>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Complete digital solutions to accelerate your business growth and online presence.</p>
+            </div>
+            <div class="py-20 md:py-28">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Service Cards -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Website Development</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Custom responsive websites built with modern technologies.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹14,995</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Responsive Design</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>SEO Optimized</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Fast Loading</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Mobile Friendly</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 100ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">WhatsApp Store</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Setup and manage your business on WhatsApp.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹7,995</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Catalog Setup</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Automated Replies</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Order Management</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Payment Integration</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 200ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Mobile App Development</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Native and cross-platform mobile applications.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹25,995</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>iOS & Android</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Cross Platform</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Native Performance</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Cloud Integration</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 300ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">UI/UX Design</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Professional, user-friendly interface and experience design for websites & apps.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹12,995</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>User Research</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Wireframing & Prototyping</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Interactive Design</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Usability Testing</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 400ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce Solutions</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Complete online store setup with payment integration.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹20,995</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Payment Gateway</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Inventory Management</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Order Tracking</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Admin Panel</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 500ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Hosting + Domain</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Reliable hosting solutions with free domain registration.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹2,295/year</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>99.9% Uptime</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>SSL Certificate</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Daily Backups</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>24/7 Support</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 600ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">QR Business Cards</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Digital business cards with QR codes and link management.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹895</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Custom Design</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Analytics</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Social Links</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Contact Management</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 700ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Maintenance & Support</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Ongoing updates, bug fixes, and 24/7 technical support.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Starting from ₹2595/month</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Regular Backups</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Security Monitoring</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Performance Optimization</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Content Updates</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                         <div class="bg-white border border-gray-200 rounded-lg p-8 flex flex-col fade-in-section card-hover-effect" style="transition-delay: 800ms;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Full Customization</h3>
+                            <p class="text-gray-500 mb-4 flex-grow">Tailored solutions for unique business requirements.</p>
+                            <div class="text-2xl font-bold gradient-text mb-4">Custom Quote</div>
+                            <ul class="space-y-2 text-gray-600 mb-6">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Custom Features</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>API Integration</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Third-party Tools</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Scalable Architecture</li>
+                            </ul>
+                            <a href="contact.html" class="mt-auto w-full text-center px-6 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <!-- Our Process Section -->
+            <div class="py-20 md:py-28 bg-gray-50">
+                <div class="container mx-auto px-4">
+                     <div class="text-center mb-16 fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Process</h2>
+                        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Simple, transparent, and effective approach to deliver your project.</p>
+                    </div>
+                    <div class="relative grid md:grid-cols-4 gap-8 text-center">
+                        <div class="absolute top-8 left-0 w-full h-0.5 bg-gray-200 hidden md:block"></div>
+                        <div class="fade-in-section relative">
+                             <div class="mx-auto w-16 h-16 mb-4 rounded-full gradient-bg text-white flex items-center justify-center text-2xl font-bold z-10 relative border-4 border-white">1</div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-2">Discovery</h3>
+                             <p class="text-gray-500">We understand your requirements and goals.</p>
+                         </div>
+                         <div class="fade-in-section relative" style="transition-delay: 150ms;">
+                              <div class="mx-auto w-16 h-16 mb-4 rounded-full gradient-bg text-white flex items-center justify-center text-2xl font-bold z-10 relative border-4 border-white">2</div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-2">Planning</h3>
+                             <p class="text-gray-500">We create a detailed project roadmap.</p>
+                         </div>
+                         <div class="fade-in-section relative" style="transition-delay: 300ms;">
+                              <div class="mx-auto w-16 h-16 mb-4 rounded-full gradient-bg text-white flex items-center justify-center text-2xl font-bold z-10 relative border-4 border-white">3</div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-2">Development</h3>
+                             <p class="text-gray-500">We build your solution with precision.</p>
+                         </div>
+                         <div class="fade-in-section relative" style="transition-delay: 450ms;">
+                              <div class="mx-auto w-16 h-16 mb-4 rounded-full gradient-bg text-white flex items-center justify-center text-2xl font-bold z-10 relative border-4 border-white">4</div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-2">Launch</h3>
+                             <p class="text-gray-500">We deploy and support your project.</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                 <a href="index.html" class="flex items-center justify-center space-x-2 mb-4">
+                    <img src="assets/N.png" alt="Eaz Nexora Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">Eaz Nexora</span>
+                </a>
+                <p class="max-w-xl mx-auto text-sm mt-4">We craft stunning, high-performance websites and applications that drive growth. From hosting to custom digital business cards, we provide complete solutions for your online presence.</p>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <a href="https://www.instagram.com/eaznexora" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                 <p class="text-gray-400 text-sm">&copy; 2025 Eaz Nexora. All Rights Reserved. Professionally crafted for innovation.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

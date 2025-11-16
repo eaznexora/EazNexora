@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="buoMQSkh_C-CbigslAmFhx3ceg6bKyxY61nzbj033II" />
+
+  <!-- Title & Meta Description -->
+  <title>Meet the Team | Eaz Nexora Innovators</title>
+  <meta name="description" content="Meet the visionaries behind Eaz Nexora — experts in frontend, backend, UI/UX design, cybersecurity, and more.">
+  <meta name="keywords" content="web development, mobile app development, e-commerce, UI/UX design, hosting, QR business cards, digital solutions, Eaz Nexora, professional web design, IT services, software development, custom solutions">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.eaznexora.com/team.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.jpg" type="image/jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.eaznexora.com/team.html">
+  <meta property="og:title" content="Meet the Team | Eaz Nexora Innovators">
+  <meta property="og:description" content="Meet the visionaries behind Eaz Nexora — experts in frontend, backend, UI/UX design, cybersecurity, and more.">
+  <meta property="og:image" content="https://www.eaznexora.com/logo.jpg">
+  <meta property="og:image:alt" content="Eaz Nexora Logo">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.eaznexora.com/team.html">
+  <meta name="twitter:title" content="Meet the Team | Eaz Nexora Innovators">
+  <meta name="twitter:description" content="Meet the visionaries behind Eaz Nexora — experts in frontend, backend, UI/UX design, cybersecurity, and more.">
+  <meta name="twitter:image" content="https://www.eaznexora.com/logo.jpg">
+  <meta name="twitter:image:alt" content="Eaz Nexora Logo">
+
+  <!-- Styles & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json" src="schema.json"></script>
+</head>
+<body class="antialiased">
+  <canvas id="particle-canvas"></canvas>
+
+    <!-- Header -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 top">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="assets/N.png" alt="Eaz Nexora Logo" class="h-10 w-auto">
+                    <span id="eaz-nexora-title" class="text-xl font-bold transition-colors duration-300">Eaz Nexora</span>
+                </a>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="work.html" class="nav-link">Our Work</a>
+                        <a href="team.html" class="nav-link">Team</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                    <button id="dark-mode-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i data-lucide="sun" id="sun-icon" class="text-gray-600 dark:text-gray-300"></i>
+                        <i data-lucide="moon" id="moon-icon" class="text-gray-600 dark:text-gray-300 hidden"></i>
+                    </button>
+                    <a href="contact.html" class="hidden md:inline-block px-5 py-2 rounded-md text-white font-semibold gradient-bg hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+                        Contact Us
+                    </a>
+                    <button id="mobile-menu-button" class="md:hidden">
+                        <i data-lucide="menu" id="mobile-menu-icon" class="text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+                <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-card shadow-lg">
+           <a href="index.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Home</a>
+           <a href="services.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Services</a>
+           <a href="work.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Our Work</a>
+           <a href="team.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Team</a>
+           <a href="contact.html" class="nav-link block py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 text-right">Contact</a>
+       </div>
+    </header>
+
+    <main>
+        <section id="team">
+            <div class="page-hero page-hero-bg py-24 md:py-32">
+                <h1 class="text-4xl md:text-5xl font-bold">The Innovators Behind Eaz Nexora</h1>
+                <p class="mt-4 text-lg text-gray-300 max-3xl mx-auto">Meet the dedicated professionals who blend creativity, technology, and strategy to bring your digital visions to life.</p>
+            </div>
+            <div class="py-20 md:py-28">
+                <div class="container mx-auto px-4 space-y-20">
+                    <!-- Team Member 1: Rehan -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in-section bg-white dark:bg-dark-card p-8 rounded-lg shadow-lg">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-md flex-shrink-0 overflow-hidden">
+                            <img src="assets/Rehan.jpg" alt="Rehan Shaikh" class="w-full h-full object-cover image-hover-effect">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-gray-800">Rehan Shaikh</h2>
+                            <p class="gradient-text font-semibold text-lg mb-2">Co-Founder</p>
+                            <p class="expertise-highlight mb-4">Expert in Frontend Development, Lead Development & Team Leadership</p>
+                            <p class="text-gray-500 mb-4">Rehan co-founded Eaz Nexora with a passion for clean code and intuitive user experiences. He leads our development team, mentoring engineers and architecting the high-performance frontends that define our brand.</p>
+                            <div class="flex justify-center md:justify-start flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500 mb-6">
+                                <div class="font-bold text-gray-800">3+ Internships</div>
+                                <div class="font-bold text-gray-800">50+ Projects</div>
+                            </div>
+                            <div class="flex justify-center md:justify-start gap-3">
+                                <a href="mailto:shaikhrehan.nizamuddin@gmail.com" class="px-4 py-2 text-sm rounded-md text-white font-semibold gradient-bg">Send Email</a>
+                                <a href="https://linkedin.com/in/rehan-eaznexora" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm rounded-md text-gray-800 font-semibold bg-gray-200 hover:bg-gray-300">LinkedIn</a>
+                                <a href="https://www.instagram.com/rehan_1.3_" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm rounded-md text-white font-semibold" style="background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Team Member 2: Ameen -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in-section bg-white dark:bg-dark-card p-8 rounded-lg shadow-lg">
+                         <div class="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-md flex-shrink-0 overflow-hidden">
+                            <img src="assets/Ameen.png" alt="Khan Sarguroh Mohammed Ameen Bilal Ahmed" class="w-full h-full object-cover image-hover-effect">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-gray-800">Khan Sarguroh Mohammed Ameen Bilal Ahmed</h2>
+                            <p class="gradient-text font-semibold text-lg mb-2">Co-Founder</p>
+                            <p class="expertise-highlight mb-4">Expert in UI/UX Design & Project Management</p>
+                            <p class="text-gray-500 mb-4">Ameen's dual expertise in design and project management ensures that our creative visions become reality. As a co-founder, he guarantees that every project is not only beautiful but also delivered seamlessly and efficiently.</p>
+                            <div class="flex justify-center md:justify-start flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500 mb-6">
+                                <div class="font-bold text-gray-800">4+ Internships</div>
+                                <div class="font-bold text-gray-800">75+ Projects</div>
+                            </div>
+                             <div class="flex justify-center md:justify-start gap-3">
+                                <a href="mailto:connect@ameensarguroh.com" class="px-4 py-2 text-sm rounded-md text-white font-semibold gradient-bg">Send Email</a>
+                                <a href="https://www.ameensarguroh.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm rounded-md text-gray-800 font-semibold bg-gray-200 hover:bg-gray-300">Portfolio</a>
+                                <a href="https://www.instagram.com/khan_ameen_15" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm rounded-md text-white font-semibold" style="background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Team Member 3: Nafis -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in-section bg-white dark:bg-dark-card p-8 rounded-lg shadow-lg">
+                         <div class="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-md flex-shrink-0 overflow-hidden">
+                            <img src="assets/Nafis 2.jpg" alt="Mohammad Nafis Ansari" class="w-full h-full object-cover image-hover-effect">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-gray-800">Mohammad Nafis Ansari</h2>
+                            <p class="gradient-text font-semibold text-lg mb-2">Chief Executive Officer (CEO)</p>
+                            <p class="expertise-highlight mb-4">Expert in Prototype Engineering, Testing & Cybersecurity Expert Lead</p>
+                            <p class="text-gray-500 mb-4">As CEO, Nafis steers the company's strategic vision, ensuring every project meets the highest standards of quality and security. His expertise in testing and cybersecurity forms the bedrock of our commitment to delivering robust and reliable digital solutions.</p>
+                            <div class="flex justify-center md:justify-start flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500 mb-6">
+                                <div class="font-bold text-gray-800">4+ Internships</div>
+                                <div class="font-bold text-gray-800">62+ Projects</div>
+                            </div>
+                             <div class="flex justify-center md:justify-start gap-3">
+                                <a href="mailto:nafis.ceo@eaznexora.com" class="px-4 py-2 text-sm rounded-md text-white font-semibold gradient-bg">Send Email</a>
+                                <a href="https://nafis-eaznexora.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm rounded-md text-gray-800 font-semibold bg-gray-200 hover:bg-gray-300">Portfolio</a>
+                                <a href="https://instagram.com/nafis-eaznexora" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm rounded-md text-white font-semibold" style="background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 4: Adarsh -->
+                     <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in-section bg-white dark:bg-dark-card p-8 rounded-lg shadow-lg">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-md flex-shrink-0 overflow-hidden">
+                            <img src="assets/Adarsh.jpg" alt="Adarsh Dubey" class="w-full h-full object-cover image-hover-effect">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-gray-800">Adarsh Dubey</h2>
+                            <p class="gradient-text font-semibold text-lg mb-2">Developer Advocate / Developer Evangelist</p>
+                            <p class="expertise-highlight mb-4">Expert in Backend Development & Gateway Integration</p>
+                            <p class="text-gray-500 mb-4">Adarsh represents the technical excellence of Eaz Nexora. His deep knowledge of backend systems and complex integrations allows him to connect with clients and partners, showcasing the power and reliability of our technology.</p>
+                            <div class="flex justify-center md:justify-start flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500 mb-6">
+                                <div class="font-bold text-gray-800">2+ Internships</div>
+                                <div class="font-bold text-gray-800">35+ Projects</div>
+                            </div>
+                             <div class="flex justify-center md:justify-start gap-3">
+                                <a href="mailto:adarsh.ambassador@eaznexora.com" class="px-4 py-2 text-sm rounded-md text-white font-semibold gradient-bg">Send Email</a>
+                                <a href="https://linkedin.com/in/adarsh-eaznexora" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm rounded-md text-gray-800 font-semibold bg-gray-200 hover:bg-gray-300">LinkedIn</a>
+                                <a href="https://www.instagram.com/adarsh_h05" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm rounded-md text-white font-semibold" style="background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                 <a href="index.html" class="flex items-center justify-center space-x-2 mb-4">
+                    <img src="assets/N.png" alt="Eaz Nexora Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">Eaz Nexora</span>
+                </a>
+                <p class="max-w-xl mx-auto text-sm mt-4">We craft stunning, high-performance websites and applications that drive growth. From hosting to custom digital business cards, we provide complete solutions for your online presence.</p>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <a href="https://www.instagram.com/eaznexora" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                 <p class="text-gray-400 text-sm">&copy; 2025 Eaz Nexora. All Rights Reserved. Professionally crafted for innovation.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
