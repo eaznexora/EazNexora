@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eaz Nexora | Links</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/geometr415-blk-bt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Geometr415 Blk BT', 'Inter', sans-serif;
+            /* A beautiful, subtle gradient background inspired by fragrance and luxury */
+            background-color: #04062C;
+            background-image: radial-gradient(circle at top right, #4080D4 0%, #04062C 40%, #34B3CC 100%);
+        }
+        .font-brand {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* The main card container */
+        .linktree-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(107, 79, 79, 0.2);
+        }
+
+        /* Custom animation for links appearing */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .link-item {
+            animation: fadeIn 0.5s ease-out forwards;
+            font-family: poppins;
+            opacity: 0; /* Start hidden */
+            border: 2px solid transparent; /* Prepare for hover effect */
+        }
+        /* Stagger the animation for each link */
+        .link-item:nth-child(1) { animation-delay: 0.2s; }
+        .link-item:nth-child(2) { animation-delay: 0.3s; }
+        .link-item:nth-child(3) { animation-delay: 0.4s; }
+        .link-item:nth-child(4) { animation-delay: 0.5s; }
+        .link-item:nth-child(5) { animation-delay: 0.6s; }
+
+        .font-brand {
+  font-family: 'Geometr415 Blk BT', sans-serif;
+}
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="linktree-card w-full max-w-md mx-auto text-center rounded-2xl p-6 sm:p-8">
+
+        <!-- Header: Logo and Brand Name -->
+        <header class="mb-8 flex flex-col items-center">
+        
+            <img 
+                src="logo.jpg" 
+                alt="Fawaz Fragrance Logo" 
+                class="w-32 h-32 object-contain mb-4 rounded-full shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/128x128/6B4F4F/FFFFFF?text=FF';"
+            >
+            <h1 class="text-4xl font-brand font-bold text-[#04062C]">EAZ NEXORA</h1>
+            <p class="text-md font-brand text-[#04062C] mt-1">INNOVATING THE NEXT</p>
+        </header>
+
+        <!-- Main Content: Links -->
+        <main class="space-y-4">
+            <!-- WhatsApp Broadcast Channel -->
+          <!--  <a href="https://www.whatsapp.com/channel/0029VbAZzX30bIdegIuGtX2Y" target="_blank" rel="noopener noreferrer" class="link-item block bg-[#4080D4] text-white w-full py-3 px-5 rounded-lg shadow-md hover:shadow-xl hover:bg-white hover:text-[#04062C] hover:border-[#04062C] transform hover:-translate-y-1 transition-all duration-300 font-semibold text-lg">
+                WhatsApp Broadcast Channel
+            </a> -->
+
+            <!-- WhatsApp Number -->
+            <a href="https://api.whatsapp.com/send/?phone=917039233801&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="link-item block bg-[#4080D4] text-white w-full py-3 px-5 rounded-lg shadow-md hover:shadow-xl hover:bg-white hover:text-[#04062C] hover:border-[#04062C] transform hover:-translate-y-1 transition-all duration-300  ">
+                Chat on WhatsApp
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/eaznexora" target="_blank" rel="noopener noreferrer" class="link-item block bg-[#4080D4] text-white w-full py-3 px-5 rounded-lg shadow-md hover:shadow-xl hover:bg-white hover:text-[#04062C] hover:border-[#04062C] transform hover:-translate-y-1 transition-all duration-300 ">
+                Follow us on Instagram
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/61581232636166/" target="_blank" rel="noopener noreferrer" class="link-item block bg-[#4080D4] text-white w-full py-3 px-5 rounded-lg shadow-md hover:shadow-xl hover:bg-white hover:text-[#04062C] hover:border-[#04062C] transform hover:-translate-y-1 transition-all duration-300  ">
+                Find us on Facebook
+            </a>
+
+            <!--Website store-->
+              <a href="https://www.eaznexora.com/" target="_blank" rel="noopener noreferrer" class="link-item block bg-[#4080D4] text-white w-full py-3 px-5 rounded-lg shadow-md hover:shadow-xl hover:bg-white hover:text-[#04062C] hover:border-[#04062C] transform hover:-translate-y-1 transition-all duration-300  ">
+                Official Website
+            </a>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-10">
+            <p class="text-sm font-poppins text-[#838383]">Navi Mumbai, Maharashtra, India.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
