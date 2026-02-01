@@ -1,0 +1,63 @@
+/* Custom Button Styles */
+.contact-btn {
+    width: 52px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+.contact-btn:hover {
+    background: #f8f8f8;
+}
+
+.link-card {
+    display: block;
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.link-card:active {
+    opacity: 0.8;
+}
+
+.social-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, opacity 0.2s;
+    overflow: hidden;
+}
+
+.social-icon:active {
+    transform: scale(0.9);
+    opacity: 0.9;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    /* This ensures icons look consistent even if they have different original sizes */
+    display: block;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}

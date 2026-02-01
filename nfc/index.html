@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Ameen - Digital Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="N.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white font-['Poppins'] antialiased">
+
+    <div class="max-w-[430px] mx-auto min-h-screen relative pb-24 px-4">
+        
+        <div class="mt-4 w-full h-[200px] overflow-hidden rounded-[10px]">
+            <img id="banner-img" src="assets/images/banner.png" 
+                 alt="Banner" class="w-full h-full object-cover bg-[#D9D9D9]">
+        </div>
+
+        <div class="flex justify-center -mt-[104px]">
+            <div class="w-[208px] h-[208px] border-[3px] border-white rounded-full shadow-lg overflow-hidden bg-[#D9D9D9]">
+                <img id="profile-img" src="assets/images/ameen.jpeg" 
+                     alt="Profile" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <h1 class="text-[19px] font-medium text-black">Mohammed Ameen</h1>
+            <p class="text-[15px] text-[#5E5B5B]">UI Designer</p>
+            
+            <div class="flex flex-col items-center mt-2">
+                <div class="w-[214px] border-t border-[#B4B4B4] my-2"></div>
+                <div class="flex items-center gap-2 text-[#413A3A] font-medium text-[15px]">
+                    <i class="fa-solid fa-building text-[#D9D9D9]"></i>
+                    <span>Eaz Nexora (India)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center gap-6 mt-6">
+            <a href="tel:+919326392368" class="contact-btn"><i class="fa-solid fa-phone"></i></a>
+            <a href="mailto:eaznexora@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope"></i></a>
+            <button id="share-btn" class="contact-btn"><i class="fa-solid fa-share-nodes"></i></button>
+        </div>
+
+        <div class="bg-[#FAFAFA] rounded-[10px] p-6 mt-8 space-y-4">
+            <a href="#" class="link-card bg-[#0077B5] text-white">View LinkedIn Profile</a>
+            <a href="https://wa.me/919326392368?text=Hi%20Mohammed,%20I%20saw%20your%20digital%20card!" 
+               target="_blank" 
+               class="link-card bg-[#128C7E] text-white">
+               Chat on WhatsApp
+            </a>
+            <a href="#" class="link-card bg-[#F2F2F2] border border-[#1F2937] text-[#1F2937]">View Portfolio</a>
+
+            <div class="flex justify-center gap-3 pt-4">
+                <a href="#" class="social-icon bg-black">
+                    <img src="assets/icons/1.svg" alt="X">
+                </a>
+     
+                <a href="#" class="social-icon bg-[#E1306C]">
+                    <img src="assets/icons/2.svg" alt="Instagram">
+                </a>
+
+                <a href="#" class="social-icon bg-[#1877F2]">
+                    <img src="assets/icons/3.svg" alt="Facebook">
+                </a>
+
+                <a href="#" class="social-icon bg-[#333333]">
+                    <img src="assets/icons/4.svg" alt="GitHub">
+                </a>
+            </div>
+        </div>
+
+        <div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-full max-w-[398px] px-4">
+            <button class="w-full bg-[#4A93D8] text-white py-3 rounded-[10px] font-medium shadow-[0px_4px_4px_rgba(0,0,0,0.25)] active:scale-95 transition-transform">
+                Save Contact
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
