@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buzz Digital Media</title>
+  <meta name="description" content="Tech+Classic marketing agency: work-led portfolio with bento gallery, case studies, services, insights, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0B0F19;          /* near-black */
+      --porcelain:#F7F7F5;    /* warm white */
+      --graphite:#2D2F36;     /* soft dark */
+      --gold:#C9A227;         /* heritage accent */
+      --blue:#3563FF;         /* tech accent */
+      --muted:#8A8F98;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --shadow-sm:0 4px 16px rgba(0,0,0,.06);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; color:var(--ink); background:var(--porcelain);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
+      line-height:1.6; font-size:16px;
+    }
+
+    /* --- Entry intro: overlay + staggered element reveals --- */
+:root {
+  --intro-ease: cubic-bezier(.2,.9,.25,1);
+  --intro-duration: 640ms;
+  --intro-stagger: 90ms;
+}
+
+
+
+
+/* Elements initial state for the intro */
+[data-anim] {
+  opacity: 0;
+  transform: translateY(10px) scale(0.995);
+  will-change: transform, opacity;
+}
+
+/* When the intro plays, add .in to each element to animate them in */
+[data-anim].in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity var(--intro-duration) var(--intro-ease),
+    transform var(--intro-duration) var(--intro-ease);
+}
+
+/* Optional micro interactions for logo & CTA */
+[data-anim="logo"].in { transform-origin: left center; transform: translateY(0) scale(1); }
+[data-anim="cta"].in { transform-origin: center; transform: translateY(0) scale(1.02); transition-duration: calc(var(--intro-duration) * 1.05); }
+
+/* Small shimmer on headline after entrance (subtle) */
+.headline .headline-shimmer {
+  display:inline-block; position:relative; overflow:hidden;
+}
+.headline .headline-shimmer::after {
+  content: '';
+  position:absolute; inset:0; left:-40%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-18deg);
+  transition: transform 900ms cubic-bezier(.2,.9,.25,1) 600ms;
+  opacity: 0;
+}
+.body-intro.intro-done .headline .headline-shimmer::after {
+  transform: translateX(180%);
+  opacity: 1;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .intro-overlay,
+  [data-anim],
+  [data-anim].in,
+  .headline .headline-shimmer::after {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .body-intro .intro-overlay { display:none; }
+}
+
+
+    /* ===== NAVBAR BASE ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.container.header-row {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 86px; /* Default navbar height */
+  transition: height 0.3s ease;
+}
+
+/* ===== LOGO ===== */
+.brand-logo {
+  width: 210px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.brand-logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: var(--blue);
+}
+
+/* ===== CTA ===== */
+.nav-cta .cta {
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-cta .cta:hover {
+  background: var(--blue);
+  transform: translateY(-1px);
+}
+
+/* ===== SHRINK EFFECT ===== */
+header.shrink .container.header-row {
+  height: 64px;
+}
+
+header.shrink .brand-logo {
+  width: 170px;
+  height: 52px;
+  transform: translateY(0);
+}
+
+header.shrink {
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- header base ---------- */
+#siteHeader { position: sticky; top: 0; z-index: 1100; background: rgba(247,247,245,0.95); border-bottom:1px solid rgba(0,0,0,.06); backdrop-filter: blur(6px); }
+.container.header-row { max-width: var(--maxw,1200px); margin-inline:auto; padding:0 20px; display:flex; align-items:center; gap:16px; height:86px; transition:height .28s ease; }
+
+/* logo */
+.brand-logo { width:210px; height:70px; display:flex; align-items:center; justify-content:center; transition:all .28s ease; }
+.brand-logo img{ height:100%; width:auto; display:block; object-fit:contain; }
+
+/* desktop nav */
+.nav-desktop { flex:1 1 auto; }
+.nav-list { display:flex; gap:20px; list-style:none; margin:0; padding:0; align-items:center; }
+.nav-list a{ text-decoration:none; color:var(--ink); font-weight:500; padding:8px 10px; display:inline-block; }
+
+/* right area */
+.nav-right { display:flex; align-items:center; gap:12px; flex:0 0 auto; }
+.cta { padding:10px 14px; border-radius:12px; background:var(--ink); color:#fff; text-decoration:none; font-weight:600; box-shadow:var(--shadow-sm); }
+
+/* hamburger (hidden desktop) */
+.hamburger { display:none; background:transparent; border:0; padding:10px; margin:0; cursor:pointer; border-radius:10px; }
+.hamburger:focus{ outline:2px solid rgba(53,99,255,.12); outline-offset:3px; }
+.hamburger-bar{ display:block; width:22px; height:2px; background:var(--ink); margin:4px 0; border-radius:2px; transition:all .18s ease; }
+
+/* mobile menu (hidden by default) */
+.mobile-menu{ position:fixed; inset:0; display:none; z-index:1200; }
+.mobile-menu[aria-hidden="false"]{ display:block; }
+.mobile-inner{ position: absolute; top:0; left:0; right:0; background:#fff; padding:18px 20px 32px; box-shadow:0 20px 40px rgba(10,10,10,.12); transform:translateY(-8px); animation:slideDown .28s ease forwards; }
+@keyframes slideDown { from { transform: translateY(-8px); opacity:0 } to { transform:translateY(0); opacity:1 } }
+.mobile-close{ position:absolute; right:14px; top:12px; border:0; background:transparent; font-size:20px; padding:8px; cursor:pointer; }
+
+/* mobile list */
+.mobile-list{ list-style:none; padding:56px 0 12px; margin:0; display:flex; flex-direction:column; gap:12px; }
+.mobile-list a{ display:block; padding:14px 12px; border-radius:10px; text-decoration:none; color:var(--ink); font-weight:600; font-size:17px; background:transparent; }
+.mobile-list a:active, .mobile-list a:focus { background:rgba(0,0,0,.03); outline:none; }
+
+/* mobile CTA style */
+.mobile-cta{ background:var(--ink); color:#fff; text-align:center; }
+
+/* shrink effect */
+#siteHeader.shrink .container.header-row { height:64px; }
+#siteHeader.shrink .brand-logo { width:170px; height:52px; }
+
+/* ---------- Responsive breakpoints ---------- */
+/* Mobile first: show hamburger, hide desktop nav; ensure large touch targets */
+@media (max-width: 880px) {
+  .nav-desktop { display: none; }
+  .hamburger { display: inline-flex; }
+  .nav-right .cta { display: none; } /* CTA moved into mobile menu */
+  .brand-logo { width:160px; height:56px; }
+  .container.header-row { padding:0 16px; height:72px; }
+}
+
+/* Small tablets / landscape phones — show nav if wide enough */
+@media (min-width: 881px) and (max-width: 1024px) {
+  .nav-desktop { display:flex; }
+  .hamburger { display:none; }
+  .nav-right .cta { display:inline-flex; }
+  .brand-logo { width:180px; height:60px; }
+}
+
+/* ensure focus visibility for keyboard users */
+.nav-list a:focus, .mobile-list a:focus, .cta:focus { outline:3px solid rgba(53,99,255,0.12); outline-offset:3px; }
+
+/* ensure large hit-area for touch */
+.nav-list a, .mobile-list a, .cta { min-height:48px; display:flex; align-items:center; padding-left:12px; padding-right:12px; }
+
+
+    .container{max-width:var(--maxw); margin-inline:auto; padding:0 20px}
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+
+    /* Skip link */
+    .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{left:16px; top:16px; width:auto; height:auto; background:#fff; padding:8px 12px; border-radius:8px; box-shadow:var(--shadow)}
+
+    /* Navbar */
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px); background:rgba(247,247,245,.75); border-bottom:1px solid rgba(0,0,0,.06);}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; height:72px; transition:height .3s ease}
+    header.shrink .nav{height:56px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .brand-mark{width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg,var(--blue),#7aa0ff)}
+    nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0}
+    nav a{opacity:.9}
+    nav a:hover, nav a:focus{opacity:1}
+    .cta{padding:10px 14px; border-radius:12px; background:var(--ink); color:#fff; box-shadow:var(--shadow-sm); font-weight:600}
+    .cta:hover{transform:translateY(-1px)}
+
+    /* Hero */
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:28px}
+    .headline h1{font-family:Spectral,serif; font-size:56px; line-height:1.05; margin:0 0 12px}
+    .headline p{color:var(--graphite); max-width:64ch}
+    .actions{display:flex; gap:10px; margin-top:16px}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:12px; border:1px solid rgba(0,0,0,.08); background:#fff; box-shadow:var(--shadow-sm); font-weight:600}
+    .btn.primary{background:var(--ink); color:#fff; border-color:var(--ink)}
+
+    /* ===== Our Clients section — oversized logo edition ===== */
+.clients-block {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.clients-block .eyebrow {
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.clients-title {
+  font-family: Spectral, serif;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 24px;
+  font-weight: 600;
+}
+
+.clients {
+  display: flex;
+  gap: 60px; /* more breathing room between big logos */
+  align-items: center;
+  overflow-x: auto;
+  padding: 12px 0;
+  scroll-behavior: smooth;
+}
+
+/* >>> BIG LOGOS <<< */
+.clients img {
+  height: 140px;          /* was 90px */
+  width: auto;
+  opacity: 0.9;
+  filter: grayscale(1) brightness(0.92);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.clients img:hover {
+  filter: none;
+  opacity: 1;
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* Tablet scale */
+@media (max-width: 1024px) {
+  .clients img { height: 110px; }
+  .clients { gap: 40px; }
+}
+
+/* Phone scale */
+@media (max-width: 720px) {
+  .clients-title { font-size: 24px; margin-bottom: 16px; }
+  .clients img { height: 90px; }
+  .clients { gap: 28px; }
+}
+
+
+    /* Bento collage (hero right) */
+    .bento-hero{display:grid; grid-template-columns:repeat(6,1fr); grid-auto-rows:70px; gap:10px}
+    .tile{position:relative; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm); background:#ddd}
+    .tile::after{content:""; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
+    .tile.small{grid-column:span 2; grid-row:span 2}
+    .tile.med{grid-column:span 3; grid-row:span 3}
+    .tile.wide{grid-column:span 4; grid-row:span 3}
+    .tile.tall{grid-column:span 2; grid-row:span 4}
+    .tile img, .tile video{width:100%; height:100%; object-fit:cover; filter:saturate(1.05)}
+    .caption{position:absolute; left:8px; bottom:8px; background:rgba(0,0,0,.55); color:#fff; padding:6px 9px; border-radius:10px; font-size:12px}
+
+    /* Proof metrics */
+    .proof{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:24px 0}
+    .metric{background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:16px; box-shadow:var(--shadow-sm)}
+    .metric b{font-size:28px; font-family:Spectral,serif}
+
+    /* Client row */
+    .clients{display:flex; gap:36px; align-items:center; overflow:auto; padding:14px 0}
+    .clients img{height:28px; opacity:.7; filter:grayscale(1)}
+
+    /* Section titles */
+    section{padding:64px 0}
+    .eyebrow{letter-spacing:.15em; font-size:12px; text-transform:uppercase; color:var(--muted)}
+    .title{font-family:Spectral,serif; font-size:36px; margin:6px 0 14px}
+    .sub{color:var(--graphite)}
+
+    /* Work grid + filters */
+    .filters{display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 22px}
+    .chip{border:1px solid rgba(0,0,0,.08); border-radius:999px; padding:8px 12px; background:#fff; cursor:pointer; user-select:none}
+    .chip.active{background:var(--ink); color:#fff; border-color:var(--ink)}
+    .work-grid{display:grid; grid-template-columns:repeat(12,1fr); grid-auto-rows:90px; gap:12px}
+    .work-tile{position:relative; border-radius:16px; overflow:hidden; background:#eaeaea; box-shadow:var(--shadow-sm); transition:transform .2s ease}
+    .work-tile:hover{transform:translateY(-2px)}
+    .work-tile[data-size="2x2"]{grid-column:span 4; grid-row:span 2}
+    .work-tile[data-size="4x4"]{grid-column:span 6; grid-row:span 4}
+    .work-tile[data-size="6x4"]{grid-column:span 12; grid-row:span 4}
+    .work-tile[data-size="4x6"]{grid-column:span 6; grid-row:span 6}
+    .work-tile img, .work-tile video{width:100%; height:100%; object-fit:cover}
+    .work-tile .tagbar{position:absolute; left:8px; top:8px; display:flex; gap:6px; flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,.9); border-radius:999px; padding:4px 8px; font-size:12px; border:1px solid rgba(0,0,0,.06)}
+    .work-tile .go{position:absolute; right:8px; bottom:8px; background:rgba(0,0,0,.65); color:#fff; padding:6px 10px; border-radius:10px; font-size:12px}
+
+    /* Load more button (tech + classic aesthetic) */
+#loadMore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 28px auto 0;
+  padding: 14px 28px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#loadMore:hover {
+  background: var(--ink);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+#loadMore:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+#loadMore.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#loadMore::after {
+  content: "⟳";
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#loadMore.loading::after {
+  opacity: 1;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loadmore-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+
+    /* Services */
+    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .card{background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:18px; box-shadow:var(--shadow-sm)}
+    .card h3{margin:8px 0 6px; font-family:Spectral,serif}
+    .card ul{margin:8px 0 0 16px}
+
+    /* Testimonials */
+    .quotes{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .quote{background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:18px}
+    .quote b{display:block; margin-top:8px}
+
+    /* Insights simple list */
+    .list{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .post{background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:18px}
+
+    /* Contact */
+    form{display:grid; grid-template-columns:1fr 1fr; gap:12px; background:#fff; padding:18px; border:1px solid rgba(0,0,0,.06); border-radius:16px}
+    form input, form select, form textarea{padding:12px 12px; border-radius:12px; border:1px solid rgba(0,0,0,.12); font:inherit; background:#fff}
+    form textarea{grid-column:1/-1; min-height:120px}
+
+    /* Footer */
+    footer{padding:36px 0; border-top:1px solid rgba(0,0,0,.08)}
+    .foot{display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:14px}
+    .foot h4{margin-top:0; font-family:Spectral,serif}
+    .note{margin-top:12px; color:var(--muted); font-size:14px}
+
+    /* Lightbox */
+    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:100}
+    .lightbox.open{display:flex}
+    .lightbox-inner{position:relative; max-width:92vw; max-height:86vh}
+    .lightbox-inner img, .lightbox-inner video{max-width:100%; max-height:86vh; border-radius:12px; box-shadow:var(--shadow)}
+    .lightbox-close{position:absolute; top:-42px; right:0; background:#fff; border:none; border-radius:999px; padding:10px 12px; box-shadow:var(--shadow-sm); cursor:pointer}
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .hero-grid{grid-template-columns:1fr}
+      .proof{grid-template-columns:1fr;}
+      .cards,.quotes,.list{grid-template-columns:1fr 1fr}
+      .work-grid{grid-auto-rows:80px}
+      .work-tile[data-size="6x4"]{grid-column:span 12}
+    }
+    @media (max-width:720px){
+      .nav{height:64px}
+      .headline h1{font-size:38px}
+      .clients{gap:22px}
+      .cards,.quotes,.list{grid-template-columns:1fr}
+      .work-grid{grid-template-columns:repeat(6,1fr); grid-auto-rows:70px}
+      .work-tile[data-size="2x2"]{grid-column:span 3; grid-row:span 2}
+      .work-tile[data-size="4x4"]{grid-column:span 6; grid-row:span 3}
+      .work-tile[data-size="6x4"]{grid-column:span 6; grid-row:span 3}
+      .work-tile[data-size="4x6"]{grid-column:span 6; grid-row:span 5}
+      form{grid-template-columns:1fr}
+    }
+      /* Reel showcase */
+    .reels-wrap{margin:22px 0 28px}
+    .reels-head{display:flex;justify-content:space-between;align-items:center;margin:8px 0 10px}
+    .reels{display:flex; gap:12px; overflow:auto; scroll-snap-type:x mandatory; padding-bottom:6px}
+    .reel{position:relative; flex:0 0 260px; aspect-ratio:9/16; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm); background:#000; scroll-snap-align:start}
+    .reel video{width:100%; height:100%; object-fit:cover}
+    .reel .badge{position:absolute; left:8px; top:8px; background:rgba(0,0,0,.6); color:#fff; padding:4px 8px; border-radius:10px; font-size:12px}
+    .reel .controls{position:absolute; right:8px; bottom:8px; display:flex; gap:6px}
+    .reel button{border:none; border-radius:10px; padding:6px 8px; background:rgba(255,255,255,.9); cursor:pointer}
+    .reels-nav{display:flex; gap:8px}
+    .reels-nav button{border:1px solid rgba(0,0,0,.08); background:#fff; border-radius:10px; padding:8px 10px; box-shadow:var(--shadow-sm)}
+    @media(max-width:720px){ .reel{flex-basis:56vw;} }
+    
+
+    /* ===== FINAL OVERRIDE: make client logos BIG ===== */
+.clients img {
+  height: 130px !important;   /* force large logos */
+  width: auto !important;
+  opacity: 1 !important;
+  filter: none !important;
+  display: block !important;
+}
+
+.clients {
+  gap: 70px !important;
+  justify-content: center !important;
+  padding: 20px 0 !important;
+}
+
+.clients-block .clients-title {
+  font-family: Spectral, serif !important;
+  font-size: 38px !important;
+  line-height: 1.1 !important;
+  color: var(--ink) !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin-bottom: 30px !important;
+}
+
+.clients-block .eyebrow {
+  text-align: center !important;
+  color: var(--muted) !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.16em !important;
+  margin-bottom: 8px !important;
+}
+
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  
+<header id="siteHeader">
+  <div class="container header-row">
+    <!-- Brand -->
+    <a href="#home" class="brand" aria-label="Home">
+      <div class="brand-logo">
+        <img src="buzz-logo.png" alt="Buzz Digital Media logo">
+      </div>
+    </a>
+
+    <!-- Desktop nav (visible on tablet+). For mobile, this is hidden and shown inside the slide menu. -->
+    <nav class="nav-desktop" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#studio">Studio</a></li>
+        <li><a href="#careers">Careers</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right-side CTA and hamburger -->
+    <div class="nav-right">
+      <a href="#contact" class="cta" role="button">Start a project</a>
+
+      <!-- hamburger only visible on small screens -->
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile slide-down menu -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="mobile-inner" role="document">
+      <button id="mobileClose" class="mobile-close" aria-label="Close menu">✕</button>
+      <nav aria-label="Mobile Primary">
+        <ul class="mobile-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#studio">Studio</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a class="mobile-cta" href="#contact">Start a project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="headline">
+          <div class="eyebrow">Marketing, Media & Content</div>
+          <h1>Ideas with measurable impact.</h1>
+          <p>We craft campaigns and content that convert—without losing the soul of your brand. A tech‑plus‑classic studio for performance, brand, and everything in‑between.</p>
+          <div class="actions">
+            <a class="btn primary" href="#contact">Start a project</a>
+            <a class="btn" href="#work">See our work</a>
+          </div>
+          <div class="proof">
+            <div class="metric"><b>+184%</b><br/>Avg ROAS YoY</div>
+            <div class="metric"><b>23M</b><br/>Organic Views</div>
+            <div class="metric"><b>7</b><br/>Markets Activated</div>
+          </div>
+        
+          <div class="clients-block">
+  <div class="eyebrow">Trusted by</div>
+  <h3 class="clients-title">Our Clients</h3>
+  <div class="clients" aria-label="Client logos">
+    <img alt="Client A" src="eaznexora.jpg" loading="lazy" />
+    <img alt="Client B" src="eaznexora.jpg" loading="lazy" />
+    <img alt="Client C" src="eaznexora.jpg" loading="lazy" />
+    <img alt="Client D" src="eaznexora.jpg" loading="lazy" />
+  </div>
+</div>
+
+
+        </div>
+        <div class="bento-hero" aria-label="Featured work collage">
+          <div class="tile med" data-lightbox="aesthetic1.avif"><img alt="OOH spread" src="aesthetic1.avif"></div>
+          <div class="tile small" data-lightbox="aesthetic2.avif"><img alt="Social grid" src="aesthetic2.avif"></div>
+          <div class="tile wide" data-lightbox-type="video" data-lightbox="reel-1.mp4"><video muted loop playsinline src="reel-1.mp4"></video><span class="caption">Reel</span></div>
+          <div class="tile small" data-lightbox="aesthetic3.webp"><img alt="Product flat" src="aesthetic3.webp"></div>
+          <div class="tile tall" data-lightbox="aesthetic4.avif"><img alt="Portrait campaign" src="aesthetic4.avif"></div>
+        </div>
+
+        <!-- Reel showcase (moved below grid) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work">
+      <div class="container">
+        <div class="eyebrow">Work</div>
+        <h2 class="title">Case studies</h2>
+        <p class="sub">Filter by industry, service, or outcome. Click any tile to view full-screen; open case to read Brief → Insight → Idea → Impact.</p>
+
+        <div class="filters" role="tablist" aria-label="Work filters">
+          <button class="chip active" data-filter="all" aria-selected="true">All</button>
+          <button class="chip" data-filter="fmcg">FMCG</button>
+          <button class="chip" data-filter="tech">Tech</button>
+          <button class="chip" data-filter="fashion">Fashion</button>
+          <button class="chip" data-filter="saas">SaaS</button>
+          <button class="chip" data-filter="performance">Performance</button>
+          <button class="chip" data-filter="brand">Brand</button>
+          <button class="chip" data-filter="ooh">OOH</button>
+          <button class="chip" data-filter="video">Video</button>
+        </div>
+        <div class="work-grid" id="workGrid">
+          <!-- Example tiles (replace src with your assets) -->
+          <article class="work-tile" data-size="6x4" data-tags="fmcg brand video" data-link="#">
+            <div class="tagbar"><span class="tag">FMCG</span><span class="tag">Brand</span></div>
+            <img alt="Diwali brand film" src="aesthetic1.avif" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+          <article class="work-tile" data-size="4x4" data-tags="tech performance" data-link="#">
+            <div class="tagbar"><span class="tag">Tech</span><span class="tag">Performance</span></div>
+            <img alt="App UA" src="aesthetic2.avif" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+          <article class="work-tile" data-size="2x2" data-tags="fashion brand ooh" data-link="#">
+            <div class="tagbar"><span class="tag">Fashion</span></div>
+            <img alt="Lookbook" src="aesthetic3.webp" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+          <article class="work-tile" data-size="4x6" data-tags="saas performance video" data-link="#">
+            <div class="tagbar"><span class="tag">SaaS</span><span class="tag">Video</span></div>
+            <img alt="Explainer" src="aesthetic4.avif" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+          <article class="work-tile" data-size="2x2" data-tags="tech video" data-link="#">
+            <div class="tagbar"><span class="tag">Tech</span><span class="tag">Video</span></div>
+            <img alt="Device closeup" src="aesthetic5.avif" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+          <article class="work-tile" data-size="4x4" data-tags="ooh brand" data-link="#">
+            <div class="tagbar"><span class="tag">OOH</span></div>
+            <img alt="Billboard" src="aesthetic1.avif" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+           <article class="work-tile" data-size="2x2" data-tags="fashion brand ooh" data-link="#">
+            <div class="tagbar"><span class="tag">Fashion</span></div>
+            <img alt="Lookbook" src="aesthetic2.avif" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+          <article class="work-tile" data-size="4x6" data-tags="saas performance video" data-link="#">
+            <div class="tagbar"><span class="tag">SaaS</span><span class="tag">Video</span></div>
+            <img alt="Explainer" src="aesthetic3.webp" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+          <article class="work-tile" data-size="2x2" data-tags="tech video" data-link="#">
+            <div class="tagbar"><span class="tag">Tech</span><span class="tag">Video</span></div>
+            <img alt="Device closeup" src="aesthetic4.avif" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+          <article class="work-tile" data-size="4x4" data-tags="ooh brand" data-link="#">
+            <div class="tagbar"><span class="tag">OOH</span></div>
+            <img alt="Billboard" src="aesthetic5.avif" loading="lazy" />
+            <a class="go" href="#">View case</a>
+          </article>
+        </div>
+        <div class="loadmore-wrap">
+          <button id="loadMore" class="btn">Load more</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reels (separate section) -->
+    <section id="reelsSection">
+      <div class="container">
+        <div class="reels-wrap" aria-label="Reel showcase">
+          <div class="reels-head">
+            <div>
+              <div class="eyebrow">Reels</div>
+              <h3 class="title" style="font-size:24px; margin:4px 0;">Quick wins & teasers</h3>
+            </div>
+            <div class="reels-nav">
+              <button id="reelsPrev" aria-label="Scroll reels left">◀</button>
+              <button id="reelsNext" aria-label="Scroll reels right">▶</button>
+            </div>
+          </div>
+          <div class="reels" id="reels">
+            <div class="reel" data-lightbox-type="video" data-lightbox="reel-1.mp4">
+              <video muted loop playsinline src="reel-1.mp4"></video>
+              <span class="badge">Performance</span>
+              <div class="controls">
+                <button class="mute" aria-label="Toggle sound">🔇</button>
+                <button class="open" aria-label="Open reel">⤢</button>
+              </div>
+            </div>
+            <div class="reel" data-lightbox-type="video" data-lightbox="ree1-1.mp4">
+              <video muted loop playsinline src="reel-1.mp4"></video>
+              <span class="badge">Brand</span>
+              <div class="controls">
+                <button class="mute" aria-label="Toggle sound">🔇</button>
+                <button class="open" aria-label="Open reel">⤢</button>
+              </div>
+            </div>
+            <div class="reel" data-lightbox-type="video" data-lightbox="reel-1.mp4">
+              <video muted loop playsinline src="reel-1.mp4"></video>
+              <span class="badge">UGC</span>
+              <div class="controls">
+                <button class="mute" aria-label="Toggle sound">🔇</button>
+                <button class="open" aria-label="Open reel">⤢</button>
+              </div>
+            </div>
+            <div class="reel" data-lightbox-type="video" data-lightbox="reel-1.mp4">
+              <video muted loop playsinline src="reel-1.mp4"></video>
+              <span class="badge">Product</span>
+              <div class="controls">
+                <button class="mute" aria-label="Toggle sound">🔇</button>
+                <button class="open" aria-label="Open reel">⤢</button>
+              </div>
+            </div>
+             <div class="reel" data-lightbox-type="video" data-lightbox="reel-1.mp4">
+              <video muted loop playsinline src="reel-1.mp4"></video>
+              <span class="badge">Performance</span>
+              <div class="controls">
+                <button class="mute" aria-label="Toggle sound">🔇</button>
+                <button class="open" aria-label="Open reel">⤢</button>
+              </div>
+            </div> 
+            <div class="reel" data-lightbox-type="video" data-lightbox="reel-1.mp4">
+              <video muted loop playsinline src="reel-1.mp4"></video>
+              <span class="badge">Performance</span>
+              <div class="controls">
+                <button class="mute" aria-label="Toggle sound">🔇</button>
+                <button class="open" aria-label="Open reel">⤢</button>
+              </div>
+            </div>
+             <div class="reel" data-lightbox-type="video" data-lightbox="reel-1.mp4">
+              <video muted loop playsinline src="reel-1.mp4"></video>
+              <span class="badge">Performance</span>
+              <div class="controls">
+                <button class="mute" aria-label="Toggle sound">🔇</button>
+                <button class="open" aria-label="Open reel">⤢</button>
+              </div>
+            </div>
+             <div class="reel" data-lightbox-type="video" data-lightbox="reel-1.mp4">
+              <video muted loop playsinline src="reel-1.mp4"></video>
+              <span class="badge">Performance</span>
+              <div class="controls">
+                <button class="mute" aria-label="Toggle sound">🔇</button>
+                <button class="open" aria-label="Open reel">⤢</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="eyebrow">Services</div>
+        <h2 class="title">What you get in 30 days</h2>
+        <p class="sub">Outcome-first packages. Clear scope, timelines, deliverables, and FAQs for each track.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Brand & Strategy</h3>
+            <p>Positioning, narrative, identity, go-to-market.</p>
+            <ul>
+              <li>Brand audit & competitive map</li>
+              <li>Messaging framework</li>
+              <li>Visual identity starter kit</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Content & Social</h3>
+            <p>Campaigns, shoots, UGC, editorial calendars.</p>
+            <ul>
+              <li>Monthly content plan</li>
+              <li>Studio shoot (photo/video)</li>
+              <li>Creator pack (3–5 posts)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Performance & Growth</h3>
+            <p>Acquisition, CRO, analytics, marketing ops.</p>
+            <ul>
+              <li>Channel plan & budgets</li>
+              <li>Landing page & CRO tests</li>
+              <li>Attribution & KPI dashboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="eyebrow">About</div>
+        <h2 class="title">Classic craft. Modern speed.</h2>
+        <p class="sub">We merge editorial taste with technical precision. Small, senior team; fast feedback loops; measurable outcomes.</p>
+        <div class="quotes">
+          <div class="quote">“They grew our ROAS from 1.8 to 4.2 in 90 days without sacrificing brand.”<b>VP Marketing, D2C</b></div>
+          <div class="quote">“The team thinks like strategists and executes like a studio.”<b>Head of Brand, SaaS</b></div>
+          <div class="quote">“Finally, a partner who speaks creative and numbers.”<b>Founder, Fashion</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights -->
+    <section id="insights">
+      <div class="container">
+        <div class="eyebrow">Insights</div>
+        <h2 class="title">Playbooks & Teardowns</h2>
+        <div class="list">
+          <article class="post">
+            <h3>How to brief for performance creative</h3>
+            <p>Framework to align brand, message, audience, and KPI so ads don’t feel like ads.</p>
+          </article>
+          <article class="post">
+            <h3>Brand vs. performance: stop choosing</h3>
+            <p>Sequencing tactics across the funnel, with examples and benchmarks.</p>
+          </article>
+          <article class="post">
+            <h3>The studio stack we actually use</h3>
+            <p>From asset management to color, a pragmatic toolkit for small teams.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio -->
+    <section id="studio">
+      <div class="container">
+        <div class="eyebrow">Studio</div>
+        <h2 class="title">Image-first content hub</h2>
+        <p class="sub">Collections for shoots, flats, OOH, and reels. Tap any tile to open lightbox; use arrows or keyboard.</p>
+        <div class="work-grid">
+          <div class="work-tile" data-size="4x4" data-tags="studio" data-lightbox="aesthetic1.avif"><img alt="Studio setup" src="aesthetic1.avif" loading="lazy"></div>
+          <div class="work-tile" data-size="2x2" data-tags="studio" data-lightbox="aesthetic2.avif"><img alt="Product flat" src="aesthetic2.avif" loading="lazy"></div>
+          <div class="work-tile" data-size="6x4" data-tags="studio" data-lightbox-type="video" data-lightbox="aesthetic1.avif"><video muted loop playsinline src="aesthetic1.avif"></video></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Careers -->
+    <section id="careers">
+      <div class="container">
+        <div class="eyebrow">Careers</div>
+        <h2 class="title">Join a senior, craft-first team</h2>
+        <div class="cards">
+          <div class="card"><h3>Senior Designer</h3><p>Editorial + digital. Figma, motion a plus.</p><a class="btn" href="#contact">Refer yourself</a></div>
+          <div class="card"><h3>Performance Lead</h3><p>Media strategy, experimentation, analytics.</p><a class="btn" href="#contact">Apply</a></div>
+          <div class="card"><h3>Producer</h3><p>Run shoots and creators like clockwork.</p><a class="btn" href="#contact">Say hello</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="eyebrow">Contact</div>
+        <h2 class="title">Tell us your target—let’s reverse‑engineer it.</h2>
+        <form aria-label="Project brief form" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.'); this.reset();">
+          <input type="text" name="name" placeholder="Your name" required aria-label="Your name" />
+          <input type="email" name="email" placeholder="Work email" required aria-label="Work email" />
+          <input type="text" name="company" placeholder="Company" aria-label="Company" />
+          <select name="budget" aria-label="Budget">
+            <option value="" disabled selected>Budget range</option>
+            <option>₹2L–₹5L</option>
+            <option>₹5L–₹12L</option>
+            <option>₹12L–₹25L</option>
+            <option>₹25L+</option>
+          </select>
+          <textarea name="brief" placeholder="Goals, timeline, references…"></textarea>
+          <button class="btn primary" type="submit">Send brief</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <h4>BUZZ Didital</h4>
+        <div class="note">A tech + classic marketing studio based in Mumbai & remote. We blend strategy, content, and performance.</div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About</a><br/>
+        <a href="#careers">Careers</a><br/>
+        <a href="#work">Work</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#insights">Insights</a><br/>
+        <a href="#studio">Studio</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Privacy</a><br/>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" title="Close" aria-label="Close viewer">✕</button>
+      <!-- media injected by JS -->
+    </div>
+  </div>
+
+<script>
+/*
+  Page intro controller
+  - Adds .body-intro to <body> while running
+  - Adds .in to [data-anim] with a small stagger
+  - Removes overlay cleanly after animation
+  - Respects prefers-reduced-motion
+*/
+(function(){
+  if (window.__pageIntroInstalled) return;
+  window.__pageIntroInstalled = true;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return; // skip complex intro if user prefers reduced motion
+
+  const body = document.body;
+  // create overlay element
+  const overlay = document.createElement('div');
+  overlay.className = 'intro-overlay';
+  document.documentElement.appendChild(overlay);
+
+  // Mark body so CSS can style during intro
+  body.classList.add('body-intro');
+
+  // Elements to animate in: pick the important ones on first meaningful paint
+  // You can change selectors to fit your layout (these match the page we built)
+  const targets = [
+    '[data-anim="logo"]',      // brand
+    '.nav-list',               // nav links container
+    '.headline h1',            // main headline
+    '.headline p',             // subcopy
+    '.actions',                // hero CTAs
+    '.bento-hero',             // hero collage
+    '#work .eyebrow',          // work eyebrow/title
+    '#work .title',
+    '#work .filters'
+  ].join(', ');
+
+  const els = Array.from(document.querySelectorAll(targets)).filter(Boolean);
+
+  // fallback: if nothing matched, animate a few sensible items
+  if (!els.length) {
+    els.push(...Array.from(document.querySelectorAll('.headline h1, .nav-list, .brand-logo')).slice(0,6));
+  }
+
+  // add data-anim attributes if not present (so CSS targets them)
+  els.forEach((el, i) => {
+    if (!el.hasAttribute('data-anim')) {
+      // prefer custom names for important items
+      if (el.matches('.brand-logo')) el.setAttribute('data-anim','logo');
+      else if (el.matches('.actions')) el.setAttribute('data-anim','cta');
+      else el.setAttribute('data-anim','auto-'+i);
+    }
+  });
+
+  // stagger in sequence
+  const nodes = Array.from(document.querySelectorAll('[data-anim]'));
+
+  // If you want to only animate selected nodes instead of all with data-anim,
+  // replace `nodes` above with `els`.
+
+  const baseDelay = 120; // ms between items (feel free to tweak)
+  nodes.forEach((n, idx) => {
+    // initially ensure hidden state
+    n.classList.remove('in');
+    // set a timeout to add .in to each element in sequence
+    setTimeout(() => n.classList.add('in'), baseDelay * idx + 220);
+  });
+
+  // End of intro: shrink overlay then remove marker after full animation time
+  const totalDuration = Math.max(1000, baseDelay * nodes.length + 600);
+  setTimeout(() => {
+    body.classList.add('intro-done'); // triggers overlay transform + headline shimmer
+    // allow overlay transition to complete then remove it from DOM
+    setTimeout(() => {
+      try { overlay.remove(); } catch(e) { overlay.style.display='none'; }
+      // mark intro finished so other scripts or CSS can revert
+      body.classList.remove('body-intro');
+      body.classList.add('intro-complete');
+    }, 520);
+  }, totalDuration);
+})();
+</script>
+
+
+<script>
+/*
+  Unified JS for Atlas & Co — replace all other page scripts with this single block.
+  - Handles: header shrink, mobile menu, work filters, load-more, hover/play videos,
+    reels autoplay, lightbox, reveal-on-scroll.
+  - Defensive: checks for missing elements, logs useful diagnostics.
+*/
+(function () {
+  if (window.__atlasUnifiedInstalled) {
+    console.warn('Atlas unified script already installed.');
+    return;
+  }
+  window.__atlasUnifiedInstalled = true;
+
+  // helpers
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from((root||document).querySelectorAll(sel));
+  const on = (el, ev, fn, opts) => el && el.addEventListener(ev, fn, opts || false);
+  const tryPlay = (v) => { if (!v) return; v.play().catch(err => {/* autoplay blocked or user gesture required */}); };
+
+  // ---------------- Header shrink (rAF, robust) ----------------
+  function initHeaderShrink() {
+    const header = document.getElementById('siteHeader') || document.querySelector('header');
+    if (!header) { console.warn('[header] siteHeader/header not found'); return; }
+    let ticking = false;
+    const threshold = 40;
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          header.classList.toggle('shrink', window.scrollY > threshold);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    // initial
+    header.classList.toggle('shrink', window.scrollY > threshold);
+    on(window, 'scroll', onScroll, { passive: true });
+    on(window, 'resize', () => header.classList.toggle('shrink', window.scrollY > threshold));
+  }
+
+  // ---------------- Mobile menu / hamburger ----------------
+  function initMobileMenu() {
+    const hamb = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    if (!hamb || !menu) {
+      // not fatal — may be desktop-only template
+      return;
+    }
+    hamb.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+
+    const focusable = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    function lockBody(lock) {
+      document.documentElement.style.overflow = lock ? 'hidden' : '';
+      document.body.style.overflow = lock ? 'hidden' : '';
+    }
+    function openMenu() {
+      hamb.setAttribute('aria-expanded', 'true');
+      menu.setAttribute('aria-hidden', 'false');
+      lockBody(true);
+      setTimeout(() => {
+        const first = menu.querySelector(focusable);
+        if (first) first.focus();
+        document.dispatchEvent(new CustomEvent('mobileMenuOpen'));
+      }, 60);
+    }
+    function closeMenu() {
+      hamb.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+      lockBody(false);
+      hamb.focus();
+      document.dispatchEvent(new CustomEvent('mobileMenuClose'));
+    }
+    on(hamb, 'click', (e) => { e.preventDefault(); const open = hamb.getAttribute('aria-expanded') === 'true'; open ? closeMenu() : openMenu(); });
+    if (mobileClose) on(mobileClose, 'click', closeMenu);
+    // close when clicking a link
+    on(menu, 'click', (e) => { if (e.target.closest('a')) setTimeout(closeMenu, 0); });
+    // esc
+    on(document, 'keydown', (e) => { if (e.key === 'Escape' && menu.getAttribute('aria-hidden') === 'false') closeMenu(); });
+    // focus trap
+    on(document, 'keydown', (e) => {
+      if (e.key !== 'Tab' || menu.getAttribute('aria-hidden') === 'true') return;
+      const items = Array.from(menu.querySelectorAll(focusable));
+      if (!items.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+  }
+
+  // ---------------- Work filters ----------------
+  function initWorkFilters() {
+    const work = document.getElementById('work');
+    if (!work) return;
+    const chips = Array.from(work.querySelectorAll('.chip'));
+    const tiles = Array.from(work.querySelectorAll('.work-tile'));
+    const status = document.getElementById('workStatus');
+    const noResults = document.getElementById('noResults');
+
+    function apply(key) {
+      const k = (key || 'all').toLowerCase();
+      let shown = 0;
+      tiles.forEach(t => {
+        const tags = (t.dataset.tags || '').toLowerCase().split(/\s+/).filter(Boolean);
+        const ok = (k === 'all') || tags.includes(k);
+        t.style.display = ok ? '' : 'none';
+        if (ok) shown++;
+      });
+      if (status) status.textContent = (k === 'all') ? '' : `${shown} case${shown === 1 ? '' : 's'} shown`;
+      if (noResults) noResults.style.display = shown ? 'none' : '';
+    }
+
+    chips.forEach(ch => on(ch, 'click', () => {
+      chips.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-selected','false'); });
+      ch.classList.add('active'); ch.setAttribute('aria-selected','true');
+      apply(ch.dataset.filter);
+    }));
+
+    apply(work.querySelector('.chip.active')?.dataset.filter || 'all');
+  }
+
+  // ---------------- Load more (simple pagination) ----------------
+  function initLoadMore() {
+    const grid = document.getElementById('workGrid');
+    const btn = document.getElementById('loadMore');
+    if (!grid || !btn) return;
+    const pageSize = 8;
+    const tiles = Array.from(grid.querySelectorAll('.work-tile'));
+    let page = 1;
+
+    function render() {
+      const visible = page * pageSize;
+      tiles.forEach((t, i) => t.style.display = i < visible ? '' : 'none');
+      btn.style.display = tiles.length > visible ? '' : 'none';
+    }
+    on(btn, 'click', () => {
+      btn.classList.add('loading');
+      setTimeout(() => btn.classList.remove('loading'), 600);
+      page++;
+      render();
+    });
+    render();
+  }
+
+  // ---------------- Lightbox ----------------
+  function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) {
+      console.warn('[lightbox] element not found');
+      return;
+    }
+    const inner = lightbox.querySelector('.lightbox-inner');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    function open(src, type) {
+      inner.querySelectorAll('img,video').forEach(n => n.remove());
+      if (!src) return console.warn('[lightbox] open called without src');
+      if (type === 'video') {
+        const v = document.createElement('video');
+        v.src = src; v.controls = true; v.autoplay = true; v.playsInline = true; v.muted = false;
+        inner.appendChild(v);
+      } else {
+        const img = document.createElement('img'); img.src = src; img.alt = '';
+        inner.appendChild(img);
+      }
+      lightbox.classList.add('open'); document.body.style.overflow = 'hidden';
+      document.dispatchEvent(new CustomEvent('lightboxOpen'));
+    }
+    function close() {
+      lightbox.classList.remove('open'); document.body.style.overflow = '';
+      inner.querySelectorAll('img,video').forEach(n => n.remove());
+      document.dispatchEvent(new CustomEvent('lightboxClose'));
+    }
+    on(closeBtn, 'click', close);
+    on(lightbox, 'click', (e) => { if (e.target === lightbox) close(); });
+    on(document, 'keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('open')) close(); });
+
+    // bind bento hero tiles & work tiles
+    $$('.bento-hero .tile').forEach(tile => {
+      const src = tile.dataset.lightbox;
+      const type = tile.dataset.lightboxType || (tile.querySelector('video') ? 'video' : 'image');
+      if (src) on(tile, 'click', () => open(src, type));
+    });
+    $$('.work-tile').forEach(tile => {
+      const src = tile.dataset.lightbox;
+      const type = tile.dataset.lightboxType || (tile.querySelector('video') ? 'video' : 'image');
+      if (src) on(tile, 'click', (e) => { if (e.target.closest('a')) return; open(src, type); });
+    });
+
+    // expose globally for other handlers
+    window.openLightbox = open;
+  }
+
+  // ---------------- Reels (visibility autoplay + controls) ----------------
+  function initReels() {
+    const container = document.getElementById('reels');
+    if (!container) return;
+    const reels = Array.from(container.querySelectorAll('.reel'));
+    // ensure attributes & add debug listeners
+    reels.forEach(r => {
+      const v = r.querySelector('video');
+      if (!v) return;
+      try {
+        v.muted = true; v.loop = true; v.playsInline = true;
+        v.setAttribute('preload', v.getAttribute('preload') || 'metadata');
+        v.setAttribute('muted','');
+        v.setAttribute('playsinline','');
+      } catch (e) {}
+      v.addEventListener('error', (ev) => console.warn('[reel] video error', ev, v.currentSrc || v.src));
+      v.addEventListener('play', () => {/*console.debug('[reel] play', v.currentSrc || v.src)*/});
+      // best-effort play
+      tryPlay(v);
+    });
+
+    // IntersectionObserver to play visible reels
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          const reel = en.target;
+          const v = reel.querySelector('video');
+          if (!v) return;
+          if (en.intersectionRatio >= 0.5) {
+            if (v.muted) tryPlay(v);
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: [0, 0.5, 1] });
+      reels.forEach(r => io.observe(r));
+    } else {
+      // fallback: pause all then try to play first few
+      reels.forEach(r => { const v = r.querySelector('video'); if (v) v.pause(); });
+    }
+
+    // controls: mute, open, click video to open
+    on(container, 'click', (e) => {
+      const reel = e.target.closest('.reel');
+      if (!reel) return;
+      const v = reel.querySelector('video');
+      if (e.target.closest('button.mute')) {
+        if (!v) return;
+        v.muted = !v.muted;
+        e.target.textContent = v.muted ? '🔇' : '🔊';
+        if (v.muted) tryPlay(v);
+        return;
+      }
+      if (e.target.closest('button.open')) {
+        const src = reel.dataset.lightbox || (v && (v.currentSrc || v.src));
+        if (typeof window.openLightbox === 'function') window.openLightbox(src, 'video'); else window.open(src, '_blank');
+        return;
+      }
+      if (e.target.closest('video')) {
+        const src = reel.dataset.lightbox || (v && (v.currentSrc || v.src));
+        if (typeof window.openLightbox === 'function') window.openLightbox(src, 'video');
+      }
+    });
+
+    // scroll nav buttons
+    const prev = document.getElementById('reelsPrev'), next = document.getElementById('reelsNext');
+    if (prev && next) {
+      const step = () => Math.round(container.clientWidth * 0.8);
+      on(prev, 'click', () => container.scrollBy({ left: -step(), behavior: 'smooth' }));
+      on(next, 'click', () => container.scrollBy({ left: step(), behavior: 'smooth' }));
+    }
+
+    // pause reels when lightbox opens
+    document.addEventListener('lightboxOpen', () => reels.forEach(r => { const v = r.querySelector('video'); if (v) v.pause(); }));
+  }
+
+  // ---------------- Hover play for embedded videos (hero, tiles) ----------------
+  function initHoverPlay() {
+    const vids = $$('.bento-hero video, .work-tile video');
+    vids.forEach(v => {
+      try { v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('preload', v.getAttribute('preload') || 'metadata'); } catch(e){}
+      const parent = v.closest('.tile, .work-tile') || v;
+      if (parent) {
+        on(parent, 'pointerenter', () => { if (v.muted) tryPlay(v); });
+        on(parent, 'pointerleave', () => { try { v.pause(); } catch(_){} });
+      }
+      // best-effort play in background
+      tryPlay(v);
+      v.addEventListener('error', (ev) => console.warn('[video] error', ev, v.currentSrc || v.src));
+    });
+  }
+
+  // ---------------- Reveal on scroll ----------------
+  function initReveal() {
+    const items = $$('.work-tile, .card, .post, .quote, .metric');
+    if (!items.length) return;
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            en.target.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 420, easing: 'ease-out', fill: 'forwards' });
+            obs.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      items.forEach(it => io.observe(it));
+    } else {
+      items.forEach(it => it.style.opacity = 1);
+    }
+  }
+
+  // ---------------- Init all ----------------
+  function initAll() {
+    initHeaderShrink();
+    initMobileMenu();
+    initWorkFilters();
+    initLoadMore();
+    initLightbox();
+    initReels();
+    initHoverPlay();
+    initReveal();
+
+    // Pause reels/videos when page hidden to save battery
+    on(document, 'visibilitychange', () => {
+      if (document.hidden) $$('.reel video, .bento-hero video, .work-tile video').forEach(v => { try { v.pause(); } catch(_){}; });
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initAll); else initAll();
+
+  // Small diagnostic: log missing assets that commonly break autoplay
+  setTimeout(() => {
+    const bad = $$('.reel video').filter(v => !(v.currentSrc || v.src));
+    if (bad.length) console.warn('[diagnostic] Some reel <video> elements have no src. Check paths:', bad);
+  }, 800);
+
+})();
+</script>
+
+
+</body>
+</html>
+
