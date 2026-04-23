@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Usmani Valves - Contact Us</title>
+  <link rel="icon" href="iconutvc.png" type="image/png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    :root{
+      --topbar-bg:#0056A4;
+      --topbar-fg:#fff;
+      --topbar-x:16px;
+      --topbar-y:6px;
+      --topbar-gap:18px;
+      --brand:#0056A4;
+      --accent:#f9b916;
+      --error-color: #dc3545;
+      --success-color: #28a745;
+    }
+
+    /* ---------- TOP BAR ---------- */
+    .top-bar {
+      background: var(--topbar-bg);
+      color: var(--topbar-fg);
+      font-size: 14px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .top-bar-inner {
+      width: 100%;
+      max-width: 1420px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--topbar-y) 40px;
+      box-sizing: border-box;
+    }
+
+    .tb-left {
+      display: flex;
+      align-items: center;
+      gap: var(--topbar-gap);
+      font-weight: 800;
+      font-size: larger;
+    }
+
+    .tb-left span {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .tb-left i { margin-right: 6px; }
+
+    .tb-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tb-right img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      display: inline-block;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header-main {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      height: 80px;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1450px;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+
+    .header-left img, .header-right img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------- NAV ---------- */
+    .nav-bar {
+      background: var(--accent);
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .nav-bar .container {
+      width: 100%;
+      max-width: 1470px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      box-sizing: border-box;
+      gap: 30px;
+      height: 45px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-menu a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      position: relative;
+      overflow: hidden;
+      padding: 6px 10px;
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .nav-menu a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      background: #0056A4;
+      z-index: -1;
+      transition: width 0.35s ease;
+      border-radius: 5px;
+    }
+
+    .nav-menu a:hover::before { width: 100%; }
+    .nav-menu a:hover { color: white; }
+    .nav-menu a.active { color: var(--brand); }
+
+    .nav-buttons { display: flex; gap: 10px; }
+
+    .nav-bar .nav-buttons a {
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .contact{ height: 15px; }
+    .nav-buttons .contact { background: #fff; color: var(--brand); border: 1px solid #ddd; }
+    .nav-buttons .contact:hover { color: #003e75; box-shadow: 0 2px 8px rgba(0,0,0,.12); transform: translateY(-1px); }
+
+    .quote{ height: 15px; }
+    .nav-buttons .quote { background: var(--brand); color: #fff; border: 1px solid var(--brand); }
+    .nav-buttons .quote:hover { background: #004a90; border-color: #004a90; box-shadow: 0 2px 10px rgba(0,0,0,.15); transform: translateY(-1px); }
+
+    /* Responsive Nav */
+    @media (max-width: 900px) {
+      .nav-bar .container { flex-direction: column; align-items: center; gap: 20px; padding: 10px 20px; }
+      .nav-menu { justify-content: center; }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      padding: 25px 15px;
+      max-width: 1350px;
+      margin: 0 auto;
+      background: #f9f9f9;
+      padding-top: 25px !important;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 18px !important;
+      margin-top: 5px !important;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .contact-header h1 {
+      color: #333333;
+      font-size: 27px;
+      font-weight: bolder;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: 12px;
+      margin-top: 0 !important;
+      line-height: 1.15;
+    }
+
+    .contact-header p {
+      color: #444444;
+      font-size: 15px;
+      max-width: 550px;
+      margin: 0 auto;
+      line-height: 1.5;
+      margin-top: 6px !important;
+      margin-bottom: 12px !important;
+    }
+
+    .contact-container {
+      display: flex;
+      gap: 25px;
+      align-items: stretch;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      overflow: hidden;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    /* Contact Info Panel */
+    .contact-info {
+      background: #0060aa;
+      color: white;
+      padding: 25px 20px;
+      flex: 0 0 380px;
+      display: flex;
+      flex-direction: column;
+      animation: slideInLeft 1s ease-out 0.4s both;
+    }
+
+    .contact-info h2 { font-size: 22px; font-weight: bold; margin-bottom: 20px; color: white; text-align: center; }
+    .contact-details { flex: 1; }
+
+    /* Phone Grid */
+    .phone-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 15px; margin: 15px 0; }
+    .phone-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; cursor: pointer; font-size: 13px; }
+    .phone-item:hover { border-bottom-color: #fdb913; transform: translateX(3px); color: #fdb913; }
+    .phone-item i { font-size: 12px; color: #fdb913; width: 15px; }
+    .phone-item span { font-size: 13px; font-weight: 500; }
+
+    /* Email Grid */
+    .email-grid { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 15px 0; }
+    .email-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; }
+    .email-item:hover { border-bottom-color: #fdb913; transform: translateX(3px); }
+    .email-item i { font-size: 12px; color: #fdb913; width: 15px; }
+    .email-item a { color: white; text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.3s; }
+    .email-item:hover a { color: #fdb913; }
+
+    .contact-section-title { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 16px; font-weight: bold; color: #fdb913; }
+    .contact-section-title i { font-size: 16px; }
+
+    .address-section { margin-top: 20px; }
+    .address-item { margin-bottom: 12px; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    .address-item h4 { font-size: 14px; font-weight: bold; margin-bottom: 6px; color: #fdb913; display: flex; align-items: center; gap: 6px; }
+    .address-item p { font-size: 12px; line-height: 1.4; margin-bottom: 0; padding-left: 20px; }
+
+    /* Social Links */
+    .social-links { display: flex; gap: 24px; margin-top: 15px; justify-content: center; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.3); }
+    .social-links a { display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 8px; color: white; font-size: 16px; transition: all 0.3s; border: 2px solid transparent; }
+    .social-links a:hover { background: #fdb913; transform: translateY(-2px) scale(1.05); border-color: white; animation: pulse 0.6s ease-in-out; }
+    .social-links a img { width: 20px !important; height: 20px !important; }
+
+    /* Contact Form */
+    .contact-form { padding: 25px 20px; flex: 1; animation: slideInRight 1s ease-out 0.6s both; }
+    .form-row { display: flex; gap: 15px; margin-bottom: 18px; }
+    .form-group { flex: 1; position: relative; opacity: 0; animation: fadeInUp 0.4s ease-out forwards; }
+    .form-group.full-width { width: 100%; }
+
+    /* Animation Delays */
+    .form-group:nth-child(1) { animation-delay: 0.6s; }
+    .form-group:nth-child(2) { animation-delay: 0.7s; }
+    .form-group:nth-child(3) { animation-delay: 0.8s; }
+    .form-group:nth-child(4) { animation-delay: 0.9s; }
+
+    .form-group label { display: block; font-weight: bold; margin-bottom: 6px; color: #333; font-size: 14px; transition: color 0.3s; }
+
+    /* GENERAL INPUT STYLING (Including Select) */
+    .form-group input, 
+    .form-group textarea, 
+    .form-group select {
+      width: 100%;
+      padding: 10px 0;
+      border: none;
+      border-bottom: 2px solid #e0e0e0;
+      background: transparent;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+      outline: none;
+      font-family: Arial, sans-serif;
+      color: #333; 
+    }
+
+    .form-group input:focus, 
+    .form-group textarea:focus, 
+    .form-group select:focus { 
+        border-bottom-color: #0060aa; 
+    }
+    
+    .form-group input::placeholder, 
+    .form-group textarea::placeholder { 
+        color: #999; font-style: italic; 
+    }
+    
+    .form-group textarea { height: 90px; resize: vertical; }
+
+    /* --- TESTER UPGRADE: STYLED DROPDOWN --- */
+    .phone-input-group {
+      display: flex;
+      gap: 10px;
+    }
+    
+    /* The styled dropdown */
+    .phone-input-group select {
+      /* Remove default browser arrow and styling */
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      
+      width: 110px; /* Width for text + arrow */
+      flex-shrink: 0;
+      cursor: pointer;
+      padding-right: 25px; /* Space for arrow to not overlap text */
+      
+      /* Typography to pop */
+      font-weight: 700;
+      color: #0060aa; /* Brand Blue for the code */
+      
+      /* Custom Brand Blue Arrow SVG */
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230060aa%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0 center;
+      background-size: 12px auto;
+      
+      border-radius: 0; /* Sharp edges for underline style */
+    }
+
+    /* Custom Input for "Other" - Matches select exactly */
+    #customCountryCode {
+        width: 110px;
+        flex-shrink: 0;
+        display: none; 
+        text-align: center;
+        font-weight: 700;
+        color: #0060aa;
+    }
+
+    .phone-input-group input[type="tel"] {
+      flex-grow: 1;
+    }
+
+    /* --- TESTER ADDITION: ERROR MESSAGES --- */
+    .error-msg {
+      color: var(--error-color);
+      font-size: 11px;
+      display: none; 
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      font-weight: bold;
+    }
+    .form-group.error input, .form-group.error textarea, .form-group.error select {
+      border-bottom-color: var(--error-color);
+    }
+    .form-group.error .error-msg {
+      display: block;
+    }
+
+    /* Subject Selection */
+    .subject-section { margin-bottom: 20px; opacity: 0; animation: fadeInUp 0.4s ease-out 1.0s forwards; }
+    .subject-section > label { display: block; font-weight: bold; margin-bottom: 10px; color: #333; font-size: 14px; }
+    .subject-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 12px 0; border-bottom: 2px solid #e0e0e0; }
+    .radio-option { display: flex; align-items: center; gap: 8px; padding: 8px 0; transition: all 0.3s ease; cursor: pointer; position: relative; }
+    .radio-option:hover { color: #0060aa; transform: translateX(3px); }
+    .radio-option input[type="radio"] { width: 16px; height: 16px; margin: 0; accent-color: #0060aa; cursor: pointer; border: none; }
+    .radio-option label { margin: 0; font-weight: 500; cursor: pointer; font-size: 13px; color: #555; border: none; }
+    .radio-option input[type="radio"]:checked + label { color: #0060aa; font-weight: bold; }
+
+    /* --- SHINING BUTTON ANIMATION --- */
+    @keyframes sheen {
+      0% { left: -100%; }
+      20% { left: 100%; }
+      100% { left: 100%; } /* Long pause */
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, #0060aa 0%, #004b82 100%);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      float: right;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeInUp 0.4s ease-out 1.1s forwards;
+      z-index: 1;
+    }
+
+    /* The Shine Effect */
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      z-index: 2;
+      animation: sheen 4s infinite; 
+    }
+
+    .submit-btn:hover { background: linear-gradient(135deg, #004b82 0%, #003666 100%); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,96,170,0.3); }
+    .submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+
+    /* Success Message Toast */
+    #formFeedback {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 13px;
+        display: none;
+        clear: both;
+        text-align: center;
+    }
+    .feedback-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+    .feedback-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+    /* Stop overflows */
+    .top-bar-inner, .hero-banner, .hero-slide { width: 100% !important; }
+    html, body { overflow-x: hidden; }
+
+    /* Footer */
+    footer { background:#0060aa; color:#fff; margin-top:60px; }
+    .footer-top { display:flex; justify-content:space-between; flex-wrap:wrap; padding:40px 60px; }
+    .footer-col { flex:1; min-width:260px; margin:10px 20px; }
+    .footer-logo { height:60px; margin-bottom:10px; }
+    .footer-col h4 { font-size:16px; margin:15px 0 10px; font-weight:bold; }
+    .footer-col p, .footer-col a, .products-grid span { font-size:14px; line-height:1.6; color:#fff; text-decoration:none; }
+    .divider { border-top:1px solid rgba(255,255,255,0.4); margin:15px 0; }
+    .link-grid { display:grid; grid-template-columns: repeat(2, auto); gap:5px 40px; }
+    .subscribe-box { display:flex; margin:15px 0; border-radius:4px; overflow:hidden; max-width:320px; }
+    .subscribe-box input { flex:1; padding:12px; border:none; font-size:14px; color:#333; }
+    .subscribe-box button { background:#fdb913; border:none; padding:0 20px; cursor:pointer; font-size:16px; color:#000; font-weight:bold; transition:all 0.3s; }
+    .subscribe-box button:hover { background:#e5a900; }
+    .social-icons { display: flex; gap: 12px; margin-top: 10px; justify-content: flex-start; }
+    .social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: transparent; border-radius: 6px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .social-icons img { width: 30px; height: 30px; object-fit: contain; display: block; }
+    .social-icons a:hover { transform: scale(1.15); }
+    .footer-bottom { background:#005299; text-align:center; padding:12px; font-size:13px; }
+    .footer-bottom a { color:#fff; margin:0 8px; text-decoration:none; }
+    .products-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px 20px; margin-top:10px; }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .contact-container { flex-direction: column; }
+      .contact-info, .contact-form { flex: none; padding: 20px 15px; }
+      .form-row { flex-direction: column; gap: 15px; }
+      .phone-grid, .subject-options { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .top-bar { padding: 8px 16px; }
+      .top-bar .tb-left span { display: none; }
+      .nav-buttons { order: 2; }
+      .contact-header h1 { font-size: 24px; }
+      .social-icons { justify-content: center; }
+      .footer-top { flex-direction: column; align-items: center; padding: 30px 20px; }
+      .footer-col { text-align: center; margin: 12px 0; max-width: 520px; width: 100%; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="tb-left">
+        <span><i class="fa-solid fa-envelope"></i> info@usmanivalves.com</span>
+        <span><i class="fa-solid fa-phone"></i> +91 9833868523</span>
+      </div>
+      <div class="tb-right">
+        <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a>
+        <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="container header-flex">
+      <div class="header-left">
+        <img src="./Header & Footer/Header.png" alt="UTVC Logo">
+      </div>
+      <div class="header-right">
+        <img src="./Header & Footer/certificates.png" alt="Certifications">
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <div class="container">
+      <div class="nav-menu">
+        <a href="index.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="catalogues.html">CATALOGUE</a>
+        <a href="certificates.html">CERTIFICATES</a>
+        <a href="client.html">CLIENTS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="gallery.html">GALLERY</a>
+      </div>
+      <div class="nav-buttons">
+        <a href="contact.html" class="contact">Contact Us</a>
+        <a href="quote.html" class="quote">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="contact-header">
+      <h1>Contact Usmani Valves – Your Trusted Industrial Valve Partner</h1>
+      <p>Reach out to our sales or support teams using the information below.</p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <div class="contact-details">
+          <div class="contact-section-title"><i class="fas fa-phone"></i><span>Phone Numbers</span></div>
+          <div class="phone-grid">
+            <div class="phone-item"><i class="fas fa-phone"></i><span>+91 9833868523</span></div>
+            <div class="phone-item"><i class="fas fa-phone"></i><span>+91 9820498523</span></div>
+            <div class="phone-item"><i class="fas fa-phone"></i><span>+91 9619819385</span></div>
+            <div class="phone-item"><i class="fas fa-phone"></i><span>+91 8657398712</span></div>
+            <div class="phone-item"><i class="fas fa-phone"></i><span>+91 9833621114</span></div>
+          </div>
+
+          <div class="contact-section-title"><i class="fas fa-envelope"></i><span>Email Addresses</span></div>
+          <div class="email-grid">
+            <div class="email-item"><i class="fas fa-envelope"></i><a href="mailto:info@usmanivalve.com">info@usmanivalve.com</a></div>
+            <div class="email-item"><i class="fas fa-envelope"></i><a href="mailto:sales@usmanivalves.com">sales@usmanivalve.com</a></div>
+          </div>
+        </div>
+
+        <div class="address-section">
+          <div class="contact-section-title"><i class="fas fa-map-marker-alt"></i><span>Our Locations</span></div>
+          <div class="address-item">
+            <h4><i class="fas fa-building"></i> Reg. Office:</h4>
+            <p>Rabiya manzil 3rd Floor 306 Near Kausa Police Chowki Kausa Mumbra Thane 400612</p>
+          </div>
+          <div class="address-item">
+            <h4><i class="fas fa-briefcase"></i> Correspondence Office:</h4>
+            <p>Virani Business Centre, B Wing 301, Opp. Bharath Gear Company Above Dawat Banquet Hall and Abhyudaya Bank Kausa Mumbra, Thane - 400612</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+          <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a> 
+          <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="companyName">Company Name</label>
+              <input type="text" id="companyName" name="companyName" placeholder="" required>
+              <small class="error-msg">Company name is required</small>
+            </div>
+            <div class="form-group">
+              <label for="yourName">Your Name</label>
+              <input type="text" id="yourName" name="yourName" placeholder="" required>
+              <small class="error-msg">Please enter a valid name (letters only)</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="" required>
+              <small class="error-msg">Please enter a valid email address</small>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <div class="phone-input-group">
+                <select id="countryCode" name="countryCode">
+                  <option value="+91" selected>🇮🇳 +91</option>
+                  <option value="+971">🇦🇪 +971</option>
+                  <option value="+966">🇸🇦 +966</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+974">🇶🇦 +974</option>
+                  <option value="+968">🇴🇲 +968</option>
+                  <option value="+965">🇰🇼 +965</option>
+                  <option value="other">Other</option>
+                </select>
+                <input type="text" id="customCountryCode" placeholder="+Code">
+                
+                <input type="tel" id="phone" name="phoneRaw" placeholder="" required>
+              </div>
+              <input type="hidden" id="fullPhone" name="phone">
+              <small class="error-msg">Please enter a valid phone number</small>
+            </div>
+          </div>
+
+          <div class="subject-section">
+            <label>Select Subject?</label>
+            <div class="subject-options">
+              <div class="radio-option">
+                <input type="radio" id="inquiry1" name="subject" value="General Inquiry" checked>
+                <label for="inquiry1">General Inquiry</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="inquiry2" name="subject" value="Product Inquiry">
+                <label for="inquiry2">Product Inquiry</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="inquiry3" name="subject" value="Quote Request">
+                <label for="inquiry3">Quote Request</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="inquiry4" name="subject" value="Technical Support">
+                <label for="inquiry4">Technical Support</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="" required></textarea>
+            <small class="error-msg">Message must be at least 10 characters</small>
+          </div>
+
+          <div id="formFeedback"></div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-col company-info">
+        <img src="./Header & Footer/Footer.png" alt="Usmani Logo" class="footer-logo" />
+        <div class="divider"></div>
+        <p>Virani Business Centre, B Wing 301, Opp. Bharath Gear Company Above Dawat Banquet Hall and Abhyudaya Bank Kausa Mumbra, Thane - 400612</p>
+        <p><i class="fas fa-envelope"></i> info@usmanivalves.com</p>
+        <p><i class="fas fa-phone"></i> +91 9833868523</p>
+      </div>
+
+      <div class="footer-col links">
+        <h4>Company Links</h4>
+        <div class="link-grid">
+          <a href="index.html">Home</a>
+          <a href="aboutus.html">ABOUT US</a>
+          <a href="products.html">PRODUCTS</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="divider"></div>
+        <h4>Products</h4>
+        <div class="products-grid">
+          <span>Ball Valve</span>
+          <span>Butterfly Valve</span>
+          <span>Check Valve</span>
+          <span>Safety Valve</span>
+        </div>
+      </div>
+
+      <div class="footer-col subscribe">
+        <h4>Stay Connected</h4>
+        <p>Subscribe for the latest valve news, product launches, and catalogues.</p>
+        <div class="subscribe-box">
+          <input type="email" placeholder="Enter Your Email Address" />
+          <button>→</button>
+        </div>
+        <div class="divider"></div>
+        <h4>Follow Usmani Tubes and Valves on</h4>
+        <div class="social-icons">
+          <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+          <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a> 
+          <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Usmani Tubes And Valves Co. Pvt. Ltd. All Rights Reserved
+    </div>
+  </footer>
+
+<script>
+  // TESTER UPGRADE: VALIDATION FUNCTIONS
+  const form = document.getElementById('contactForm');
+  const countrySelect = document.getElementById('countryCode');
+  const customCountryInput = document.getElementById('customCountryCode');
+
+  // --- LOGIC FOR "OTHER" COUNTRY CODE ---
+  countrySelect.addEventListener('change', function() {
+    if(this.value === 'other') {
+        this.style.display = 'none'; // hide select
+        customCountryInput.style.display = 'block'; // show input
+        customCountryInput.focus();
+    }
+  });
+
+  // Real-time validation listeners
+  const inputs = form.querySelectorAll('input, textarea');
+  inputs.forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
+    input.addEventListener('input', () => {
+        if(input.parentElement.classList.contains('error')) {
+            validateField(input);
+        }
+    });
+  });
+
+  // Numeric only for phone input
+  document.getElementById('phone').addEventListener('input', function (e) {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
+
+  function validateField(field) {
+    // Skip the hidden custom code input from normal validation loops unless visible
+    if(field.id === 'customCountryCode' && field.style.display === 'none') return true;
+
+    const parent = field.closest('.form-group');
+    if(!parent) return true;
+    
+    let isValid = true;
+
+    // Check Required
+    if (field.hasAttribute('required') && !field.value.trim()) {
+        isValid = false;
+    }
+
+    // Check Email Regex
+    if (field.type === 'email' && field.value.trim()) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(field.value)) isValid = false;
+    }
+
+    // Check Name
+    if (field.id === 'yourName' && field.value.trim()) {
+        const namePattern = /^[a-zA-Z\s\.\-']+$/;
+        if (!namePattern.test(field.value)) isValid = false;
+    }
+
+    // Check Message Length
+    if (field.tagName === 'TEXTAREA' && field.value.trim().length < 10) {
+        isValid = false;
+    }
+
+    // Check Phone Length
+    if (field.id === 'phone' && field.value.trim()) {
+        if(field.value.length < 7 || field.value.length > 15) isValid = false;
+    }
+
+    // Toggle Error UI
+    if (!isValid) {
+        parent.classList.add('error');
+    } else {
+        parent.classList.remove('error');
+    }
+
+    return isValid;
+  }
+
+  // Contact form submission
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // 1. Run all validations
+    let formIsValid = true;
+    inputs.forEach(input => {
+        if (!validateField(input)) formIsValid = false;
+    });
+
+    if (!formIsValid) {
+        return; 
+    }
+
+    // 2. Data Preparation (Sanitization)
+    // Combine Country Code + Phone
+    let finalCode = countrySelect.value;
+    if (countrySelect.value === 'other') {
+        finalCode = customCountryInput.value || ''; 
+    }
+    
+    const rawPhone = document.getElementById('phone').value;
+    document.getElementById('fullPhone').value = `${finalCode} ${rawPhone}`;
+
+    // Button animation
+    const submitBtn = this.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    const feedback = document.getElementById('formFeedback');
+    feedback.style.display = 'none';
+    feedback.className = '';
+
+    // Gather form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    // Clean up data sent to sheet
+    delete data.phoneRaw;
+    delete data.countryCode;
+
+    // Send to Google Sheets
+    await sendToGoogleSheets(data, submitBtn, originalText);
+  });
+
+  async function sendToGoogleSheets(data, btn, btnText) {
+    const feedback = document.getElementById('formFeedback');
+    
+    try {
+      const formData = new FormData();
+      for (const key in data) {
+        formData.append(key, data[key]);
+      }
+
+      const res = await fetch("https://script.google.com/macros/s/AKfycbxDxNnMEStO9w5gy9xDFsyxaqy2nnR1GnviXEMU-aMv7X24NZammNWYUQS-Od9PIQ_P-w/exec", {
+        method: "POST",
+        body: formData
+      });
+
+      form.reset();
+      // Reset country dropdown visibility
+      countrySelect.style.display = 'block';
+      customCountryInput.style.display = 'none';
+      
+      document.getElementById('inquiry1').checked = true;
+      feedback.textContent = "Thank you! Your message has been sent successfully. We will contact you shortly.";
+      feedback.className = "feedback-success";
+      feedback.style.display = "block";
+
+    } catch (err) {
+      console.error("Error:", err);
+      feedback.textContent = "Network Error. Please try again or call us directly.";
+      feedback.className = "feedback-error";
+      feedback.style.display = "block";
+    } finally {
+        btn.textContent = btnText;
+        btn.disabled = false;
+    }
+  }
+
+  // Click-to-call functionality
+  document.querySelectorAll('.phone-item').forEach(item => {
+    item.addEventListener('click', function () {
+      const phoneNumber = this.querySelector('span').textContent;
+      window.location.href = `tel:${phoneNumber}`;
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

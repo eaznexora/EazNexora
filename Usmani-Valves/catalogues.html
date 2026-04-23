@@ -1,0 +1,1654 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Usmani Valves - catalogues</title>
+  <link rel="icon" href="iconutvc.png" type="image/png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+       :root{
+      --topbar-bg:#0056A4;
+      --topbar-fg:#fff;
+      --topbar-x:16px;
+      --topbar-y:6px;
+      --topbar-gap:18px;
+      --brand:#0056A4;
+      --accent:#f9b916;
+    }
+
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+    }
+
+        /* ---------- TOP BAR ---------- */
+.top-bar {
+  background: var(--topbar-bg);
+  color: var(--topbar-fg);
+  font-size: 14px;
+  height: 40px;
+  display: flex;
+  justify-content: center; /* center content container */
+}
+
+.top-bar-inner {
+  width: 100%;
+  max-width: 1420px; /* same alignment as header/nav */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--topbar-y) 40px;
+  box-sizing: border-box;
+}
+
+.tb-left {
+  display: flex;
+  align-items: center;
+  gap: var(--topbar-gap);
+  font-weight: 800;
+  font-size: larger;
+}
+
+.tb-left span {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.tb-left i {
+  margin-right: 6px;
+}
+
+.tb-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tb-right img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/* ---------- HEADER ---------- */
+.header-main {
+  background: #fff;
+  display: flex;
+  justify-content: center; /* centers the header content */
+  padding: 10px 0;
+  height: 80px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1450px; /* unified width */
+  padding: 0 50px;   /* same side spacing */
+  box-sizing: border-box;
+}
+
+.header-left img,
+.header-right img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- NAV ---------- */
+.nav-bar {
+  background: var(--accent);
+  display: flex;
+  justify-content: center; /* center the nav container */
+  width: 100%;
+}
+
+.nav-bar .container {
+  width: 100%;
+  max-width: 1470px; /* same width as header/topbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+  gap: 30px;
+  height: 45px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-menu a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  padding: 6px 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.nav-menu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: #0056A4; /* blue background */
+  z-index: -1;
+  transition: width 0.35s ease;
+  border-radius: 5px;
+}
+
+.nav-menu a:hover::before {
+  width: 100%;
+}
+
+.nav-menu a:hover {
+  color: white;
+}
+.nav-menu a.active {
+  color: var(--brand);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-bar .nav-buttons a {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform .2s, background .2s, color .2s, box-shadow .2s;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.contact{
+  height: 15px;
+}
+
+.nav-buttons .contact {
+  background: #fff;
+  color: var(--brand);
+  border: 1px solid #ddd;
+}
+
+.nav-buttons .contact:hover {
+  color: #003e75;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  transform: translateY(-1px);
+}
+
+.quote{
+  height: 15px;
+}
+
+.nav-buttons .quote {
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid var(--brand);
+}
+
+.nav-buttons .quote:hover {
+  background: #004a90;
+  border-color: #004a90;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-bar .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  .nav-menu {
+    justify-content: center;
+  }
+}
+
+
+/* ---- FULL WIDTH HERO BANNER ---- */
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 80vh; /* 👑 Responsive height */
+  min-height: 500px; /* ensures good look on smaller screens */
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+  height: 80vh;
+  min-height: 500px;
+  position: relative;
+}
+
+.hero-track {
+  display: flex;
+  transition: transform .6s ease;
+  will-change: transform;
+}
+
+/* Buttons */
+.hero-cta {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  display: flex;
+  gap: 16px;
+}
+.btn {
+  padding: 10px 20px; /* 👑 same as navbar */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid transparent; /* matches navbar button border */
+  transition: transform .2s, background .2s, box-shadow .2s;
+  line-height: 1;
+}
+
+.btn-orange {
+  background: #e74a1a;
+  color: #fff;
+  border-color: #e74a1a;
+}
+.btn-orange:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(231,74,26,.35);
+}
+.btn-blue {
+  background: #1869bf;
+  color: #fff;
+  border-color: #1869bf;
+}
+.btn-blue:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(24,105,191,.35);
+}
+
+   /* --- ALIGN CATALOGUE SECTION WITH HEADER & NAV --- */
+.catalogue-section {
+  max-width: 1470px !important;  /* same width as navigation */
+  padding-left: 60px !important; /* same left padding */
+  padding-right: 60px !important;/* same right padding */
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+
+    /* CATALOGUE SECTION */
+    .catalogue-section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .catalogue-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .catalogue-header h1 {
+      font-size: 32px;
+      color: #333333;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .catalogue-header p {
+      font-size: 16px;
+      color: #444444;
+      margin: 0;
+    }
+
+    .catalogue-header::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #0060aa;
+      margin: 20px auto;
+    }
+
+    /* CATALOGUE GRID */
+    .catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+
+    .catalogue-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .catalogue-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .catalogue-image {
+      width: 100%;
+      height: 200px;
+      background: #707070;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .catalogue-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Make catalogue images look like PDF/book covers */
+.catalogue-image {
+  height: 450px !important;   /* taller, book-like shape */
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.catalogue-image img {
+  object-fit: cover !important;
+  object-position: top center; /* crops neatly */
+}
+
+
+    .catalogue-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .catalogue-title {
+      font-size: 14px;
+      color: #333;
+      margin: 0 0 15px 0;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .download-btn {
+      background: #e30613;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .download-btn:hover {
+      background: #b8050f;
+      transform: scale(1.02);
+    }
+
+    /* PAGINATION */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .pagination a {
+      display: inline-block;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      color: #666;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .pagination a:hover {
+      background: #f0f0f0;
+      border-color: #ccc;
+    }
+
+    .pagination a.active {
+      background: #fdb913;
+      color: #fff;
+      border-color: #fdb913;
+    }
+
+    .pagination a.prev,
+    .pagination a.next {
+      color: #0060aa;
+    }
+
+    .pagination a.prev:hover,
+    .pagination a.next:hover {
+      background: #0060aa;
+      color: #fff;
+    }
+
+    /* Stop 100vw overflow that causes the bottom scrollbar */
+.top-bar-inner { width: 100% !important; }     /* was 100vw */
+.hero-banner   { width: 100% !important; }     /* was 100vw */
+.hero-slide    { flex: 0 0 100% !important; }  /* was 100vw */
+
+/* Safety: never allow horizontal scrolling */
+html, body { overflow-x: hidden; }
+
+    /* FOOTER */
+    footer { background:#0060aa; color:#fff; margin-top:60px; }
+    .footer-top { display:flex; justify-content:space-between; flex-wrap:wrap; padding:40px 60px; }
+    .footer-col { flex:1; min-width:260px; margin:10px 20px; }
+    .footer-logo { height:60px; margin-bottom:10px; }
+    .footer-col h4 { font-size:16px; margin:15px 0 10px; font-weight:bold; }
+    .footer-col p, .footer-col a, .products-grid span { font-size:14px; line-height:1.6; color:#fff; text-decoration:none; }
+    .divider { border-top:1px solid rgba(255,255,255,0.4); margin:15px 0; }
+    .link-grid { display:grid; grid-template-columns: repeat(2, auto); gap:5px 40px; }
+    .subscribe-box { display:flex; margin:15px 0; border-radius:4px; overflow:hidden; max-width:320px; }
+    .subscribe-box input { flex:1; padding:12px; border:none; font-size:14px; color:#333; }
+    .subscribe-box button { background:#fdb913; border:none; padding:0 20px; cursor:pointer; font-size:16px; color:#000; font-weight:bold; transition:all 0.3s; }
+    .subscribe-box button:hover { background:#e5a900; }
+    .social-icons { display:flex; gap:12px; margin-top:10px; }
+    .social-icons a { display:flex; align-items:center; justify-content:center; width:38px; height:38px; background:#fff; color:#0060aa; border-radius:6px; font-size:18px; transition:transform 0.3s; }
+    .social-icons a:hover { transform:scale(1.15); }
+    .cert-logos img { height:70px; margin:10px 15px 0 0; }
+    .footer-bottom { background:#005299; text-align:center; padding:12px; font-size:13px; }
+    .footer-bottom a { color:#fff; margin:0 8px; text-decoration:none; }
+    .footer-bottom a:hover { text-decoration:underline; }
+    .products-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px 20px; margin-top:10px; }
+    .products-grid div, .products-grid span { font-size:14px; line-height:1.6; color:#fff; }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .catalogue-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar { padding: 8px 16px; }
+      .top-bar .left span { display: none; }
+      .top-bar .left i { font-size: 18px; }
+
+      .logo-row { padding: 12px 16px; }
+      .logo-with-text img:first-child { padding-left: 0; }
+      .logo-with-text img:last-child { padding-left: 0; }
+
+      nav { padding: 12px 16px; }
+      .nav-center { order: 1; width: 100%; display:none; }
+      .nav-buttons { order: 2; }
+      .mobile-hamburger { order: 3; display:inline-block; margin-left: 8px; }
+      .mobile-menu { display:none; order: 4; }
+
+      .catalogue-section { padding: 40px 20px; }
+      .catalogue-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-top { flex-direction: column; align-items: center; padding: 30px 20px; }
+      .footer-col { text-align: center; margin: 12px 0; max-width: 520px; min-width: auto; width: 100%; }
+    }
+
+    @media (max-width: 420px) {
+      .logo-with-text img { height: 52px; }
+      .catalogue-section { padding: 30px 15px; }
+      .catalogue-header h1 { font-size: 26px; }
+    }
+
+    /* Hidden pages for pagination */
+    .catalogue-page {
+      display: none;
+    }
+    .catalogue-page.active {
+      display: grid;
+    }
+
+    /* === FOOTER SOCIAL ICONS (Colorful like Header) === */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: flex-start; /* stays aligned like before */
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: transparent; /* remove white background */
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+.social-icons a:hover {
+  transform: scale(1.15);
+}
+
+/* optional glowing hover for a premium touch */
+.social-icons a[href*="insta"]:hover {
+  box-shadow: 0 0 12px rgba(228, 64, 95, 0.6); /* Instagram pink */
+}
+.social-icons a[href*="whatsapp"]:hover {
+  box-shadow: 0 0 12px rgba(37, 211, 102, 0.6); /* WhatsApp green */
+}
+.social-icons a[href*="facebook"]:hover {
+  box-shadow: 0 0 12px rgba(24, 119, 242, 0.6); /* Facebook blue */
+}
+
+/* center them nicely on mobile */
+@media (max-width: 768px) {
+  .social-icons {
+    justify-content: center;
+  }
+}
+/* Fix: Grid layout for all catalogue pages */
+.catalogue-page {
+  display: none !important;
+}
+
+.catalogue-page.active {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+
+/* Make Catalogue heading same as Clients heading */
+.catalogue-header {
+  text-align: center !important;
+  margin-bottom: 40px !important;
+}
+
+.catalogue-header h1 {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  margin-bottom: 10px !important;
+}
+
+.catalogue-header p {
+  font-size: 16px !important;
+  color: #555 !important;
+  margin-bottom: 10px !important;
+}
+
+.catalogue-header::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 15px auto 0;
+  background: #0060aa !important; /* same underline color */
+  border-radius: 3px;
+}
+/* Tighten space between navbar and catalogue heading (match Clients page) */
+.catalogue-section {
+  padding-top: 18px !important;    /* reduces space above the whole section */
+  padding-bottom: 40px !important; /* keep bottom comfortable */
+}
+
+.catalogue-header {
+  margin-top: 4px !important;      /* pulls the header up a bit */
+  margin-bottom: 28px !important;  /* a bit less space under heading */
+}
+
+/* fine tune heading text spacing so it visually matches Clients page */
+.catalogue-header h1 {
+  margin-top: 0 !important;
+  line-height: 1.05 !important;
+}
+
+.catalogue-header p {
+  margin-top: 6px !important;
+  margin-bottom: 0 !important;
+  color: #555 !important;
+}
+
+/* FINAL OVERRIDE — MAKE SMALL PDF CARDS */
+.catalogue-page.active {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 20px !important;
+}
+
+/* FORCE SMALL CARD */
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.catalogue-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 340px; /* consistent card height */
+}
+
+.catalogue-image {
+    width: 100%;
+    height: 180px;         /* smaller image area */
+    background: #eee;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalogue-image img {
+    height: 100%;
+    width: auto;           /* 👑 important: shows full PDF cover */
+    object-fit: contain;   /* so entire cover is visible */
+}
+
+.catalogue-content {
+    padding: 10px 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catalogue-title {
+    margin: 0 0 6px;
+    font-size: 13px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.download-btn {
+    background: #e30613;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 8px; /* lowers gap */
+}
+
+
+
+/* MAKE CARD LOOK LIKE A REAL PDF COVER */
+.catalogue-card {
+    height: 330px !important;          /* Taller card */
+    width: 100% !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* PDF cover shape (portrait) */
+.catalogue-image {
+    height: 220px !important;          /* Tall image like PDF */
+    width: 100% !important;
+    overflow: hidden !important;
+    border-bottom: 1px solid #eee !important;
+    background: #ccc !important;
+}
+
+/* Portrait image crop */
+.catalogue-image img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+}
+
+/* Text + button */
+.catalogue-content {
+    height: 110px !important;
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.catalogue-title {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+/* Small download button */
+.download-btn {
+    padding: 8px 0 !important;
+    font-size: 12px !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+}
+
+/* REAL PDF IMAGE FIX — final clean version */
+.catalogue-image {
+    height: 260px !important;          /* tall like PDF cover */
+    width: 100% !important;
+    background: #fff !important;
+    overflow: hidden !important;
+    border-bottom: 1px solid #eee !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* FILL THE IMAGE WITHOUT SHRINKING */
+.catalogue-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;      /* FILL THE BOX */
+    object-position: top center !important;
+}
+
+/* CARD FIX */
+.catalogue-card {
+    height: 380px !important;          /* perfect balance */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+/* CONTENT */
+.catalogue-content {
+    padding: 12px !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+/* TITLE FIX */
+.catalogue-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* BUTTON FIX */
+.download-btn {
+    padding: 10px 0 !important;
+    font-size: 13px !important;
+    border-radius: 6px !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+
+/* FIX 1 — MAKE IMAGE FILL PROPERLY (NO CROPPING, NO EMPTY SPACE) */
+.catalogue-image {
+    height: 200px !important;        /* perfect portrait height */
+    width: 100% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* FULL IMAGE WITH NO WHITE SPACE & NO CUT */
+.catalogue-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;     /* fills the whole frame */
+    object-position: center center !important;
+}
+
+/* FIX 2 — FIX CONTENT SPACING */
+.catalogue-content {
+    padding: 10px 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;              /* small gap between text & button */
+}
+
+/* TITLE FIX */
+.catalogue-title {
+    margin: 0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+/* FIX 3 — BUTTON CLOSE TO TEXT */
+.download-btn {
+    margin-top: 4px !important;       /* reduce gap */
+    padding: 10px 0 !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    width: 100% !important;
+}
+
+
+/* ==== FIX PDF COVER IMAGE LAYOUT ==== */
+.catalogue-image {
+    width: 100%;
+    height: 260px !important;     /* Taller like real PDF */
+    background: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalogue-image img {
+    width: auto !important;
+    height: 100% !important;       /* FULL HEIGHT of PDF cover */
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+/* ==== FIX SPACING BETWEEN TEXT & BUTTON ==== */
+.catalogue-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                     /* perfect spacing */
+}
+
+.catalogue-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* ==== MAKE BUTTON CONSISTENT ==== */
+.download-btn {
+    margin-top: auto;              /* stick button at bottom */
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+@media (max-width: 1400px) {
+  .catalogue-grid,
+  .catalogue-page.active {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .catalogue-grid,
+  .catalogue-page.active {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalogue-grid,
+  .catalogue-page.active {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="tb-left">
+        <span><i class="fa-solid fa-envelope"></i> info@usmanivalves.com</span>
+        <span><i class="fa-solid fa-phone"></i> +91 9833868523</span>
+      </div>
+      <div class="tb-right">
+        <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a>
+        <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header-main">
+  <div class="container header-flex">
+    <div class="header-left">
+      <img src="./Header & Footer/Header.png" alt="UTVC Logo">
+    </div>
+    <div class="header-right">
+      <img src="./Header & Footer/certificates.png" alt="Certifications">
+    </div>
+  </div>
+</div>
+
+
+  <!-- NAV -->
+  <div class="nav-bar">
+  <div class="container">
+    <div class="nav-menu">
+      <a href="index.html">HOME</a>
+      <a href="aboutus.html">ABOUT US</a>
+      <a href="products.html">PRODUCTS</a>
+      <a href="catalogues.html" class="active" style="color: black; border-bottom:3px solid #0056A4; padding-bottom:4px;">CATALOGUE</a>
+      <a href="certificates.html">CERTIFICATES</a>
+      <a href="client.html">CLIENTS</a>
+      <a href="blog.html">BLOG</a>
+      <a href="gallery.html">GALLERY</a>
+    </div>
+    <div class="nav-buttons">
+      <a href="contact.html" class="contact">Contact Us</a>
+      <a href="quote.html" class="quote">Get a Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- CATALOGUE SECTION -->
+<section class="catalogue-section">
+  <div class="catalogue-header">
+    <h1>Download Our Product Catalogues</h1>
+    <p>Explore our full range of valves and technical details in one place</p>
+  </div>
+
+  <!-- Page 1 -->
+  <div class="catalogue-grid catalogue-page active" id="page-1">
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="./Data/Catelogue/ca1.jpg" alt="Gate globe check Valve Forged Steel" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Gate globe check Valve Forged Steel</p>
+        <a href="./Data/Catelogue/Gate-globe-check-Valve-Forged Steel.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="./Data/Catelogue/ca2.jpg" alt="Safety relief valve" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Safety relief valve manufacturers</p>
+        <a href="./Data/Catelogue/Safety-relief-valve-manufacturers.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="./Data/Catelogue/ca3.jpg" alt="Gate valve carbon steel wcb" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Gate valve carbon steel wcb</p>
+        <a href="./Data/Catelogue/gate-valve-carbon-steel-wcb.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="./Data/Catelogue/ca4.jpg" alt="Gate Globe Check Ball Valve" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Gate Globe Check Ball Valve</p>
+        <a href="./Data/Catelogue/Gate-Globe-Check-Ball-Valve-Catalogue.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="./Data/Catelogue/ca1.jpg" alt="Ball Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Single piece ball valve manufacturers.</p>
+        <a href="catalogues/ball-valve-catalogue-5.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="./Data/Catelogue/ca2.jpg" alt="Ball Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Single piece ball valve manufacturers.</p>
+        <a href="catalogues/ball-valve-catalogue-6.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+<div class="catalogue-card">
+  <div class="catalogue-image">
+    <img src="./Data/Catelogue/ca3.jpg" alt="Ball Valve Catalogue" onerror="this.style.display='none'">
+  </div>
+  <div class="catalogue-content">
+    <p class="catalogue-title">Single piece ball valve manufacturers.</p>
+    <a href="catalogues/ball-valve-catalogue-5.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+  </div>
+</div>
+
+<div class="catalogue-card">
+  <div class="catalogue-image">
+    <img src="./Data/Catelogue/ca4.jpg" alt="Ball Valve Catalogue" onerror="this.style.display='none'">
+  </div>
+  <div class="catalogue-content">
+    <p class="catalogue-title">Single piece ball valve manufacturers.</p>
+    <a href="catalogues/ball-valve-catalogue-6.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+  </div>
+</div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="./Data/Catelogue/ca1.jpg" alt="Ball Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Single piece ball valve manufacturers.</p>
+        <a href="catalogues/ball-valve-catalogue-5.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="./Data/Catelogue/ca2.jpg" alt="Ball Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Single piece ball valve manufacturers.</p>
+        <a href="catalogues/ball-valve-catalogue-6.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+<div class="catalogue-card">
+  <div class="catalogue-image">
+    <img src="./Data/Catelogue/ca3.jpg" alt="Ball Valve Catalogue" onerror="this.style.display='none'">
+  </div>
+  <div class="catalogue-content">
+    <p class="catalogue-title">Single piece ball valve manufacturers.</p>
+    <a href="catalogues/ball-valve-catalogue-5.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+  </div>
+</div>
+
+<div class="catalogue-card">
+  <div class="catalogue-image">
+    <img src="./Data/Catelogue/ca4.jpg" alt="Ball Valve Catalogue" onerror="this.style.display='none'">
+  </div>
+  <div class="catalogue-content">
+    <p class="catalogue-title">Single piece ball valve manufacturers.</p>
+    <a href="catalogues/ball-valve-catalogue-6.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+  </div>
+</div>
+
+
+  </div>
+
+  
+
+  <!-- Page 2 -->
+  <div class="catalogue-grid catalogue-page" id="page-2">
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-check-valve-1.jpg" alt="Check Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Check valve manufacturers and suppliers.</p>
+        <a href="catalogues/check-valve-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-check-valve-2.jpg" alt="Check Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Check valve manufacturers and suppliers.</p>
+        <a href="catalogues/check-valve-catalogue-2.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-check-valve-3.jpg" alt="Check Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Check valve manufacturers and suppliers.</p>
+        <a href="catalogues/check-valve-catalogue-3.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-butterfly-valve-1.jpg" alt="Butterfly Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Butterfly valve manufacturers and suppliers.</p>
+        <a href="catalogues/butterfly-valve-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-butterfly-valve-2.jpg" alt="Butterfly Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Butterfly valve manufacturers and suppliers.</p>
+        <a href="catalogues/butterfly-valve-catalogue-2.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-butterfly-valve-3.jpg" alt="Butterfly Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Butterfly valve manufacturers and suppliers.</p>
+        <a href="catalogues/butterfly-valve-catalogue-3.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="catalogue-grid catalogue-page" id="page-3">
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-globe-valve-1.jpg" alt="Globe Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Globe valve manufacturers and suppliers.</p>
+        <a href="catalogues/globe-valve-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-globe-valve-2.jpg" alt="Globe Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Globe valve manufacturers and suppliers.</p>
+        <a href="catalogues/globe-valve-catalogue-2.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-globe-valve-3.jpg" alt="Globe Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Globe valve manufacturers and suppliers.</p>
+        <a href="catalogues/globe-valve-catalogue-3.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-safety-valve-1.jpg" alt="Safety Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Safety valve manufacturers and suppliers.</p>
+        <a href="catalogues/safety-valve-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-safety-valve-2.jpg" alt="Safety Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Safety valve manufacturers and suppliers.</p>
+        <a href="catalogues/safety-valve-catalogue-2.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-safety-valve-3.jpg" alt="Safety Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Safety valve manufacturers and suppliers.</p>
+        <a href="catalogues/safety-valve-catalogue-3.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 4 -->
+  <div class="catalogue-grid catalogue-page" id="page-4">
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-gate-valve-1.jpg" alt="Gate Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Gate valve manufacturers and suppliers.</p>
+        <a href="catalogues/gate-valve-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-gate-valve-2.jpg" alt="Gate Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Gate valve manufacturers and suppliers.</p>
+        <a href="catalogues/gate-valve-catalogue-2.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-gate-valve-3.jpg" alt="Gate Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Gate valve manufacturers and suppliers.</p>
+        <a href="catalogues/gate-valve-catalogue-3.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-control-valve-1.jpg" alt="Control Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Control valve manufacturers and suppliers.</p>
+        <a href="catalogues/control-valve-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-control-valve-2.jpg" alt="Control Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Control valve manufacturers and suppliers.</p>
+        <a href="catalogues/control-valve-catalogue-2.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-control-valve-3.jpg" alt="Control Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Control valve manufacturers and suppliers.</p>
+        <a href="catalogues/control-valve-catalogue-3.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 5 -->
+  <div class="catalogue-grid catalogue-page" id="page-5">
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-diaphragm-valve-1.jpg" alt="Diaphragm Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Diaphragm valve manufacturers and suppliers.</p>
+        <a href="catalogues/diaphragm-valve-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-diaphragm-valve-2.jpg" alt="Diaphragm Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Diaphragm valve manufacturers and suppliers.</p>
+        <a href="catalogues/diaphragm-valve-catalogue-2.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-diaphragm-valve-3.jpg" alt="Diaphragm Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Diaphragm valve manufacturers and suppliers.</p>
+        <a href="catalogues/diaphragm-valve-catalogue-3.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-plug-valve-1.jpg" alt="Plug Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Plug valve manufacturers and suppliers.</p>
+        <a href="catalogues/plug-valve-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-plug-valve-2.jpg" alt="Plug Valve Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Plug valve manufacturers and suppliers.</p>
+        <a href="catalogues/plug-valve-catalogue-2.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="catalogue-card">
+      <div class="catalogue-image">
+        <img src="catalogue-steam-trap-1.jpg" alt="Steam Trap Catalogue" onerror="this.style.display='none'">
+      </div>
+      <div class="catalogue-content">
+        <p class="catalogue-title">Steam trap manufacturers and suppliers.</p>
+        <a href="catalogues/steam-trap-catalogue-1.pdf" class="download-btn download-link" target="_blank">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <a href="#" class="prev" id="prevBtn">Previous</a>
+    <a href="#" data-page="1" class="page-num active">1</a>
+    <a href="#" data-page="2" class="page-num">2</a>
+    <a href="#" data-page="3" class="page-num">3</a>
+    <a href="#" data-page="4" class="page-num">4</a>
+    <a href="#" data-page="5" class="page-num">5</a>
+    <a href="#" class="next" id="nextBtn">Next</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-col company-info">
+      <img src="./Header & Footer/Footer.png" alt="Usmani Logo" class="footer-logo" />
+      <div class="divider"></div>
+      <p>
+        Virani Business Centre, B Wing 301,<br />
+        Opp. Bharath Gear Company Above<br />
+        Dawat Banquet Hall and Abhyudaya<br />
+        Bank Kausa Mumbra, Thane - 400612,
+      </p>
+      <p><i class="fas fa-envelope"></i> info@usmanivalves.com</p>
+      <p><i class="fas fa-phone"></i> +91 9833868523</p>
+      <div class="cert-logos">
+        <!-- <img src="usmani-header-certificates-logo.jpg" alt="CE" /> -->
+      </div>
+    </div>
+
+    <div class="footer-col links">
+      <h4>Company Links</h4>
+      <div class="link-grid">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="catalogues.html">CATALOGUE</a>
+        <a href="certificates.html">CERTIFICATES</a>
+        <a href="client.html">CLIENTS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Get a Quote</a>
+      </div>
+      <div class="divider"></div>
+      <h4>Products</h4>
+      <div class="products-grid">
+        <span>Ball Valve</span>
+        <span>Diaphragm Valve</span>
+        <span>Safety Valve</span>
+        <span>Check Valve</span>
+        <span>Butterfly Valve</span>
+        <span>Plug Valve</span>
+        <span>Control Valve</span>
+        <span>Globe Valve</span>
+        <span>Flush Valve</span>
+        <span>Disc Check Valve</span>
+        <span>Knife Gate</span>
+        <span>Basket Strainer Valve</span>
+        <span>Steam Trap</span>
+      </div>
+    </div>
+
+    <div class="footer-col subscribe">
+      <h4>Stay Connected</h4>
+      <p>
+        Subscribe for the latest valve news, product launches, and catalogues from
+        Usmani Tubes and Valves – trusted valve manufacturers in Mumbai, India.
+      </p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter Your Email Address" />
+        <button>→</button>
+      </div>
+      <div class="divider"></div>
+      <h4>Follow Usmani Tubes and Valves on</h4>
+      <div class="social-icons">
+        <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a> 
+        <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Usmani Tubes And Valves Co. Pvt. Ltd. All Rights Reserved
+    <!--<a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Certificates</a>-->
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+  // Mobile hamburger functionality
+  (function() {
+    var hamburger = document.getElementById('mobileHamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+
+    // If the elements do NOT exist, skip this script completely.
+    if (!hamburger || !mobileMenu) {
+      return;
+    }
+
+    function checkSmall() {
+      var mq = window.matchMedia('(max-width: 768px)');
+      if (mq.matches) {
+        hamburger.style.display = 'inline-block';
+      } else {
+        hamburger.style.display = 'none';
+        mobileMenu.style.display = 'none';
+      }
+    }
+    checkSmall();
+    window.addEventListener('resize', checkSmall);
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (mobileMenu.style.display === 'flex') {
+        mobileMenu.style.display = 'none';
+        mobileMenu.setAttribute('aria-hidden','true');
+      } else {
+        mobileMenu.style.display = 'flex';
+        mobileMenu.setAttribute('aria-hidden','false');
+      }
+    });
+
+    document.addEventListener('click', function(e){
+      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileMenu.style.display = 'none';
+        mobileMenu.setAttribute('aria-hidden','true');
+      }
+    });
+  })();
+
+
+  // PDF Preview and Download functionality
+  document.querySelectorAll('.download-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Let the browser open the PDF in a new tab immediately
+      // (target="_blank" does this automatically)
+
+      // Then after a short delay, trigger the download
+      const pdfUrl = this.href;
+      setTimeout(() => {
+        const a = document.createElement('a');
+        a.href = pdfUrl;
+        a.download = ''; // This will use the original filename
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }, 1000);
+    });
+  });
+
+   // Pagination functionality
+  (function() {
+    const totalPages = 5;
+    let currentPage = 1;
+
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const pageNums = document.querySelectorAll('.page-num');
+    const pages = document.querySelectorAll('.catalogue-page');
+
+    function showPage(pageNum) {
+      // Ensure pageNum stays within valid range
+      if (pageNum < 1) pageNum = 1;
+      if (pageNum > totalPages) pageNum = totalPages;
+
+      currentPage = pageNum;
+
+      // Hide all pages
+      pages.forEach(page => page.classList.remove('active'));
+
+      // Show correct page
+      document.getElementById(`page-${pageNum}`).classList.add('active');
+
+      // Update active button
+      pageNums.forEach(btn => {
+        btn.classList.toggle('active', parseInt(btn.dataset.page) === pageNum);
+      });
+
+      // Disable prev on page 1
+      prevBtn.style.opacity = pageNum === 1 ? '0.5' : '1';
+      prevBtn.style.pointerEvents = pageNum === 1 ? 'none' : 'auto';
+
+      // Disable next on last page
+      nextBtn.style.opacity = pageNum === totalPages ? '0.5' : '1';
+      nextBtn.style.pointerEvents = pageNum === totalPages ? 'none' : 'auto';
+    }
+
+    // Page number clicks
+    pageNums.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        showPage(parseInt(this.dataset.page));
+      });
+    });
+
+    // Prev button
+    prevBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      showPage(currentPage - 1);
+    });
+
+    // Next button
+    nextBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      showPage(currentPage + 1);
+    });
+
+    // Initialize
+    showPage(1);
+  })();
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

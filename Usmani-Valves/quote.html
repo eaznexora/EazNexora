@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Usmani Tubes and Valves Co Pvt. Ltd - Get a Quote</title>
+  <link rel="icon" href="iconutvc.png" type="image/png">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    :root{
+      --topbar-bg:#0056A4;
+      --topbar-fg:#fff;
+      --topbar-x:16px;
+      --topbar-y:6px;
+      --topbar-gap:18px;
+      --brand:#0056A4;
+      --accent:#f9b916;
+      --error-color: #dc3545;
+    }
+
+    /* ---------- TOP BAR ---------- */
+    .top-bar {
+      background: var(--topbar-bg);
+      color: var(--topbar-fg);
+      font-size: 14px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .top-bar-inner {
+      width: 100%;
+      max-width: 1420px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--topbar-y) 40px;
+      box-sizing: border-box;
+    }
+
+    .tb-left {
+      display: flex;
+      align-items: center;
+      gap: var(--topbar-gap);
+      font-weight: 800;
+      font-size: larger;
+    }
+
+    .tb-left span {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .tb-left i { margin-right: 6px; }
+
+    .tb-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tb-right img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      display: inline-block;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header-main {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      height: 80px;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1450px;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+
+    .header-left img, .header-right img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------- NAV ---------- */
+    .nav-bar {
+      background: var(--accent);
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .nav-bar .container {
+      width: 100%;
+      max-width: 1470px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      box-sizing: border-box;
+      gap: 30px;
+      height: 45px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-menu a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      position: relative;
+      overflow: hidden;
+      padding: 6px 10px;
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .nav-menu a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      background: #0056A4;
+      z-index: -1;
+      transition: width 0.35s ease;
+      border-radius: 5px;
+    }
+
+    .nav-menu a:hover::before { width: 100%; }
+    .nav-menu a:hover { color: white; }
+    .nav-menu a.active { color: var(--brand); }
+
+    .nav-buttons { display: flex; gap: 10px; }
+
+    .nav-bar .nav-buttons a {
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .contact{ height: 15px; }
+    .nav-buttons .contact { background: #fff; color: var(--brand); border: 1px solid #ddd; }
+    .nav-buttons .contact:hover { color: #003e75; box-shadow: 0 2px 8px rgba(0,0,0,.12); transform: translateY(-1px); }
+
+    .quote{ height: 15px; }
+    .nav-buttons .quote { background: var(--brand); color: #fff; border: 1px solid var(--brand); }
+    .nav-buttons .quote:hover { background: #004a90; border-color: #004a90; box-shadow: 0 2px 10px rgba(0,0,0,.15); transform: translateY(-1px); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-bar .container { flex-direction: column; align-items: center; gap: 20px; padding: 10px 20px; }
+      .nav-menu { justify-content: center; }
+    }
+
+
+    /* Animations */
+    @keyframes fadeInLeft { from{opacity:0;transform:translateX(-20px)} to{opacity:1;transform:translateX(0)} }
+    @keyframes fadeInRight{ from{opacity:0;transform:translateX(20px)}  to{opacity:1;transform:translateX(0)} }
+    @keyframes fadeInUp   { from{opacity:0;transform:translateY(20px)}  to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+
+    /* Quote form layout */
+    .quote-container {
+      max-width: 1350px; margin: 60px auto; background: #fff; border-radius: 16px;
+      overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      display: flex; animation: fadeInUp 0.8s ease-out both;
+    }
+    .quote-left {
+      width: 45%; padding: 40px; border-right: 1px solid #eee;
+      animation: fadeInLeft 0.8s ease-out both;
+    }
+    .quote-left h1 { font-size: 28px; margin-bottom: 16px; }
+    .quote-left p { font-size: 16px; margin-bottom: 24px; line-height: 1.5; color: #555; }
+    .quote-left h3 { font-size: 20px; margin-bottom: 12px; }
+    .quote-left ul { list-style: disc inside; color: #555; padding-left: 0; }
+    .quote-left ul li { margin-bottom: 12px; transition: color 0.3s; }
+    .quote-left ul li:hover { color: #0060aa; }
+
+    .quote-right {
+      width: 55%; padding: 40px; display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 32px 40px; animation: fadeInRight 0.8s ease-out both;
+    }
+    
+    .form-group { position: relative; margin-bottom: 25px; animation: fadeInDown 0.6s ease-out both; padding-top: 8px; }
+    .form-group label { position: absolute; top: 0; left: 0; background: #fff; padding: 0 4px; font-size: 14px; color: #666; font-weight: bold; }
+    
+    /* Unified Input Styling */
+    .form-group input, 
+    .form-group textarea, 
+    .form-group select {
+      width: 100%; border: none; border-bottom: 2px solid #ccc; padding: 8px 0; font-size: 15px;
+      transition: border-color 0.3s; outline: none; background: transparent; margin-top: 8px;
+      font-family: Arial, sans-serif;
+    }
+    .form-group input:focus, 
+    .form-group textarea:focus, 
+    .form-group select:focus { border-color: #0060aa; }
+    .form-group textarea { resize: vertical; height: 80px; }
+
+    /* --- TESTER UPGRADE: STYLED DROPDOWN --- */
+    .phone-input-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+      border-bottom: 2px solid #ccc; /* Bottom border on container for alignment */
+    }
+    
+    /* Remove individual bottom borders inside group */
+    .phone-input-group input, 
+    .phone-input-group select {
+        margin-top: 0;
+        border-bottom: none; 
+    }
+
+    /* Focus state for the whole group */
+    .phone-input-group:focus-within {
+        border-bottom-color: #0060aa;
+    }
+    
+    .phone-input-group select {
+      appearance: none; -webkit-appearance: none;
+      width: 100px; flex-shrink: 0; cursor: pointer;
+      font-weight: 700; color: #0060aa;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230060aa%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0 center;
+      background-size: 10px auto;
+      padding-right: 15px;
+    }
+
+    #customCountryCode {
+        width: 100px; flex-shrink: 0; display: none; 
+        text-align: center; font-weight: 700; color: #0060aa;
+    }
+
+    /* Error Messages */
+    .error-msg {
+      color: var(--error-color);
+      font-size: 11px;
+      display: none; 
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      font-weight: bold;
+    }
+    .form-group.error input, 
+    .form-group.error textarea, 
+    .form-group.error .phone-input-group {
+      border-bottom-color: var(--error-color);
+    }
+    .form-group.error .error-msg { display: block; }
+
+
+    .form-actions { grid-column: span 2; display: flex; gap: 20px; justify-content: flex-end; margin-top: 16px; animation: fadeInDown 0.6s ease-out both; }
+    
+    .form-actions button {
+      padding: 12px 24px; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      position: relative; overflow: hidden;
+    }
+
+    /* --- SHINE ANIMATION --- */
+    @keyframes sheen {
+      0% { left: -100%; }
+      20% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    .btn-call { background: #0060aa; color: #fff; }
+    
+    .btn-quote-send { 
+        background: #004b82; color: #fff; 
+        z-index: 1;
+    }
+    
+    /* Apply Shine to Quote Button */
+    .btn-quote-send::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      z-index: 2;
+      animation: sheen 4s infinite; 
+    }
+
+    .btn-quote-send:hover, .btn-call:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+    .loader {
+      border: 4px solid #f3f3f3; border-top: 4px solid #0060aa; border-radius: 50%; width: 20px; height: 20px;
+      animation: spin 1s linear infinite; display: inline-block; vertical-align: middle; margin-left: 8px;
+    }
+    @keyframes spin { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
+    
+    /* Toast Messages */
+    #formFeedback {
+        grid-column: span 2;
+        padding: 10px; border-radius: 5px; font-size: 13px;
+        display: none; text-align: center; margin-bottom: 15px;
+    }
+    .feedback-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+    .feedback-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+    /* Safety */
+    .top-bar-inner { width: 100% !important; }
+    html, body { overflow-x: hidden; }
+
+    /* FOOTER */
+    footer { background:#0060aa; color:#fff; margin-top:60px; }
+    .footer-top { display:flex; justify-content:space-between; flex-wrap:wrap; padding:40px 60px; }
+    .footer-col { flex:1; min-width:260px; margin:10px 20px; }
+    .footer-logo { height:60px; margin-bottom:10px; }
+    .footer-col h4 { font-size:16px; margin:15px 0 10px; font-weight:bold; }
+    .footer-col p, .footer-col a, .products-grid span { font-size:14px; line-height:1.6; color:#fff; text-decoration:none; }
+    .divider { border-top:1px solid rgba(255,255,255,0.4); margin:15px 0; }
+    .link-grid { display:grid; grid-template-columns: repeat(2, auto); gap:5px 40px; }
+    .subscribe-box { display:flex; margin:15px 0; overflow:hidden; max-width:320px; border-radius:4px; }
+    .subscribe-box input { flex:1; padding:12px; border:none; font-size:14px; color:#333; }
+    .subscribe-box button { background:#fdb913; border:none; padding:0 20px; cursor:pointer; font-size:16px; color:#000; font-weight:bold; transition:background .3s; }
+    .subscribe-box button:hover { background:#e5a900; }
+    .social-icons { display:flex; gap:12px; margin-top:10px; }
+    .social-icons a { width:38px; height:38px; background:#fff; color:#0060aa; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:18px; transition:transform .3s; }
+    .social-icons a:hover { transform:scale(1.15); }
+    .footer-bottom { background:#005299; text-align:center; padding:12px; font-size:13px; }
+    .footer-bottom a { color:#fff; margin:0 8px; text-decoration:none; }
+    .footer-bottom a:hover { text-decoration:underline; }
+    .products-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:8px 20px; margin-top:10px; }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .quote-container { flex-direction: column; }
+      .quote-left { border-right: none; border-bottom: 1px solid #eee; width: 100%; }
+      .quote-right { width: 100%; grid-template-columns: 1fr; }
+      .form-actions { justify-content: center; }
+    }
+    @media (max-width: 768px) {
+      .top-bar { padding: 8px 16px; }
+      .nav-menu { display:none; } /* Basic hiding for mobile since no hamburger logic provided in prompt */
+      .quote-container { margin: 30px 20px; }
+      .quote-left, .quote-right { padding: 20px; }
+      .social-icons { justify-content: center; }
+    }
+
+    /* === FOOTER SOCIAL ICONS === */
+    .social-icons { display: flex; gap: 12px; margin-top: 10px; justify-content: flex-start; }
+    .social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: transparent; border-radius: 6px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .social-icons img { width: 30px; height: 30px; object-fit: contain; display: block; }
+    .social-icons a:hover { transform: scale(1.15); }
+    @media (max-width: 768px) { .social-icons { justify-content: center; } }
+
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="tb-left">
+        <span><i class="fa-solid fa-envelope"></i> info@usmanivalves.com</span>
+        <span><i class="fa-solid fa-phone"></i> +91 9833868523</span>
+      </div>
+      <div class="tb-right">
+        <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a>
+        <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="container header-flex">
+      <div class="header-left">
+        <img src="./Header & Footer/Header.png" alt="UTVC Logo">
+      </div>
+      <div class="header-right">
+        <img src="./Header & Footer/certificates.png" alt="Certifications">
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <div class="container">
+      <div class="nav-menu">
+        <a href="index.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="catalogues.html">CATALOGUE</a>
+        <a href="certificates.html">CERTIFICATES</a>
+        <a href="client.html">CLIENTS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="gallery.html">GALLERY</a>
+      </div>
+      <div class="nav-buttons">
+        <a href="contact.html" class="contact">Contact Us</a>
+        <a href="quote.html" class="quote">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+
+<div class="quote-container">
+  <div class="quote-left">
+    <h1>Request a Quote from Usmani Valves</h1>
+    <p>Tell us about your requirements, and our team will get back with the best solution and pricing.</p>
+    <h3>Why Choose Us</h3>
+    <ul>
+      <li>High-Quality, Certified Valves</li>
+      <li>Customized Solutions for Every Industry</li>
+      <li>Fast Response and Global Delivery</li>
+      <li>Trusted by Leading Companies Worldwide</li>
+    </ul>
+  </div>
+  
+  <form id="quoteForm" class="quote-right" novalidate>
+    <div class="form-group">
+      <label for="companyName">Company Name</label>
+      <input type="text" id="companyName" name="companyName" required>
+      <small class="error-msg">Company Name is required</small>
+    </div>
+    
+    <div class="form-group">
+      <label for="yourName">Your Name</label>
+      <input type="text" id="yourName" name="yourName" required>
+      <small class="error-msg">Valid Name is required (letters only)</small>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <small class="error-msg">Please enter a valid email address</small>
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <div class="phone-input-group">
+          <select id="countryCode" name="countryCode">
+              <option value="+91" selected>🇮🇳 +91</option>
+              <option value="+971">🇦🇪 +971</option>
+              <option value="+966">🇸🇦 +966</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+974">🇶🇦 +974</option>
+              <option value="+968">🇴🇲 +968</option>
+              <option value="+965">🇰🇼 +965</option>
+              <option value="other">Other</option>
+          </select>
+          <input type="text" id="customCountryCode" placeholder="+Code">
+          <input type="tel" id="phone" name="phoneRaw" required>
+      </div>
+      <input type="hidden" id="fullPhone" name="phone">
+      <small class="error-msg">Valid phone number is required (digits only)</small>
+    </div>
+
+    <div class="form-group">
+      <label for="industry">Industry</label>
+      <input type="text" id="industry" name="industry" required>
+      <small class="error-msg">Industry field is required</small>
+    </div>
+    
+    <div class="form-group">
+      <label for="productType">Product Type</label>
+      <input type="text" id="productType" name="productType" required>
+      <small class="error-msg">Product Type is required</small>
+    </div>
+    
+    <div class="form-group">
+      <label for="quantity">Quantity Required</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+      <small class="error-msg">Please enter a valid quantity</small>
+    </div>
+
+    <div class="form-group" style="grid-column: span 2;">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Additional details (optional)"></textarea>
+    </div>
+    
+    <div id="formFeedback"></div>
+
+    <div class="form-actions">
+      <button class="btn-call" type="button" onclick="window.location.href='tel:+919833868523'">Request a call</button>
+      <button class="btn-quote-send" type="submit" id="sendQuoteBtn">Send a Quote</button>
+    </div>
+  </form>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-col company-info">
+      <img src="./Header & Footer/Footer.png" class="footer-logo" alt="Usmani Logo">
+      <div class="divider"></div>
+      <p>
+        Virani Business Centre, B Wing 301,<br>
+        Opp. Bharath Gear Company Above<br>
+        Dawat Banquet Hall and Abhyudaya<br>
+        Bank Kausa Mumbra, Thane – 400612
+      </p>
+      <p><i class="fas fa-envelope"></i> info@usmanivalves.com</p>
+      <p><i class="fas fa-phone"></i> +91 9833868523</p>
+    </div>
+    <div class="footer-col links">
+      <h4>Company Links</h4>
+      <div class="link-grid">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="catalogues.html">CATALOGUE</a>
+        <a href="certificates.html">CERTIFICATES</a>
+        <a href="client.html">CLIENTS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Get a Quote</a>
+      </div>
+      <div class="divider"></div>
+      <h4>Products</h4>
+      <div class="products-grid">
+        <span>Ball Valve</span><span>Diaphragm Valve</span><span>Safety Valve</span>
+        <span>Check Valve</span><span>Butterfly Valve</span><span>Plug Valve</span>
+        <span>Control Valve</span><span>Globe Valve</span><span>Flush Valve</span>
+        <span>Disc Check Valve</span><span>Knife Gate</span><span>Basket Strainer Valve</span>
+        <span>Steam Trap</span>
+      </div>
+    </div>
+    <div class="footer-col subscribe">
+      <h4>Stay Connected</h4>
+      <p>Subscribe for the latest valve news, product launches, and catalogues.</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter Your Email Address">
+        <button>→</button>
+      </div>
+      <div class="divider"></div>
+      <h4>Follow Usmani Tubes and Valves on</h4>
+      <div class="social-icons">
+        <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a> 
+        <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Usmani Tubes And Valves Co. Pvt. Ltd. All Rights Reserved
+  </div>
+</footer>
+
+<script>
+// ========== TESTER UPGRADE: ROBUST FORM LOGIC ==========
+(function () {
+  var form = document.getElementById('quoteForm');
+  var sendBtn = document.getElementById('sendQuoteBtn');
+  var countrySelect = document.getElementById('countryCode');
+  var customCountryInput = document.getElementById('customCountryCode');
+  var feedback = document.getElementById('formFeedback');
+
+  if (!form || !sendBtn) return;
+
+  // 1. "Other" Country Logic
+  countrySelect.addEventListener('change', function() {
+    if(this.value === 'other') {
+        this.style.display = 'none';
+        customCountryInput.style.display = 'block';
+        customCountryInput.focus();
+    }
+  });
+
+  // 2. Real-time Validation & Sanitization
+  var inputs = form.querySelectorAll('input, textarea, select');
+  
+  // Force numeric on phone
+  document.getElementById('phone').addEventListener('input', function(e) {
+      this.value = this.value.replace(/[^0-9]/g, '');
+  });
+
+  // Force text on Name (optional but good practice)
+  document.getElementById('yourName').addEventListener('input', function(e) {
+     // Allow letters, spaces, hyphens
+     this.value = this.value.replace(/[^a-zA-Z\s\-]/g, '');
+  });
+
+  function validateField(field) {
+    if(field.id === 'customCountryCode' && field.style.display === 'none') return true;
+    
+    var parent = field.closest('.form-group');
+    var isValid = true;
+    
+    if (field.hasAttribute('required') && !field.value.trim()) isValid = false;
+    
+    // Specific email check
+    if (field.type === 'email' && field.value.trim()) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(field.value)) isValid = false;
+    }
+    
+    // Toggle Error UI
+    if (!isValid) parent.classList.add('error');
+    else parent.classList.remove('error');
+    
+    return isValid;
+  }
+
+  inputs.forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
+    input.addEventListener('input', () => {
+        if(input.closest('.form-group').classList.contains('error')) validateField(input);
+    });
+  });
+
+  // 3. Submit Logic
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Check all fields
+    let formIsValid = true;
+    inputs.forEach(input => {
+        if (!validateField(input)) formIsValid = false;
+    });
+
+    if (!formIsValid) {
+        // Shake or scroll to top could be added here
+        return; 
+    }
+
+    // Prepare Data (Combine Country + Phone)
+    let finalCode = countrySelect.value;
+    if (countrySelect.value === 'other') {
+        finalCode = customCountryInput.value || ''; 
+    }
+    const rawPhone = document.getElementById('phone').value;
+    document.getElementById('fullPhone').value = `${finalCode} ${rawPhone}`;
+
+    // UI Updates
+    sendBtn.disabled = true;
+    const originalText = sendBtn.innerText;
+    sendBtn.innerHTML = 'Sending... <span class="loader"></span>';
+    feedback.style.display = 'none';
+
+    try {
+      // Create FormData from form
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      // Clean up internal fields before sending
+      delete data.phoneRaw;
+      delete data.countryCode;
+
+      // Note: Using the specific URL found in your code snippet
+      const res = await fetch('https://script.google.com/macros/s/AKfycbwFmcJM09OxrP7RV7uUdmAI7NRyXN_8zYXmQUFwvQBzrxqlh5PPvBJAv5f7yB5QsQf7Bg/exec', {
+        method: 'POST',
+        body: JSON.stringify(data)
+      });
+      
+      const result = await res.text();
+      
+      if (!res.ok) throw new Error('Network error');
+
+      // Success
+      feedback.textContent = "Success! Your quote request has been sent.";
+      feedback.className = "feedback-success";
+      feedback.style.display = "block";
+      
+      sendBtn.innerHTML = 'Submitted';
+      form.reset();
+      
+      // Reset UI states
+      countrySelect.style.display = 'block';
+      customCountryInput.style.display = 'none';
+
+      // Reset button after delay
+      setTimeout(() => {
+          sendBtn.disabled = false;
+          sendBtn.innerText = originalText;
+      }, 3000);
+
+    } catch (err) {
+      console.error(err);
+      feedback.textContent = "Unable to send. Please check your connection or call us directly.";
+      feedback.className = "feedback-error";
+      feedback.style.display = "block";
+      
+      sendBtn.disabled = false;
+      sendBtn.innerText = originalText;
+    }
+  });
+})();
+</script>
+</body>
+</html>

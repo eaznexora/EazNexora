@@ -1,0 +1,2960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Usmani Valves – Products</title>
+  <link rel="icon" href="iconutvc.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    /* --- Global Reset & Fonts --- */
+    body { margin:0; font-family:Arial,sans-serif; background:#f9f9f9; scroll-behavior:smooth; }
+    img { max-width:100%; display:block; }
+    button, a { font-family:inherit; }
+
+    :root{
+      --topbar-bg:#0056A4;
+      --topbar-fg:#fff;
+      --topbar-x:16px;
+      --topbar-y:6px;
+      --topbar-gap:18px;
+      --brand:#0056A4;
+      --accent:#f9b916;
+    }
+
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ---------- TOP BAR ------- */
+    .top-bar {
+      background: var(--topbar-bg);
+      color: var(--topbar-fg);
+      font-size: 14px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .top-bar-inner {
+      width: 100%;
+      max-width: 1420px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--topbar-y) 40px;
+      box-sizing: border-box;
+    }
+
+    .tb-left {
+      display: flex;
+      align-items: center;
+      gap: var(--topbar-gap);
+      font-weight: 800;
+      font-size: larger;
+    }
+
+    .tb-left span {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .tb-left i {
+      margin-right: 6px;
+    }
+
+    .tb-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tb-right img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      display: inline-block;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header-main {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      height: 80px;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1450px;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+
+    .header-left img,
+    .header-right img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------- NAV ---------- */
+    .nav-bar {
+      background: var(--accent);
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .nav-bar .container {
+      width: 100%;
+      max-width: 1470px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      box-sizing: border-box;
+      gap: 30px;
+      height: 45px;
+    }
+
+    .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-menu a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  padding: 6px 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.nav-menu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: #0056A4; /* blue background */
+  z-index: -1;
+  transition: width 0.35s ease;
+  border-radius: 5px;
+}
+
+.nav-menu a:hover::before {
+  width: 100%;
+}
+
+.nav-menu a:hover {
+  color: white;
+}
+.nav-menu a.active {
+  color: var(--brand);
+}
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-bar .nav-buttons a {
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .contact{
+      height: 15px;
+    }
+
+    .nav-buttons .contact {
+      background: #fff;
+      color: var(--brand);
+      border: 1px solid #ddd;
+    }
+
+    .nav-buttons .contact:hover {
+      color: #003e75;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      transform: translateY(-1px);
+    }
+
+    .quote{
+      height: 15px;
+    }
+
+    .nav-buttons .quote {
+      background: var(--brand);
+      color: #fff;
+      border: 1px solid var(--brand);
+    }
+
+    .nav-buttons .quote:hover {
+      background: #004a90;
+      border-color: #004a90;
+      box-shadow: 0 2px 10px rgba(0,0,0,.15);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 900px) {
+      .nav-bar .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 20px;
+      }
+      .nav-menu {
+        justify-content: center;
+      }
+    }
+
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: 80vh;
+      min-height: 500px;
+    }
+
+    .hero-slide {
+      flex: 0 0 100%;
+      height: 80vh;
+      min-height: 500px;
+      position: relative;
+    }
+
+    .hero-track {
+      display: flex;
+      transition: transform .6s ease;
+      will-change: transform;
+    }
+
+    .hero-cta {
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: transform .2s, background .2s, box-shadow .2s;
+      line-height: 1;
+    }
+
+    .btn-orange {
+      background: #e74a1a;
+      color: #fff;
+      border-color: #e74a1a;
+    }
+
+    .btn-orange:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(231,74,26,.35);
+    }
+
+    .btn-blue {
+      background: #1869bf;
+      color: #fff;
+      border-color: #1869bf;
+    }
+
+    .btn-blue:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(24,105,191,.35);
+    }
+
+    /* --- Layout Containers --- */
+    .catalog-container, .page-container { display:flex; gap:30px; padding:40px 20px; max-width:1200px; margin:0 auto;}
+    .catalog-sidebar { flex:0 0 220px; position:sticky; top:20px; }
+    .category-table { width:100%; border-collapse:collapse; }
+    .category-table th { background:#0056a3; color:#fff; padding:12px; text-align:left; }
+    .category-table td { background:#f7f7f7; padding:10px 12px; border-bottom:1px solid #ddd; }
+    .category-table tr.active > td { background:#e1e7f2; }
+    .category-table a { color:#333; text-decoration:none; display:block; transition:.2s;  }
+    .category-table a:hover { background:#e0e0e0; padding-left:8px; }
+
+    /* --- SUBCATEGORY DROPDOWN STYLES - SMOOTH ANIMATIONS --- */
+    .category-row {
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+    
+    .category-row.has-subcategories > td {
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+      padding: 10px 12px;
+      font-weight: 500;
+    }
+    
+    .category-row.has-subcategories:hover > td {
+      background: #E1E7F2;
+      transition: background-color 0.3s ease;
+    }
+    
+    .category-row.open > td {
+      background: #E1E7F2;
+      color: #0056a3;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* SMOOTH SLIDE-DOWN + FADE-IN ANIMATION */
+    .subcategory-row {
+      display: none;
+      background: linear-gradient(to bottom, #fff6bf 0%, #fff6bf 100%);
+      border-left: 3px solid #0056a3;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    
+    /* SHOW STATE - SLIDE DOWN + FADE IN */
+    .subcategory-row.show {
+      display: table-row !important;
+      max-height: 500px;
+      opacity: 1;
+      animation: slideDownFadeIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    
+    /* HIDE STATE - SLIDE UP + FADE OUT */
+    .subcategory-row.hide {
+      animation: slideUpFadeOut 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    
+    /* KEYFRAME ANIMATIONS */
+    @keyframes slideDownFadeIn {
+      from {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideUpFadeOut {
+      from {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    }
+    
+    /* SUBCATEGORY LINKS - SMOOTH HOVER EFFECT */
+    .subcategory-row td {
+      background: #fff6bf !important;
+      padding: 0 !important;
+      border-bottom: 1px solid #e5d900 !important;
+    }
+    
+    .subcategory-row a {
+      display: block;
+      padding: 12px 12px 12px 28px;
+      color: #0056a3;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .subcategory-row a::before {
+      content: "→";
+      position: absolute;
+      left: 12px;
+      opacity: 0;
+      transition: all 0.4s ease;
+      color: #0056a3;
+    }
+    
+    .subcategory-row a:hover {
+      background: #ffe680;
+      padding-left: 32px;
+      color: #003d7a;
+    }
+    
+    .subcategory-row a:hover::before {
+      opacity: 1;
+    }
+    
+    .subcategory-row.active a {
+      background: #fff6bf;
+      color: #0056a3;
+      font-weight: 600;
+    }
+
+    /* --- Catalog Grid --- REMOVED - styles kept for other pages */
+    .catalog-main { flex:1; }
+    .catalog-header { text-align:center; margin-bottom:24px; }
+    .catalog-header h2 { font-size:28px; margin:0 0 8px; position:relative; display:inline-block;}
+    .catalog-header h2::after { content:""; position:absolute; bottom:-6px; left:20%; width:60%; height:2px; background:#0056a3;}
+    .catalog-header p { color:#555; font-size:15px; line-height:1.6; max-width:800px; margin:0 auto; }
+    .catalog-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px; }
+
+    .catalog-item { 
+      background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.12);
+      overflow:hidden; transition:transform .15s ease, box-shadow .15s ease;
+      padding:12px; display:flex; flex-direction:column; gap:10px;
+      opacity:0; transform:translateY(20px);
+    }
+    
+    .catalog-item.visible { opacity:1; transform:translateY(0); }
+    .catalog-item:hover { transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,0.16); }
+    .catalog-item > img { width:100%; height:150px; object-fit:contain; border-radius:6px; background:#fff; }
+    .catalog-item-content { padding:0; text-align:center; }
+    .catalog-item-content h4 { margin:4px 0 6px; font-size:18px; font-weight:600; color:#333; }
+
+    .catalog-buttons { display:flex; gap:10px; justify-content:flex-start; }
+    .catalog-buttons .btn-quote,
+    .catalog-buttons .btn-info { 
+      flex:0 0 auto; padding:8px 14px; border-radius:6px; font-size:14px; font-weight:600; line-height:1; border:1px solid transparent; cursor:pointer;
+    }
+    .catalog-buttons .btn-quote { background:#1976d2; color:#fff; border-color:#1976d2; text-decoration:none; }
+    .catalog-buttons .btn-quote:hover { background:#165fa9; border-color:#165fa9; }
+    .catalog-buttons .btn-info { background:#e0e0e0; color:#555; border-color:#d5d5d5; }
+    .catalog-buttons .btn-info:hover { background:#d6d6d6; }
+
+    /* --- Pagination --- */
+    .pagination { text-align:center; padding:20px 0; }
+    .page-btn { border:1px solid #ccc; background:none; color:#444; margin:0 4px; padding:6px 12px; cursor:pointer; transition:.2s; }
+    .page-btn:hover { background:#f0f0f0; }
+    .page-btn.active { background:#0056a3; color:#fff; border-color:#0056a3; }
+    .page-btn.prev, .page-btn.next { font-weight:bold; }
+
+    /* Detail layout */
+    .detail-pixel { padding: 24px 20px !important; gap: 28px !important; }
+    .detail-pixel__sidebar { flex: 0 0 280px !important; }
+
+    .detail-cats thead th{
+      background:#0d47a1 !important;
+      color:#fff !important;
+      font-weight:800;
+      font-size:16px;
+      letter-spacing:.2px;
+      padding:12px 14px !important;
+    }
+    
+    .detail-cats tbody td{
+      background:#f3f4f6 !important;
+      padding:0 !important;
+      border-bottom:1px solid #e5e7eb !important;
+    }
+    
+    .detail-cats tbody a{
+      display:block;
+      padding:12px 14px;
+      color:#1f2937;
+      text-decoration:none;
+      font-size:14px;
+      line-height:1.25;
+    }
+    
+    .detail-cats tbody tr.active td{ background:#fff6bf !important; }
+
+    .detail-pixel__header{ margin: 0 0 10px; position: relative; }
+    .detail-pixel__title{
+      margin:0 32px 4px 0;
+      font-size:30px;
+      line-height:1.15;
+      color:#1e63c8;
+      letter-spacing: .2px;
+    }
+    
+    .detail-pixel__share{
+      position:absolute;
+      top:6px; right:0;
+      color:#1b8a37;
+      font-size:18px;
+      cursor:pointer;
+    }
+    
+    .detail-pixel__sub{
+      margin:0 0 10px;
+      color:#6b7280;
+      font-size:14px;
+      line-height:1.5;
+      max-width: 720px;
+    }
+    
+    .detail-pixel__rule{
+      border:0;
+      border-top:1px solid #e5e7eb;
+      margin: 0;
+    }
+
+    .detail-pixel__grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      align-items:start;
+      gap: 24px;
+    }
+
+    .detail-pixel__featTitle{
+      margin: 6px 0 10px;
+      font-size:18px;
+      color:#1f2937;
+      letter-spacing:.2px;
+    }
+    
+    .detail-specs{
+      font-size:14px;
+      color:#111;
+      line-height:1.55;
+    }
+    
+    .detail-pixel__features{ padding-right: 8px; }
+
+    .detail-pixel__imgCard{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:12px;
+      padding:18px;
+      text-align:center;
+      box-shadow:0 1px 2px rgba(0,0,0,.04);
+    }
+    
+    .detail-pixel__imgCard img{
+      width:100%;
+      max-width:260px;
+      height:auto;
+      margin:0 auto;
+      display:block;
+    }
+
+    .detail-pixel__thumbs{ display:none !important; }
+
+    .detail-pixel__cta{
+      margin-top: 16px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    
+    .detail-pixel__btnPDF{
+      height:44px;
+      border:none;
+      border-radius:8px;
+      background:#ef233c;
+      color:#fff;
+      font-weight:700;
+      font-size:16px;
+      cursor:pointer;
+    }
+    
+    .detail-pixel__btnQuote{
+      height:44px;
+      border-radius:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      background:#0d47a1;
+      color:#fff;
+      font-weight:700;
+      font-size:16px;
+    }
+    
+    .detail-pixel__more{
+      display: block;
+      text-align: center;
+      margin-top: 14px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #737373 !important;
+      text-decoration: none;
+      letter-spacing: .2px;
+      line-height: 1.25;
+    }
+
+    .detail-pixel__more:hover{
+      color: #000 !important;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px){
+      .detail-pixel__grid{ grid-template-columns: 1fr; gap:16px; }
+      .detail-pixel__sidebar{ position:relative; top:auto; }
+      .detail-pixel__imgCard{ max-width: 360px; margin: 0 auto; }
+    }
+
+    .btn-quote,
+    a.btn-quote {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      background: #1976d2;
+      border: 1px solid #1976d2;
+      text-decoration: none;
+      line-height: 1;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .05s ease;
+    }
+
+    .btn-quote:hover,
+    a.btn-quote:hover {
+      background: #165fa9;
+      border-color: #165fa9;
+      box-shadow: 0 2px 8px rgba(25,118,210,0.35);
+    }
+
+    .btn-quote:active,
+    a.btn-quote:active {
+      transform: translateY(1px);
+    }
+
+    .top-bar-inner { width: 100% !important; }
+    .hero-banner   { width: 100% !important; }
+    .hero-slide    { flex: 0 0 100% !important; }
+
+    html, body { overflow-x: hidden; }
+
+    footer{background:#0060aa;color:#fff;margin-top:60px}
+    .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;padding:40px 60px}
+    .footer-col{flex:1;min-width:260px;margin:10px 20px}
+    .footer-logo{height:60px;margin-bottom:10px}
+    .footer-col h4{font-size:16px;margin:15px 0 10px;font-weight:bold}
+    .footer-col p,.footer-col a,.products-grid span{font-size:14px;line-height:1.6;color:#fff;text-decoration:none}
+    .divider{border-top:1px solid rgba(255,255,255,0.4);margin:15px 0}
+    .link-grid{display:grid;grid-template-columns:repeat(2,auto);gap:5px 40px}
+    .subscribe-box{display:flex;margin:15px 0;border-radius:4px;overflow:hidden;max-width:320px}
+    .subscribe-box input{flex:1;padding:12px;border:none;font-size:14px;color:#333}
+    .subscribe-box button{background:#fdb913;border:none;padding:0 20px;cursor:pointer;font-size:16px;color:#000;font-weight:bold;transition:all .3s}
+    .subscribe-box button:hover{background:#e5a900}
+    .social-icons{display:flex;gap:12px;margin-top:10px}
+    .social-icons a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:#fff;color:#0060aa;border-radius:6px;font-size:18px;transition:transform .3s}
+    .social-icons a:hover{transform:scale(1.15)}
+    .cert-logos img{height:70px;margin:10px 15px 0 0}
+    .footer-bottom{background:#005299;text-align:center;padding:12px;font-size:13px}
+    .footer-bottom a{color:#fff;margin:0 8px;text-decoration:none}
+    .footer-bottom a:hover{text-decoration:underline}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px 20px;margin-top:10px}
+    .products-grid div,.products-grid span{font-size:14px;line-height:1.6;color:#fff}
+
+    @media (max-width:768px){
+      .footer-top{flex-direction:column;align-items:center;padding:30px 20px}
+      .footer-col{text-align:center;margin:12px 0;max-width:520px;min-width:auto;width:100%}
+    }
+
+    @media(max-width:768px){
+      .mobile-hamburger{display:inline-block;}
+      nav.site-nav .nav-center{display:none;}
+      .mobile-menu{display:flex;}
+      .catalog-container,.page-container{flex-direction:column;padding:20px;}
+      .catalog-sidebar{position:relative;top:auto;margin-bottom:20px;}
+      .footer-top{flex-direction:column;align-items:center;padding:30px 20px;}
+      .detail-content{flex-direction:column;}
+      .swiper{width:100%!important;}
+      .catalog-item > img { height:140px; }
+    }
+    
+/* --- ALIGN PRODUCT DETAIL SECTION WITH HEADER/NAV --- */
+.page-container.detail-pixel {
+  max-width: 1470px !important;  /* same width as the nav bar */
+  padding-left: 60px !important; /* perfectly aligned with nav left */
+  padding-right: 60px !important;
+  margin: 0 auto !important;     /* center on the page */
+  box-sizing: border-box !important;
+}
+
+
+.catalog-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px 60px !important;   /* same as nav bar */
+  max-width: 1450px !important;     /* same as nav bar */
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.catalog-sidebar {
+  width: 260px !important;
+  min-width: 260px !important;
+}
+
+
+    #catalogSection .catalog-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 22px !important;
+    }
+
+    #catalogSection .catalog-item,
+    #catalogSection .catalog-item.visible {
+      background: #fff !important;
+      border: 1px solid #e2e2e2 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05) !important;
+      padding: 14px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    #catalogSection .catalog-item > img {
+      width: 100% !important;
+      height: 160px !important;
+      object-fit: contain !important;
+      margin: 0 auto 6px !important;
+    }
+
+    #catalogSection .catalog-item-content h4 {
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+      margin: 6px 0;
+    }
+
+    #catalogSection .catalog-item-content {
+      text-align: left !important;
+      padding: 0 !important;
+    }
+    
+    #catalogSection .catalog-item-content h4 {
+      margin: 4px 0 10px !important;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      color: #111 !important;
+      font-family: 'Poppins', Arial, sans-serif !important;
+    }
+
+    #catalogSection .catalog-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    #catalogSection .catalog-buttons .btn-quote,
+    #catalogSection .catalog-buttons .btn-info {
+      flex: 1 1 48%;
+      max-width: 140px;
+      min-width: 100px;
+      padding: 8px 0;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    #catalogSection .catalog-buttons .btn-quote {
+      background: #0056d2;
+      color: #fff;
+    }
+
+    #catalogSection .catalog-buttons .btn-info {
+      background: #e0e0e0;
+      color: #555;
+    }
+
+    #catalogSection .catalog-buttons .btn-quote:hover {
+      background: #0041a8;
+    }
+    
+    #catalogSection .catalog-buttons .btn-info:hover {
+      background: #d6d6d6;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+      justify-content: flex-start;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: transparent;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.15);
+    }
+
+    .social-icons a[href*="insta"]:hover {
+      box-shadow: 0 0 12px rgba(228, 64, 95, 0.6);
+    }
+    
+    .social-icons a[href*="whatsapp"]:hover {
+      box-shadow: 0 0 12px rgba(37, 211, 102, 0.6);
+    }
+    
+    .social-icons a[href*="facebook"]:hover {
+      box-shadow: 0 0 12px rgba(24, 119, 242, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .social-icons {
+        justify-content: center;
+      }
+    }
+
+    /* --- PRODUCT DETAIL TRANSITION (Premium Version) --- */
+
+.detail-transition {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+    filter: blur(3px);
+    transition: 
+        opacity 0.45s ease,
+        transform 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 0.45s ease;
+}
+
+.detail-transition.show {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+}
+
+/* ================================
+   ADVANCED ANIMATION PACK
+   Premium Transition Effects
+================================ */
+
+/* Smooth fade slide container */
+.adv-transition {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+    filter: blur(5px);
+    transition: all 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.adv-transition.show {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+}
+
+/* Title + description slide-in left */
+.adv-fade-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.adv-fade-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Image zoom-in effect */
+.adv-zoom-image {
+    opacity: 0;
+    transform: scale(0.9) translateY(15px);
+    transition: all 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.adv-zoom-image.show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Specs list stagger animation */
+.spec-line {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.45s ease;
+}
+.spec-line.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Thumbnails stagger animation */
+.thumb-anim {
+    opacity: 0;
+    transform: translateY(15px) scale(0.95);
+    transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.thumb-anim.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Do NOT force display so JS can hide/show it */
+#seeMoreLink {
+  background: #f4c317;
+  color: #000 !important;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #d4a80f;
+  width: 100%;
+  text-decoration: none;
+  margin-top: 12px;
+  box-sizing: border-box;
+  transition: 0.25s ease-in-out;
+}
+
+#seeMoreLink:hover {
+  background: #e0b010;
+  border-color: #bb950c;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="tb-left">
+        <span><i class="fa-solid fa-envelope"></i> info@usmanivalves.com</span>
+        <span><i class="fa-solid fa-phone"></i> +91 9833868523</span>
+      </div>
+      <div class="tb-right">
+        <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a>
+        <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header-main">
+    <div class="container header-flex">
+      <div class="header-left">
+        <img src="./Header & Footer/Header.png" alt="UTVC Logo">
+      </div>
+      <div class="header-right">
+        <img src="./Header & Footer/certificates.png" alt="Certifications">
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav-bar">
+    <div class="container">
+      <div class="nav-menu">
+        <a href="index.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="products.html" class="active" style="color: black; border-bottom:3px solid #0056A4; padding-bottom:4px;">PRODUCTS</a>
+        <a href="catalogues.html">CATALOGUE</a>
+        <a href="certificates.html">CERTIFICATES</a>
+        <a href="client.html">CLIENTS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="gallery.html">GALLERY</a>
+      </div>
+      <div class="nav-buttons">
+        <a href="contact.html" class="contact">Contact Us</a>
+        <a href="quote.html" class="quote">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <button class="mobile-hamburger" id="mobileHamburger"><i class="fas fa-bars"></i></button>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="">Valve Gallery</a>
+    <a href="#"> Quality Policy</a>
+    <a href="#">Catalogue</a>
+    <a href="client.html">Clients</a>
+  </div>
+
+  <main>
+    <!-- DETAIL (Left categories + product list -> Right detail) -->
+    <section class="page-container detail-pixel" id="detailSection" style="display:flex;">
+      <aside class="catalog-sidebar detail-pixel__sidebar">
+        <!-- MAIN CATEGORY LIST (was in catalogSection) -->
+        <table class="category-table">
+          <thead><tr><th>Categories</th></tr></thead>
+          <tbody id="categoryBody"></tbody>
+        </table>
+
+        <!-- Product list for selected subcategory (detail sidebar list) -->
+        <table class="category-table detail-cats" style="margin-top:18px;">
+          <thead>
+            <tr><th id="detailCategoryHeader">Products</th></tr>
+          </thead>
+          <tbody id="detailCategoryBody"></tbody>
+        </table>
+      </aside>
+
+      <div class="detail-main visible detail-pixel__main" style="flex:1;">
+        <div class="detail-header detail-pixel__header">
+          <h1 id="detailTitle" class="detail-pixel__title">Product Title</h1>
+          <i class="fas fa-share-alt detail-pixel__share" title="Share"></i>
+          <p id="detailDesc" class="detail-pixel__sub">Product short description will appear here.</p>
+          <hr class="detail-pixel__rule">
+        </div>
+
+        <div class="detail-pixel__grid">
+          <div class="detail-pixel__features">
+            <h3 class="detail-pixel__featTitle">Salient Features</h3>
+            <div class="detail-specs" id="detailSpecs"></div>
+          </div>
+
+          <div class="detail-pixel__right">
+            <div class="detail-pixel__imgCard">
+              <img id="mainImage" src="" alt="">
+            </div>
+
+            <div class="swiper mySwiper detail-pixel__thumbs">
+              <div class="swiper-wrapper" id="detailSwiperWrapper"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="detail-pixel__cta">
+              <button class="detail-pixel__btnPDF" id="downloadPdfBtn" type="button">Download PDF</button>
+              <a class="detail-pixel__btnQuote" id="detailQuoteBtn" href="quote.html">Get Quote</a>
+              <a class="detail-pixel__more" id="seeMoreLink" href="#catalogSection" style="display:none;">Back to Products →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-col company-info">
+        <img src="./Header & Footer/Footer.png" alt="Usmani Logo" class="footer-logo" />
+        <div class="divider"></div>
+        <p>
+          Virani Business Centre, B Wing 301,<br />
+          Opp. Bharath Gear Company Above<br />
+          Dawat Banquet Hall and Abhyudaya<br />
+          Bank Kausa Mumbra, Thane - 400612,
+        </p>
+        <p><i class="fas fa-envelope"></i> info@usmanivalves.com</p>
+        <p><i class="fas fa-phone"></i> +91 9833868523</p>
+        <div class="cert-logos">
+        </div>
+      </div>
+
+      <div class="footer-col links">
+        <h4>Company Links</h4>
+        <div class="link-grid">
+          <a href="index.html">Home</a>
+          <a href="aboutus.html">ABOUT US</a>
+          <a href="products.html">PRODUCTS</a>
+          <a href="catalogues.html">CATALOGUE</a>
+          <a href="certificates.html">CERTIFICATES</a>
+          <a href="client.html">CLIENTS</a>
+          <a href="blog.html">BLOG</a>
+          <a href="gallery.html">GALLERY</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="quote.html">Get a Quote</a>
+        </div>
+        <div class="divider"></div>
+        <h4>Products</h4>
+        <div class="products-grid">
+          <span>Ball Valve</span>
+          <span>Diaphragm Valve</span>
+          <span>Safety Valve</span>
+          <span>Check Valve</span>
+          <span>Butterfly Valve</span>
+          <span>Plug Valve</span>
+          <span>Control Valve</span>
+          <span>Globe Valve</span>
+          <span>Flush Valve</span>
+          <span>Disc Check Valve</span>
+          <span>Knife Gate</span>
+          <span>Basket Strainer Valve</span>
+          <span>Steam Trap</span>
+        </div>
+      </div>
+
+      <div class="footer-col subscribe">
+        <h4>Stay Connected</h4>
+        <p>
+          Subscribe for the latest valve news, product launches, and catalogues from
+          Usmani Tubes and Valves – trusted valve manufacturers in Mumbai, India.
+        </p>
+        <div class="subscribe-box">
+          <input type="email" placeholder="Enter Your Email Address" />
+          <button>→</button>
+        </div>
+        <div class="divider"></div>
+        <h4>Follow Usmani Tubes and Valves on</h4>
+        <div class="social-icons">
+          <a href="#"><img src="./Social/insta.png" alt="Instagram"></a>
+          <a href="#"><img src="./Social/whatsapp.png" alt="WhatsApp"></a> 
+          <a href="#"><img src="./Social/facebook.png" alt="Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Usmani Tubes And Valves Co. Pvt. Ltd. All Rights Reserved
+      <!--<a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Certificates</a>-->
+    </div>
+
+    <div id="imgModal" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+">
+
+  <!-- CLOSE BUTTON -->
+  <div id="modalClose" style="
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+    font-weight:700;
+    z-index:10000;
+    user-select:none;
+  ">×</div>
+
+  <!-- IMAGE -->
+  <img id="modalImage" style="
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(255,255,255,0.3);
+  "/>
+
+</div>
+
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+(function(){
+  var hamburger=document.getElementById('mobileHamburger');
+  var mobileMenu=document.getElementById('mobileMenu');
+
+  function checkSmall(){
+    var mq=window.matchMedia('(max-width: 768px)');
+    if(mq.matches) hamburger.style.display='inline-block';
+    else{ hamburger.style.display='none'; mobileMenu.style.display='none'; }
+  }
+  checkSmall();
+  window.addEventListener('resize',checkSmall);
+
+  hamburger?.addEventListener('click',function(e){
+    e.stopPropagation();
+    mobileMenu.style.display = (mobileMenu.style.display==='flex') ? 'none' : 'flex';
+  });
+
+  document.addEventListener('click',function(e){
+    if(mobileMenu && !mobileMenu.contains(e.target) && !hamburger.contains(e.target)){
+      mobileMenu.style.display='none';
+    }
+  });
+})();
+
+/* ------------------ DATA ------------------ */
+/* Keep your productCategories data exactly as before.
+   (I paste your original array here unchanged) */
+
+const productCategories = [
+  {
+    name: "Ball Valve",
+    desc: "Engineered for reliable flow control with secure, quarter-turn operation across industrial applications.",
+    subcategories: [
+      {
+        name: "Floating Ball Valves",
+        desc: "High-performance floating ball valves with blow-out proof stem.",
+        types: [
+          {
+            name: "Ball Valve Three Piece",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            pdf: "./pdfs/ball_valve_three_piece.pdf",
+            specs:[ 
+    "<strong>Design:</strong> Three Piece Ball valve blow out proof stem construction",
+    "<strong>Material:</strong> CS ASTM A 216 Gr. WCB, A105, LF2, CF8, CF8M etc.",
+    "<strong>Ball & Trims:</strong> SS 304, 304L, 316, 316L",
+    "<strong>Seat:</strong> PTFE, GFT, CFT",
+    "<strong>Action:</strong> Manual, Lever",
+    "<strong>Rating:</strong> ASA 800",
+    "<strong>Ends Connection:</strong> Screwed ends, Socket weld, Butt weld",
+    "<strong>Port:</strong> Full & Reduce",
+    "<strong>Manufacturing Standard:</strong> BS 5351 / B16.34 / API 6D, API 609 / MSS SP 72",
+    "<strong>Testing Standard:</strong> API 598 / BS 6755",
+    "<strong>Applications:</strong> Air, Gas, Water, Chemicals, Pharma, Oil, Acid, Foods, Vacuum, Heat Treatment, Paper & Sugar Industries" ]
+          },
+          {
+            name: "Ball Valve Three Piece Flange",
+            desc: "UTVC Ball Valve Three Piece Flanged End Floating Investment casting",
+            mainImage: "./Products/p1.1.2.jpg",
+            gallery:[ "./Products/p1.1.2.jpg","./Products/p1.1.2.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> Three piece ball valve full bore",
+    "<strong>Material:</strong> CS ASTM A 216 Gr. WCB, CF8, CF8M etc.",
+    "<strong>Ball & Trims:</strong> SS 304,304L, 316,316L",
+    "<strong>Seat:</strong> PTFE, GFT, CFT",
+    "<strong>Action:</strong> Manual, Lever, Gear operated",
+    "<strong>Rating:</strong> ASA 150, 300",
+    "<strong>Ends Connection:</strong> Flanged ends but weld",
+    "<strong>Port:</strong> Full Bore",
+    "<strong>Manufacturing Standard:</strong> BS 5351/B16.34 /API 6D-ISO 14313/ API 609/MSS SP 72",
+    "<strong>Testing Standard:</strong> API 598 / BS 6755",
+    "<strong>Applications:</strong> Air, Gas, Water, Chemicals, Pharma, Pharmaceuticals, Oil, Acid, Foods, Vacuum, Heat Treatment, Paper & Sugar Industries fire fitting etc."]
+          },
+          {
+            name: "Ball Valve Two Piece Full Bore",
+            desc: "UTVC Ball Valve Two Piece Flanged End Floating type mounting paid",
+            mainImage: "./Products/p1.1.3.jpg",
+            gallery:[ "./Products/p1.1.3.jpg","./Products/p1.1.3.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> Two piece ball valve Fire safe design full bore",
+    "<strong>Material:</strong> CS ASTM A 216 Gr. WCB, LCB, LCC, CF8, CF8M etc.",
+    "<strong>Ball & Trims:</strong> SS 304,304L, 316,316L, monel",
+    "<strong>Seat:</strong> PTFE, GFT, CFT",
+    "<strong>Action:</strong> Manual, Lever, Gear operated with pneumatic Actuator",
+    "<strong>Rating:</strong> ASA 150, 300",
+    "<strong>Ends Connection:</strong> Flanged ends but weld",
+    "<strong>Port:</strong> Full & Reduce",
+    "<strong>Manufacturing Standard:</strong> BS 5351/B16.34 /API 6D-ISO 14313/ API 609/MSS SP 72",
+    "<strong>Testing Standard:</strong> API 598 / BS 6755",
+    "<strong>Applications:</strong> Air, Gas, Water, Chemicals, Pharma, Oil, Acid, Foods, Vacuum, Heat Treatment, Paper & Sugar Industries"]
+          },
+          {
+            name: "Ball Valve Single Piece Reduce Bore",
+            desc: "UTVC Ball Valve Single Piece flanged end Floating type mounting paid",
+            mainImage: "./Products/p1.1.4.jpg",
+            gallery:[ "./Products/p1.1.4.jpg","./Products/p1.1.4.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> Single Piece Ball valve Fire safe design Reduce bore",
+    "<strong>Material:</strong> CS ASTM A 216 Gr. WCB, LCB, LCC, CF8, CF8M etc.",
+    "<strong>Ball & Trims:</strong> SS 304,304L, 316,316L, monel",
+    "<strong>Seat:</strong> PTFE, GFT, CFT",
+    "<strong>Action:</strong> Manual, Lever, Gear operated with pneumatic Actuator",
+    "<strong>Rating:</strong> ASA 150, 300",
+    "<strong>Ends Connection:</strong> Flanged ends but weld",
+    "<strong>Port:</strong> Reduce",
+    "<strong>Manufacturing Standard:</strong> BS 5351/B16.34 /API 6D-ISO 14313/ API 609/MSS SP 72",
+    "<strong>Testing Standard:</strong> API 598 / BS 6755",
+    "<strong>Applications:</strong> Air, Gas, Water, Chemicals, Pharma, Oil, Acid, Foods, Vacuum, Heat Treatment, Paper & Sugar Industries"]
+          },
+          {
+            name: "Ball valve One piece WOG 2000",
+            desc: "UTVC Ball Valve One Piece Floating type (investment casting)",
+            mainImage: "./Products/p1.1.5.jpg",
+            gallery:[ "./Products/p1.1.5.jpg","./Products/p1.1.5.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> Three Piece Ball valve blow out proof stem design",
+    "<strong>Material:</strong> CS ASTM A 216 Gr. WCB, CF8, CF8M etc.",
+    "<strong>Ball & Trims:</strong> SS 304,316",
+    "<strong>Seat:</strong> PTFE, GFT, CFT",
+    "<strong>Action:</strong> Manual, Lever",
+    "<strong>Rating:</strong> 1000,2000, PSI",
+    "<strong>Ends Connection:</strong> Screwed ends, PSP,BSPT,NPT",
+    "<strong>Size:</strong> ¼” to 3”",
+    "<strong>Port:</strong> Full & Reduce",
+    "<strong>Temperature Range:</strong> -4 to 356 °F -20 to 180 °C",
+    "<strong>Manufacturing Standard:</strong> BS 5351",
+    "<strong>Testing Standard:</strong> API 598 / BS 6755",
+    "<strong>Applications:</strong> Air, Gas, Water, Chemicals, Pharma, Oil, Acid, Foods, Vacuum, Heat Treatment, Paper & Sugar Industries"]
+          },
+          {
+            name: "Fire safe Design Ball Valve",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Flush Bottom Ball Valve",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Jacketed Ball Valve",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "PTFE Lined Ball Valve",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Ball Valves Bar Stock 6000",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "High Pressure Ball Valves",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Pneumatic Ball Valve Two Piece",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Pneumatic Ball Valve Three Piece",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Electrical Actuator Ball Valve",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Pneumatic Actuated Ball Valve Single Piece",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Ball Valve Three piece Screwed end",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Pneumatic Ball Valve One Piece",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+        ]
+      },
+      {
+        name: "Trunnion Mounted Ball Valves",
+        desc: "Robust trunnion mounted ball valves for high-flow applications.",
+        types: [
+          {
+            name: "Trunnion-Mounted Ball Valve Two Piece 600",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Trunnion-Mounted Ball Valve Two Piece 900",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Trunnion-Mounted Ball Valve Two Piece 1500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Trunnion mounted Ball Valve Three Piece 600",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Trunnion Mounted Ball Valve Three Piece 900",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Trunnion - Mounted Ball Valve Three Piece 1500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+
+        ]
+      }
+    ]
+  },
+  {
+    name: "Globe valve",
+    desc: "Space-efficient valves offering quick shutoff and throttling with resilient seats.",
+    subcategories: [
+      {
+        name: "Cast Steel",
+        desc: "Compact wafer style butterfly valves.",
+        types: [
+          {
+            name: "Globe valve class 150",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe valve class 300",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe valve class 600",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe valve class 900",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe valve class 1500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe valve class 2500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Steam Globe valve",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Piston Globe valve",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Control Valve",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+
+        ]
+      },
+      {
+        name: "Forged Steel",
+        desc: "Lug type butterfly valves for dead-end service.",
+        types: [
+          {
+            name: "Globe Valve Forged 800",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            pdf: "./pdfs/ball_valve_three_piece.pdf",
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe Valve Forged 1500",
+            desc: "UTVC Globe Valve Forged 1500 Forged Steel (investment casting & Forging)",
+            mainImage: "./Products/Globe-valve-forged-steel-1500-Usmani-Valves.jpg",
+            gallery:[ "./Products/Globe-valve-forged-steel-1500-Usmani-Valves.jpg","./Products/Globe-valve-forged-steel-1500-Usmani-Valves.jpg"],
+            pdf: "./pdfs/Globe-valve-forged-valve-class-2500-Usmani-Valves.pdf",
+            specs:[ 
+    "<strong>Design:</strong> T Type, Y type, Welded Bonnet",
+"<strong>Material:</strong> Forged Carbon Steel FCS A 105 F11, F22, LF2, F5, F9, F91, F321, F347H, CF8, CF8M, CF3M, etc.",
+"<strong>Ball & Trims:</strong> F6, SS 304, 304L, 316, 316L, F321, F347H, Monel, Stellite HF etc.",
+"<strong>Seat:</strong> FCS SS304, 304L, SS316, 316L",
+"<strong>Action:</strong> Hand Wheel",
+"<strong>Rating:</strong> Class 1500#",
+"<strong>Ends Connection:</strong> Screwed ends, Socket weld, Butt weld, B16.10, B16.25", 
+"<strong>Port:</strong> ½” To 2”",
+"<strong>Manufacturing Standard:</strong> BS 5352, API 602",
+"<strong>Testing Standard:</strong> API 598 / BS 6755",
+"<strong>Applications:</strong> Air, Oil & Gas, Water, Chemicals, Boiler steam, Heat Oil, Acid, Foods, Vacuum, Heat Treatment, Paper Mills & Sugar Industries, Power Plant, Petroleum Industries, Petrochemicals Plant" ]
+          },
+          {
+            name: "Globe Valve Forged 2500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            pdf: "./pdfs/Globe-valve-forged-valve-class-2500-Usmani-Valves.pdf",
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe Valve Forged Flanged 150",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            pdf: "./pdfs/ball_valve_three_piece.pdf",
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe Valve Forged Flanged 300",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            pdf: "./pdfs/ball_valve_three_piece.pdf",
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe Valve Forged Flanged 600",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            pdf: "./pdfs/ball_valve_three_piece.pdf",
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe Valve Forged Flanged 900",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            pdf: "./pdfs/ball_valve_three_piece.pdf",
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Globe Valve Forged Flanged 1500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            pdf: "./pdfs/ball_valve_three_piece.pdf",
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+
+        ]
+      }
+    ]
+  },
+  {
+name: "Gate Valve",
+    desc: "Linear-motion isolation valves designed for minimal pressure drop when fully open.",
+    subcategories: [
+      {
+        name: "Cast Steel",
+        desc: "High-performance floating ball valves with blow-out proof stem.",
+        types: [
+          {
+            name: "Gate valve class 150",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve class 300",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve class 600",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve class 900",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve pressure seal 900",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve pressure seal 1500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve pressure seal 2500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve extension stem",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve pressure seal Parallel seat",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+        
+          
+        ]
+      },
+      {
+        name: "Forged Steel",
+        desc: "Robust trunnion mounted ball valves for high-flow applications.",
+        types: [
+          {
+            name: "Gate valve Class 800",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve forge class 1500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve Class 2500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve Class 150",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve Class 300",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve Class 600",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve forge welded bonnet 1500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve forge welded bonnet 2500",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          {
+            name: "Gate valve forge extension stem",
+            desc: "UTVC Ball Valve Three Piece Floating type (investment casting & Forging)",
+            mainImage: "./Products/p1.1.1.jpg",
+            gallery:[ "./Products/p1.1.1.jpg","./Products/p1.1.1.jpg"],
+            specs:[ 
+    "<strong>Design:</strong> ",
+    "<strong>Material:</strong> ",
+    "<strong>Ball & Trims:</strong> ",
+    "<strong>Seat:</strong> ",
+    "<strong>Action:</strong> ",
+    "<strong>Rating:</strong> ",
+    "<strong>Ends Connection:</strong> ",
+    "<strong>Port:</strong> ",
+    "<strong>Manufacturing Standard:</strong> ",
+    "<strong>Testing Standard:</strong> ",
+    "<strong>Applications:</strong> " ]
+          },
+          
+        ]
+      }
+    ]
+  },
+  {
+    name: "Check Valve",
+    desc: "Valves designed to allow flow in only one direction.",
+    types: [
+          {
+            name: "Swing Check Valve",
+            desc: "Swing check valve design.",
+            mainImage: "./Products/gate-rising.jpg",
+            gallery:[ "gate-rising.jpg","gate-wedge.jpg" ],
+            specs:[ "<strong>Material:</strong> ASTM A216 WCB", "<strong>End:</strong> Flanged" ]
+          },
+          {
+            name: "Lift Check Valve",
+            desc: "Lift check valve for general service.",
+            mainImage: "./Products/gate-wedge.jpg",
+            gallery:[ "gate-wedge.jpg","gate-rising.jpg" ],
+            specs:[ "<strong>Rating:</strong> CL150", "<strong>Disc:</strong> Bronze" ]
+          }
+        ]
+  },
+  {
+    name: "Butterfly Valve",
+    desc: "Butterfly valves for quarter-turn operation.",
+    subcategories: []
+  },
+  {
+    name: "Strainer 'Y'Type",
+    desc: "Y-Type strainer valves for protection.",
+    subcategories: []
+  },
+  {
+    name: "Strainer trap TD 3",
+    desc: "Steam trap strainer valves.",
+    subcategories: []
+  },
+  {
+    name: "Safety Relief Valve",
+    desc: "Safety relief valves for pressure protection.",
+        types: [
+          {
+            name: "Direct Acting Relief",
+            desc: "Direct acting relief valve.",
+            mainImage: "./Products/gate-rising.jpg",
+            gallery:[ "gate-rising.jpg","gate-wedge.jpg" ],
+            specs:[ "<strong>Material:</strong> ASTM A216 WCB", "<strong>End:</strong> Flanged" ]
+          },
+          {
+            name: "Pilot Operated Relief",
+            desc: "Pilot operated relief valve.",
+            mainImage: "./Products/gate-wedge.jpg",
+            gallery:[ "gate-wedge.jpg","gate-rising.jpg" ],
+            specs:[ "<strong>Rating:</strong> CL150", "<strong>Disc:</strong> Bronze" ]
+          }
+        ]
+  },
+  {
+    name: "Diaphragm Valve",
+    desc: "Diaphragm valves for chemical applications.",
+    subcategories: []
+  },
+  {
+    name: "Plug Valve",
+    desc: "Plug valves for general isolation.",
+    subcategories: []
+  },
+  {
+    name: "Needle Valve",
+    desc: "Needle valves for precise flow control.",
+    subcategories: []
+  },
+  {
+    name: "Basket Strainer Valve",
+    desc: "Basket strainer valves for protection.",
+    subcategories: []
+  },
+  {
+    name: "Knife Gate Valve",
+    desc: "Knife gate valves for slurry applications.",
+    subcategories: []
+  },
+  {
+    name: "Double Window Sight Glass",
+    desc: "Double window sight glasses for level indication.",
+    subcategories: []
+  },
+  {
+    name: "Full View Sight Glass",
+    desc: "Full view sight glasses for maximum visibility.",
+    subcategories: []
+  },
+  {
+    name: "Foot Valve",
+    desc: "Foot valves for pump inlet protection.",
+    subcategories: []
+  },
+  {
+    name: "PTFE LIned Diaphragm Valve",
+    desc: "PTFE lined diaphragm valves for corrosive applications.",
+    subcategories: []
+  },
+  {
+    name: "Flush Bottom Valve",
+    desc: "Flush bottom valves for tank drainage.",
+    subcategories: []
+  },
+];
+
+/* ------------------ UTILS ------------------ */
+const byId = (id) => document.getElementById(id);
+
+let activeCategoryIndex = 0;
+let activeSubcategoryIndex = 0;
+let activeProductIndex = 0;
+let swiperInstance = null;
+
+/* ---------- RENDER CATEGORIES ---------- */
+function closeAllMenus() {
+  const allRows = document.querySelectorAll('.category-row.open');
+  allRows.forEach(row => row.classList.remove('open'));
+}
+
+function renderCategories(){
+  const catBody = byId('categoryBody');
+  catBody.innerHTML="";
+
+  productCategories.forEach((cat, catIdx) => {
+    // If no subcategories but direct types exist, treat as clickable leaf
+    const hasSubcats = cat.subcategories && cat.subcategories.length > 0;
+
+    if (!hasSubcats) {
+      // create a single clickable row that behaves like a main category without subcats
+      const mainTr = document.createElement('tr');
+      mainTr.className = 'category-row';
+      mainTr.classList.toggle('active', catIdx === activeCategoryIndex);
+
+      const mainTd = document.createElement('td');
+      const mainLink = document.createElement('a');
+      mainLink.textContent = cat.name;
+      mainLink.href = '#';
+
+      mainLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        activeCategoryIndex = catIdx;
+        activeSubcategoryIndex = 0;
+        activeProductIndex = 0;
+        // If cat has types directly (some entries use types directly), load them to product list
+        renderProductListOnSidebar();
+        autoShowFirstProduct();
+        renderCategories();
+      });
+
+      mainTd.appendChild(mainLink);
+      mainTr.appendChild(mainTd);
+      catBody.appendChild(mainTr);
+      return;
+    }
+
+    // main category row that has subcategories
+    const mainTr = document.createElement('tr');
+    mainTr.className = 'category-row has-subcategories';
+    mainTr.classList.toggle('active', catIdx === activeCategoryIndex);
+
+    const mainTd = document.createElement('td');
+    mainTd.textContent = cat.name;
+    mainTr.appendChild(mainTd);
+    catBody.appendChild(mainTr);
+
+    const subcatRows = [];
+
+    cat.subcategories.forEach((subcat, subcatIdx) => {
+      const subTr = document.createElement('tr');
+      subTr.className = 'subcategory-row';
+
+      const isActive = catIdx === activeCategoryIndex && subcatIdx === activeSubcategoryIndex;
+      subTr.classList.toggle('active', isActive);
+
+      const subTd = document.createElement('td');
+      const subA = document.createElement('a');
+      subA.textContent = subcat.name;
+      subA.href = '#';
+
+      subA.addEventListener('click', (e) => {
+    e.preventDefault();
+    activeCategoryIndex = catIdx;
+    activeSubcategoryIndex = subcatIdx;
+    activeProductIndex = 0;
+
+    // NEW: hide categories & show only products
+    hideMainCategoriesShowProducts();
+
+    renderCategories();
+    renderProductListOnSidebar();
+    autoShowFirstProduct();
+});
+
+
+      subTd.appendChild(subA);
+      subTr.appendChild(subTd);
+      catBody.appendChild(subTr);
+      subcatRows.push(subTr);
+    });
+
+    // Hover behavior - show/hide subcategories (same animation)
+    mainTr.addEventListener('mouseenter', () => {
+      closeAllMenus();
+      mainTr.classList.add('open');
+      subcatRows.forEach((row, index) => {
+        row.classList.remove('hide');
+        row.classList.add('show');
+        row.style.animationDelay = (index * 0.05) + 's';
+      });
+    });
+
+    mainTr.addEventListener('mouseleave', () => {
+      let keepOpen = false;
+      subcatRows.forEach(row => {
+        if (row.matches(':hover')) keepOpen = true;
+      });
+      if (!keepOpen) {
+        mainTr.classList.remove('open');
+        subcatRows.forEach((row, index) => {
+          row.classList.remove('show');
+          row.classList.add('hide');
+          row.style.animationDelay = (index * 0.03) + 's';
+          setTimeout(() => { row.classList.remove('hide'); }, 400);
+        });
+      }
+    });
+
+    subcatRows.forEach(subRow => {
+      subRow.addEventListener('mouseenter', () => {
+        mainTr.classList.add('open');
+      });
+      subRow.addEventListener('mouseleave', () => {
+        let stillHoveringOthers = false;
+        subcatRows.forEach(row => { if (row.matches(':hover')) stillHoveringOthers = true; });
+        if (!stillHoveringOthers && !mainTr.matches(':hover')) {
+          mainTr.classList.remove('open');
+          subcatRows.forEach((row, index) => {
+            row.classList.remove('show');
+            row.classList.add('hide');
+            row.style.animationDelay = (index * 0.03) + 's';
+            setTimeout(() => { row.classList.remove('hide'); }, 400);
+          });
+        }
+      });
+    });
+  });
+}
+
+/* ---------- RENDER PRODUCT LIST ON SIDEBAR ---------- */
+function renderProductListOnSidebar(){
+  const body = byId('detailCategoryBody');
+  body.innerHTML = '';
+
+  const activeCat = productCategories[activeCategoryIndex];
+  // find selected subcategory object - if cat has subcategories
+  let typesList = [];
+
+  if (activeCat.subcategories && activeCat.subcategories.length > 0) {
+    const sub = activeCat.subcategories[activeSubcategoryIndex] || activeCat.subcategories[0];
+    typesList = sub.types || [];
+    byId('detailCategoryHeader').textContent = sub.name || activeCat.name;
+  } else if (activeCat.types) {
+    typesList = activeCat.types;
+    byId('detailCategoryHeader').textContent = activeCat.name;
+  } else {
+    byId('detailCategoryHeader').textContent = activeCat.name;
+  }
+
+  typesList.forEach((t, i) => {
+    const r = document.createElement('tr');
+    r.classList.toggle('active', i === activeProductIndex);
+    r.innerHTML = `<td><a href="#" data-index="${i}">${t.name}</a></td>`;
+    r.querySelector('a').addEventListener('click', (e) => {
+      e.preventDefault();
+      activeProductIndex = i;
+      // re-render product list to mark active row
+      renderProductListOnSidebar();
+      // show this product details
+      showDetail(i);
+    });
+    body.appendChild(r);
+  });
+
+  // If there are no products, clear detail area too
+  if (typesList.length === 0) {
+    // clear detail
+    byId('detailTitle').textContent = activeCat.name || 'No product';
+    byId('detailDesc').textContent = activeCat.desc || '';
+    byId('detailSpecs').innerHTML = '<p>No products available in this subcategory.</p>';
+    byId('mainImage').src = '';
+  }
+}
+
+/* ---------- SHOW DETAIL ---------- */
+function showDetail(productIndex) {
+  const activeCat = productCategories[activeCategoryIndex];
+
+
+
+    /* =============================
+   ADVANCED ANIMATION START
+============================= */
+
+// Fade slide for full detail grid
+const detailGrid = document.querySelector(".detail-pixel__grid");
+detailGrid.classList.remove("show", "adv-transition");
+void detailGrid.offsetWidth;
+detailGrid.classList.add("adv-transition");
+setTimeout(() => detailGrid.classList.add("show"), 20);
+
+// Title animation
+const titleEl = document.getElementById("detailTitle");
+titleEl.classList.remove("show", "adv-fade-left");
+void titleEl.offsetWidth;
+titleEl.classList.add("adv-fade-left");
+setTimeout(() => titleEl.classList.add("show"), 100);
+
+// Description animation
+const descEl = document.getElementById("detailDesc");
+descEl.classList.remove("show", "adv-fade-left");
+void descEl.offsetWidth;
+descEl.classList.add("adv-fade-left");
+setTimeout(() => descEl.classList.add("show"), 150);
+
+// MAIN IMAGE ZOOM-IN
+const mainImg = document.getElementById("mainImage");
+mainImg.classList.remove("show", "adv-zoom-image");
+void mainImg.offsetWidth;
+mainImg.classList.add("adv-zoom-image");
+setTimeout(() => mainImg.classList.add("show"), 200);
+
+// STAGGER FEATURE LINES
+const specLines = document.querySelectorAll(".detail-specs p");
+specLines.forEach((line, i) => {
+    line.classList.remove("show", "spec-line");
+    void line.offsetWidth;
+    line.classList.add("spec-line");
+    setTimeout(() => line.classList.add("show"), 120 + i * 60);
+});
+
+// THUMBNAIL STAGGER
+document.querySelectorAll(".mySwiper .swiper-slide").forEach((thumb, i) => {
+    thumb.classList.remove("show", "thumb-anim");
+    void thumb.offsetWidth;
+    thumb.classList.add("thumb-anim");
+    setTimeout(() => thumb.classList.add("show"), 200 + i * 80);
+});
+
+/* =============================
+   ADVANCED ANIMATION END
+============================= */
+
+
+
+
+
+  // find current types array
+  let typesArray = [];
+  let currentSub = null;
+  if (activeCat.subcategories && activeCat.subcategories.length > 0) {
+    currentSub = activeCat.subcategories[activeSubcategoryIndex] || activeCat.subcategories[0];
+    typesArray = currentSub.types || [];
+  } else if (activeCat.types) {
+    typesArray = activeCat.types;
+  }
+
+  if (!typesArray || typesArray.length === 0) return;
+
+  const detail = typesArray[productIndex];
+  if (!detail) return;
+
+  // update sidebar active marking
+  activeProductIndex = productIndex;
+  renderProductListOnSidebar();
+
+  // update detail content
+  byId('detailTitle').textContent = detail.name;
+  byId('detailDesc').textContent = detail.desc || activeCat.desc || '';
+  const mainImage = byId('mainImage');
+  mainImage.src = detail.mainImage || '';
+  mainImage.alt = detail.name || '';
+
+  const sw = byId('detailSwiperWrapper');
+  sw.innerHTML = '';
+  (detail.gallery || []).forEach(img=> {
+    const d = document.createElement('div');
+    d.className = 'swiper-slide';
+    d.innerHTML = `<img src="${img}" alt="${detail.name}" loading="lazy">`;
+    sw.appendChild(d);
+  });
+
+  const specs = byId('detailSpecs');
+  specs.innerHTML = (detail.specs || []).map(s => `<p>${s}</p>`).join('');
+
+  const q = byId('detailQuoteBtn');
+  q.href = `quote.html?product=${encodeURIComponent(detail.name)}`;
+
+  // init/destroy swiper safely
+  if (swiperInstance && typeof swiperInstance.destroy === 'function') {
+    try { swiperInstance.destroy(true, true); } catch(e) {}
+    swiperInstance = null;
+  }
+  if (document.querySelector('.mySwiper') && (detail.gallery || []).length > 0) {
+    swiperInstance = new Swiper('.mySwiper', {
+      loop: (detail.gallery || []).length > 3,
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      slidesPerView: 3,
+      spaceBetween: 10,
+      breakpoints: { 640: { slidesPerView: 3 }, 320: { slidesPerView: 2 } }
+    });
+  }
+
+  // click thumbs to change main image
+  const slideImgs = document.querySelectorAll('.mySwiper .swiper-slide img');
+  slideImgs.forEach(imgEl => {
+    imgEl.onclick = () => { mainImage.src = imgEl.src; };
+  });
+}
+
+/* ---------- AUTO SHOW FIRST PRODUCT ---------- */
+function autoShowFirstProduct() {
+  // decide product index 0 if available
+  const activeCat = productCategories[activeCategoryIndex];
+  let typesArray = [];
+  if (activeCat.subcategories && activeCat.subcategories.length > 0) {
+    const sub = activeCat.subcategories[activeSubcategoryIndex] || activeCat.subcategories[0];
+    typesArray = sub.types || [];
+  } else if (activeCat.types) {
+    typesArray = activeCat.types;
+  }
+
+  if (typesArray.length > 0) {
+    activeProductIndex = 0;
+    showDetail(0);
+  } else {
+    // nothing to show
+    byId('detailTitle').textContent = activeCat.name || '';
+    byId('detailDesc').textContent = activeCat.desc || '';
+    byId('detailSpecs').innerHTML = '';
+    byId('mainImage').src = '';
+  }
+}
+
+/* ------------------ NEW LOGIC YOU REQUESTED ------------------ */
+
+// SELECTORS
+const mainCategoryTable = document.querySelector(".category-table:first-of-type");
+const productListTable = document.querySelector(".detail-cats");
+const seeMoreBtn = document.getElementById("seeMoreLink");
+
+// 1️⃣ HIDE MAIN CATEGORY when subcategory clicked
+function hideMainCategoriesShowProducts() {
+    mainCategoryTable.style.display = "none";
+    productListTable.style.display = "table";
+    seeMoreBtn.style.display = "block";
+}
+
+// 2️⃣ SHOW MAIN CATEGORY when See More Products clicked
+function showMainCategoriesHideProducts() {
+    mainCategoryTable.style.display = "table";
+    productListTable.style.display = "none";
+
+    // Hide all subcategory dropdowns
+    document.querySelectorAll(".subcategory-row").forEach(row => {
+        row.classList.remove("show");
+        row.classList.remove("hide");
+        row.style.display = "none";
+    });
+
+    seeMoreBtn.style.display = "none";
+}
+
+// Override detail link function
+function onSubCategoryClick() {
+    hideMainCategoriesShowProducts();
+}
+
+// We will call this inside your existing subcategory click event
+
+
+/* ---------- INITIALIZATION ---------- */
+window.onload = () => {
+
+  // Hide product list + see more on first load
+productListTable.style.display = "none";
+seeMoreBtn.style.display = "none";
+
+
+  seeMoreBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    showMainCategoriesHideProducts();
+});
+
+  // initial indices
+  activeCategoryIndex = 0;
+  activeSubcategoryIndex = 0;
+  activeProductIndex = 0;
+
+  // --- SHARE BUTTON WORKING ---
+const shareBtn = document.querySelector(".detail-pixel__share");
+
+shareBtn.addEventListener("click", () => {
+    const productName = document.getElementById("detailTitle").textContent;
+    const productURL = window.location.href;
+
+    const shareData = {
+        title: productName,
+        text: `Check out this product: ${productName}`,
+        url: productURL
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData).catch(err => console.log(err));
+    } else {
+        const msg = encodeURIComponent(`Check out this product: ${productName}\n${productURL}`);
+        window.open(`https://wa.me/?text=${msg}`, "_blank");
+    }
+});
+
+
+  renderCategories();
+  // render product list for the default subcategory
+  renderProductListOnSidebar();
+  // show default first product if exists
+  autoShowFirstProduct();
+
+  // mobile menu small helper
+  const ham=document.getElementById('mobileHamburger'), menu=document.getElementById('mobileMenu');
+  function applyResponsive(){ if(window.innerWidth<=768){ ham.style.display='inline-block'; } else { ham.style.display='none'; menu.style.display='none'; } }
+  applyResponsive();
+  window.addEventListener('resize',applyResponsive);
+  ham.addEventListener('click',(e)=>{ e.stopPropagation(); menu.style.display = (menu.style.display==='flex') ? 'none' : 'flex'; });
+  document.addEventListener('click',(e)=>{ if(!menu.contains(e.target) && !ham.contains(e.target)){ menu.style.display='none'; } });
+  menu.querySelectorAll && menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.style.display='none'; }));
+
+  // modal handlers
+  const modal = document.getElementById("imgModal");
+  const modalImage = document.getElementById("modalImage");
+  const mainImageEl = document.getElementById("mainImage");
+  const modalClose = document.getElementById("modalClose");
+
+  mainImageEl.onclick = () => {
+    if (!mainImageEl.src) return;
+    modalImage.src = mainImageEl.src;
+    modal.style.display = "flex";
+  };
+  modalClose.onclick = () => { modal.style.display = "none"; };
+  modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+
+  // Download PDF placeholder (you can wire actual file)
+  const dl = document.getElementById('downloadPdfBtn');
+  dl.addEventListener('click', () => {
+    // example action: open pdf in new tab if you have link stored in detail.pdf
+    const activeCat = productCategories[activeCategoryIndex];
+    let typesArray = [];
+    if (activeCat.subcategories && activeCat.subcategories.length > 0) {
+      const sub = activeCat.subcategories[activeSubcategoryIndex] || activeCat.subcategories[0];
+      typesArray = sub.types || [];
+    } else if (activeCat.types) {
+      typesArray = activeCat.types;
+    }
+    const product = typesArray[activeProductIndex];
+    if (product && product.pdf) {
+    const link = document.createElement("a");
+    link.href = product.pdf;
+
+    // File name based on product name
+    const cleanName = product.name.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+    link.download = `${cleanName}.pdf`;
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+} else {
+    alert("PDF not available for this product.");
+}
+  });
+};
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
