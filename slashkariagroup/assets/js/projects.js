@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
        SECTION 2: EXPLORE OUR DEVELOPMENTS MAP (LEAFLET.JS)
        ============================================================ */
 
+    let isInitialLoad = true; // Flag to prevent auto-scroll on first load
     const mapElement = document.getElementById('map');
     if (mapElement) {
         // 1. Parse Data from HTML Sidebar
@@ -277,9 +278,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 easeLinearity: 0.25
             });
 
-            // 4. Scroll Page to Map Wrapper with a slight gap at the top
+            // 4. Scroll Page to Map Wrapper (SKIP on initial load)
             const mapWrapper = document.querySelector('.map-wrapper');
-            if (mapWrapper) {
+            if (mapWrapper && !isInitialLoad) {
                 const yOffset = -100; // 100px gap from the top
                 const y = mapWrapper.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 
@@ -288,6 +289,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
+
+            // After first load is handled, subsequent calls will scroll the page
+            isInitialLoad = false;
         }
 
         // 5. SET DEFAULT OPEN PROJECT (LASHKARIA SOLITAIRE - ID 1)
