@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lashkaria Group | Crafting Landmarks That Define Modern Living</title>
+    <meta name="description"
+        content="Lashkaria Group - Pioneering premium-quality real estate with unmatched craftsmanship. Discover thoughtfully designed spaces in prime locations.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <script>
+        if (!window.location.pathname.endsWith('/') && !window.location.pathname.endsWith('.html')) {
+            var newUrl = window.location.href + "/";
+            window.history.replaceState(null, '', newUrl);
+        }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="assets/logo/logo-header.svg" alt="Lashkaria Group Logo" id="logo-header">
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">HOME</a></li>
+                    <li><a href="#about" class="nav-link">ABOUT US</a></li>
+                    <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                    <li><a href="#contact" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contact" class="cta-button">
+                <span>BOOK A CONSULTATION</span>
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16L12 8L0 0V16Z" fill="currentColor" />
+                </svg>
+            </a>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content reveal-fade-up">
+                    <h1 class="hero-title">CRAFTING LANDMARKS <br> THAT DEFINE MODERN LIVING</h1>
+                    <p class="hero-subtitle">Premium residences in prime locations, designed for those who expect more.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-hero btn-explore">Explore Projects</a>
+                        <a href="#contact" class="btn btn-hero btn-schedule">Schedule Visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg-wrapper">
+                <img src="assets/bg/hero-bg.png" alt="Lashkaria Hero" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="vision-mission" id="about">
+            <div class="about-bg-images">
+                <img src="assets/bg/about-1.png" alt="Hexagon" class="bg-about-1">
+                <img src="assets/bg/about-2.png" alt="Hexagon" class="bg-about-2">
+                <img src="assets/bg/about-3.png" alt="Hexagon" class="bg-about-3">
+            </div>
+            <div class="container about-container">
+                <div class="hexagon-image reveal-fade-left">
+                    <img src="assets/images/hexagon-1.png" alt="Vision Image">
+                </div>
+                <div class="vision-content">
+                    <h2 class="reveal-fade-up">BUILDING SPACES <br> THAT ELEVATE LIFE</h2>
+
+                    <div class="vision-cards">
+                        <div class="vision-card reveal-fade-right">
+                            <div class="card-icon">
+                                <img src="assets/icons/Our Vision.png" alt="Our Vision Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>OUR VISION</h3>
+                                <p>To redefine urban living by creating world-class developments that elevate
+                                    lifestyles, drive economic growth, and set new benchmarks in innovation and
+                                    sustainability.</p>
+                            </div>
+                        </div>
+
+                        <div class="vision-card reveal-fade-right" style="transition-delay: 0.2s;">
+                            <div class="card-icon">
+                                <img src="assets/icons/our-mission.png" alt="Our Mission Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>OUR MISSION</h3>
+                                <p>To redefine urban living by creating world-class developments that elevate
+                                    lifestyles, drive economic growth, and set new benchmarks in innovation and
+                                    sustainability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider reveal-fade-up">
+            <div class="divider-line"></div>
+            <div class="divider-hex"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="values-bg-images">
+                <img src="assets/bg/about-4.png" alt="Hexagon" class="bg-about-4">
+                <img src="assets/bg/about-5.png" alt="Hexagon" class="bg-about-5">
+            </div>
+            <div class="container values-container">
+                <div class="values-left reveal-fade-left">
+                    <div class="about-brand-logo">
+                        <img src="assets/logo/logo-aboutus.png" alt="Lashkaria Logo">
+                    </div>
+                    <h2>WHAT WE <br> STAND FOR</h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-item reveal-fade-up">
+                        <div class="value-icon">
+                            <img src="assets/icons/excellence.png" alt="Excellence Icon">
+                        </div>
+                        <div class="value-text">
+                            <h3>EXCELLENCE</h3>
+                            <p>Pioneering premium-quality real estate with unmatched craftsmanship.</p>
+                        </div>
+                    </div>
+                    <div class="value-item reveal-fade-up" style="transition-delay: 0.1s;">
+                        <div class="value-icon">
+                            <img src="assets/icons/integrity.png" alt="Integrity Icon">
+                        </div>
+                        <div class="value-text">
+                            <h3>INTEGRITY</h3>
+                            <p>Building relationships on trust, transparency, and ethical practices.</p>
+                        </div>
+                    </div>
+                    <div class="value-item reveal-fade-up" style="transition-delay: 0.2s;">
+                        <div class="value-icon">
+                            <img src="assets/icons/innovation.png" alt="Innovation Icon">
+                        </div>
+                        <div class="value-text">
+                            <h3>INNOVATION</h3>
+                            <p>Leveraging technology and sustainable solutions for futuristic developments.</p>
+                        </div>
+                    </div>
+                    <div class="value-item reveal-fade-up" style="transition-delay: 0.3s;">
+                        <div class="value-icon">
+                            <img src="assets/icons/commitment.png" alt="Commitment Icon">
+                        </div>
+                        <div class="value-text">
+                            <h3>COMMITMENT</h3>
+                            <p>Delivering projects on time, every time, with unwavering quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider reveal-fade-up">
+            <div class="divider-line"></div>
+            <div class="divider-hex"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container stats-container">
+                <h2 class="stats-header reveal-fade-up">DRIVEN BY NUMBERS. DEFINED BY IMPACT.</h2>
+                <div class="stats-grid">
+                    <div class="stat-item reveal-fade-up">
+                        <img src="assets/icons/area.svg" alt="Developed Icon">
+                        <div class="stat-number">2.7+</div>
+                        <div class="stat-label">Million sq. ft. Developed</div>
+                    </div>
+                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.1s;">
+                        <img src="assets/icons/crane.svg" alt="Pipeline Icon">
+                        <div class="stat-number">2.1+</div>
+                        <div class="stat-label">Million sq. ft. in the Pipeline</div>
+                    </div>
+                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.2s;">
+                        <img src="assets/icons/family-house.svg" alt="Families Icon">
+                        <div class="stat-number">2000+</div>
+                        <div class="stat-label">Families Served</div>
+                    </div>
+                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.3s;">
+                        <img src="assets/icons/flats.svg" alt="Units Icon">
+                        <div class="stat-number">6000+</div>
+                        <div class="stat-label">Flats Delivered</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developments Section -->
+        <section id="explore-map" class="developments-section">
+            <div class="container section-container">
+                <div class="section-header reveal-fade-up">
+                    <div class="header-text-group">
+                        <h2 class="section-title-large">EXPLORE OUR DEVELOPMENTS</h2>
+                        <p class="section-subtitle">Discover thoughtfully designed spaces in prime locations.<br>Click
+                            on a marker to explore our projects.</p>
+                    </div>
+                    <div class="header-brand-group">
+                        <img src="assets/logo/logo-map.png" alt="Lashkaria Seal" class="map-header-logo">
+                    </div>
+                </div>
+
+                <div class="map-wrapper reveal-fade-up">
+                    <!-- Sidebar: Project List -->
+                    <aside class="project-sidebar">
+                        <div class="sidebar-header">
+                            <h3>ALL DEVELOPMENTS</h3>
+                        </div>
+                        <div class="sidebar-scrollable">
+                            <div class="location-cluster">
+                                <h4>ANDHERI</h4>
+                                <ul class="project-list">
+                                    <li class="project-item active" data-project-id="1" data-title="LASHKARIA SOLITAIRE"
+                                        data-location="Andheri (West)" data-coords="[19.1136, 72.8697]"
+                                        data-image="assets/images/1.png"
+                                        data-desc="A premium residential development offering modern design, refined living spaces, and a well-connected location for an elevated lifestyle.">
+                                        <span class="marker-dot"></span>
+                                        LASHKARIA SOLITAIRE
+                                    </li>
+                                    <li class="project-item" data-project-id="2" data-title="AMANN HILLS"
+                                        data-location="Andheri (East)" data-coords="[19.1250, 72.8750]"
+                                        data-image="assets/images/2.png"
+                                        data-desc="Thoughtfully designed spaces that blend luxury with nature, offering a peaceful retreat in the heart of the city.">
+                                        <span class="marker-dot"></span>
+                                        AMANN HILLS
+                                    </li>
+                                    <li class="project-item" data-project-id="3" data-title="LASHKARIA SOLITAIRE"
+                                        data-location="Andheri (West)" data-coords="[19.1180, 72.8600]"
+                                        data-image="assets/images/3.png"
+                                        data-desc="Redefining the skyline of Andheri with contemporary architecture and premium lifestyle amenities.">
+                                        <span class="marker-dot"></span>
+                                        LASHKARIA SOLITAIRE
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="location-cluster">
+                                <h4>MALAD</h4>
+                                <ul class="project-list">
+                                    <li class="project-item" data-project-id="4" data-title="LASHKARIA SOLITAIRE"
+                                        data-location="Malad (West)" data-coords="[19.1860, 72.8485]"
+                                        data-image="assets/images/4.png"
+                                        data-desc="Modern living redefined with expansive floor plans and world-class amenities in the thriving neighborhood of Malad.">
+                                        <span class="marker-dot"></span>
+                                        LASHKARIA SOLITAIRE
+                                    </li>
+                                    <li class="project-item" data-project-id="5" data-title="AMANN HILLS"
+                                        data-location="Malad (East)" data-coords="[19.1950, 72.8650]"
+                                        data-image="assets/images/1.png"
+                                        data-desc="A sanctuary of peace in the bustling Malad suburb, designed for those who appreciate the finer things in life.">
+                                        <span class="marker-dot"></span>
+                                        AMANN HILLS
+                                    </li>
+                                    <li class="project-item" data-project-id="6" data-title="LASHKARIA SOLITAIRE"
+                                        data-location="Malad (West)" data-coords="[19.1750, 72.8400]"
+                                        data-image="assets/images/2.png"
+                                        data-desc="A landmark development in Malad West, offering unparalleled connectivity and luxury.">
+                                        <span class="marker-dot"></span>
+                                        LASHKARIA SOLITAIRE
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="location-cluster">
+                                <h4>DAHISAR</h4>
+                                <ul class="project-list">
+                                    <li class="project-item" data-project-id="7" data-title="LASHKARIA SOLITAIRE"
+                                        data-location="Dahisar" data-coords="[19.2486, 72.8596]"
+                                        data-image="assets/images/3.png"
+                                        data-desc="Excellent connectivity and serene surroundings make this development the perfect choice for growing families.">
+                                        <span class="marker-dot"></span>
+                                        LASHKARIA SOLITAIRE
+                                    </li>
+                                    <li class="project-item" data-project-id="8" data-title="AMANN HILLS"
+                                        data-location="Dahisar" data-coords="[19.2550, 72.8650]"
+                                        data-image="assets/images/4.png"
+                                        data-desc="Experience elevated living in Dahisar with thoughtfully crafted homes and modern conveniences.">
+                                        <span class="marker-dot"></span>
+                                        AMANN HILLS
+                                    </li>
+                                    <li class="project-item" data-project-id="9" data-title="LASHKARIA SOLITAIRE"
+                                        data-location="Dahisar" data-coords="[19.2350, 72.8500]"
+                                        data-image="assets/images/1.png"
+                                        data-desc="Crafting iconic spaces in Dahisar that offer lasting value through vision and craftsmanship.">
+                                        <span class="marker-dot"></span>
+                                        LASHKARIA SOLITAIRE
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sidebar-footer">
+                            <a href="#" class="btn-view-all">View All Projects &rarr;</a>
+                        </div>
+                    </aside>
+
+                    <!-- Map Container -->
+                    <div id="map" class="map-view-container">
+                        <!-- Leaflet Map will be initialized here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section id="about" class="legacy-section">
+            <!-- Top Gradient Line -->
+            <div class="gradient-divider top"></div>
+
+            <div class="container legacy-container">
+                <!-- Background Decoration Assets -->
+                <img src="assets/bg/ploygon.png" alt="" class="bg-legacy-polygon">
+                <img src="assets/images/Hexagon Building 1.png" alt="" class="bg-legacy-building">
+
+                <div class="legacy-layout">
+                    <!-- Left Content -->
+                    <div class="legacy-content reveal-fade-left">
+                        <h2 class="legacy-title">OUR LEGACY OF EXCELLENCE</h2>
+                        <div class="legacy-accent"></div>
+                        <p class="legacy-description">With a strong foundation in real estate and construction, we
+                            create spaces and communities that stand the test of time.</p>
+                    </div>
+
+                    <!-- Right Services Grid -->
+                    <div class="legacy-grid">
+                        <!-- Card 1 -->
+                        <div class="legacy-card reveal-fade-up">
+                            <div class="card-header">
+                                <img src="assets/icons/urban.svg" alt="Urban" class="card-icon">
+                                <h3 class="card-title">Urban Redevelopment & SRA Projects</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Transforming communities with modern infrastructure</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.1s;">
+                            <div class="card-header">
+                                <img src="assets/icons/building.svg" alt="Building" class="card-icon">
+                                <h3 class="card-title">Premium Residential Communities</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">High-end apartments & gated townships</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.2s;">
+                            <div class="card-header">
+                                <img src="assets/icons/corporate.svg" alt="Corporate" class="card-icon">
+                                <h3 class="card-title">Corporate & Commercial Complexes</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Dynamic office spaces & IT parks</p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.3s;">
+                            <div class="card-header">
+                                <img src="assets/icons/infrastructure.svg" alt="Infrastructure" class="card-icon">
+                                <h3 class="card-title">Public Infrastructure Development</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Roads, bridges & urban planning</p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.4s;">
+                            <div class="card-header">
+                                <img src="assets/icons/retail.svg" alt="Retail" class="card-icon">
+                                <h3 class="card-title">Retail & Hospitality Spaces</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Shopping malls, hotels & serviced residences</p>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="legacy-card reveal-fade-up" style="transition-delay: 0.5s;">
+                            <div class="card-header">
+                                <img src="assets/icons/Healthcare.svg" alt="Healthcare" class="card-icon">
+                                <h3 class="card-title">Healthcare & Educational Institutions</h3>
+                            </div>
+                            <div class="card-line"></div>
+                            <p class="card-desc">Cutting-edge hospitals & schools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Gradient Line -->
+            <div class="gradient-divider bottom"></div>
+        </section>
+
+        <!-- Crafted Developments Section -->
+        <section id="projects" class="crafted-section">
+            <div class="container">
+
+                <!-- TOP ROW: Header (left) + Big Card (right) -->
+                <div class="crafted-top-row">
+
+                    <!-- LEFT: Section Header -->
+                    <div class="crafted-header reveal-fade-up">
+                        <h2 class="crafted-title">CRAFTED<br>DEVELOPMENTS</h2>
+                        <div class="crafted-accent"></div>
+                        <p class="crafted-subtitle">Spaces that define modern living, crafted with precision and
+                            long-term vision.</p>
+                        <a href="#" class="btn-all-projects">View All Projects &rarr;</a>
+                    </div>
+
+                    <!-- RIGHT: Big Card -->
+                    <div id="active-project-container" class="active-project reveal-fade-up">
+                        <!-- Content injected by JS -->
+                    </div>
+
+                </div><!-- end .crafted-top-row -->
+
+                <!-- Navigation: full-width, right-aligned -->
+                <div class="projects-nav">
+                    <button id="prev-project" class="nav-btn prev">
+                        <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5 0L34.5215 9.25V27.75L18.5 37L2.47853 27.75V9.25L18.5 0Z" fill="#F4F4F4"
+                                stroke="#122144" />
+                            <path d="M21 12L15 18.5L21 25" stroke="#122144" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button id="next-project" class="nav-btn next">
+                        <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5 0L34.5215 9.25V27.75L18.5 37L2.47853 27.75V9.25L18.5 0Z" fill="#122144" />
+                            <path d="M16 12L22 18.5L16 25" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- SMALL CARDS: Full-width 3-column grid -->
+                <div id="small-projects-grid" class="small-projects-grid reveal-fade-up">
+                    <!-- Content injected by JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+
+            <!-- Layer 1: BG image as <img> — same approach as hero, crisp & no blur -->
+            <img src="assets/bg/cta-bg.png" alt="" class="cta-bg-img" aria-hidden="true">
+
+            <!-- Layer 2: Polygon shape — right side -->
+            <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon" aria-hidden="true">
+
+            <!-- Layer 3: Content -->
+            <div class="container cta-container">
+
+                <!-- LEFT: Hero Text — top-left aligned -->
+                <div class="cta-text reveal-fade-left">
+                    <h2 class="cta-title">FIND YOUR<br>PERFECT SPACE TODAY</h2>
+                    <div class="accent-line-light"></div>
+                    <p class="cta-subtitle">Exclusive Residences. Thoughtful Design.<br>Spaces that elevate the way you
+                        live</p>
+                </div>
+
+                <!-- RIGHT: Contact Form Card — exact Figma 519×645px -->
+                <div class="contact-form-card reveal-fade-right">
+                    <h3 class="form-heading">LET'S CONNECT</h3>
+                    <div class="form-heading-line"></div>
+                    <p class="form-subtext">Share a few details and our team will connect with you shortly.</p>
+                    <form id="consultation-form">
+                        <div class="form-group">
+                            <img src="assets/icons/profile.svg" alt="Name">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <img src="assets/icons/contact-call.svg" alt="Phone">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group fg-email">
+                            <img src="assets/icons/contact-mail.svg" alt="Email">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group fg-message">
+                            <img src="assets/icons/message.svg" alt="Message">
+                            <textarea placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-consult">Schedule a Consultation &rarr;</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <!-- Col 1: Brand -->
+            <div class="footer-col brand-col">
+                <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
+                <h4 class="footer-tagline">Shaping What's Next</h4>
+                <p class="footer-desc">We create iconic spaces and lasting value through vision, craftsmanship, and
+                    trust.</p>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col links-col">
+                <ul class="footer-links">
+                    <li><a href="#home">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="#about">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="#projects">Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="#">Services <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="#contact">Contact <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Our Projects -->
+            <div class="footer-col links-col">
+                <ul class="footer-links">
+                    <li><a href="#">Completed Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
+                    <li class="link-divider"></li>
+                    <li><a href="#">Ongoing Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="link-divider"></li>
+                    <li><a href="#">Upcoming Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact Info -->
+            <div class="footer-col contact-col">
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
+                        <p>S. Lashkaria Group 1st Floor, Juhu Azad Nagar CHS C.D. Barfiwala Road, Andheri (W), Mumbai
+                            400053</p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/call.svg" alt="" class="contact-icon">
+                        <p>+91 2226256875 / 76</p>
+                    </div>
+                    <div class="contact-divider"></div>
+                    <div class="contact-item">
+                        <img src="assets/icons/mail.svg" alt="" class="contact-icon">
+                        <p>slashkariagroup@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom divider -->
+        <div class="container">
+            <div class="footer-bottom-line"></div>
+        </div>
+
+        <!-- Bottom Row: Copyright, Privacy, Credits, Socials -->
+        <div class="container footer-bottom-row">
+            <div class="footer-bottom-left">
+                <p class="copyright">@2026 S. Lashkaria Group. All rights reserved.</p>
+                <a href="#" class="privacy-link">Privacy Policy</a>
+            </div>
+
+            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
+                    Nexora</a></p>
+
+            <div class="social-links">
+                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/projects.js"></script>
+</body>
+
+</html>

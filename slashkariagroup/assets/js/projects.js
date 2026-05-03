@@ -1,0 +1,302 @@
+/**
+ * Lashkaria Group - Projects & Developments Logic
+ * This file handles:
+ * 1. The "Crafted Developments" Slider (Main Carousel)
+ * 2. The "Explore Our Developments" Map (Leaflet.js)
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* ============================================================
+       SECTION 1: CRAFTED DEVELOPMENTS SLIDER
+       ============================================================ */
+
+    const craftedProjects = [
+        {
+            id: 'p1',
+            title: "Lashkaria Solitaire",
+            location: "Andheri West",
+            desc: "A premium residential development offering modern design, refined living spaces, and a well-connected location for an elevated lifestyle.",
+            image: "assets/images/1.png",
+            bgClass: "active-bg-1"
+        },
+        {
+            id: 'p2',
+            title: "Amann Hills",
+            location: "Andheri East",
+            desc: "A sanctuary of peace in the bustling city, offering luxury villas and premium apartments with world-class amenities.",
+            image: "assets/images/2.png",
+            bgClass: "active-bg-2"
+        },
+        {
+            id: 'p3',
+            title: "Lashkaria Pearl",
+            location: "Malad West",
+            desc: "Modern living redefined with expansive floor plans and serene surroundings, perfectly balanced for the urban family.",
+            image: "assets/images/3.png",
+            bgClass: "active-bg-3"
+        },
+        {
+            id: 'p4',
+            title: "Amann Heights",
+            location: "Dahisar",
+            desc: "Elevated living experiences with panoramic city views and meticulously designed interiors for the modern professional.",
+            image: "assets/images/4.png",
+            bgClass: "active-bg-4"
+        }
+    ];
+
+    let currentCraftedIndex = 0;
+    const activeProjectContainer = document.getElementById('active-project-container');
+    const smallProjectsGrid = document.getElementById('small-projects-grid');
+    const prevBtn = document.getElementById('prev-project');
+    const nextBtn = document.getElementById('next-project');
+
+    function renderCraftedSlider(direction = 'right') {
+        if (!activeProjectContainer || !smallProjectsGrid) return;
+
+        const active = craftedProjects[currentCraftedIndex];
+        const animationClass = direction === 'right' ? 'slide-in-right' : 'slide-in-left';
+        
+        // 1. Render Big Card
+        activeProjectContainer.innerHTML = `
+            <img src="${active.image}" alt="${active.title}" class="${animationClass}" style="width:100%; height:100%; object-fit:cover;">
+            <div class="project-overlay fade-up-content">
+                <div class="overlay-inner">
+                    <h3 class="overlay-title">${active.title}</h3>
+                    <div class="overlay-loc">
+                        <img src="assets/icons/project-location.svg" alt="Loc">
+                        (${active.location})
+                    </div>
+                    <div class="overlay-divider"></div>
+                    <p class="overlay-desc">${active.desc}</p>
+                </div>
+                <a href="#" class="btn-view-project">View Project &rarr;</a>
+            </div>
+        `;
+
+        // 2. Render Small Cards in a LINEAR Circular Sequence
+        // This ensures cards always follow a predictable order (1 -> 2 -> 3 -> 4)
+        const smallProjects = [];
+        for (let i = 1; i < craftedProjects.length; i++) {
+            const nextIdx = (currentCraftedIndex + i) % craftedProjects.length;
+            smallProjects.push(craftedProjects[nextIdx]);
+        }
+
+        smallProjectsGrid.innerHTML = smallProjects.map(proj => `
+            <div class="small-card">
+                <img src="${proj.image}" alt="${proj.title}" class="${animationClass}" style="width:100%; height:100%; object-fit:cover;">
+                <div class="small-overlay fade-up-content">
+                    <h4 class="small-title">${proj.title}</h4>
+                    <div class="small-loc">
+                        <img src="assets/icons/project-location.svg" alt="Loc">
+                        ${proj.location}
+                    </div>
+                    <a href="#" class="btn-view-project-small">View Project &rarr;</a>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentCraftedIndex = (currentCraftedIndex - 1 + craftedProjects.length) % craftedProjects.length;
+            renderCraftedSlider('left');
+        });
+        nextBtn.addEventListener('click', () => {
+            currentCraftedIndex = (currentCraftedIndex + 1) % craftedProjects.length;
+            renderCraftedSlider('right');
+        });
+    }
+
+    // Initial Render
+    renderCraftedSlider();
+
+
+    /* ============================================================
+       SECTION 2: EXPLORE OUR DEVELOPMENTS MAP (LEAFLET.JS)
+       ============================================================ */
+
+    const mapElement = document.getElementById('map');
+    if (mapElement) {
+        // 1. Parse Data from HTML Sidebar
+        const sidebarItems = document.querySelectorAll('.project-item');
+        const mapProjectData = Array.from(sidebarItems).map(item => ({
+            id: item.dataset.projectId,
+            name: item.dataset.title,
+            location: item.dataset.location,
+            coords: JSON.parse(item.dataset.coords),
+            image: item.dataset.image,
+            logo: "assets/logo/logo-header.svg",
+            desc: item.dataset.desc
+        }));
+
+        // 2. Initialize Map
+        const map = L.map('map', {
+            center: [19.15, 72.87],
+            zoom: 12,
+            zoomControl: false,
+            attributionControl: false,
+            scrollWheelZoom: false // Disabled by default, enabled via Ctrl key
+        });
+
+        // 2.1 Ctrl + Scroll to Zoom functionality
+        // Prevent default browser zoom and handle map zoom manually
+        mapElement.addEventListener('wheel', (e) => {
+            if (e.ctrlKey) {
+                e.preventDefault();
+                if (e.deltaY < 0) {
+                    map.zoomIn();
+                } else {
+                    map.zoomOut();
+                }
+            }
+        }, { passive: false });
+
+        // Ensure scrollWheelZoom is disabled to let our manual handler take over cleanly
+        map.scrollWheelZoom.disable();
+
+        // Ensure Map Completeness
+        setTimeout(() => { map.invalidateSize(); }, 500);
+        window.addEventListener('resize', () => { map.invalidateSize(); });
+
+        // Add Zoom Control
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+        // Tile Layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; CARTO' }).addTo(map);
+
+        // Custom Icons with Alternating Labels (Left/Right)
+        const createMarkerIcon = (project, index, isActive = false) => {
+            const side = index % 2 === 0 ? 'right' : 'left';
+            return L.divIcon({
+                className: 'custom-marker',
+                html: `
+                    <div class="marker-container ${isActive ? 'active' : ''} label-${side}">
+                        <div class="marker-label">
+                            <img src="${project.logo}" alt="Logo">
+                            <span>${project.name}</span>
+                        </div>
+                        <div class="hexagon-pin"></div>
+                    </div>
+                `,
+                iconSize: [0, 0],
+                iconAnchor: [0, 0]
+            });
+        };
+
+        const markers = {};
+
+        // 3. Create Markers & Popups
+        mapProjectData.forEach((project, index) => {
+            const marker = L.marker(project.coords, {
+                icon: createMarkerIcon(project, index, false)
+            }).addTo(map);
+
+            const popupContent = `
+                <div class="map-popup-card">
+                    <img src="${project.image}" alt="${project.name}" class="popup-image">
+                    <div class="popup-details">
+                        <div class="popup-header">
+                            <img src="${project.logo}" alt="Logo" class="popup-logo">
+                            <h3>${project.name}</h3>
+                        </div>
+                        <div class="popup-location">📍 ${project.location}</div>
+                        <p class="popup-desc">${project.desc}</p>
+                        <a href="#" class="btn-popup">View Project &rarr;</a>
+                    </div>
+                </div>
+            `;
+            marker.bindPopup(popupContent, {
+                maxWidth: 320,
+                className: 'premium-popup',
+                offset: [0, -40],
+                autoPan: false, // Prevents map from moving on hover
+                closeButton: true
+            });
+
+            markers[project.id] = marker;
+
+            // Hover interactions
+            marker.on('mouseover', function (e) {
+                this.openPopup();
+                this.setIcon(createMarkerIcon(project, index, true));
+                this.getElement().classList.add('hover-active');
+            });
+
+            marker.on('mouseout', function (e) {
+                this.getElement().classList.remove('hover-active');
+
+                // CRITICAL: Check if this project is CURRENTLY active in the sidebar
+                const sidebarItem = document.querySelector(`.project-item[data-project-id="${project.id}"]`);
+                const isActive = sidebarItem && sidebarItem.classList.contains('active');
+
+                if (!isActive) {
+                    this.closePopup();
+                    this.setIcon(createMarkerIcon(project, index, false));
+                }
+            });
+
+            marker.on('click', () => {
+                focusOnMapProject(project);
+                marker.openPopup(); // Ensure it stays open
+            });
+        });
+
+        // 4. Sidebar Interaction Logic
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const projectId = item.dataset.projectId;
+                const project = mapProjectData.find(p => p.id === projectId);
+                if (project) {
+                    focusOnMapProject(project);
+                    markers[projectId].openPopup();
+                }
+            });
+        });
+
+        function focusOnMapProject(project) {
+            const index = mapProjectData.findIndex(p => p.id === project.id);
+
+            // 1. Update Sidebar Active State
+            sidebarItems.forEach(item => {
+                item.classList.toggle('active', item.dataset.projectId === project.id);
+            });
+
+            // 2. Update Marker Icons
+            Object.keys(markers).forEach(id => {
+                const p = mapProjectData.find(proj => proj.id === id);
+                const pIdx = mapProjectData.findIndex(proj => proj.id === id);
+                markers[id].setIcon(createMarkerIcon(p, pIdx, id === project.id));
+            });
+
+            // 3. Center Map on Project (Optimized to center the project card itself)
+            const offsetLat = 0.02; 
+            map.flyTo([project.coords[0] + offsetLat, project.coords[1]], 14, {
+                duration: 1.5,
+                easeLinearity: 0.25
+            });
+
+            // 4. Scroll Page to Map Wrapper with a slight gap at the top
+            const mapWrapper = document.querySelector('.map-wrapper');
+            if (mapWrapper) {
+                const yOffset = -100; // 100px gap from the top
+                const y = mapWrapper.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // 5. SET DEFAULT OPEN PROJECT (LASHKARIA SOLITAIRE - ID 1)
+        const defaultProject = mapProjectData.find(p => p.id === "1");
+        if (defaultProject) {
+            setTimeout(() => {
+                focusOnMapProject(defaultProject);
+                markers["1"].openPopup();
+            }, 1000); // Slight delay to ensure map is ready
+        }
+    }
+});
