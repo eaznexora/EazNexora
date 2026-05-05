@@ -3356,4 +3356,176 @@ header.scrolled .logo img {
         width: 150px;
         border-radius: 4px;
     }
+
+    /* CTA Section Mobile */
+    .cta-section {
+        padding: 140px 0 80px; /* Added significant top gap for content */
+    }
+    
+    .cta-bg-img, .cta-polygon {
+        display: none !important; /* Hide desktop backgrounds */
+    }
+    
+    .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: url('../bg/mobile-cta-bg.png');
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+
+    .cta-container {
+        position: relative;
+        z-index: 2;
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+    }
+
+    .cta-text {
+        text-align: center;
+    }
+
+    .accent-line-light {
+        margin: 0 auto 25px auto;
+    }
+
+    .contact-form-card {
+        padding: 35px 20px;
+    }
+
+    /* Footer Mobile */
+    .site-footer {
+        padding: 60px 0 30px;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+        padding-bottom: 40px;
+        align-items: start; /* Forces columns to align at the top perfectly */
+    }
+
+    .brand-col {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: none !important; /* Reset desktop shift */
+    }
+
+    .links-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0; /* Reset gap to rely on fixed row height */
+        transform: none !important; /* Reset desktop shift */
+        width: 100%;
+    }
+
+    .footer-links li {
+        width: 100%;
+    }
+
+    .footer-links li a {
+        height: 70px; /* Fixed height forces perfect row synchronization */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px; /* Fix squished text and arrow */
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .link-divider {
+        display: block; /* Restore dividers for the grid look */
+        width: 100%;
+    }
+
+    .contact-col {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align all items to the left edge of this container */
+        width: 280px; /* Fixed width to match the location text wrap */
+        margin: 0 auto; /* Perfectly center this entire block on the screen */
+        gap: 25px;
+    }
+
+    .contact-item {
+        flex-direction: row;
+        align-items: flex-start; 
+        text-align: left;
+        gap: 15px;
+    }
+
+    .contact-item .contact-icon {
+        width: 36px !important; /* Force identical width for all icons */
+        height: 36px !important;
+        object-fit: contain !important;
+        object-position: center !important; /* Center the icon within its fixed box */
+    }
+
+    .contact-item .contact-icon:not(.loc-icon) {
+        padding: 5px; /* Visually shrinks the wider call/mail icons so they match the location pin's visual weight */
+        box-sizing: border-box;
+    }
+
+    .contact-divider {
+        display: none;
+    }
+
+    /* Footer Bottom Reordering */
+    .footer-bottom-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .social-links {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom-left {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .credits {
+        order: 3;
+        margin-top: 10px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .copyright, .privacy-link {
+        text-align: center;
+        white-space: normal;
+    }
 }
