@@ -3194,6 +3194,15 @@ header.scrolled .logo img {
         text-align: center;
     }
 
+    .legacy-accent {
+        margin: 0 auto 30px auto;
+    }
+
+    .legacy-description {
+        text-align: center;
+        margin: 0 auto;
+    }
+
     .values-left {
         align-items: center;
         text-align: center;
