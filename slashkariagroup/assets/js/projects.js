@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Lashkaria Group - Projects & Developments Logic
  * This file handles:
  * 1. The "Crafted Developments" Slider (Main Carousel)
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const active = craftedProjects[currentCraftedIndex];
         const animationClass = direction === 'right' ? 'slide-in-right' : 'slide-in-left';
-        
+
         // 1. Render Big Card
         activeProjectContainer.innerHTML = `
             <img src="${active.image}" alt="${active.title}" class="${animationClass}" style="width:100%; height:100%; object-fit:cover;">
@@ -202,17 +202,18 @@ document.addEventListener('DOMContentLoaded', () => {
                             <img src="${project.logo}" alt="Logo" class="popup-logo">
                             <h3>${project.name}</h3>
                         </div>
-                        <div class="popup-location">ðŸ“ ${project.location}</div>
+                        <div class="popup-location"><svg width="12" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> ${project.location}</div>
                         <p class="popup-desc">${project.desc}</p>
                         <a href="#" class="btn-popup">View Project &rarr;</a>
                     </div>
                 </div>
             `;
             marker.bindPopup(popupContent, {
-                maxWidth: 320,
+                maxWidth: 300,
                 className: 'premium-popup',
                 offset: [0, -40],
-                autoPan: false, // Prevents map from moving on hover
+                autoPan: true,
+                autoPanPadding: [50, 50], // More padding to ensure centering
                 closeButton: true
             });
 
@@ -271,8 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 markers[id].setIcon(createMarkerIcon(p, pIdx, id === project.id));
             });
 
-            // 3. Center Map on Project (Optimized to center the project card itself)
-            const offsetLat = 0.02; 
+            // 3. Center Map on Project (Optimized for mobile to center the popup)
+            const isMobile = window.innerWidth <= 992;
+            const offsetLat = isMobile ? 0.02 : 0.02;
             map.flyTo([project.coords[0] + offsetLat, project.coords[1]], 14, {
                 duration: 1.5,
                 easeLinearity: 0.25
@@ -283,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mapWrapper && !isInitialLoad) {
                 const yOffset = -100; // 100px gap from the top
                 const y = mapWrapper.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                
+
                 window.scrollTo({
                     top: y,
                     behavior: 'smooth'

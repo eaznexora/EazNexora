@@ -2750,6 +2750,7 @@ header.scrolled .logo img {
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
     height: 600px;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
 }
 
 .project-sidebar {
@@ -3119,23 +3120,274 @@ header.scrolled .logo img {
     box-shadow: 0 4px 12px rgba(45, 83, 170, 0.3);
 }
 
+/* Desktop Hiding - will be overridden in media query below */
+.mobile-item-content {
+    display: none;
+}
+
 @media (max-width: 992px) {
-    .map-wrapper {
+    .section-header {
         flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .header-text-group {
+        max-width: 100%;
+    }
+
+    .map-wrapper {
+        flex-direction: column-reverse; /* Map on top, Sidebar below */
         height: auto;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        overflow: visible; /* Don't clip the overlapping sidebar */
+    }
+
+    .map-view-container {
+        height: 700px;
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        z-index: 5;
+        margin-bottom: 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        flex: none; /* Prevent collapse in flex-auto parent */
+    }
+
+    .premium-popup .leaflet-popup-content {
+        width: 280px !important;
+    }
+
+    .premium-popup .leaflet-popup-content-wrapper::after {
+        display: none; /* Hide dotted connector on mobile to save space */
+    }
+
+    .popup-image {
+        height: 100px; /* Even shorter image in popup on mobile for better centering */
+    }
+
+    .popup-details {
+        padding: 12px 15px;
+    }
+
+    .popup-details h3 {
+        font-size: 16px;
+    }
+
+    .popup-desc {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .btn-popup {
+        padding: 10px;
+        font-size: 14px;
     }
 
     .project-sidebar {
         width: 100%;
-        height: 350px;
+        height: auto;
+        max-height: 600px;
         border-right: none;
-        border-bottom: 1px solid #EDF2F7;
+        border-radius: 24px 24px 0 0;
+        background: #FFFFFF;
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        position: relative;
+        padding-top: 15px; /* Extra space for the handle */
+    }
+
+    .sidebar-header {
+        padding: 35px 24px 10px 24px; /* Slightly compacted */
+        border-bottom: none;
+        position: relative;
+    }
+
+    .sidebar-header::before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 45px;
+        height: 4px;
+        background: #E2E8F0;
+        border-radius: 2px;
+    }
+
+    .sidebar-header h3 {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: normal;
+        color: #122144;
+        text-transform: none;
+    }
+
+    .sidebar-scrollable {
+        padding: 0 20px;
+        max-height: 450px;
+    }
+
+    .location-cluster h4 {
+        display: none;
+    }
+
+    .project-item {
+        padding: 15px 0;
+        border-bottom: 1px solid #F1F5F9;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: transparent !important;
+    }
+
+    .project-item::before {
+        display: none !important;
+    }
+
+    .project-item .marker-dot,
+    .project-item .item-text-desktop {
+        display: none;
+    }
+
+    /* Mobile Content Structure */
+    .mobile-item-content {
+        display: block;
+    }
+
+    .item-flex {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .item-thumb {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .item-info {
+        flex: 1;
+    }
+
+    .item-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #122144;
+        margin-bottom: 1px;
+        text-transform: uppercase;
+    }
+
+    .item-loc {
+        font-size: 12px;
+        color: #64748B;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .item-loc svg {
+        width: 10px;
+        height: 12px;
+        opacity: 0.7;
+    }
+
+    .item-arrow {
+        color: #94A3B8;
+        opacity: 0.6;
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Active Item - Big Card Style (Compacted) */
+    .project-item.active .mobile-item-content {
+        background: #F8FBFF;
+        border: 1.5px solid #DCE7F5;
+        border-radius: 14px;
+        padding: 12px;
+        margin: 5px 0;
+        box-shadow: 0 8px 20px rgba(45, 83, 170, 0.06);
+    }
+
+    .project-item.active .item-flex {
+        margin-bottom: 12px;
+    }
+
+    .project-item.active .item-thumb {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .project-item.active .item-title {
+        font-size: 16px;
+    }
+
+    .project-item.active .item-arrow {
+        display: none;
+    }
+
+    .item-active-extra {
+        display: none;
+    }
+
+    .project-item.active .item-active-extra {
+        display: block;
+    }
+
+    .item-desc {
+        font-size: 12px;
+        line-height: 1.4;
+        color: #475569;
+        margin-bottom: 12px;
+    }
+
+    .btn-view-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        background: #122144;
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+
+    .sidebar-footer {
+        padding: 15px 20px;
+        background: #FFFFFF;
+        border-top: none;
+    }
+
+    .btn-view-all {
+        justify-content: center;
+        background: #F1F5F9;
+        padding: 12px;
+        border-radius: 8px;
+        color: #2D53AA;
+        width: 100%;
+        font-size: 13px;
     }
 
     .map-view-container {
-        height: 500px;
+        height: 450px;
+        border-radius: 20px;
+        overflow: hidden;
     }
 }
+
 
 /* Utility for Mobile Line Breaks */
 .mobile-br {
