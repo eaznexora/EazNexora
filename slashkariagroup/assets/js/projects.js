@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Lashkaria Group - Projects & Developments Logic
  * This file handles:
  * 1. The "Crafted Developments" Slider (Main Carousel)
@@ -14,34 +14,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const craftedProjects = [
         {
             id: 'p1',
-            title: "Lashkaria Solitaire",
+            title: "Amann Hills",
             location: "Andheri West",
-            desc: "A premium residential development offering modern design, refined living spaces, and a well-connected location for an elevated lifestyle.",
-            image: "assets/images/1.png",
+            desc: "Discover elevated living in the heart of Andheri. Amann Hills offers a perfect blend of modern architecture and premium amenities for a refined urban lifestyle.",
+            image: "assets/projects/8. Amann Hills (Andheri West).jpg",
             bgClass: "active-bg-1"
         },
         {
             id: 'p2',
-            title: "Amann Hills",
-            location: "Andheri East",
-            desc: "A sanctuary of peace in the bustling city, offering luxury villas and premium apartments with world-class amenities.",
-            image: "assets/images/2.png",
+            title: "Amann Marina",
+            location: "Worli",
+            desc: "Experience the ultimate in seafront luxury. Amann Marina redefined the Worli skyline with its iconic design and breathtaking views of the Arabian Sea.",
+            image: "assets/projects/4. Amann Marina (Worli).jpg",
             bgClass: "active-bg-2"
         },
         {
             id: 'p3',
-            title: "Lashkaria Pearl",
-            location: "Malad West",
-            desc: "Modern living redefined with expansive floor plans and serene surroundings, perfectly balanced for the urban family.",
-            image: "assets/images/3.png",
+            title: "Amann Highland Park",
+            location: "Malad East",
+            desc: "A sanctuary of green living amidst the city. Highland Park combines modern comforts with serene surroundings and rapid connectivity.",
+            image: "assets/projects/10. Amann Highland Park (Malad East).jpg",
             bgClass: "active-bg-3"
         },
         {
             id: 'p4',
-            title: "Amann Heights",
-            location: "Dahisar",
-            desc: "Elevated living experiences with panoramic city views and meticulously designed interiors for the modern professional.",
-            image: "assets/images/4.png",
+            title: "Amann Solitaire",
+            location: "Borivali West",
+            desc: "Elite residences designed for those who expect more. Amann Solitaire stands as a testament to craftsmanship and luxury in Borivali.",
+            image: "assets/projects/9. Amann Solitaire (Borivali West).jpg",
             bgClass: "active-bg-4"
         }
     ];
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <img src="${project.logo}" alt="Logo" class="popup-logo">
                             <h3>${project.name}</h3>
                         </div>
-                        <div class="popup-location">📍 ${project.location}</div>
+                        <div class="popup-location">ðŸ“ ${project.location}</div>
                         <p class="popup-desc">${project.desc}</p>
                         <a href="#" class="btn-popup">View Project &rarr;</a>
                     </div>
@@ -304,3 +304,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
