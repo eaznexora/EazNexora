@@ -1,81 +1,58 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Lashkaria Group</title>
-    <meta name="description"
-        content="Discover thoughtfully designed developments in prime locations, built for those who expect more.">
-
-    <!-- Favicon -->
+    <meta name="description" content="Discover thoughtfully designed developments in prime locations, built for those who expect more.">
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <script>
-        if (!window.location.pathname.endsWith('/') && !window.location.pathname.endsWith('.html')) {
-            var newUrl = window.location.href + "/";
-            window.history.replaceState(null, '', newUrl);
-        }
-    </script>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
 
-    <!-- Header -->
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="assets/logo/logo-header.svg" alt="Lashkaria Group Logo" id="logo-header">
             </a>
-
             <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html#home" class="nav-link">HOME</a></li>
-                    <li><a href="index.html#about" class="nav-link">ABOUT US</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT US</a></li>
                     <li><a href="projects.html" class="nav-link active">PROJECTS</a></li>
-                    <li><a href="index.html#contact" class="nav-link">CONTACT US</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
                 </ul>
             </nav>
-
-            <a href="index.html#contact" class="cta-button">
+            <a href="contact.html" class="cta-button">
                 <span>BOOK A CONSULTATION</span>
                 <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 16L12 8L0 0V16Z" fill="currentColor" />
                 </svg>
             </a>
-
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
 
-    <main>
+<main>
         <!-- Projects Hero Section -->
         <section class="projects-page-hero">
             <div class="hero-bg-wrapper">
-                <img src="assets/bg/projects-hero-bg.png" alt="Projects Hero" class="hero-image desktop-hero-bg">
-                <img src="assets/bg/mobile-projects-hero-bg.png" alt="Projects Hero Mobile" class="hero-image mobile-hero-bg" style="display: none;">
+                <img src="assets/images/about_us_bg-new.png" alt="Projects Hero" class="hero-image desktop-hero-bg">
+                <img src="assets/images/about_us_bg-new-mobile.png" alt="Projects Hero Mobile"
+                    class="hero-image mobile-hero-bg" style="display: none;">
             </div>
             <div class="container hero-container">
                 <div class="hero-content reveal-fade-up">
                     <h1 class="projects-hero-title">OUR DEVELOPMENTS<br>CRAFTED FOR LIFE</h1>
-                    <p class="projects-hero-subtitle">We develop iconic spaces that inspire, endure,<br>and elevate the way people live and work.</p>
+                    <p class="projects-hero-subtitle">We develop iconic spaces that inspire, endure,<br>and elevate the
+                        way people live and work.</p>
                     <div class="hero-btns">
-                        <a href="index.html#contact" class="btn btn-hero btn-schedule-visit">Schedule Visit</a>
+                        <a href="contact.html" class="btn btn-hero btn-schedule-visit">Schedule Visit</a>
                     </div>
                 </div>
             </div>
@@ -84,7 +61,7 @@
         <!-- Gap Filler: Counting Section -->
         <section class="projects-gap-section reveal-fade-up">
             <img src="assets/bg/Couting.png" class="bg-counting" alt="" aria-hidden="true">
-            
+
             <div class="counting-box">
                 <span class="count-number">25+</span>
                 <span class="count-text">No. Of Projects</span>
@@ -99,101 +76,184 @@
             </div>
         </section>
 
-        <!-- INITIAL PROJECTS (No Title) -->
-        <section class="detailed-projects-section pt-0">
+        <!-- OUR PROJECTS -->
+        <section id="completed" class="detailed-projects-section pt-20">
             <img src="assets/bg/breakdown-polygon-left.png" class="bg-poly-left-1" alt="" aria-hidden="true">
-            <img src="assets/bg/Polygon 20.png" class="bg-poly-right-1" alt="" aria-hidden="true">
             <div class="container">
-                <div class="detailed-projects-grid" id="initial-projects-grid">
-                    <!-- Card 1 -->
+                <h2 class="watermark-title reveal-fade-up">OUR PROJECTS</h2>
+                <div class="detailed-projects-grid">
+                    <!-- Amann Hills -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/images/project-1.png" alt="Project 1">
+                            <img src="assets/projects/8. Amann Hills (Andheri West).jpg" alt="Amann Hills">
                         </div>
                         <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
+                            <h3 class="detailed-card-title">AMANN HILLS</h3>
                             <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Andheri West, Mumbai
                             </div>
                             <div class="detailed-card-divider"></div>
                             <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Premium Residences
+                                </div>
+                                <div class="meta-item"><i data-lucide="star" class="w-4 h-4"></i> Luxury Amenities</div>
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                </div>
                             </div>
                             <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Andheri+West+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 2 -->
+                    <!-- Dreams Mall -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/images/project-2.png" alt="Project 2">
+                            <img src="assets/projects/1. Dream Mall (Bandup).jpg" alt="Dreams Mall">
                         </div>
                         <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
+                            <h3 class="detailed-card-title">DREAMS MALL</h3>
                             <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Bhandup West, Mumbai
                             </div>
                             <div class="detailed-card-divider"></div>
                             <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
+                                <div class="meta-item"><i data-lucide="building-2" class="w-4 h-4"></i> Commercial Hub
+                                </div>
+                                <div class="meta-item"><i data-lucide="shopping-bag" class="w-4 h-4"></i> Retail Spaces
+                                </div>
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                </div>
                             </div>
                             <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Bhandup+West+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 3 -->
+                    <!-- Jankalyan -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/images/project-3.png" alt="Project 3">
+                            <img src="assets/projects/2. Jankalyan (Dahisar East).jpg" alt="Jankalyan">
                         </div>
                         <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
+                            <h3 class="detailed-card-title">JANKALYAN</h3>
                             <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Dahisar East, Mumbai
                             </div>
                             <div class="detailed-card-divider"></div>
                             <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Residential Project
+                                </div>
+                                <div class="meta-item"><i data-lucide="check-circle" class="w-4 h-4"></i> Ready to Move
+                                </div>
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                </div>
                             </div>
                             <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Dahisar+East+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 4 -->
+                    <!-- Amann Sagar -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/images/project-4.png" alt="Project 4">
+                            <img src="assets/projects/6. Amann Sagar (Kandiwali West).jpg" alt="Amann Sagar">
                         </div>
                         <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
+                            <h3 class="detailed-card-title">AMANN SAGAR</h3>
                             <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Kandivali West, Mumbai
                             </div>
                             <div class="detailed-card-divider"></div>
                             <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Sea View Apts</div>
+                                <div class="meta-item"><i data-lucide="star" class="w-4 h-4"></i> Premium Living</div>
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                </div>
                             </div>
                             <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Kandivali+West+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Amann Spring -->
+                    <div class="detailed-project-card reveal-fade-up">
+                        <div class="card-image-wrap">
+                            <img src="assets/projects/7. Amann Spring (Kandivali West).jpg" alt="Amann Spring">
+                        </div>
+                        <div class="card-content-wrap">
+                            <h3 class="detailed-card-title">AMANN SPRING</h3>
+                            <div class="detailed-card-loc">
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Kandivali West, Mumbai
+                            </div>
+                            <div class="detailed-card-divider"></div>
+                            <div class="project-meta-grid">
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Modern Residency</div>
+                                <div class="meta-item"><i data-lucide="sparkles" class="w-4 h-4"></i> Elite Design</div>
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                </div>
+                            </div>
+                            <div class="detailed-card-btns">
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Kandivali+West+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Rashmi Heights -->
+                    <div class="detailed-project-card reveal-fade-up">
+                        <div class="card-image-wrap">
+                            <img src="assets/projects/3. Rashmi Height (Malad East).jpg" alt="Rashmi Heights">
+                        </div>
+                        <div class="card-content-wrap">
+                            <h3 class="detailed-card-title">RASHMI HEIGHTS</h3>
+                            <div class="detailed-card-loc">
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Malad East, Mumbai
+                            </div>
+                            <div class="detailed-card-divider"></div>
+                            <div class="project-meta-grid">
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Urban Spaces</div>
+                                <div class="meta-item"><i data-lucide="users" class="w-4 h-4"></i> Community Living
+                                </div>
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                </div>
+                            </div>
+                            <div class="detailed-card-btns">
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Malad+East+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lashkaria Solitaire -->
+                    <div class="detailed-project-card reveal-fade-up">
+                        <div class="card-image-wrap">
+                            <img src="assets/projects/11. Lashkaria Solitaire (Andheri West).jpg"
+                                alt="Lashkaria Solitaire">
+                        </div>
+                        <div class="card-content-wrap">
+                            <h3 class="detailed-card-title">LASHKARIA SOLITAIRE</h3>
+                            <div class="detailed-card-loc">
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Andheri West, Mumbai
+                            </div>
+                            <div class="detailed-card-divider"></div>
+                            <div class="project-meta-grid">
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Elite Residences</div>
+                                <div class="meta-item"><i data-lucide="gem" class="w-4 h-4"></i> Iconic Landmark</div>
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                </div>
+                            </div>
+                            <div class="detailed-card-btns">
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Andheri+West+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
                     </div>
@@ -202,402 +262,205 @@
         </section>
 
         <!-- Divider -->
-        <div class="section-divider reveal-fade-up mt-80 mb-80">
-            <div class="divider-line"></div>
-            <div class="divider-hex"></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- COMPLETED PROJECTS -->
-        <section class="detailed-projects-section pt-0">
-            <img src="assets/bg/ongoing-top.png" class="bg-poly-right-2" alt="" aria-hidden="true">
-            <div class="container">
-                <h2 class="watermark-title reveal-fade-up">COMPLETED PROJECTS</h2>
-                <div class="detailed-projects-grid" id="completed-projects-grid">
-                    <!-- Card 1 -->
-                    <div class="detailed-project-card reveal-fade-up">
-                        <div class="card-image-wrap">
-                            <img src="assets/images/project-1.png" alt="Project 1">
-                        </div>
-                        <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
-                            <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
-                            </div>
-                            <div class="detailed-card-divider"></div>
-                            <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
-                            </div>
-                            <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="detailed-project-card reveal-fade-up">
-                        <div class="card-image-wrap">
-                            <img src="assets/images/project-2.png" alt="Project 2">
-                        </div>
-                        <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
-                            <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
-                            </div>
-                            <div class="detailed-card-divider"></div>
-                            <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
-                            </div>
-                            <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="detailed-project-card reveal-fade-up">
-                        <div class="card-image-wrap">
-                            <img src="assets/images/project-3.png" alt="Project 3">
-                        </div>
-                        <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
-                            <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
-                            </div>
-                            <div class="detailed-card-divider"></div>
-                            <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
-                            </div>
-                            <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="detailed-project-card reveal-fade-up">
-                        <div class="card-image-wrap">
-                            <img src="assets/images/project-4.png" alt="Project 4">
-                        </div>
-                        <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
-                            <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
-                            </div>
-                            <div class="detailed-card-divider"></div>
-                            <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
-                            </div>
-                            <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Divider -->
-        <div class="section-divider reveal-fade-up mt-80 mb-80">
+        <div class="section-divider reveal-fade-up mt-20 mb-20">
             <div class="divider-line"></div>
             <div class="divider-hex"></div>
             <div class="divider-line"></div>
         </div>
 
         <!-- ONGOING PROJECTS -->
-        <section class="detailed-projects-section pt-0">
-            <img src="assets/bg/breakdown-polygon-right.png" class="bg-poly-left-2" alt="" aria-hidden="true">
+        <section id="ongoing" class="detailed-projects-section pt-0">
+            <img src="assets/bg/ongoing-top.png" class="bg-poly-right-2" alt="" aria-hidden="true">
             <div class="container">
                 <h2 class="watermark-title reveal-fade-up">ONGOING PROJECTS</h2>
                 <div class="detailed-projects-grid" id="ongoing-projects-grid">
-                    <!-- Card 1 -->
+                    <!-- Amann Marina -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/images/project-1.png" alt="Project 1">
+                            <img src="assets/projects/4. Amann Marina (Worli).jpg" alt="Amann Marina">
                         </div>
                         <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
+                            <h3 class="detailed-card-title">AMANN MARINA</h3>
                             <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Worli, Mumbai
                             </div>
                             <div class="detailed-card-divider"></div>
                             <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Luxury Seafront</div>
+                                <div class="meta-item"><i data-lucide="star" class="w-4 h-4"></i> Exclusive Lifestyle
+                                </div>
+                                <div class="meta-item"><i data-lucide="loader" class="w-4 h-4"></i> Construction Phase
+                                </div>
                             </div>
                             <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Worli+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 2 -->
+                    <!-- Amann Solitaire -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/images/project-2.png" alt="Project 2">
+                            <img src="assets/projects/9. Amann Solitaire (Borivali West).jpg" alt="Amann Solitaire">
                         </div>
                         <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
+                            <h3 class="detailed-card-title">AMANN SOLITAIRE</h3>
                             <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Borivali West, Mumbai
                             </div>
                             <div class="detailed-card-divider"></div>
                             <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Modern Residency</div>
+                                <div class="meta-item"><i data-lucide="activity" class="w-4 h-4"></i> Rapid Development
+                                </div>
+                                <div class="meta-item"><i data-lucide="loader" class="w-4 h-4"></i> Ongoing</div>
                             </div>
                             <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Borivali+West+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 3 -->
+                    <!-- Amann Highland Park -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/images/project-3.png" alt="Project 3">
+                            <img src="assets/projects/10. Amann Highland Park (Malad East).jpg"
+                                alt="Amann Highland Park">
                         </div>
                         <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
+                            <h3 class="detailed-card-title">AMANN HIGHLAND PARK</h3>
                             <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Malad East, Mumbai
                             </div>
                             <div class="detailed-card-divider"></div>
                             <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Green Living</div>
+                                <div class="meta-item"><i data-lucide="mountain" class="w-4 h-4"></i> Scenic Views</div>
+                                <div class="meta-item"><i data-lucide="loader" class="w-4 h-4"></i> Ongoing</div>
                             </div>
                             <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Malad+East+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Card 4 -->
+                    <!-- Amann Akansha Heights -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/images/project-4.png" alt="Project 4">
+                            <img src="assets/projects/5. Amann Akanksha Height (Worli).jpg" alt="Amann Akansha Heights">
                         </div>
                         <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
+                            <h3 class="detailed-card-title">AMANN AKANSHA HEIGHTS</h3>
                             <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
+                                <i data-lucide="map-pin" class="w-4 h-4"></i> Worli, Mumbai
                             </div>
                             <div class="detailed-card-divider"></div>
                             <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
+                                <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Premium Tower</div>
+                                <div class="meta-item"><i data-lucide="landmark" class="w-4 h-4"></i> Prime Location
+                                </div>
+                                <div class="meta-item"><i data-lucide="loader" class="w-4 h-4"></i> Ongoing</div>
                             </div>
                             <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Divider -->
-        <div class="section-divider reveal-fade-up mt-80 mb-80">
-            <div class="divider-line"></div>
-            <div class="divider-hex"></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- UPCOMING PROJECTS -->
-        <section class="detailed-projects-section pt-0">
-            <div class="container">
-                <h2 class="watermark-title reveal-fade-up">UPCOMING PROJECTS</h2>
-                <div class="detailed-projects-grid" id="upcoming-projects-grid">
-                    <!-- Card 1 -->
-                    <div class="detailed-project-card reveal-fade-up">
-                        <div class="card-image-wrap">
-                            <img src="assets/images/project-1.png" alt="Project 1">
-                        </div>
-                        <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
-                            <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
-                            </div>
-                            <div class="detailed-card-divider"></div>
-                            <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
-                            </div>
-                            <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="detailed-project-card reveal-fade-up">
-                        <div class="card-image-wrap">
-                            <img src="assets/images/project-2.png" alt="Project 2">
-                        </div>
-                        <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
-                            <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
-                            </div>
-                            <div class="detailed-card-divider"></div>
-                            <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
-                            </div>
-                            <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="detailed-project-card reveal-fade-up">
-                        <div class="card-image-wrap">
-                            <img src="assets/images/project-3.png" alt="Project 3">
-                        </div>
-                        <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
-                            <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
-                            </div>
-                            <div class="detailed-card-divider"></div>
-                            <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
-                            </div>
-                            <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="detailed-project-card reveal-fade-up">
-                        <div class="card-image-wrap">
-                            <img src="assets/images/project-4.png" alt="Project 4">
-                        </div>
-                        <div class="card-content-wrap">
-                            <h3 class="detailed-card-title">RASHMI HEIGHT</h3>
-                            <div class="detailed-card-loc">
-                                <img src="assets/icons/project-location.svg" alt="Location"> Andheri West, Mumbai
-                            </div>
-                            <div class="detailed-card-divider"></div>
-                            <div class="project-meta-grid">
-                                <div class="meta-item"><img src="assets/icons/home.svg" alt=""> 1 & 2 BHK</div>
-                                <div class="meta-item"><img src="assets/icons/star.svg" alt=""> 25+ Amenities</div>
-                                <div class="meta-item"><img src="assets/icons/build.svg" alt=""> 23 Storeys</div>
-                                <div class="meta-item"><img src="assets/icons/verified.svg" alt=""> RERA Registered</div>
-                            </div>
-                            <div class="detailed-card-btns">
-                                <a href="#" class="btn btn-solid-dark">Brochure</a>
-                                <a href="#" class="btn btn-solid-gray">View On Map</a>
+                                <a href="contact.html" class="btn btn-solid-dark">Enquire Now</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Worli+Mumbai"
+                                    target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <img src="assets/bg/breakdown-polygon-right.png" class="bg-poly-right-bottom" alt="" aria-hidden="true">
         </section>
 
         <!-- CTA Section -->
-        <section id="contact" class="cta-section projects-page-cta">
-            <img src="assets/bg/projects-cta-bg.png" alt="" class="cta-bg-img desktop-cta-bg" aria-hidden="true">
-            <img src="assets/bg/mobile-projects-cta-bg.png" alt="" class="cta-bg-img mobile-cta-bg" aria-hidden="true" style="display: none;">
-            
-            <div class="container cta-container align-start">
+        <section id="contact" class="cta-section">
+
+            <!-- Layer 1: BG image as <img> â€” same approach as hero, crisp & no blur -->
+            <img src="assets/bg/cta-bg.png" alt="" class="cta-bg-img" aria-hidden="true">
+
+            <!-- Layer 2: Polygon shape â€” right side -->
+            <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon" aria-hidden="true">
+
+            <!-- Layer 3: Content -->
+            <div class="container cta-container">
+
+                <!-- LEFT: Hero Text â€” top-left aligned -->
                 <div class="cta-text reveal-fade-left">
                     <h2 class="cta-title">FIND YOUR<br>PERFECT SPACE TODAY</h2>
                     <div class="accent-line-light"></div>
-                    <p class="cta-subtitle">Discover thoughtfully designed developments in prime locations, built for those who expect more.</p>
-                    
-                    <div class="projects-cta-btns">
-                        <a href="index.html#contact" class="btn btn-solid-light">Schedule a Consultation</a>
-                        <a href="index.html#contact" class="btn btn-outline-light">Contact Us</a>
-                    </div>
+                    <p class="cta-subtitle">Exclusive Residences. Thoughtful Design.<br>Spaces that elevate the way you
+                        live</p>
                 </div>
+
+                <!-- RIGHT: Contact Form Card â€” exact Figma 519Ã—645px -->
+                <div class="contact-form-card reveal-fade-right">
+                    <h3 class="form-heading">LET'S CONNECT</h3>
+                    <div class="form-heading-line"></div>
+                    <p class="form-subtext">Share a few details and our team will connect with you shortly.</p>
+                    <form id="consultation-form">
+                        <div class="form-group">
+                            <img src="assets/icons/profile.svg" alt="Name">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <img src="assets/icons/contact-call.svg" alt="Phone">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group fg-email">
+                            <img src="assets/icons/contact-mail.svg" alt="Email">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group fg-message">
+                            <img src="assets/icons/message.svg" alt="Message">
+                            <textarea placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-consult">Schedule a Consultation &rarr;</button>
+                    </form>
+                </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-container">
-            <!-- Col 1: Brand -->
             <div class="footer-col brand-col">
                 <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
                 <h4 class="footer-tagline">Shaping What's Next</h4>
-                <p class="footer-desc">We create iconic spaces and lasting value through vision, craftsmanship, and
-                    trust.</p>
+                <p class="footer-desc">We create iconic spaces and lasting value through vision, craftsmanship, and trust.</p>
             </div>
-
-            <!-- Col 2: Quick Links -->
             <div class="footer-col links-col">
                 <ul class="footer-links">
                     <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="index.html#about">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
-                    </li>
+                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
-                    </li>
+                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
                     <li><a href="#">Services <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                 </ul>
             </div>
-
-            <!-- Col 3: Our Projects -->
             <div class="footer-col links-col">
                 <ul class="footer-links">
-                    <li><a href="projects.html">Completed Projects <img src="assets/icons/right.svg" alt=""
-                                class="footer-arrow"></a></li>
+                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Ongoing Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
-                    </li>
+                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
-                    </li>
+                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="index.html#contact">Contact <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
-                    </li>
+                    <li><a href="contact.html">Contact <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                 </ul>
             </div>
-
-            <!-- Col 4: Contact Info -->
             <div class="footer-col contact-col">
                 <div class="contact-items">
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
-                        <p>S. Lashkaria Group 1st Floor, Juhu Azad Nagar CHS C.D. Barfiwala Road, Andheri (W), Mumbai
-                            400053</p>
+                        <p>S. Lashkaria Group 1st Floor, Juhu Azad Nagar CHS C.D. Barfiwala Road, Andheri (W), Mumbai 400053</p>
                     </div>
                     <div class="contact-divider"></div>
                     <div class="contact-item">
@@ -612,22 +475,13 @@
                 </div>
             </div>
         </div>
-
-        <!-- Footer Bottom divider -->
-        <div class="container">
-            <div class="footer-bottom-line"></div>
-        </div>
-
-        <!-- Bottom Row: Copyright, Privacy, Credits, Socials -->
+        <div class="container"><div class="footer-bottom-line"></div></div>
         <div class="container footer-bottom-row">
             <div class="footer-bottom-left">
                 <p class="copyright">@2026 S. Lashkaria Group. All rights reserved.</p>
                 <a href="#" class="privacy-link">Privacy Policy</a>
             </div>
-
-            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
-                    Nexora</a></p>
-
+            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz Nexora</a></p>
             <div class="social-links">
                 <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
                 <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
@@ -637,7 +491,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <script>lucide.createIcons();</script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/projects.js"></script>
