@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Amann Highland Park",
             location: "Malad East",
             desc: "A sanctuary of green living amidst the city. Highland Park combines modern comforts with serene surroundings and rapid connectivity.",
-            image: "assets/projects/amann-highlands-d.png",
+            image: "assets/projects/amann-Highlands-d.png",
             bgClass: "active-bg-3"
         },
         {
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
        SECTION 3: COUNTING ANIMATION
        ============================================================ */
     const countNumbers = document.querySelectorAll('.count-number');
-    
+
     const animateCount = (el) => {
         const target = parseInt(el.getAttribute('data-target'));
         const duration = 2000; // 2 seconds
@@ -324,10 +324,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const updateCount = (currentTime) => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            
+
             // Easing function (easeOutQuad)
             const easeProgress = progress * (2 - progress);
-            
+
             const currentValue = Math.floor(easeProgress * (target - start) + start);
             el.innerText = currentValue;
 
