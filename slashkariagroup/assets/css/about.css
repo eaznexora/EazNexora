@@ -1176,7 +1176,6 @@
     position: relative;
     width: 100vw;
     background-color: #A3D3F2;
-    overflow: hidden;
 }
 
 .dark-top-strip {
@@ -1207,10 +1206,14 @@
 
 .image-box-alt img {
     width: 100%;
-    max-width: 350px;
+    max-width: 420px; /* Increased slightly */
     height: auto;
     object-fit: contain;
     display: block;
+    position: relative;
+    z-index: 10;
+    transform: translateY(-25px) scale(1.05); /* Shift up to prevent head clipping */
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2));
 }
 
 .info-box-alt {
