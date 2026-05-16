@@ -8,22 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('scrolled');
         }
     });
-
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
 
     // Close mobile menu on link click
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
         });
     });
 
@@ -32,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (consultationForm) {
         consultationForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Basic simulation of success
             const btn = consultationForm.querySelector('button');
             const originalText = btn.innerHTML;
             btn.innerHTML = 'Sending...';
@@ -47,25 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Active Link Highlighting
-    const sections = document.querySelectorAll('section[id]');
-    window.addEventListener('scroll', () => {
-        let current = "";
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= sectionTop - 100) {
-                current = section.getAttribute("id");
-            }
-        });
-
-        navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").includes(current)) {
-                link.classList.add("active");
-            }
-        });
-    });
+    // Active Link Highlighting - Removed to keep 'HOME' active on index page
+    // Header Scroll Handling - Removed as header is now solid by default via CSS
 
     // Developments Map Interactivity
     const projectItems = document.querySelectorAll('.project-items li');

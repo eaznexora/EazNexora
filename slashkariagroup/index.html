@@ -7,6 +7,7 @@
     <title>Lashkaria Group | Crafting Landmarks That Define Modern Living</title>
     <meta name="description"
         content="Lashkaria Group - Pioneering premium-quality real estate with unmatched craftsmanship. Discover thoughtfully designed spaces in prime locations.">
+    <meta name="theme-color" content="#192954">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -40,7 +41,7 @@
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="assets/logo/logo-header.svg" alt="Lashkaria Group Logo" id="logo-header">
+                <img src="assets/logo/new-header-logo-light.png" alt="Lashkaria Group Logo" id="logo-header">
             </a>
 
             <nav class="nav-menu">
@@ -48,16 +49,18 @@
                     <li><a href="#home" class="nav-link active">HOME</a></li>
                     <li><a href="about.html" class="nav-link">ABOUT US</a></li>
                     <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
-                    <li><a href="contact.html" class="nav-link"></a></li>
+                    <li><a href="blog.html" class="nav-link">BLOGS</a></li>
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">DOWNLOAD BROCHURE</a></li>
+                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
                 </ul>
             </nav>
 
-            <a href="contact.html" class="cta-button">
-                <span>CONTACT US</span>  
-             <!--  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 16L12 8L0 0V16Z" fill="currentColor" />
-                </svg> -->
-            </a>
+            <div class="header-actions">
+                <a href="#" class="btn-outline-header">DOWNLOAD BROCHURE</a>
+                <a href="contact.html" class="cta-button">
+                    <span>CONTACT US</span>
+                </a>
+            </div>
 
             <div class="hamburger">
                 <span></span>
@@ -70,32 +73,108 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="container hero-container">
-                <div class="hero-content reveal-fade-up">
-                    <h1 class="hero-title">CRAFTING LANDMARKS <br> THAT DEFINE MODERN <br class="mobile-br">LIVING</h1>
-                    <p class="hero-subtitle">Premium residences in prime locations, designed for those who expect more.
-                    </p>
-                    <div class="hero-btns">
-                        <a href="#projects" class="btn btn-hero btn-explore">Explore Projects</a>
-                       <!-- <a href="#contact" class="btn btn-hero btn-schedule">Schedule Visit</a> -->
+            <div class="hero-slider-wrapper">
+                <div class="hero-slider-container">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide active">
+                        <div class="container hero-container">
+                            <div class="hero-content reveal-fade-up">
+                                <h1 class="hero-title">CRAFTING LANDMARKS <br> THAT DEFINE MODERN <br
+                                        class="mobile-br">LIVING</h1>
+                                <p class="hero-subtitle">Premium residences in prime locations, designed for those who
+                                    expect more.
+                                </p>
+                                <div class="hero-btns">
+                                    <a href="#projects" class="btn btn-hero btn-explore">Explore Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-bg">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="assets/bg/home-page-mobile-bg.png">
+                                <img src="assets/bg/hero-bg.png" alt="Lashkaria Hero" class="hero-image">
+                            </picture>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="hero-slide">
+                        <div class="container hero-container">
+                            <div class="hero-content reveal-fade-up">
+                                <h1 class="hero-title">ELEVATING URBAN <br> SPACES WITH <br class="mobile-br">PRECISION
+                                </h1>
+                                <p class="hero-subtitle">Innovative designs meeting unmatched craftsmanship in every
+                                    project.
+                                </p>
+                                <div class="hero-btns">
+                                    <a href="#projects" class="btn btn-hero btn-explore">Explore Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-bg">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="assets/images/about_us_bg-new-mobile.png">
+                                <img src="assets/bg/hero-bg2.png" alt="Lashkaria Hero" class="hero-image">
+                            </picture>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="hero-slide">
+                        <div class="container hero-container">
+                            <div class="hero-content reveal-fade-up">
+                                <h1 class="hero-title">DEFINING THE <br> FUTURE OF <br class="mobile-br">LUXURY</h1>
+                                <p class="hero-subtitle">Creating sustainable communities that inspire and endure.
+                                </p>
+                                <div class="hero-btns">
+                                    <a href="#projects" class="btn btn-hero btn-explore">Explore Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide-bg">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="assets/images/about_us_bg-new-mobile.png">
+                                <img src="assets/bg/hero-bg.png" alt="Lashkaria Hero" class="hero-image">
+                            </picture>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-bg-wrapper">
-                <img src="assets/bg/hero-bg.png" alt="Lashkaria Hero" class="hero-image">
+
+            <!-- Slider Navigation -->
+            <div class="hero-slider-nav">
+                <button class="hero-slider-arrow prev" aria-label="Previous Slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="hero-slider-arrow next" aria-label="Next Slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Slider Pagination -->
+            <div class="hero-slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
             </div>
         </section>
 
         <!-- Vision Section -->
         <section class="vision-mission" id="about">
             <div class="about-bg-images">
-                <img src="assets/bg/about-1.png" alt="Hexagon" class="bg-about-1">
-                <img src="assets/bg/about-2.png" alt="Hexagon" class="bg-about-2">
-                <img src="assets/bg/about-3.png" alt="Hexagon" class="bg-about-3">
+                <img src="assets/bg/about-1.png" alt="Hexagon" class="bg-about-1 reveal-fade-up">
+                <img src="assets/bg/about-2.png" alt="Hexagon" class="bg-about-2 reveal-fade-up"
+                    style="transition-delay: 0.2s;">
+                <img src="assets/bg/about-3.png" alt="Hexagon" class="bg-about-3 reveal-fade-up"
+                    style="transition-delay: 0.4s;">
             </div>
             <div class="container about-container">
                 <div class="hexagon-image reveal-fade-left">
-                    <img src="assets/images/hexagon-1.png" alt="Vision Image">
+                    <img src="assets/images/homepage-below-banner.png" alt="Vision Image">
                 </div>
                 <div class="vision-content">
                     <h2 class="reveal-fade-up">BUILDING SPACES <br> THAT ELEVATE LIFE</h2>
@@ -139,8 +218,8 @@
         <!-- Values Section -->
         <section class="values-section">
             <div class="values-bg-images">
-                <img src="assets/bg/about-4.png" alt="Hexagon" class="bg-about-4">
-                <img src="assets/bg/about-5.png" alt="Hexagon" class="bg-about-5">
+                <img src="assets/bg/about-4.png" alt="Hexagon" class="bg-about-4 reveal-fade-left">
+                <img src="assets/bg/about-5.png" alt="Hexagon" class="bg-about-5 reveal-fade-right">
             </div>
             <div class="container values-container">
                 <div class="values-left reveal-fade-left">
@@ -715,8 +794,9 @@
 
             <div class="container legacy-container">
                 <!-- Background Decoration Assets -->
-                <img src="assets/bg/ploygon.png" alt="" class="bg-legacy-polygon">
-                <img src="assets/images/Hexagon Building 1.png" alt="" class="bg-legacy-building">
+                <img src="assets/bg/ploygon.png" alt="" class="bg-legacy-polygon reveal-fade-right">
+                <img src="assets/images/corner-building-homepage.png" alt="" class="bg-legacy-building reveal-fade-up"
+                    style="transition-delay: 0.2s; width:270px; left: 50px;">
 
                 <div class="legacy-layout">
                     <!-- Left Content -->
@@ -824,14 +904,14 @@
                     <button id="prev-project" class="nav-btn prev">
                         <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.5 0L34.5215 9.25V27.75L18.5 37L2.47853 27.75V9.25L18.5 0Z" fill="#F4F4F4"
-                                stroke="#122144" />
-                            <path d="M21 12L15 18.5L21 25" stroke="#122144" stroke-width="2" stroke-linecap="round"
+                                stroke="#192954" />
+                            <path d="M21 12L15 18.5L21 25" stroke="#192954" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </button>
                     <button id="next-project" class="nav-btn next">
                         <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.5 0L34.5215 9.25V27.75L18.5 37L2.47853 27.75V9.25L18.5 0Z" fill="#122144" />
+                            <path d="M18.5 0L34.5215 9.25V27.75L18.5 37L2.47853 27.75V9.25L18.5 0Z" fill="#192954" />
                             <path d="M16 12L22 18.5L16 25" stroke="white" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
@@ -850,10 +930,10 @@
         <section id="contact" class="cta-section">
 
             <!-- Layer 1: BG image as <img> — same approach as hero, crisp & no blur -->
-            <img src="assets/bg/cta-bg.png" alt="" class="cta-bg-img" aria-hidden="true">
+            <img src="assets/bg/cta-bg.png" alt="" class="cta-bg-img reveal-fade-up" aria-hidden="true">
 
             <!-- Layer 2: Polygon shape — right side -->
-            <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon" aria-hidden="true">
+            <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon reveal-fade-right" aria-hidden="true">
 
             <!-- Layer 3: Content -->
             <div class="container cta-container">
@@ -901,7 +981,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <!-- Col 1: Brand -->
-            <div class="footer-col brand-col">
+            <div class="footer-col brand-col reveal-fade-up">
                 <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
                 <h4 class="footer-tagline">Shaping What's Next</h4>
                 <p class="footer-desc">We create iconic spaces and lasting value through vision, craftsmanship, and
@@ -909,7 +989,7 @@
             </div>
 
             <!-- Col 2: Quick Links -->
-            <div class="footer-col links-col">
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.1s;">
                 <ul class="footer-links">
                     <li><a href="#home">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
@@ -924,7 +1004,7 @@
             </div>
 
             <!-- Col 3: Our Projects -->
-            <div class="footer-col links-col">
+            <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.2s;">
                 <ul class="footer-links">
                     <li><a href="#">Completed Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
@@ -935,17 +1015,19 @@
                     <li><a href="#">Upcoming Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
                     <li class="link-divider"></li>
-                    <li><a href="#contact">Contract Projects<img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    <li><a href="#contact">Contract Projects<img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a>
                     </li>
                 </ul>
             </div>
 
             <!-- Col 4: Contact Info -->
-            <div class="footer-col contact-col">
+            <div class="footer-col contact-col reveal-fade-up" style="transition-delay: 0.3s;">
                 <div class="contact-items">
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
-                        <p> S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053</p>
+                        <p> S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri
+                            (W), Mumbai 400053</p>
                     </div>
                     <div class="contact-divider"></div>
                     <div class="contact-item">
@@ -967,7 +1049,7 @@
         </div>
 
         <!-- Bottom Row: Copyright, Privacy, Credits, Socials -->
-        <div class="container footer-bottom-row">
+        <div class="container footer-bottom-row reveal-fade-up">
             <div class="footer-bottom-left">
                 <p class="copyright">@2026 S. Lashkaria Group. All rights reserved.</p>
                 <a href="#" class="privacy-link">Privacy Policy</a>
@@ -980,7 +1062,7 @@
                 <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
                 <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
-               <!-- <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
+                <!-- <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
             </div>
         </div>
     </footer>
@@ -991,6 +1073,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/projects.js"></script>
+    <script src="assets/js/hero-slider.js"></script>
 </body>
 
 </html>

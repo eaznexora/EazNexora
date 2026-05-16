@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Amann Hills",
             location: "Andheri West",
             desc: "Discover elevated living in the heart of Andheri. Amann Hills offers a perfect blend of modern architecture and premium amenities for a refined urban lifestyle.",
-            image: "assets/projects/8. Amann Hills (Andheri West).jpg",
+            image: "assets/projects/amann-hills-d.png",
             bgClass: "active-bg-1"
         },
         {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Amann Marina",
             location: "Worli",
             desc: "Experience the ultimate in seafront luxury. Amann Marina redefined the Worli skyline with its iconic design and breathtaking views of the Arabian Sea.",
-            image: "assets/projects/4. Amann Marina (Worli).jpg",
+            image: "assets/projects/amann-marina-d.png",
             bgClass: "active-bg-2"
         },
         {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Amann Highland Park",
             location: "Malad East",
             desc: "A sanctuary of green living amidst the city. Highland Park combines modern comforts with serene surroundings and rapid connectivity.",
-            image: "assets/projects/10. Amann Highland Park (Malad East).jpg",
+            image: "assets/projects/amann-highlands-d.png",
             bgClass: "active-bg-3"
         },
         {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Amann Solitaire",
             location: "Borivali West",
             desc: "Elite residences designed for those who expect more. Amann Solitaire stands as a testament to craftsmanship and luxury in Borivali.",
-            image: "assets/projects/9. Amann Solitaire (Borivali West).jpg",
+            image: "assets/projects/amann-solitare-d.png",
             bgClass: "active-bg-4"
         }
     ];
@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 1. Render Big Card
         activeProjectContainer.innerHTML = `
-            <img src="${active.image}" alt="${active.title}" class="${animationClass}" style="width:100%; height:100%; object-fit:cover;">
+            <div class="card-image-wrapper ${animationClass}">
+                <img src="${active.image}" alt="${active.title}" style="width:100%; height:100%; object-fit:cover;">
+            </div>
             <div class="project-overlay fade-up-content">
                 <div class="overlay-inner">
                     <h3 class="overlay-title">${active.title}</h3>
@@ -85,7 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         smallProjectsGrid.innerHTML = smallProjects.map(proj => `
             <div class="small-card">
-                <img src="${proj.image}" alt="${proj.title}" class="${animationClass}" style="width:100%; height:100%; object-fit:cover;">
+                <div class="card-image-wrapper ${animationClass}">
+                    <img src="${proj.image}" alt="${proj.title}" style="width:100%; height:100%; object-fit:cover;">
+                </div>
                 <div class="small-overlay fade-up-content">
                     <h4 class="small-title">${proj.title}</h4>
                     <div class="small-loc">
@@ -305,5 +309,53 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000); // Slight delay to ensure map is ready
         }
     }
+
+    /* ============================================================
+       SECTION 3: COUNTING ANIMATION
+       ============================================================ */
+    const countNumbers = document.querySelectorAll('.count-number');
+    
+    const animateCount = (el) => {
+        const target = parseInt(el.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const start = 0;
+        const startTime = performance.now();
+
+        const updateCount = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function (easeOutQuad)
+            const easeProgress = progress * (2 - progress);
+            
+            const currentValue = Math.floor(easeProgress * (target - start) + start);
+            el.innerText = currentValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCount);
+            } else {
+                el.innerText = target;
+            }
+        };
+
+        requestAnimationFrame(updateCount);
+    };
+
+    const countObserverOptions = {
+        threshold: 0.5
+    };
+
+    const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCount(entry.target);
+                countObserver.unobserve(entry.target);
+            }
+        });
+    }, countObserverOptions);
+
+    countNumbers.forEach(num => {
+        countObserver.observe(num);
+    });
 });
 

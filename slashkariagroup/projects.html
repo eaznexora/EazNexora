@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,6 +7,7 @@
     <title>Projects | Lashkaria Group</title>
     <meta name="description"
         content="Discover thoughtfully designed developments in prime locations, built for those who expect more.">
+    <meta name="theme-color" content="#192954">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,22 +23,24 @@
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo/logo-header.svg" alt="Lashkaria Group Logo" id="logo-header">
+                <img src="assets/logo/new-header-logo-light.png" alt="Lashkaria Group Logo" id="logo-header">
             </a>
             <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html#home" class="nav-link">HOME</a></li>
                     <li><a href="about.html" class="nav-link">ABOUT US</a></li>
                     <li><a href="projects.html" class="nav-link active">PROJECTS</a></li>
-                    <li><a href="contact.html" class="nav-link"></a></li>
+                    <li><a href="blog.html" class="nav-link">BLOGS</a></li>
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">DOWNLOAD BROCHURE</a></li>
+                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="cta-button">
-                <span>CONTACT US</span>
-              <!--  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 16L12 8L0 0V16Z" fill="currentColor" />
-                </svg> -->
-            </a>
+            <div class="header-actions">
+                <a href="#" class="btn-outline-header">DOWNLOAD BROCHURE</a>
+                <a href="contact.html" class="cta-button">
+                    <span>CONTACT US</span>
+                </a>
+            </div>
             <div class="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
@@ -56,7 +59,7 @@
                     <p class="projects-hero-subtitle">We develop iconic spaces that inspire, endure,<br>and elevate the
                         way people live and work.</p>
                     <div class="hero-btns">
-                   <!--     <a href="contact.html" class="btn btn-hero btn-schedule-visit">Schedule Visit</a> -->
+                        <!--     <a href="contact.html" class="btn btn-hero btn-schedule-visit">Schedule Visit</a> -->
                     </div>
                 </div>
             </div>
@@ -67,15 +70,21 @@
             <img src="assets/bg/Couting.png" class="bg-counting" alt="" aria-hidden="true">
 
             <div class="counting-box">
-                <span class="count-number">25+</span>
+                <div class="count-row">
+                    <span class="count-number" data-target="25">0</span><span class="count-suffix">+</span>
+                </div>
                 <span class="count-text">No. Of Projects</span>
             </div>
             <div class="counting-box">
-                <span class="count-number">10k+</span>
+                <div class="count-row">
+                    <span class="count-number" data-target="9">0</span><span class="count-suffix">k+</span>
+                </div>
                 <span class="count-text">Happy Families</span>
             </div>
             <div class="counting-box">
-                <span class="count-number">30</span>
+                <div class="count-row">
+                    <span class="count-number" data-target="30">0</span>
+                </div>
                 <span class="count-text">Years Legacy</span>
             </div>
         </section>
@@ -101,7 +110,7 @@
                             <div class="project-meta-grid">
                                 <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Green Living</div>
                                 <div class="meta-item"><i data-lucide="mountain" class="w-4 h-4"></i> Scenic Views</div>
-                                 <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
                                 </div>
                             </div>
                             <div class="detailed-card-btns">
@@ -126,7 +135,7 @@
                                 <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Luxury Seafront</div>
                                 <div class="meta-item"><i data-lucide="star" class="w-4 h-4"></i> Exclusive Lifestyle
                                 </div>
-                                 <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
                                 </div>
                             </div>
                             <div class="detailed-card-btns">
@@ -161,7 +170,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Dreams Mall -->
+                    <!-- Dreams Mall 
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/1. Dream Mall (Bandup).jpg" alt="Dreams Mall">
@@ -186,8 +195,8 @@
                                     target="_blank" class="btn btn-solid-gray">View On Map</a>
                             </div>
                         </div>
-                    </div>
-                     <!-- Amann Akansha Heights -->
+                    </div> -->
+                    <!-- Amann Akansha Heights -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/5. Amann Akanksha Height (Worli).jpg" alt="Amann Akansha Heights">
@@ -202,7 +211,7 @@
                                 <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Premium Tower</div>
                                 <div class="meta-item"><i data-lucide="landmark" class="w-4 h-4"></i> Prime Location
                                 </div>
-                                 <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
+                                <div class="meta-item"><i data-lucide="shield-check" class="w-4 h-4"></i> Completed
                                 </div>
                             </div>
                             <div class="detailed-card-btns">
@@ -352,8 +361,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Amann Solitaire -->
+
+                    <!-- the zone -->
                     <div class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/9. Amann Solitaire (Borivali West).jpg" alt="Amann Solitaire">
@@ -401,7 +410,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
             <img src="assets/bg/breakdown-polygon-right.png" class="bg-poly-right-bottom" alt="" aria-hidden="true">
@@ -410,16 +419,16 @@
         <!-- CTA Section -->
         <section id="contact" class="cta-section">
 
-            <!-- Layer 1: BG image as <img> â€” same approach as hero, crisp & no blur -->
+            <!-- Layer 1: BG image as <img> — same approach as hero, crisp & no blur -->
             <img src="assets/bg/cta-bg.png" alt="" class="cta-bg-img" aria-hidden="true">
 
-            <!-- Layer 2: Polygon shape â€” right side -->
+            <!-- Layer 2: Polygon shape — right side -->
             <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon" aria-hidden="true">
 
             <!-- Layer 3: Content -->
             <div class="container cta-container">
 
-                <!-- LEFT: Hero Text â€” top-left aligned -->
+                <!-- LEFT: Hero Text — top-left aligned -->
                 <div class="cta-text reveal-fade-left">
                     <h2 class="cta-title">FIND YOUR<br>PERFECT SPACE TODAY</h2>
                     <div class="accent-line-light"></div>
@@ -427,7 +436,7 @@
                         live</p>
                 </div>
 
-                <!-- RIGHT: Contact Form Card â€” exact Figma 519Ã—645px -->
+                <!-- RIGHT: Contact Form Card — exact Figma 519×645px -->
                 <div class="contact-form-card reveal-fade-right">
                     <h3 class="form-heading">LET'S CONNECT</h3>
                     <div class="form-heading-line"></div>
@@ -499,7 +508,8 @@
                 <div class="contact-items">
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
-                        <p> S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053</p>
+                        <p> S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri
+                            (W), Mumbai 400053</p>
                     </div>
                     <div class="contact-divider"></div>
                     <div class="contact-item">
@@ -528,7 +538,7 @@
                 <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
                 <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
-              <!--  <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
+                <!--  <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
             </div>
         </div>
     </footer>

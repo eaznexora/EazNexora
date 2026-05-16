@@ -7,6 +7,7 @@
     <title>About Us | S. Lashkaria Group</title>
     <meta name="description"
         content="Learn about S. Lashkaria Group – over 20 years of building iconic spaces and lasting value across Mumbai.">
+    <meta name="theme-color" content="#192954">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/about-animations.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,7 +33,7 @@
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo/logo-header.svg" alt="Lashkaria Group Logo" id="logo-header">
+                <img src="assets/logo/new-header-logo-light.png" alt="Lashkaria Group Logo" id="logo-header">
             </a>
 
             <nav class="nav-menu">
@@ -39,16 +41,18 @@
                     <li><a href="index.html#home" class="nav-link">HOME</a></li>
                     <li><a href="about.html" class="nav-link active">ABOUT US</a></li>
                     <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
-                    <li><a href="contact.html" class="nav-link"></a></li>
+                    <li><a href="blog.html" class="nav-link">BLOGS</a></li>
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">DOWNLOAD BROCHURE</a></li>
+                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
                 </ul>
             </nav>
 
-            <a href="contact.html" class="cta-button">
-                <span>CONTACT US</span>
-              <!--  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 16L12 8L0 0V16Z" fill="currentColor" />
-                </svg>  -->
-            </a>
+            <div class="header-actions">
+                <a href="#" class="btn-outline-header">DOWNLOAD BROCHURE</a>
+                <a href="contact.html" class="cta-button">
+                    <span>CONTACT US</span>
+                </a>
+            </div>
 
             <div class="hamburger">
                 <span></span>
@@ -87,13 +91,12 @@
                 <!-- Background Hexagons (Polygons) -->
                 <div class="polygon-38"></div>
                 <div class="polygon-20"></div>
-                <div class="polygon-37"></div>
-                <div class="polygon-36"></div>
+
 
                 <!-- Top Left Content -->
-                <div class="logo-aboutus"></div>
-                <h1 class="heading-building">Building More Than Structures</h1>
-                <p class="desc-building">
+                <div class="logo-aboutus reveal-fade-left"></div>
+                <h1 class="heading-building reveal-fade-up" style="transition-delay: 0.2s;">Building More Than Structures</h1>
+                <p class="desc-building reveal-fade-up" style="transition-delay: 0.4s;">
                     With over 20+ years of experience, S. Lashkaria Group has been shaping urban landscapes with a
                     commitment to quality, precision, and long-term value.<br>
                     From residential communities to commercial developments, every project is thoughtfully designed to
@@ -101,21 +104,82 @@
                     We don't just build spaces — we build environments where people grow, businesses thrive, and
                     communities evolve.
                 </p>
-                <div class="line-22"></div>
+                <div class="line-22 reveal-fade-left" style="transition-delay: 0.6s;"></div>
 
                 <!-- Right Side Building Image -->
-                <div class="building-shadow"></div>
-                <div class="building-img"></div>
+                <div class="building-img reveal-fade-right" style="transition-delay: 0.3s;"></div>
 
-                <!-- Director's Quote Section -->
-                <h2 class="heading-director">What our Director says</h2>
+            </div>
+        </div>
 
-                <div class="quote-card">
-                    <p class="quote-text">"Our goal has never been just to build —<br>but to create spaces that truly
-                        enhance the way people live and work."</p>
-                    <p class="quote-author">— Director, S. Lashkaria Group</p>
+        <!-- =========================================
+              NEW SECTION: THE MINDS BEHIND THE VISION
+              ========================================= -->
+        <section class="about-section-top">
+            <div class="minds-header-container">
+                <h2 class="main-title reveal-fade-up">The Minds Behind The Vision</h2>
+                <p class="main-subtitle reveal-fade-up" style="transition-delay: 0.2s;">The people driving our commitment to quality, trust, and long-term value.</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="image-box reveal-fade-left" style="transition-delay: 0.3s;">
+                    <img src="assets/images/minds/image 83.png" alt="Dr. Shakeel Lashkaria">
                 </div>
+                <div class="info-box reveal-fade-right" style="transition-delay: 0.5s;">
+                    <div class="name-bar">
+                        <h3 class="name">Dr. Shakeel Lashkaria</h3>
+                        <span class="role">Director (S Lashkaria Group)</span>
+                    </div>
+                    <div class="bio-content">
+                        <p>
+                            A second-generation leader with a comprehensive mastery of the real estate landscape, Dr. Shakeel Lashkaria is the architectural force behind the operational success of S Lashkaria Group. His influence spans the entire project lifecycle—from initial planning and design to final sales execution. By implementing rigorous systems and procedures, Dr. Lashkaria has transformed the company's internal culture, establishing a benchmark for quality and tireless productivity. Known for his hands-on approach and deep expertise in real estate deal-making, he remains committed to ensuring every project meets the highest standards of excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="chairman-section">
+            <div class="bg-pattern" style="background-image: url('assets/images/minds/pattern.png');"></div>
+            <div class="glass-card reveal-fade-up" style="transition-delay: 0.3s;">
+                <div class="content-left">
+                    <div class="name-badge">
+                        <h3 class="chairman-name">Saleem Lashkaria</h3>
+                        <span class="chairman-role">Chairman (S Lashkaria Group)</span>
+                    </div>
+                    <p class="chairman-bio">
+                        Saleem Lashkaria is the visionary leader behind S Lashkaria Group, bringing over 40 years of expertise to the real estate industry. His journey from humble beginnings has instilled in him a profound respect for fiscal discipline and strategic growth, qualities that have defined his leadership and the group’s proven track record of success. Beyond operational excellence, Mr. Lashkaria is recognized for his high ethical standards and a deep-seated belief in corporate social responsibility. Under his guidance, the S Lashkaria Group prioritizes giving back to society, specifically through dedicated initiatives that provide essential education and healthcare support to those in need. He operates on the core philosophy that sincere effort, transparency, and social impact are the ultimate drivers of sustainable results.
+                    </p>
+                    <hr class="blue-line">
+                </div>
+                <div class="image-right">
+                    <img src="assets/images/minds/Saleem-Lashkaria.png" alt="Saleem Lashkaria" class="chairman-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="director-alt-section">
+            <div class="dark-top-strip"></div>
+            <div class="content-grid-alt">
+                <div class="image-box-alt reveal-fade-left" style="transition-delay: 0.3s;">
+                    <img src="assets/images/minds/Sadiq-Lashkaria.png" alt="Sadiq Lashkaria">
+                </div>
+                <div class="info-box-alt reveal-fade-right" style="transition-delay: 0.5s;">
+                    <div class="name-bar-alt">
+                        <h3 class="name">Sadiq Lashkaria</h3>
+                        <span class="role">Director (S Lashkaria Group)</span>
+                    </div>
+                    <div class="bio-content-alt">
+                        <p>
+                            Sadiq Lashkaria has established himself as a prominent figure in the real estate industry by combining a relentless work ethic with a grounded, humble leadership style. His professional philosophy is centered on the idea that consistent effort and unwavering determination are the primary drivers of success. By prioritizing client desires and fostering long-term relationships, he has built a reputation for excellence and reliability. Furthermore, Lashkaria leverages dynamic and versatile marketing strategies to navigate the evolving market, ensuring that his business remains both innovative and deeply rooted in core values.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="about-section-wrapper">
+            <div class="about-section-content" style="height: auto; padding-top: 0;">
                 <!-- Bottom Divider Frame -->
                 <div class="bottom-divider">
                     <div class="line-14"></div>
@@ -127,18 +191,19 @@
         </div>
 
 
+
         <!-- =========================================
              SECTION 3: WHAT SETS US APART
              ========================================= -->
         <div class="features-wrapper">
             <div class="features-content">
-                <h2 class="features-title">What Sets Us Apart</h2>
+                <h2 class="features-title reveal-fade-up">What Sets Us Apart</h2>
 
                 <!-- Grid container for the 4 cards -->
                 <div class="features-grid">
 
                     <!-- Card 1 -->
-                    <div class="feature-card">
+                    <div class="feature-card reveal-fade-up" style="transition-delay: 0.1s;">
                         <div class="feature-header">
                             <div class="hexagon-icon"></div>
                             <h3 class="feature-card-title">Crafted for Modern Living</h3>
@@ -148,7 +213,7 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="feature-card">
+                    <div class="feature-card reveal-fade-up" style="transition-delay: 0.2s;">
                         <div class="feature-header">
                             <div class="hexagon-icon"></div>
                             <h3 class="feature-card-title">Located for Long-Term Value</h3>
@@ -158,7 +223,7 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="feature-card">
+                    <div class="feature-card reveal-fade-up" style="transition-delay: 0.3s;">
                         <div class="feature-header">
                             <div class="hexagon-icon"></div>
                             <h3 class="feature-card-title">Built with Precision &amp; Care</h3>
@@ -168,7 +233,7 @@
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="feature-card">
+                    <div class="feature-card reveal-fade-up" style="transition-delay: 0.4s;">
                         <div class="feature-header">
                             <div class="hexagon-icon"></div>
                             <h3 class="feature-card-title">Driven by Trust &amp; Transparency</h3>
@@ -185,7 +250,7 @@
              SECTION 4: TRUST BANNER
              ========================================= -->
         <div class="trust-banner-wrapper">
-            <div class="trust-banner-content">
+            <div class="trust-banner-content reveal-fade-up">
                 <p class="trust-text">
                     <span class="highlight-number">2000+</span>
                     <span class="text-line-1">families have trusted us to build their future.</span><br>
@@ -300,7 +365,8 @@
                 <div class="contact-items">
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
-                        <p>S. Lashkaria Group 1st Floor, Unit no. 111, Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053</p>
+                        <p>S. Lashkaria Group 1st Floor, Unit no. 111, Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri
+                            (W), Mumbai 400053</p>
                     </div>
                     <div class="contact-divider"></div>
                     <div class="contact-item">
@@ -335,7 +401,7 @@
                 <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
                 <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
-              <!--  <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
+                <!--  <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
             </div>
         </div>
     </footer>
@@ -343,6 +409,14 @@
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>

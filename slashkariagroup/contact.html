@@ -7,6 +7,7 @@
     <title>Contact Us | S. Lashkaria Group</title>
     <meta name="description"
         content="Get in touch with S. Lashkaria Group. Schedule a consultation or visit our office in Andheri West, Mumbai.">
+    <meta name="theme-color" content="#192954">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { brandNavy: '#0B192C', brandGrey: '#F8F9FA', brandCyan: '#22D3EE', brandDarker: '#07101C' },
+                    colors: { brandNavy: '#192954', brandGrey: '#F8F9FA', brandCyan: '#22D3EE', brandDarker: '#192954' },
                     fontFamily: { sans: ['Mulish', 'sans-serif'] }
                 }
             }
@@ -43,22 +44,24 @@
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo/logo-header.svg" alt="Lashkaria Group Logo" id="logo-header">
+                <img src="assets/logo/new-header-logo-light.png" alt="Lashkaria Group Logo" id="logo-header">
             </a>
             <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html#home" class="nav-link">HOME</a></li>
                     <li><a href="about.html" class="nav-link">ABOUT US</a></li>
                     <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
-                    <li><a href="contact.html" class="nav-link active"></a></li>
+                    <li><a href="blog.html" class="nav-link">BLOGS</a></li>
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">DOWNLOAD BROCHURE</a></li>
+                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link active">CONTACT US</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="cta-button">
-                <span>CONTACT US</span>
-              <!--  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 16L12 8L0 0V16Z" fill="currentColor" />
-                </svg> -->
-            </a>
+            <div class="header-actions">
+                <a href="#" class="btn-outline-header">DOWNLOAD BROCHURE</a>
+                <a href="contact.html" class="cta-button">
+                    <span>CONTACT US</span>
+                </a>
+            </div>
             <div class="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
@@ -102,7 +105,8 @@
                                     <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Office Address
                                     </h4>
                                     <p class="text-brandNavy font-bold text-lg leading-snug">
-                                        S. Lashkaria Group 1st Floor, Unit no. 111,<br>Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053
+                                        S. Lashkaria Group 1st Floor, Unit no. 111,<br>Juhu Azad Nagar CHS, C.D.
+                                        Barfiwala Road, Andheri (W), Mumbai 400053
                                     </p>
                                 </div>
                             </div>
@@ -191,7 +195,8 @@
                         <div class="flex items-start gap-4">
                             <i data-lucide="map-pin" class="w-10 h-10 mt-1 text-brandNavy"></i>
                             <p class="text-brandNavy font-semibold leading-relaxed">
-                               S. Lashkaria Group 1st Floor, Unit no. 111, Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053
+                                S. Lashkaria Group 1st Floor, Unit no. 111, Juhu Azad Nagar CHS, C.D. Barfiwala Road,
+                                Andheri (W), Mumbai 400053
                             </p>
                         </div>
                         <div class="flex items-center gap-4">
@@ -213,7 +218,8 @@
                             <i data-lucide="map-pin" class="w-6 h-6"></i>
                         </div>
                         <p class="text-brandNavy font-bold leading-relaxed">
-                              S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053
+                            S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri
+                            (W), Mumbai 400053
                         </p>
                     </div>
                     <a href="https://www.google.com/maps/dir/?api=1&destination=19.1189,72.8423" target="_blank"
@@ -354,7 +360,8 @@
                 <div class="contact-items">
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
-                        <p>  S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053</p>
+                        <p> S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri
+                            (W), Mumbai 400053</p>
                     </div>
                     <div class="contact-divider"></div>
                     <div class="contact-item">
@@ -383,7 +390,7 @@
                 <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
                 <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
-               <!-- <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
+                <!-- <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
             </div>
         </div>
     </footer>
