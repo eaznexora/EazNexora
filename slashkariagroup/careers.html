@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers | S. Lashkaria Group</title>
-    <meta name="description" content="Build your future with S. Lashkaria Group. Join a team that values innovation, collaboration, and growth.">
+    <meta name="description"
+        content="Build your future with S. Lashkaria Group. Join a team that values innovation, collaboration, and growth.">
     <meta name="theme-color" content="#192954">
 
     <!-- Favicon -->
@@ -14,12 +15,14 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
 
     <!-- CSS Links -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
-    
+
     <style>
         :root {
             --primary-navy: #192954;
@@ -73,7 +76,7 @@
             height: 500px;
             object-fit: cover;
             border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .btn-navy {
@@ -116,7 +119,7 @@
 
         .value-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .value-icon {
@@ -191,11 +194,26 @@
 
         .job-row {
             cursor: pointer;
-            transition: background 0.2s ease;
+            transition: background 0s ease, color 0s ease;
         }
 
         .job-row:hover {
-            background: #F9FAFB;
+            background: var(--primary-navy) !important;
+            color: #FFFFFF !important;
+            transition: background 0.5s ease, color 0.5s ease !important;
+            transition-delay: 0s !important;
+        }
+
+        .job-row:hover td {
+            color: #FFFFFF !important;
+            transition: color 0.5s ease !important;
+            transition-delay: 0s !important;
+        }
+
+        .job-row:hover .job-arrow {
+            color: #FFFFFF !important;
+            transition: color 0.5s ease !important;
+            transition-delay: 0s !important;
         }
 
         .job-row td {
@@ -279,43 +297,54 @@
                 gap: 40px;
                 text-align: center;
             }
+
             .career-hero-content {
                 max-width: 100%;
             }
+
             .career-hero-img {
                 height: 250px;
             }
+
             .values-grid {
                 grid-template-columns: 1fr;
             }
+
             .jobs-table thead {
                 display: none;
             }
+
             .job-row {
                 display: block;
                 padding: 20px;
                 border-bottom: 1px solid var(--border-color);
             }
+
             .job-row td {
                 display: block;
                 padding: 5px 0;
                 border: none;
                 font-size: 16px;
             }
+
             .job-title {
                 font-size: 20px;
             }
+
             .job-location {
                 display: none !important;
             }
+
             .job-arrow {
                 display: none !important;
             }
+
             .banner-grid {
                 flex-direction: column;
                 text-align: center;
                 gap: 30px;
             }
+
             .banner-text h2 {
                 font-size: 28px;
             }
@@ -356,11 +385,13 @@
                 <div class="career-hero-grid">
                     <div class="career-hero-content reveal-fade-left">
                         <h1>Build Your Future With Us</h1>
-                        <p>At S. Lashkaria Group, we believe our people are our biggest strength. Join a team that values innovation, collaboration, and growth.</p>
+                        <p>At S. Lashkaria Group, we believe our people are our biggest strength. Join a team that
+                            values innovation, collaboration, and growth.</p>
                         <a href="#positions" class="btn-navy">View Open Positions &rarr;</a>
                     </div>
                     <div class="career-hero-visual reveal-fade-right">
-                        <img src="assets/images/career-hero.png" alt="S. Lashkaria Architecture" class="career-hero-img">
+                        <img src="assets/images/career-hero.png" alt="S. Lashkaria Architecture"
+                            class="career-hero-img">
                     </div>
                 </div>
             </div>
@@ -373,7 +404,13 @@
                     <!-- Value 1 -->
                     <div class="value-card reveal-fade-up">
                         <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
                         </div>
                         <h3>People First</h3>
                         <p>We empower our people and encourage their ideas to foster a culture of ownership.</p>
@@ -381,7 +418,12 @@
                     <!-- Value 2 -->
                     <div class="value-card reveal-fade-up" style="transition-delay: 0.1s;">
                         <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 20V10"></path>
+                                <path d="M12 20V4"></path>
+                                <path d="M6 20v-6"></path>
+                            </svg>
                         </div>
                         <h3>Grow Together</h3>
                         <p>Continuous learning and career growth opportunities are at the heart of our mission.</p>
@@ -389,7 +431,12 @@
                     <!-- Value 3 -->
                     <div class="value-card reveal-fade-up" style="transition-delay: 0.2s;">
                         <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2C9 2 6 4 6 7c0 3 2 4 2 6v2h8v-2c0-2 2-3 2-6 0-3-3-5-6-5z"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18h6"></path>
+                                <path d="M10 22h4"></path>
+                                <path d="M12 2C9 2 6 4 6 7c0 3 2 4 2 6v2h8v-2c0-2 2-3 2-6 0-3-3-5-6-5z"></path>
+                            </svg>
                         </div>
                         <h3>Innovate Always</h3>
                         <p>Work on challenging projects that create a real impact on urban landscapes.</p>
@@ -397,7 +444,11 @@
                     <!-- Value 4 -->
                     <div class="value-card reveal-fade-up" style="transition-delay: 0.3s;">
                         <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
                         </div>
                         <h3>Integrity & Respect</h3>
                         <p>We build trust through transparency, ethical practices, and mutual respect.</p>
@@ -411,7 +462,7 @@
             <div class="container">
                 <div class="positions-header">
                     <h2>Open Positions</h2>
-                    <a href="#" class="view-all-link">View All Openings &rarr;</a>
+                    <span class="view-all-link" style="cursor: default;">View openings</span>
                 </div>
 
                 <table class="jobs-table">
@@ -419,7 +470,6 @@
                         <tr>
                             <th>Job Title</th>
                             <th>Department</th>
-                            <th>Location</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -427,31 +477,26 @@
                         <tr class="job-row reveal-fade-up">
                             <td class="job-title">Senior Architect</td>
                             <td>Architecture</td>
-                            <td class="job-location">Ahmedabad, Gujarat</td>
                             <td class="job-arrow">&rarr;</td>
                         </tr>
                         <tr class="job-row reveal-fade-up" style="transition-delay: 0.1s;">
                             <td class="job-title">Project Manager</td>
                             <td>Project Management</td>
-                            <td class="job-location">Ahmedabad, Gujarat</td>
                             <td class="job-arrow">&rarr;</td>
                         </tr>
                         <tr class="job-row reveal-fade-up" style="transition-delay: 0.2s;">
                             <td class="job-title">Civil Site Engineer</td>
                             <td>Construction</td>
-                            <td class="job-location">Ahmedabad, Gujarat</td>
                             <td class="job-arrow">&rarr;</td>
                         </tr>
                         <tr class="job-row reveal-fade-up" style="transition-delay: 0.3s;">
                             <td class="job-title">Interior Designer</td>
                             <td>Design</td>
-                            <td class="job-location">Ahmedabad, Gujarat</td>
                             <td class="job-arrow">&rarr;</td>
                         </tr>
                         <tr class="job-row reveal-fade-up" style="transition-delay: 0.4s;">
                             <td class="job-title">Business Development Executive</td>
                             <td>Sales & Marketing</td>
-                            <td class="job-location">Ahmedabad, Gujarat</td>
                             <td class="job-arrow">&rarr;</td>
                         </tr>
                     </tbody>
@@ -480,32 +525,41 @@
             <div class="footer-col brand-col reveal-fade-up">
                 <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
                 <h4 class="footer-tagline">Shaping What's Next</h4>
-                <p class="footer-desc">We create iconic spaces and lasting value through vision, craftsmanship, and trust.</p>
+                <p class="footer-desc">We create iconic spaces and lasting value through vision, craftsmanship, and
+                    trust.</p>
             </div>
 
             <!-- Col 2: Quick Links -->
             <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.1s;">
                 <ul class="footer-links">
-                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="#">Download Brochure <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="#">Download Brochure <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Col 3: Our Projects -->
             <div class="footer-col links-col reveal-fade-up" style="transition-delay: 0.2s;">
                 <ul class="footer-links">
-                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Contract Projects<img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
+                    <li><a href="projects.html">Contract Projects<img src="assets/icons/right.svg" alt=""
+                                class="footer-arrow"></a></li>
                 </ul>
             </div>
 
@@ -514,7 +568,9 @@
                 <div class="contact-items">
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
-                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.1189,72.8423" target="_blank">S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
+                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.1189,72.8423"
+                                target="_blank">S. Lashkaria Group 1st Floor, Unit no. 111 Juhu Azad Nagar CHS, C.D.
+                                Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
                     </div>
                     <div class="contact-divider"></div>
                     <div class="contact-item">
@@ -553,7 +609,8 @@
                     </div>
                 </div>
             </div>
-            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz Nexora</a></p>
+            <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
+                    Nexora</a></p>
             <div class="social-links">
                 <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
                 <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>

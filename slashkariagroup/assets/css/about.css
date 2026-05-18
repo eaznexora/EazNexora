@@ -1330,3 +1330,15 @@
         text-align: left;
     }
 }
+
+/* =========================================
+   HERO TEXT COLOR OVERRIDES (FOR VISIBILITY)
+   ========================================= */
+.projects-page-hero .projects-hero-title {
+    color: #192954 !important; /* Brand Navy Blue */
+}
+
+.projects-page-hero .projects-hero-subtitle {
+    color: #192954 !important; /* Brand Navy Blue */
+    font-weight: 600 !important; /* Extra weight for readability */
+}

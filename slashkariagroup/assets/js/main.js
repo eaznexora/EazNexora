@@ -121,6 +121,32 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 scrollTop.classList.remove('show');
             }
+
+            // Check if scroll top button overlaps any dark sections, dark elements, or dark images
+            const btnRect = scrollTop.getBoundingClientRect();
+            let isDark = false;
+            
+            const darkElements = document.querySelectorAll(
+                '.site-footer, .cta-section, .stats-section, .bg-legacy-polygon, .projects-page-hero, .hero-bg-wrapper, .bg-poly-right-bottom, .bg-poly-right-2, .bg-poly-left-1'
+            );
+            
+            for (const el of darkElements) {
+                const elRect = el.getBoundingClientRect();
+                const overlap = !(btnRect.right < elRect.left || 
+                                  btnRect.left > elRect.right || 
+                                  btnRect.bottom < elRect.top || 
+                                  btnRect.top > elRect.bottom);
+                if (overlap) {
+                    isDark = true;
+                    break;
+                }
+            }
+
+            if (isDark) {
+                scrollTop.classList.add('dark-bg');
+            } else {
+                scrollTop.classList.remove('dark-bg');
+            }
         };
 
         window.addEventListener('scroll', updateScrollProgress);
@@ -215,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 2000);
         });
     };
+
 
     injectScrollTop();
     injectBrochureModal();

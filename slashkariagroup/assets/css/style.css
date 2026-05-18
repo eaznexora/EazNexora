@@ -237,9 +237,64 @@ header.scrolled {
     width: 100%;
 }
 
+.logo {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+}
+
 .logo img {
     height: 75px;
     transition: var(--transition-fast);
+    position: relative;
+    z-index: 2;
+}
+
+/* Subtle automatic gloss shine effect - matches the scroll to top button exactly */
+.logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.99) 50%,
+            rgba(255, 255, 255, 0) 70%);
+    background-size: 250% 100%;
+    background-repeat: no-repeat;
+    background-position: 150% 0;
+
+    animation: logoShine 4s infinite ease-in-out;
+
+    /* Clean Masking: clips the shine ONLY to the opaque pixels of the logo SVG */
+    mask-image: url('../logo/header-logo1.svg');
+    -webkit-mask-image: url('../logo/header-logo1.svg');
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+
+@keyframes logoShine {
+    0% {
+        background-position: 150% 0;
+    }
+
+    35% {
+        background-position: -50% 0;
+    }
+
+    100% {
+        background-position: -50% 0;
+    }
 }
 
 header.scrolled .logo img {
@@ -2213,6 +2268,7 @@ header.scrolled .logo img {
         top: 15px;
         right: 15px;
     }
+
     .small-overlay {
         width: 180px;
         top: 10px;
@@ -2284,12 +2340,10 @@ header.scrolled .logo img {
     left: -100%;
     width: 50%;
     height: 200%;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.6) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0) 100%);
     transform: rotate(45deg);
     transition: all 0.6s ease;
 }
@@ -2310,7 +2364,24 @@ header.scrolled .logo img {
     height: 20px;
     transform: rotate(-90deg);
     transition: transform 0.3s ease;
-    filter: invert(13%) sepia(21%) saturate(2900%) hue-rotate(189deg) brightness(91%) contrast(92%); /* Matches #192954 */
+    filter: invert(13%) sepia(21%) saturate(2900%) hue-rotate(189deg) brightness(91%) contrast(92%);
+    /* Matches #192954 */
+}
+
+/* Dark Background Override (when overlapping dark sections like footer) */
+.scroll-top-wrapper.dark-bg .progress-ring__path {
+    stroke: #8FCEF1;
+    /* Lighter brand color */
+}
+
+.scroll-top-wrapper.dark-bg .scroll-top-btn img {
+    filter: invert(85%) sepia(21%) saturate(762%) hue-rotate(178deg) brightness(97%) contrast(96%);
+    /* Matches #8FCEF1 */
+}
+
+.scroll-top-wrapper.dark-bg .scroll-top-btn {
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(143, 206, 241, 0.2);
 }
 
 .scroll-top-wrapper:hover img {
@@ -2324,14 +2395,17 @@ header.scrolled .logo img {
         width: 56px;
         height: 56px;
     }
+
     .scroll-top-btn {
         width: 44px;
         height: 44px;
     }
+
     .progress-ring {
         width: 56px;
         height: 56px;
     }
+
     .progress-ring circle {
         r: 24;
         cx: 28;
@@ -2435,6 +2509,7 @@ header.scrolled .logo img {
     .brochure-modal-card {
         padding: 40px 25px;
     }
+
     .brochure-form h3 {
         font-size: 26px;
     }
