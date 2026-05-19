@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'p3',
-            title: "Amann Highland Park",
+            title: "Rashmi Heights",
             location: "Malad East",
-            desc: "A sanctuary of green living amidst the city. Highland Park combines modern comforts with serene surroundings and rapid connectivity.",
-            image: "assets/projects/amann-Highlands-d.png",
+            desc: "A sanctuary of green living amidst the city. Rashmi Heights combines modern comforts with serene surroundings and rapid connectivity.",
+            image: "assets/projects/rashmi-heights-d.jpeg",
             bgClass: "active-bg-3"
         },
         {
@@ -176,17 +176,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Tile Layer
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; CARTO' }).addTo(map);
 
-        // Custom Icons with Alternating Labels (Left/Right)
+        // Custom Icons (Hexagon Pins Only)
         const createMarkerIcon = (project, index, isActive = false) => {
-            const side = index % 2 === 0 ? 'right' : 'left';
             return L.divIcon({
                 className: 'custom-marker',
                 html: `
-                    <div class="marker-container ${isActive ? 'active' : ''} label-${side}">
-                        <div class="marker-label">
-                            <img src="${project.logo}" alt="Logo">
-                            <span>${project.name}</span>
-                        </div>
+                    <div class="marker-container ${isActive ? 'active' : ''}">
                         <div class="hexagon-pin"></div>
                     </div>
                 `,
@@ -309,7 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (defaultProject) {
             setTimeout(() => {
                 focusOnMapProject(defaultProject);
-                markers["1"].openPopup();
             }, 1000); // Slight delay to ensure map is ready
         }
     }

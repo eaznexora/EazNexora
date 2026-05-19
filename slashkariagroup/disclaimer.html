@@ -241,25 +241,55 @@
             }
 
             .policy-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .icon-col {
-                display: none;
-            }
-
-            .policy-section {
-                padding: 30px 20px;
+                display: grid;
+                grid-template-columns: 48px 1fr;
+                gap: 16px;
+                padding: 24px 20px;
                 background: #FFF;
                 border-radius: 12px;
                 margin-bottom: 20px;
                 border-left: 4px solid var(--text-primary);
                 box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                align-items: start;
+            }
+
+            .icon-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .icon-card {
+                width: 36px;
+                height: 36px;
+                border-radius: 8px;
+                background: var(--light-blue);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .icon-card svg {
+                width: 20px;
+                height: 20px;
+                fill: var(--text-primary);
+            }
+
+            .track-line {
+                display: none;
+            }
+
+            .policy-section {
+                padding: 0;
+                background: transparent;
+                border-radius: 0;
+                margin-bottom: 0;
+                border-left: none;
+                box-shadow: none;
             }
 
             .policy-section h2 {
-                padding-top: 0;
+                padding-top: 5px;
                 display: flex;
                 align-items: center;
                 gap: 12px;
@@ -267,12 +297,7 @@
             }
 
             .policy-section h2::before {
-                content: '';
-                width: 24px;
-                height: 24px;
-                background: var(--light-blue);
-                display: inline-block;
-                border-radius: 4px;
+                display: none;
             }
 
             .contact-row {
@@ -323,8 +348,8 @@
                         </svg>
                         Last Updated: May 16, 2026
                     </div>
-                    <h1>Disclaimer</h1>
-                    <p class="policy-intro">This page outlines the legal limitations and representational nature of the information provided on our website. Please review these points to understand how we communicate our project details.</p>
+                    <h1>Website Disclaimer</h1>
+                    <p class="policy-intro">Welcome to www.slashkariagroup.com. By accessing or navigating this website and its associated links, you agree to these Terms &amp; Conditions without qualification or limitation.</p>
                 </div>
                 
                 <!-- Footer Logo Watermark -->
@@ -345,8 +370,7 @@
                         <div class="track-line"></div>
                     </div>
                     <div class="policy-section reveal-fade-up">
-                        <h2>1. No Warranties</h2>
-                        <p>All information, including project specifications and floor plans, is provided "as is" without any guarantees of absolute accuracy at all times. We strive to maintain current data, but technical or human errors may occur.</p>
+                        <p>This digital platform and all its hosted substance are provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis, with all faults, and your use of this venue is entirely at your own risk. The particulars displayed here are intended for general guidance only and do not constitute an offer, contract, or any part of a binding agreement. Designs, specifications, and layout plans are subject to modification, addition, or deletion at any time without prior notice, and all computer-generated imagery represents merely an artist&rsquo;s impression rather than an exact depiction of final property details. Because the published content may not reflect the absolute latest updates, it should not be construed as a definitive advertisement. Consequently, you are required to independently verify all specific details&mdash;including square footage, amenities, services, and terms of sales or payments&mdash;directly with our official sales team prior to making any purchasing decisions.</p>
                     </div>
                 </div>
 
@@ -354,55 +378,12 @@
                 <div class="policy-row">
                     <div class="icon-col">
                         <div class="icon-card reveal-fade-up" style="transition-delay: 0.1s;">
-                            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-                        </div>
-                        <div class="track-line"></div>
-                    </div>
-                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.1s;">
-                        <h2>2. Visual Representations</h2>
-                        <p>Artistic renderings, 3D models, and photographs are for representational purposes only and may not reflect the final actual development. Finished project textures, colors, and landscapes are subject to change during construction.</p>
-                    </div>
-                </div>
-
-                <!-- Row 3 -->
-                <div class="policy-row">
-                    <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.2s;">
-                            <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
-                        </div>
-                        <div class="track-line"></div>
-                    </div>
-                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.2s;">
-                        <h2>3. External Links</h2>
-                        <p>Our website may contain links to third-party sites; we are not responsible for the content or privacy practices of these external platforms. Users are encouraged to read the terms of any external site they visit via our links.</p>
-                    </div>
-                </div>
-
-                <!-- Row 4 -->
-                <div class="policy-row">
-                    <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.3s;">
                             <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
                         </div>
                         <div class="track-line"></div>
                     </div>
-                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.3s;">
-                        <h2>4. Limitation of Liability</h2>
-                        <p>S. Lashkaria Group shall not be held liable for any direct or indirect damages arising from the use of this website or reliance on its content. This includes, but is not limited to, financial loss or data corruption.</p>
-                    </div>
-                </div>
-
-                <!-- Row 5 -->
-                <div class="policy-row">
-                    <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.4s;">
-                            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                        </div>
-                        <div class="track-line"></div>
-                    </div>
-                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.4s;">
-                        <h2>5. Project Timelines</h2>
-                        <p>Expected completion dates and project milestones are estimates and are subject to change based on regulatory approvals and construction schedules. S. Lashkaria Group is not liable for delays caused by external factors.</p>
+                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.1s;">
+                        <p>Furthermore, any guidance found under the &ldquo;Buyers Guide&rdquo; or &ldquo;Blogs&rdquo; tabs is strictly for informational purposes. This educational text does not constitute legal, real estate, financial, or accounting advice, and visitors should always consult with qualified professional advisors before acting or abstaining from action based on these pages. While every effort is made to maintain accuracy, the company explicitly disclaims liability for any claims or cancellations resulting from inadvertent inaccuracies. Under no circumstances will the company be held responsible for any expense, loss, or damage&mdash;including, without limitation, indirect or consequential loss, or loss of data&mdash;arising out of or in connection with the use of this website. Finally, the company reserves the right to revise these terms at any time without prior notification. You are legally bound by any such amendments and are advised to periodically review this page to stay informed of the current terms.</p>
                     </div>
                 </div>
 

@@ -241,25 +241,55 @@
             }
 
             .policy-row {
-                grid-template-columns: 1fr;
-                gap: 0;
+                display: grid;
+                grid-template-columns: 48px 1fr;
+                gap: 16px;
+                padding: 24px 20px;
+                background: #FFF;
+                border-radius: 12px;
+                margin-bottom: 20px;
+                border-left: 4px solid var(--text-primary);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                align-items: start;
             }
 
             .icon-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .icon-card {
+                width: 36px;
+                height: 36px;
+                border-radius: 8px;
+                background: var(--light-blue);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .icon-card svg {
+                width: 20px;
+                height: 20px;
+                fill: var(--text-primary);
+            }
+
+            .track-line {
                 display: none;
             }
 
             .policy-section {
-                padding: 30px 20px;
-                background: #FFF;
-                border-radius: 12px;
-                margin-bottom: 20px;
-                border-left: 4px solid var(--text-primary); /* Changed to blue as requested */
-                box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                padding: 0;
+                background: transparent;
+                border-radius: 0;
+                margin-bottom: 0;
+                border-left: none;
+                box-shadow: none;
             }
 
             .policy-section h2 {
-                padding-top: 0;
+                padding-top: 5px;
                 display: flex;
                 align-items: center;
                 gap: 12px;
@@ -267,12 +297,7 @@
             }
 
             .policy-section h2::before {
-                content: '';
-                width: 24px;
-                height: 24px;
-                background: var(--light-blue);
-                display: inline-block;
-                border-radius: 4px;
+                display: none;
             }
 
             .contact-row {
@@ -324,7 +349,7 @@
                         Last Updated: May 16, 2026
                     </div>
                     <h1>Privacy Policy</h1>
-                    <p class="policy-intro">At S. Lashkaria Group, we value your privacy and are committed to protecting your personal data. This policy outlines how we handle your information with the highest standards of transparency and security.</p>
+                    <p class="policy-intro">At slashkariagroup.com, one of our main priorities is the privacy of our visitors. This Privacy Policy contains types of information that is collected and recorded by slashkariagroup.com and how we use it. This policy applies only to our online activities and is valid for visitors to our website. If you have additional questions, do not hesitate to contact us.</p>
                 </div>
                 
                 <!-- Footer Logo Watermark -->
@@ -335,88 +360,113 @@
         <!-- Structured Content -->
         <section class="policy-main">
             <div class="container policy-container">
-                
-                <!-- Row 1 -->
+
+                <!-- Row 1: Consent -->
                 <div class="policy-row">
                     <div class="icon-col">
-                        <div class="icon-card reveal-fade-up"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+                        <div class="icon-card reveal-fade-up"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
                         <div class="track-line"></div>
                     </div>
                     <div class="policy-section reveal-fade-up">
-                        <h2>1. Information We Collect</h2>
-                        <p>We collect personal details such as your name, contact number, and email address when you inquire about a property, download a brochure, or visit our site. This information is gathered solely to provide you with tailored real estate solutions.</p>
+                        <h2>Consent</h2>
+                        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
                     </div>
                 </div>
 
-                <!-- Row 2 -->
+                <!-- Row 2: Information We Collect -->
                 <div class="policy-row">
                     <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.1s;"><svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.1s;"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
                         <div class="track-line"></div>
                     </div>
                     <div class="policy-section reveal-fade-up" style="transition-delay: 0.1s;">
-                        <h2>2. How We Use Your Information</h2>
-                        <p>Your data helps us personalize your property search, provide project updates, and improve our digital services to offer a better browsing experience. We use these insights to match you with developments that fit your lifestyle and investment goals.</p>
+                        <h2>Information We Collect</h2>
+                        <p>The personal information that you are asked to provide, and the reasons why, will be made clear to you at the point we ask you to provide it. If you contact us directly, we may receive additional information such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you choose to provide. When you register for an Account, we may ask for your contact information including name, company name, address, email address, and telephone number.</p>
                     </div>
                 </div>
 
-                <!-- Row 3 -->
+                <!-- Row 3: How We Use Your Information -->
                 <div class="policy-row">
                     <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.2s;"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.2s;"><svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
                         <div class="track-line"></div>
                     </div>
                     <div class="policy-section reveal-fade-up" style="transition-delay: 0.2s;">
-                        <h2>3. Data Protection</h2>
-                        <p>We implement advanced encryption and organizational security measures to protect your personal information from unauthorized access or disclosure. Our digital infrastructure is regularly audited to ensure the highest safety standards for our clients.</p>
+                        <h2>How We Use Your Information</h2>
+                        <p>We use the information we collect in various ways, including to: provide, operate, and maintain our website; improve, personalize, and expand our website; understand and analyze how you use our website; develop new products, services, features, and functionality; communicate with you directly or through partners for customer service, updates, and marketing; send you emails; and find and prevent fraud.</p>
                     </div>
                 </div>
 
-                <!-- Row 4 -->
+                <!-- Row 4: Log Files -->
                 <div class="policy-row">
                     <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.3s;"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.3s;"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
                         <div class="track-line"></div>
                     </div>
                     <div class="policy-section reveal-fade-up" style="transition-delay: 0.3s;">
-                        <h2>4. Sharing Your Information</h2>
-                        <p>We do not sell your data. We only share information with trusted service partners (like banking or legal consultants) necessary to facilitate your property purchase, ensuring a seamless transition from inquiry to ownership.</p>
+                        <h2>Log Files</h2>
+                        <p>Slashkariagroup.com follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. This information is used for analyzing trends, administering the site, tracking users&rsquo; movement on the website, and gathering demographic information.</p>
                     </div>
                 </div>
 
-                <!-- Row 5 -->
+                <!-- Row 5: Advertising Partners -->
                 <div class="policy-row">
                     <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.4s;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.4s;"><svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></div>
                         <div class="track-line"></div>
                     </div>
                     <div class="policy-section reveal-fade-up" style="transition-delay: 0.4s;">
-                        <h2>5. Cookies</h2>
-                        <p>Our website uses cookies to analyze traffic and remember your preferences. These small files help us understand how you interact with our listings, allowing us to refine our interface. You can manage your cookie settings through your browser at any time.</p>
+                        <h2>Advertising Partners &amp; Their Policies</h2>
+                        <p>Some advertisers on our site may use cookies and web beacons. Each advertising partner has their own Privacy Policy for their policies on user data. Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons in their advertisements that appear on slashkariagroup.com. They automatically receive your IP address when this occurs. These technologies measure the effectiveness of advertising campaigns and personalize the advertising content you see. Note that slashkariagroup.com has no access to or control over cookies used by third-party advertisers. Our advertising partners include Google &mdash; see their policy at <a href="https://policies.google.com/technologies/ads" target="_blank" style="color:var(--text-primary);font-weight:700;">policies.google.com/technologies/ads</a>.</p>
                     </div>
                 </div>
 
-                <!-- Row 6 -->
+                <!-- Row 6: Third Party Privacy Policies -->
                 <div class="policy-row">
                     <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.5s;"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.5s;"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
                         <div class="track-line"></div>
                     </div>
                     <div class="policy-section reveal-fade-up" style="transition-delay: 0.5s;">
-                        <h2>6. Your Rights</h2>
-                        <p>You have the right to access, correct, or request the deletion of your personal data. We believe in your right to control your information. Contact our compliance team at any time to exercise these rights or request a data audit.</p>
+                        <h2>Third Party Privacy Policies</h2>
+                        <p>Slashkariagroup.com&rsquo;s Privacy Policy does not apply to other advertisers or websites. We advise you to consult the respective Privacy Policies of these third-party ad servers for more detailed information, including their practices and instructions about how to opt-out of certain options. You can choose to disable cookies through your individual browser options.</p>
                     </div>
                 </div>
 
-                <!-- Row 7 -->
+                <!-- Row 7: CCPA -->
                 <div class="policy-row">
                     <div class="icon-col">
-                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.6s;"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.6s;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div>
                         <div class="track-line"></div>
                     </div>
                     <div class="policy-section reveal-fade-up" style="transition-delay: 0.6s;">
-                        <h2>7. Contact Us</h2>
-                        <p>For any privacy-related queries, reach out to us via email or call our dedicated support line. Our team is here to ensure your data journey with S. Lashkaria Group is secure and transparent.</p>
+                        <h2>CCPA Privacy Rights</h2>
+                        <p>Under the CCPA, California consumers have the right to: request that a business disclose the categories and specific pieces of personal data it has collected; request that a business delete any personal data about the consumer; and request that a business not sell the consumer&rsquo;s personal data. If you make a request, we have one month to respond. Please contact us to exercise any of these rights.</p>
+                    </div>
+                </div>
+
+                <!-- Row 8: GDPR -->
+                <div class="policy-row">
+                    <div class="icon-col">
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.7s;"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+                        <div class="track-line"></div>
+                    </div>
+                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.7s;">
+                        <h2>GDPR Data Protection Rights</h2>
+                        <p>Every user is entitled to: the right to access copies of their personal data; the right to rectification of inaccurate or incomplete information; the right to erasure under certain conditions; the right to restrict processing under certain conditions; the right to object to processing under certain conditions; and the right to data portability. If you make a request, we have one month to respond. Please contact us to exercise any of these rights.</p>
+                    </div>
+                </div>
+
+                <!-- Row 9: Children's Information & Electronic Communication -->
+                <div class="policy-row">
+                    <div class="icon-col">
+                        <div class="icon-card reveal-fade-up" style="transition-delay: 0.8s;"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+                        <div class="track-line"></div>
+                    </div>
+                    <div class="policy-section reveal-fade-up" style="transition-delay: 0.8s;">
+                        <h2>Children&rsquo;s Information &amp; Electronic Communication</h2>
+                        <p>Slashkariagroup.com does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think your child provided this kind of information on our website, please contact us immediately and we will do our best to promptly remove such information from our records.</p>
+                        <p style="margin-top:15px;">When you visit www.slashkariagroup.com or voluntarily send e-mails to us, you are communicating with us electronically. By communicating with us and submitting your personal information, you consent to receive communication from us through Email, SMS, Call, WhatsApp or any other medium, even if your number has DND activated. You agree that all agreements, notices, disclosures, and other communications we provide to you electronically satisfy any legal requirement that such communication be in writing.</p>
                     </div>
                 </div>
 

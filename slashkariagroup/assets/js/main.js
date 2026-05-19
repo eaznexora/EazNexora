@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let isDark = false;
             
             const darkElements = document.querySelectorAll(
-                '.site-footer, .cta-section, .stats-section, .bg-legacy-polygon, .projects-page-hero, .hero-bg-wrapper, .bg-poly-right-bottom, .bg-poly-right-2, .bg-poly-left-1'
+                '.site-footer, .cta-section, .stats-section, .bg-legacy-polygon, .projects-page-hero, .hero-bg-wrapper, .bg-poly-right-bottom, .bg-poly-right-2, .bg-poly-left-1, .chairman-section, .features-wrapper, .visionary-section, .commitment-section, .shaping-section, .director-section'
             );
             
             for (const el of darkElements) {
