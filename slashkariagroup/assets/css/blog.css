@@ -567,7 +567,7 @@
 
 @media(max-width:768px){
     .blog-feed-main {
-        padding-top: 80px;
+        padding-top: 0;
     }
 
     .blog-section{
@@ -599,4 +599,13 @@
     .blog-view-main {
         padding-top: 100px;
     }
+}
+
+/* Blog Hero Text Color Override */
+.blog-feed-main .projects-hero-title {
+    color: var(--primary-blue);
+}
+
+.blog-feed-main .projects-hero-subtitle {
+    color: var(--primary-blue);
 }

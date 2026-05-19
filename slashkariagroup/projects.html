@@ -420,8 +420,8 @@
                                 <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Modern Residency</div>
                                 <div class="meta-item"><i data-lucide="activity" class="w-4 h-4"></i> Rapid Development
                                 </div>
-                                <div class="meta-item"><i data-lucide="bed" class="w-4 h-4"></i> Spacious 1 BHK & 2 BHK
-                                </div>
+                                <div class="meta-item"><i data-lucide="building-2" class="w-4 h-4"></i> Modern
+                                    Commercial</div>
                                 <div class="meta-item"><i data-lucide="loader" class="w-4 h-4"></i> Ongoing</div>
                             </div>
                             <div class="detailed-card-btns">
@@ -446,8 +446,8 @@
                                 <div class="meta-item"><i data-lucide="home" class="w-4 h-4"></i> Modern Residency</div>
                                 <div class="meta-item"><i data-lucide="activity" class="w-4 h-4"></i> Rapid Development
                                 </div>
-                                <div class="meta-item"><i data-lucide="building-2" class="w-4 h-4"></i> Modern
-                                    Commercial</div>
+                                <div class="meta-item"><i data-lucide="bed" class="w-4 h-4"></i> Spacious 1 BHK & 2 BHK
+                                </div>
                                 <div class="meta-item"><i data-lucide="loader" class="w-4 h-4"></i> Ongoing</div>
                             </div>
                             <div class="detailed-card-btns">
@@ -548,8 +548,8 @@
                     <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="careers.html">Careers<img src="assets/icons/right.svg" alt=""
-                                class="footer-arrow"></a></li>
+                    <li><a href="careers.html">Careers<img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
                 </ul>
             </div>
             <div class="footer-col contact-col">
@@ -557,7 +557,8 @@
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
                         <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.1189,72.8423"
-                                target="_blank">S. Lashkaria Group Unit no. 111, 1st Floor, Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
+                                target="_blank">S. Lashkaria Group Unit no. 111, 1st Floor, Juhu Azad Nagar CHS, C.D.
+                                Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
                     </div>
                     <div class="contact-divider"></div>
                     <div class="contact-item">
@@ -608,7 +609,7 @@
     <script src="assets/js/projects.js"></script>
     <script>
         // Scroll to specific project card if URL has a hash
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const hash = window.location.hash;
             if (hash && hash.startsWith('#project-')) {
                 const target = document.querySelector(hash);
@@ -620,7 +621,7 @@
                     target.classList.add('revealed');
 
                     // Smooth scroll with offset for sticky header
-                    setTimeout(function() {
+                    setTimeout(function () {
                         const headerHeight = 100;
                         const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                         window.scrollTo({ top: y, behavior: 'smooth' });

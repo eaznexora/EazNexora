@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             location: item.dataset.location,
             coords: JSON.parse(item.dataset.coords),
             image: item.dataset.image,
-            logo: "assets/logo/logo-header.svg",
+            logo: "assets/logo/logo-aboutus.png",
             desc: item.dataset.desc
         }));
 
