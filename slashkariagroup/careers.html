@@ -407,6 +407,17 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Resume CTA button — no pulse animation, no glow, simple hover only */
+        #openResumeModal.cta-button {
+            animation: none;
+            transition: filter 0.25s ease;
+        }
+
+        #openResumeModal.cta-button:hover {
+            transform: none;
+            box-shadow: none;
+            filter: brightness(0.93);
+        }
     </style>
 </head>
 
