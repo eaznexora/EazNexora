@@ -1206,14 +1206,16 @@
 
 .image-box-alt img {
     width: 100%;
-    max-width: 420px; /* Increased slightly */
+    max-width: 420px;
+    /* Increased slightly */
     height: auto;
     object-fit: contain;
     display: block;
     position: relative;
     z-index: 10;
-    transform: translateY(-25px) scale(1.05); /* Shift up to prevent head clipping */
-    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2));
+    transform: translateY(-25px) scale(1.05);
+    /* Shift up to prevent head clipping */
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
 }
 
 .info-box-alt {
@@ -1335,10 +1337,13 @@
    HERO TEXT COLOR OVERRIDES (FOR VISIBILITY)
    ========================================= */
 .projects-page-hero .projects-hero-title {
-    color: #192954 !important; /* Brand Navy Blue */
+    color: #192954 !important;
+    /* Brand Navy Blue */
 }
 
 .projects-page-hero .projects-hero-subtitle {
-    color: #192954 !important; /* Brand Navy Blue */
-    font-weight: 600 !important; /* Extra weight for readability */
+    color: #192954 !important;
+    /* Brand Navy Blue */
+    font-weight: 600 !important;
+    /* Extra weight for readability */
 }
