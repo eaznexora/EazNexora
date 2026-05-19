@@ -2319,15 +2319,15 @@ header.scrolled .logo img {
     position: relative;
     width: 52px;
     height: 52px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(25, 41, 84, 0.8);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 32px rgba(25, 41, 84, 0.15);
+    box-shadow: 0 8px 32px rgba(25, 41, 84, 0.25);
     transition: all 0.3s ease;
     overflow: hidden;
 }
@@ -2353,19 +2353,27 @@ header.scrolled .logo img {
 }
 
 .scroll-top-wrapper:hover .scroll-top-btn {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(25, 41, 84, 0.95);
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(25, 41, 84, 0.25);
-    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 35px rgba(25, 41, 84, 0.35);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
-.scroll-top-btn img {
+.scroll-top-arrow {
     width: 20px;
     height: 20px;
     transform: rotate(-90deg);
     transition: transform 0.3s ease;
-    filter: invert(13%) sepia(21%) saturate(2900%) hue-rotate(189deg) brightness(91%) contrast(92%);
-    /* Matches #192954 */
+}
+
+.scroll-top-arrow .arrow-hexagon {
+    fill: #8FCEF1; /* Brand light blue */
+    transition: fill 0.3s ease;
+}
+
+.scroll-top-arrow .arrow-path {
+    fill: #192954; /* Brand navy blue */
+    transition: fill 0.3s ease;
 }
 
 /* Dark Background Override (when overlapping dark sections like footer) */
@@ -2374,17 +2382,27 @@ header.scrolled .logo img {
     /* Lighter brand color */
 }
 
-.scroll-top-wrapper.dark-bg .scroll-top-btn img {
-    filter: invert(85%) sepia(21%) saturate(762%) hue-rotate(178deg) brightness(97%) contrast(96%);
-    /* Matches #8FCEF1 */
+.scroll-top-wrapper.dark-bg .scroll-top-arrow .arrow-hexagon {
+    fill: #192954; /* Brand navy blue */
+}
+
+.scroll-top-wrapper.dark-bg .scroll-top-arrow .arrow-path {
+    fill: #FFFFFF; /* White arrow */
 }
 
 .scroll-top-wrapper.dark-bg .scroll-top-btn {
-    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(143, 206, 241, 0.8);
+    border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 8px 32px rgba(143, 206, 241, 0.2);
 }
 
-.scroll-top-wrapper:hover img {
+.scroll-top-wrapper.dark-bg:hover .scroll-top-btn {
+    background: rgba(143, 206, 241, 0.95);
+    box-shadow: 0 15px 35px rgba(143, 206, 241, 0.35);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.scroll-top-wrapper:hover .scroll-top-arrow {
     transform: rotate(-90deg) translateY(-3px);
 }
 
@@ -3349,16 +3367,11 @@ header.scrolled .logo img {
 
 
 .location-cluster {
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .location-cluster h4 {
-    padding: 0 30px 12px 30px;
-    font-size: 13px;
-    font-weight: 800;
-    color: #192954;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    display: none;
 }
 
 .project-list {
@@ -3613,6 +3626,7 @@ header.scrolled .logo img {
     width: 100%;
     height: 140px;
     object-fit: cover;
+    object-position: top;
 }
 
 .popup-details {

@@ -206,7 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <img src="${project.logo}" alt="Logo" class="popup-logo">
                             <h3>${project.name}</h3>
                         </div>
-                        <div class="popup-location"><svg width="12" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> ${project.location}</div>
                         <p class="popup-desc">${project.desc}</p>
                         <a href="#" class="btn-popup">View Project &rarr;</a>
                     </div>
