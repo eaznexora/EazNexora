@@ -97,7 +97,7 @@
                 <h2 class="watermark-title reveal-fade-up">OUR PROJECTS</h2>
                 <div class="detailed-projects-grid">
                     <!-- Amann Highland Park -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-amann-highland-park" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/10. Amann Highland Park (Malad East).jpg"
                                 alt="Amann Highland Park">
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <!-- Amann Marina -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-amann-marina" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/4. Amann Marina (Worli).jpg" alt="Amann Marina">
                         </div>
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                     <!-- Amann Hills -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-amann-hills" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/8. Amann Hills (Andheri West).jpg" alt="Amann Hills">
                         </div>
@@ -195,7 +195,7 @@
                         </div>
                     </div> -->
                     <!-- Amann Akansha Heights -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-amann-akanksha-heights" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/5. Amann Akanksha Height (Worli).jpg" alt="Amann Akansha Heights">
                         </div>
@@ -219,7 +219,7 @@
                         </div>
                     </div>
                     <!-- Jankalyan -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-jankalyan" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/2. Jankalyan (Dahisar East).jpg" alt="Jankalyan">
                         </div>
@@ -244,7 +244,7 @@
                         </div>
                     </div>
                     <!-- Amann Sagar -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-amann-sagar" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/6. Amann Sagar (Kandiwali West).jpg" alt="Amann Sagar">
                         </div>
@@ -267,7 +267,7 @@
                         </div>
                     </div>
                     <!-- Amann Spring -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-amann-spring" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/7. Amann Spring (Kandivali West).jpg" alt="Amann Spring">
                         </div>
@@ -290,7 +290,7 @@
                         </div>
                     </div>
                     <!-- Rashmi Heights -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-rashmi-heights" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/3. Rashmi Height (Malad East).jpg" alt="Rashmi Heights">
                         </div>
@@ -314,7 +314,7 @@
                         </div>
                     </div>
                     <!-- Amann Avanti -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-amann-avanti" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/amann-avanti.jpeg" alt="Amann Avanti">
                         </div>
@@ -338,7 +338,7 @@
                         </div>
                     </div>
                     <!-- Amann Square -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-amann-square" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/amann-square.jpeg" alt="Amann Square">
                         </div>
@@ -380,7 +380,7 @@
                 <h2 class="watermark-title reveal-fade-up">ONGOING PROJECTS</h2>
                 <div class="detailed-projects-grid" id="ongoing-projects-grid">
                     <!-- Lashkaria Solitaire -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-lashkaria-solitaire" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/11. Lashkaria Solitaire (Andheri West).jpg"
                                 alt="Lashkaria Solitaire">
@@ -406,7 +406,7 @@
                     </div>
 
                     <!-- the zone -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-the-zone" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/9. Amann Solitaire (Borivali West).jpg" alt="Amann Solitaire">
                         </div>
@@ -432,7 +432,7 @@
                         </div>
                     </div>
                     <!-- Amann Solitaire -->
-                    <div class="detailed-project-card reveal-fade-up">
+                    <div id="project-lashkaria-vikas" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/Lashkaria Vikas (Borivali West).jpg" alt="Lashkaria Vikas">
                         </div>
@@ -606,6 +606,29 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/projects.js"></script>
+    <script>
+        // Scroll to specific project card if URL has a hash
+        window.addEventListener('load', function() {
+            const hash = window.location.hash;
+            if (hash && hash.startsWith('#project-')) {
+                const target = document.querySelector(hash);
+                if (target) {
+                    // Make sure the card is visible (bypass reveal animation)
+                    target.style.opacity = '1';
+                    target.style.transform = 'none';
+                    target.style.transition = 'none';
+                    target.classList.add('revealed');
+
+                    // Smooth scroll with offset for sticky header
+                    setTimeout(function() {
+                        const headerHeight = 100;
+                        const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }, 300);
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

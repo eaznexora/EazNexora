@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let currentCraftedIndex = 0;
+
+    // Helper: convert project title to a URL-friendly slug for deep linking
+    function projectSlug(title) {
+        return 'project-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
     const activeProjectContainer = document.getElementById('active-project-container');
     const smallProjectsGrid = document.getElementById('small-projects-grid');
     const prevBtn = document.getElementById('prev-project');
@@ -73,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="overlay-divider"></div>
                     <p class="overlay-desc">${active.desc}</p>
                 </div>
-                <a href="#" class="btn-view-project">View Project &rarr;</a>
+                <a href="projects.html#${projectSlug(active.title)}" class="btn-view-project">View Project &rarr;</a>
             </div>
         `;
 
@@ -96,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="assets/icons/project-location.svg" alt="Loc">
                         ${proj.location}
                     </div>
-                    <a href="#" class="btn-view-project-small">View Project &rarr;</a>
+                    <a href="projects.html#${projectSlug(proj.title)}" class="btn-view-project-small">View Project &rarr;</a>
                 </div>
             </div>
         `).join('');
@@ -207,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h3>${project.name}</h3>
                         </div>
                         <p class="popup-desc">${project.desc}</p>
-                        <a href="#" class="btn-popup">View Project &rarr;</a>
+                        <a href="projects.html#${projectSlug(project.name)}" class="btn-popup">View Project &rarr;</a>
                     </div>
                 </div>
             `;
