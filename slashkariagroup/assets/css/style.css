@@ -317,7 +317,6 @@ header.scrolled .logo img {
 .nav-link.active {
     color: var(--accent-light);
     transform: translateY(-1px);
-    text-shadow: 0 0 8px rgba(163, 211, 242, 0.4);
 }
 
 .header-actions {
