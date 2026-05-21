@@ -299,13 +299,26 @@ document.addEventListener('DOMContentLoaded', () => {
             isInitialLoad = false;
         }
 
-        // 5. SET DEFAULT OPEN PROJECT (LASHKARIA SOLITAIRE - ID 1)
-        const defaultProject = mapProjectData.find(p => p.id === "1");
-        if (defaultProject) {
-            setTimeout(() => {
-                focusOnMapProject(defaultProject);
-            }, 1000); // Slight delay to ensure map is ready
-        }
+        // 5. SET DEFAULT VIEW TO SHOW ALL PROJECT CLUSTERS
+        setTimeout(() => {
+            if (mapProjectData.length > 0) {
+                // Calculate bounds of all markers
+                const bounds = L.latLngBounds(mapProjectData.map(p => p.coords));
+                
+                // Add padding so markers don't sit exactly on the edges of the map
+                // For mobile, we might need a bit more padding due to the UI overlays
+                const isMobile = window.innerWidth <= 992;
+                const paddingOpts = isMobile ? [30, 30] : [50, 50];
+                
+                map.fitBounds(bounds, { 
+                    padding: paddingOpts,
+                    maxZoom: 13 // Prevent it from zooming in too far if clusters are close
+                });
+                
+                // Reset flag so subsequent clicks will scroll correctly
+                isInitialLoad = false;
+            }
+        }, 500); // Slight delay to ensure map container size is fully calculated
     }
 
     /* ============================================================

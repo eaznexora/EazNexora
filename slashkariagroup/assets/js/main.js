@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let isDark = false;
             
             const darkElements = document.querySelectorAll(
-                '.site-footer, .cta-section, .stats-section, .bg-legacy-polygon, .projects-page-hero, .hero-bg-wrapper, .bg-poly-right-bottom, .bg-poly-right-2, .bg-poly-left-1, .chairman-section, .features-wrapper, .visionary-section, .commitment-section, .shaping-section, .director-section'
+                '.site-footer, .stats-section, .bg-legacy-polygon, .projects-page-hero, .hero-bg-wrapper, .bg-poly-right-bottom, .bg-poly-right-2, .bg-poly-left-1, .chairman-section, .features-wrapper, .visionary-section, .commitment-section, .shaping-section, .director-section'
             );
             
             for (const el of darkElements) {
@@ -172,9 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="brochure-modal-card">
                     <button class="modal-close" id="closeBrochure">&times;</button>
                     <div class="brochure-form">
-                        <h3>Download Brochure</h3>
+                        <h3>Download Profile</h3>
                         <div class="form-heading-line"></div>
-                        <p>Share your contact details to download our exclusive project brochure.</p>
+                        <p>Share your contact details to download our exclusive project profile.</p>
                         <form id="brochure-download-form">
                             <div class="form-group">
                                 <img src="assets/icons/profile.svg" alt="Name">
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Find all brochure links site-wide
         const brochureLinks = Array.from(document.querySelectorAll('a')).filter(a => 
-            a.textContent.toLowerCase().includes('brochure')
+            a.textContent.toLowerCase().includes('profile')
         );
 
         brochureLinks.forEach(link => {
@@ -249,3 +249,4 @@ document.addEventListener('DOMContentLoaded', () => {
     injectScrollTop();
     injectBrochureModal();
 });
+

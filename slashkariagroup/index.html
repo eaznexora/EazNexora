@@ -51,13 +51,13 @@
                     <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
                     <li><a href="blog.html" class="nav-link">BLOGS</a></li>
                     <li><a href="careers.html" class="nav-link">CAREERS</a></li>
-                    <li class="mobile-nav-item"><a href="#" class="nav-link">DOWNLOAD BROCHURE</a></li>
+                    <li class="mobile-nav-item"><a href="#" class="nav-link">DOWNLOAD PROFILE</a></li>
                     <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <a href="#" class="btn-outline-header">DOWNLOAD BROCHURE</a>
+                <a href="#" class="btn-outline-header">DOWNLOAD PROFILE</a>
                 <a href="contact.html" class="cta-button">
                     <span>CONTACT US</span>
                 </a>
@@ -286,7 +286,7 @@
                         <div class="stat-number">2.7+</div>
                         <div class="stat-label">Million sq. ft. Delivered</div>
                     </div>
-                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.3s;">
+                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.1s;">
                         <img src="assets/icons/flats.svg" alt="Units Icon">
                         <div class="stat-number">6000+</div>
                         <div class="stat-label">Units Delivered</div>
@@ -296,7 +296,7 @@
                         <div class="stat-number">9000+</div>
                         <div class="stat-label">Happy Families</div>
                     </div>
-                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.1s;">
+                    <div class="stat-item reveal-fade-up" style="transition-delay: 0.3s;">
                         <img src="assets/icons/crane.svg" alt="Pipeline Icon">
                         <div class="stat-number">2.1+</div>
                         <div class="stat-label">Million sq. ft. underdevelopment</div>
@@ -720,7 +720,7 @@
                         <!-- Card 3 -->
                         <div class="legacy-card reveal-fade-up" style="transition-delay: 0.2s;">
                             <div class="card-header">
-                                <img src="assets/icons/corporate.svg" alt="Corporate" class="card-icon">
+                                <img src="assets/icons/corporate-icon.png" alt="Corporate" class="card-icon">
                                 <h3 class="card-title">Corporate & Commercial Complexes</h3>
                             </div>
                             <div class="card-line"></div>
@@ -817,24 +817,26 @@
         <!-- CTA Section -->
         <section id="contact" class="cta-section">
 
-            <!-- Layer 1: BG image as <img> — same approach as hero, crisp & no blur -->
-            <img src="assets/bg/cta-bg-hero.png" alt="" class="cta-bg-img reveal-fade-up" aria-hidden="true">
+            <!-- Layer 1: BG image as <img> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â desktop -->
+            <img src="assets/bg/cta-bg-hero.png" alt="" class="cta-bg-img cta-bg-desktop reveal-fade-up" aria-hidden="true">
+            <!-- Layer 1b: BG image ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â mobile only -->
+            <img src="assets/bg/cta-bg-hero-mobile.png" alt="" class="cta-bg-img cta-bg-mobile" aria-hidden="true">
 
-            <!-- Layer 2: Polygon shape — right side -->
+            <!-- Layer 2: Polygon shape ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â right side -->
             <img src="assets/bg/Polygon connect.png" alt="" class="cta-polygon reveal-fade-right" aria-hidden="true">
 
             <!-- Layer 3: Content -->
             <div class="container cta-container">
 
-                <!-- LEFT: Hero Text — top-left aligned -->
+                <!-- LEFT: Hero Text ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â top-left aligned -->
                 <div class="cta-text reveal-fade-left">
                     <h2 class="cta-title">FIND YOUR<br>PERFECT SPACE TODAY</h2>
                     <div class="accent-line-light"></div>
-                    <p class="cta-subtitle">Exclusive Residences. Thoughtful Design.<br>Spaces that elevate the way you
-                        live</p>
+                    <p class="cta-subtitle desktop-cta-subtitle">Exclusive Residences. Thoughtful Design.<br>Spaces that elevate the way you live</p>
+                    <p class="cta-subtitle mobile-cta-subtitle" style="font-size: 16px; font-weight: 400; line-height: 1.5; margin-bottom: 25px;">Discover thoughtfully designed developments in prime locations, built for those who expect more.</p>
                 </div>
 
-                <!-- RIGHT: Contact Form Card — exact Figma 519×645px -->
+                <!-- RIGHT: Contact Form Card ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â exact Figma 519ÃƒÆ’Ã¢â‚¬â€645px -->
                 <div class="contact-form-card reveal-fade-right">
                     <h3 class="form-heading">LET'S CONNECT</h3>
                     <div class="form-heading-line"></div>
@@ -881,13 +883,16 @@
                 <ul class="footer-links">
                     <li><a href="#home">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="#about">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
                     <li class="link-divider"></li>
-                    <li><a href="#projects">Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
                     <li class="link-divider"></li>
-                    <li><a href="#">Download Brochure <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    <li><a href="#">Download Profile <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
+                    <li class="iso-text" style="margin-top: 30px; font-size: 14px; font-weight: 700; color: #4CA3D4; letter-spacing: 0.05em; display: flex; align-items: center; justify-content: flex-start; opacity: 0.9;">
+                        ISO 9001
                     </li>
                 </ul>
             </div>
@@ -909,6 +914,9 @@
                     <li><a href="careers.html">Careers <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a>
                     </li>
+                    <li class="iso-text" style="margin-top: 30px; font-size: 14px; font-weight: 700; color: #4CA3D4; letter-spacing: 0.05em; display: flex; align-items: center; justify-content: flex-start; opacity: 0.9;">
+                        ISO 27001
+                    </li>
                 </ul>
             </div>
 
@@ -917,7 +925,7 @@
                 <div class="contact-items">
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="" class="contact-icon loc-icon">
-                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.1189,72.8423"
+                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=19.113575365657606,72.83949792334383"
                                 target="_blank">S. Lashkaria Group Unit no. 111, 1st Floor, Juhu Azad Nagar CHS, C.D.
                                 Barfiwala Road, Andheri (W), Mumbai 400053</a></p>
                     </div>
@@ -980,3 +988,6 @@
 </body>
 
 </html>
+
+
+

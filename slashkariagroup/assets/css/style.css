@@ -110,7 +110,7 @@ img {
     display: block;
 }
 
-/* Card images must fill their container â€” override the above */
+/* Card images must fill their container Ã¢â‚¬â€ override the above */
 .card-image-wrapper {
     position: absolute !important;
     inset: 0 !important;
@@ -561,7 +561,7 @@ header.scrolled .logo img {
     margin-bottom: 20px;
     text-transform: uppercase;
     line-height: 1.0;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.05em;
 }
 
 .hero-subtitle {
@@ -1792,7 +1792,7 @@ header.scrolled .logo img {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.4;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     color: #192954;
     max-width: 400px;
 }
@@ -1856,7 +1856,7 @@ header.scrolled .logo img {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.3;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     color: #192954;
 }
 
@@ -1868,7 +1868,7 @@ header.scrolled .logo img {
     z-index: 40;
 }
 
-/* TOP ROW: 2-col grid â€” header left (420px) | big card right */
+/* TOP ROW: 2-col grid Ã¢â‚¬â€ header left (420px) | big card right */
 .crafted-top-row {
     display: grid;
     grid-template-columns: 420px 1fr;
@@ -1945,7 +1945,7 @@ header.scrolled .logo img {
     background-size: 750px auto;
 }
 
-/* Glassmorphic info card â€” exact Figma: 399Ã—313px, top-right */
+/* Glassmorphic info card Ã¢â‚¬â€ exact Figma: 399Ãƒâ€”313px, top-right */
 .project-overlay {
     position: absolute;
     top: 20px;
@@ -2040,7 +2040,7 @@ header.scrolled .logo img {
     box-shadow: 0 8px 20px rgba(25, 41, 84, 0.4);
 }
 
-/* ---- NAVIGATION â€” full-width, right-aligned ---- */
+/* ---- NAVIGATION Ã¢â‚¬â€ full-width, right-aligned ---- */
 .projects-nav {
     display: flex;
     justify-content: flex-end;
@@ -2063,7 +2063,7 @@ header.scrolled .logo img {
     transform: translateY(-3px);
 }
 
-/* ---- SMALL CARDS GRID â€” full-width, 3 columns, ~411px each ---- */
+/* ---- SMALL CARDS GRID Ã¢â‚¬â€ full-width, 3 columns, ~411px each ---- */
 .small-projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2130,7 +2130,7 @@ header.scrolled .logo img {
     background-size: 375px auto;
 }
 
-/* Glassmorphic info box â€” exact Figma: 225Ã—125px, top-right */
+/* Glassmorphic info box Ã¢â‚¬â€ exact Figma: 225Ãƒâ€”125px, top-right */
 /* Title at top:10px, Location at top:42px, Button at top:83px */
 .small-overlay {
     position: absolute;
@@ -2211,7 +2211,7 @@ header.scrolled .logo img {
     box-shadow: 0 4px 10px rgba(25, 41, 84, 0.3);
 }
 
-/* ---- ANIMATIONS â€” true fade, no blink ---- */
+/* ---- ANIMATIONS Ã¢â‚¬â€ true fade, no blink ---- */
 .project-fade-in {
     animation: projectFade 0.5s ease forwards;
 }
@@ -2534,7 +2534,7 @@ header.scrolled .logo img {
 
 
 /* ================================================
-   CTA SECTION â€” FIND YOUR PERFECT SPACE TODAY
+   CTA SECTION Ã¢â‚¬â€ FIND YOUR PERFECT SPACE TODAY
    ================================================ */
 
 .cta-section {
@@ -2548,7 +2548,7 @@ header.scrolled .logo img {
     align-items: center;
 }
 
-/* Layer 1: BG image â€” img tag, same approach as hero (crisp, no blur) */
+/* Layer 1: BG image Ã¢â‚¬â€ img tag, same approach as hero (crisp, no blur) */
 .cta-bg-img {
     position: absolute;
     inset: 0;
@@ -2561,7 +2561,16 @@ header.scrolled .logo img {
     max-width: none !important;
 }
 
-/* Layer 2: Polygon connect.png â€” right side, above bg, below card */
+/* Desktop bg visible by default; mobile bg hidden on desktop */
+.cta-bg-desktop {
+    display: block !important;
+}
+
+.cta-bg-mobile {
+    display: none !important;
+}
+
+/* Layer 2: Polygon connect.png Ã¢â‚¬â€ right side, above bg, below card */
 .cta-polygon {
     position: absolute;
     right: -8%;
@@ -2574,7 +2583,7 @@ header.scrolled .logo img {
     max-width: none !important;
 }
 
-/* Layer 3: Content container â€” text top-left, card right */
+/* Layer 3: Content container Ã¢â‚¬â€ text top-left, card right */
 .cta-container {
     position: relative;
     z-index: 2;
@@ -2589,7 +2598,7 @@ header.scrolled .logo img {
     /* Moved content significantly higher as requested */
 }
 
-/* LEFT â€” Text block, top-left anchored */
+/* LEFT Ã¢â‚¬â€ Text block, top-left anchored */
 .cta-text {
     display: flex;
     flex-direction: column;
@@ -2622,7 +2631,15 @@ header.scrolled .logo img {
     color: #FFFFFF;
 }
 
-/* RIGHT â€” White form card â€” exact Figma: 519Ã—645px */
+.mobile-cta-subtitle {
+    display: none !important;
+}
+
+.desktop-cta-subtitle {
+    display: block !important;
+}
+
+/* RIGHT Ã¢â‚¬â€ White form card Ã¢â‚¬â€ exact Figma: 519Ãƒâ€”645px */
 .contact-form-card {
     background: #FFFFFF;
     box-shadow: 0px 5px 10.6px rgba(25, 41, 84, 0.36);
@@ -2636,7 +2653,7 @@ header.scrolled .logo img {
     box-sizing: border-box;
 }
 
-/* LET'S CONNECT â€” 33px, 41px line-height, centered */
+/* LET'S CONNECT Ã¢â‚¬â€ 33px, 41px line-height, centered */
 .form-heading {
     font-size: 33px;
     font-weight: 700;
@@ -2648,7 +2665,7 @@ header.scrolled .logo img {
     margin-bottom: 8px;
 }
 
-/* Divider â€” 2px, full width */
+/* Divider Ã¢â‚¬â€ 2px, full width */
 .form-heading-line {
     width: 100%;
     height: 2px;
@@ -2656,7 +2673,7 @@ header.scrolled .logo img {
     margin-bottom: 15px;
 }
 
-/* Subtitle â€” 20px, centered, 50px height */
+/* Subtitle Ã¢â‚¬â€ 20px, centered, 50px height */
 .form-subtext {
     font-size: 20px;
     font-weight: 500;
@@ -2667,7 +2684,7 @@ header.scrolled .logo img {
     margin-bottom: 18px;
 }
 
-/* Form fields â€” Unified padding for perfect horizontal alignment (-------) */
+/* Form fields Ã¢â‚¬â€ Unified padding for perfect horizontal alignment (-------) */
 .form-group {
     display: flex;
     align-items: center;
@@ -2708,12 +2725,12 @@ header.scrolled .logo img {
     /* Improved cursor visibility */
 }
 
-/* Email field â€” Using unified padding */
+/* Email field Ã¢â‚¬â€ Using unified padding */
 .fg-email {
     padding: 15px 20px;
 }
 
-/* Message textarea â€” Top alignment for message box */
+/* Message textarea Ã¢â‚¬â€ Top alignment for message box */
 .fg-message {
     padding: 15px 20px;
     height: 110px;
@@ -2737,7 +2754,7 @@ header.scrolled .logo img {
     padding-top: 2px;
 }
 
-/* Button â€” Figma: 54px, 20px font, padding 15px 10px */
+/* Button Ã¢â‚¬â€ Figma: 54px, 20px font, padding 15px 10px */
 .btn-consult {
     display: flex;
     align-items: center;
@@ -2798,7 +2815,7 @@ header.scrolled .logo img {
 }
 
 /* ================================================
-   FOOTER SECTION â€” REFINED AS PER FIGMA
+   FOOTER SECTION Ã¢â‚¬â€ REFINED AS PER FIGMA
    ================================================ */
 
 .site-footer {
@@ -3296,7 +3313,7 @@ header.scrolled .logo img {
 }
 
 /* ================================================
-   DEVELOPMENTS MAP SECTION — PREMIUM SAAS STYLE
+   DEVELOPMENTS MAP SECTION â€” PREMIUM SAAS STYLE
    ================================================ */
 .developments-section {
     padding: 100px 0;
@@ -3352,7 +3369,7 @@ header.scrolled .logo img {
 .sidebar-header h3 {
     font-size: 14px;
     font-weight: 800;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     color: #192954;
     text-transform: uppercase;
 }
@@ -4503,6 +4520,33 @@ header.scrolled .logo img {
         text-align: center;
     }
 
+    .cta-text {
+        text-align: center;
+    }
+
+    .mobile-cta-subtitle {
+        display: block !important;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-top: 15px;
+    }
+    
+    .desktop-cta-subtitle {
+        display: none !important;
+    }
+
+    .accent-line-light {
+        width: 80%;
+        max-width: 320px;
+        margin: 0 auto 20px auto;
+    }
+
+    .contact-form-card {
+        text-align: center;
+        margin: 0 auto;
+    }
+
     .legacy-accent {
         margin: 0 auto 30px auto;
     }
@@ -4749,7 +4793,7 @@ header.scrolled .logo img {
     .nav-link {
         font-size: 20px;
         font-weight: 500;
-        letter-spacing: 1px;
+        letter-spacing: 0.1em;
     }
 
     .hamburger {
@@ -4817,7 +4861,7 @@ header.scrolled .logo img {
         line-height: 1.25;
         margin-bottom: 25px;
         padding: 0 5px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.05em;
     }
 
     .hero-subtitle {
@@ -4858,42 +4902,53 @@ header.scrolled .logo img {
 
     /* CTA Section Mobile */
     .cta-section {
-        padding: 140px 0 80px;
-        /* Added significant top gap for content */
+        padding: 90px 0 320px;
+        /* Compressed top, extended bottom so background guy is visible */
     }
 
-    .cta-bg-img,
+    /* Hide desktop bg image and polygon on mobile */
+    .cta-bg-desktop,
     .cta-polygon {
         display: none !important;
-        /* Hide desktop backgrounds */
     }
 
-    .cta-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('../bg/mobile-cta-bg.png');
-        background-size: cover;
-        background-position: center;
-        z-index: 0;
+    /* Show mobile-specific bg image */
+    .cta-bg-mobile {
+        display: block !important;
     }
 
     .cta-container {
         position: relative;
         z-index: 2;
         grid-template-columns: 1fr !important;
-        gap: 40px;
+        gap: 25px; /* Compressed gap */
     }
 
     .cta-text {
         text-align: center;
     }
+    
+    .cta-title {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .mobile-cta-subtitle {
+        display: block !important;
+        font-size: 15px; /* Slightly smaller to compress */
+        line-height: 1.4;
+        margin-top: 10px;
+    }
+    
+    .desktop-cta-subtitle {
+        display: none !important;
+    }
 
     .accent-line-light {
-        margin: 0 auto 25px auto;
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto 15px auto; /* Reduced margin */
     }
 
     .contact-form-card {
@@ -5091,7 +5146,8 @@ header.scrolled .logo img {
         border-radius: 10px;
     }
 
-    .count-number {
+    .count-number,
+    .count-suffix {
         font-size: 24px !important;
     }
 
@@ -5224,3 +5280,34 @@ header.scrolled .logo img {
         min-width: 200px;
     }
 }
+
+
+
+/* Slim Phone Fixes */
+@media (max-width: 480px) {
+    .stats-header {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 30px !important;
+    }
+    .stats-grid {
+        gap: 10px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .stat-item {
+        padding: 20px 8px !important;
+    }
+    .stat-number {
+        font-size: 28px !important;
+        margin-bottom: 5px !important;
+    }
+    .stat-label {
+        font-size: 11px !important;
+    }
+    .stat-item img {
+        width: 45px !important;
+        height: 45px !important;
+        margin-bottom: 12px !important;
+    }
+}
+
