@@ -29,6 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let isTransitioning = false;
 
     let fallbackTimeout;
+
+    function checkBoundary() {
+        if (currentIndex === 0) {
+            currentIndex = slideCount;
+            updateSlider(false);
+        } else if (currentIndex === slideCount + 1) {
+            currentIndex = 1;
+            updateSlider(false);
+        }
+    }
+
     function updateSlider(withTransition = true) {
         if (!withTransition) {
             sliderContainer.style.transition = 'none';
@@ -39,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearTimeout(fallbackTimeout);
             fallbackTimeout = setTimeout(() => {
                 isTransitioning = false;
+                checkBoundary();
             }, 650); // Fallback to unlock
         }
         
@@ -55,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Trigger reveal animation
         const activeSlide = allSlides[currentIndex];
+        if (!activeSlide) return; // Prevent out-of-bounds error
         const content = activeSlide.querySelector('.hero-content');
         if (content && !content.classList.contains('reveal-visible')) {
             setTimeout(() => content.classList.add('reveal-visible'), 100);
@@ -64,14 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle the jump at the end of transition for seamless loop
     sliderContainer.addEventListener('transitionend', (e) => {
         if (e.target !== sliderContainer) return;
+        clearTimeout(fallbackTimeout);
         isTransitioning = false;
-        if (currentIndex === 0) {
-            currentIndex = slideCount;
-            updateSlider(false);
-        } else if (currentIndex === slideCount + 1) {
-            currentIndex = 1;
-            updateSlider(false);
-        }
+        checkBoundary();
     });
 
     function goToNextSlide() {
