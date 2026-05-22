@@ -413,7 +413,7 @@
     font-weight: 500;
     font-size: 22px;
     line-height: 28px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     color: #FFFFFF;
     margin-left: 44px;
     /* Perfectly aligns text under the title (26px icon + 18px gap) */
@@ -449,7 +449,7 @@
 .trust-text {
     width: 682px;
     text-align: center;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     color: #192954;
     margin: 0;
     line-height: 1.4;
@@ -547,7 +547,7 @@
     font-size: 26px;
     line-height: 120%;
     /* ~31px */
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     color: #FFFFFF;
     margin-bottom: 40px;
     /* Space between text and buttons */

@@ -28,12 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let startTime = 0;
     let isTransitioning = false;
 
+    let fallbackTimeout;
     function updateSlider(withTransition = true) {
         if (!withTransition) {
             sliderContainer.style.transition = 'none';
+            isTransitioning = false;
         } else {
             sliderContainer.style.transition = 'transform 0.6s cubic-bezier(0.65, 0, 0.35, 1)';
             isTransitioning = true;
+            clearTimeout(fallbackTimeout);
+            fallbackTimeout = setTimeout(() => {
+                isTransitioning = false;
+            }, 650); // Fallback to unlock
         }
         
         sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -56,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Handle the jump at the end of transition for seamless loop
-    sliderContainer.addEventListener('transitionend', () => {
+    sliderContainer.addEventListener('transitionend', (e) => {
+        if (e.target !== sliderContainer) return;
         isTransitioning = false;
         if (currentIndex === 0) {
             currentIndex = slideCount;
@@ -122,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const diff = currentX - startX;
         
         const containerWidth = sliderContainer.offsetWidth;
-        const movePercent = (diff / containerWidth) * 100;
+        let movePercent = (diff / containerWidth) * 100;
+        movePercent = Math.max(-100, Math.min(100, movePercent)); // Prevent moving more than one slide
         const translate = (-currentIndex * 100) + movePercent;
         
         sliderContainer.style.transform = `translateX(${translate}%)`;
@@ -163,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle window resize
     window.addEventListener('resize', () => {
         sliderContainer.style.transition = 'none';
+        isTransitioning = false;
         updateSlider(false);
     });
 

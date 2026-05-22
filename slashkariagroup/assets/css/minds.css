@@ -366,7 +366,7 @@ body {
   font-size: clamp(16px, 1.8vw, 19px);
   /* Slightly scaled for readability */
   line-height: 1.5;
-  text-align: justify;
+  text-align: center;
   flex-grow: 1;
   /* Keeps the bottom line pushed down uniformly */
 }
@@ -374,7 +374,7 @@ body {
 /* Mobile text adjustment */
 @media (max-width: 768px) {
   .card-text {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -607,7 +607,7 @@ body {
   font-size: clamp(14px, 1.5vw, 16px);
   /* Reduced */
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 
 .inner-divider {
@@ -774,7 +774,7 @@ body {
   font-weight: 800;
   font-size: clamp(14px, 1.5vw, 16px);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 
 .director-bio {
