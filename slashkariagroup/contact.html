@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | S. Lashkaria Group</title>
-    <meta name="description"
-        content="Get in touch with S. Lashkaria Group. Schedule a consultation or visit our office in Andheri West, Mumbai.">
+    <title>Contact Us | S. Lashkaria Group | Premium Real Estate Mumbai</title>
+    <meta name="description" content="Get in touch with S. Lashkaria Group. Schedule a consultation or visit our office in Andheri West, Mumbai for your premium real estate needs.">
     <meta name="theme-color" content="#192954">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -47,29 +44,39 @@
         }
     </style>
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        if (window.location.pathname.endsWith('.html')) {
+            var cleanUrl = window.location.href.replace(/\.html/, '');
+            if (cleanUrl.endsWith('/index')) cleanUrl = cleanUrl.replace(/\/index/, '/');
+            window.history.replaceState(null, '', cleanUrl);
+        }
+    </script>
+    <link rel="icon" href="https://slashkariagroup.com/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://slashkariagroup.com/apple-touch-icon.png">
 </head>
 
 <body>
 
     <header id="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
+            <a href="/" class="logo">
+                <img src="assets/logo/header-logo1.svg" alt="S. Lashkaria Group Logo" id="logo-header">
             </a>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html#home" class="nav-link">HOME</a></li>
-                    <li><a href="about.html" class="nav-link">ABOUT US</a></li>
-                    <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
-                    <li><a href="blog.html" class="nav-link">INSIGHTS</a></li>
-                    <li><a href="careers.html" class="nav-link">CAREERS</a></li>
+                    <li><a href="/" class="nav-link">HOME</a></li>
+                    <li><a href="/about" class="nav-link">ABOUT US</a></li>
+                    <li><a href="/projects" class="nav-link">PROJECTS</a></li>
+                    <li><a href="/blog" class="nav-link">INSIGHTS</a></li>
+                    <li><a href="/careers" class="nav-link">CAREERS</a></li>
                     <li class="mobile-nav-item"><a href="#" class="nav-link">Download Profile</a></li>
-                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link active">CONTACT US</a></li>
+                    <li class="mobile-nav-item"><a href="/contact" class="nav-link active">CONTACT US</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
                 <a href="#" class="btn-outline-header">Download Profile</a>
-                <a href="contact.html" class="cta-button">
+                <a href="/contact" class="cta-button">
                     <span>CONTACT US</span>
                 </a>
             </div>
@@ -169,17 +176,17 @@
                             SEND US A MESSAGE</h2>
                         <form class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
-                                <input type="text" placeholder="Full Name" class="input-field" required>
-                                <input type="tel" placeholder="Phone Number" class="input-field" required>
+                                <input type="text" name="Full Name" onkeypress="return /[a-zA-Z\\s]/i.test(event.key)" title="Name should only contain letters and spaces (e.g., John Doe)" pattern="^[A-Za-z\\s]{2,50}$" placeholder="Full Name" class="input-field" required>
+                                <input type="tel" name="Phone Number" onkeypress="return /[0-9]/i.test(event.key)" title="Please enter a valid phone number (digits only)" pattern="^[0-9]{10,12}$" placeholder="Phone Number" class="input-field" required>
                             </div>
-                            <input type="email" placeholder="Email Address" class="input-field" required>
-                            <select class="input-field appearance-none">
+                            <input type="email" name="Email Address" placeholder="Email Address" class="input-field" required>
+                            <select name="Interested Project" class="input-field appearance-none">
                                 <option value="" disabled selected>Interested Project</option>
-                                <option value="solitaire">Lashkaria Solitaire</option>
+                                <option value="solitaire">S. Lashkaria Solitaire</option>
                                 <option value="heights">Rashmi Heights</option>
                                 <option value="other">Other Projects</option>
                             </select>
-                            <textarea placeholder="Message" rows="5" class="input-field"></textarea>
+                            <textarea name="Message" placeholder="Message" rows="5" class="input-field"></textarea>
                             <button type="submit"
                                 class="w-full bg-brandNavy hover:bg-brandDarker text-white font-bold py-4 px-8 rounded-md transition-all shadow-lg tracking-widest">
                                 SEND ENQUIRY
@@ -259,124 +266,66 @@
                 <h2 class="text-brandNavy text-3xl md:text-4xl font-extrabold text-center mb-16 tracking-tight">
                     FREQUENTLY ASKED QUESTIONS</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Column 1 (3 Items) -->
-                    <div class="space-y-4">
-                        <!-- FAQ Item 1 -->
-                        <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
-                            <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
-                                <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">How quickly will your team contact me?</span>
-                                <span class="faq-icon transform transition-transform duration-300">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 8L10 13L15 8" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
-                                <div class="px-8 py-6 text-gray-600 leading-relaxed">
-                                    Our dedicated sales team typically responds to all enquiries within 24 business hours. For urgent requests, please feel free to call our main office line directly.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 2 -->
-                        <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
-                            <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
-                                <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">Can I schedule a property visit?</span>
-                                <span class="faq-icon transform transition-transform duration-300">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 8L10 13L15 8" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
-                                <div class="px-8 py-6 text-gray-600 leading-relaxed">
-                                    Yes, absolutely! We encourage all prospective buyers to visit our sites. You can schedule a visit through the form above or by contacting our sales team directly.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 3 -->
-                        <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
-                            <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
-                                <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">Do you assist with financing guidance?</span>
-                                <span class="faq-icon transform transition-transform duration-300">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 8L10 13L15 8" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
-                                <div class="px-8 py-6 text-gray-600 leading-relaxed">
-                                    We have partnerships with leading banks to provide seamless financing options for our customers. Our team can guide you through the initial documentation and eligibility process.
-                                </div>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
+                        <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
+                            <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">Who is the premier developer for luxury residential landmarks in Mumbai?</span>
+                            <span class="faq-icon transform transition-transform duration-300">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 8L10 13L15 8" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
+                            <div class="px-8 py-6 text-gray-600 leading-relaxed">
+                                S. Lashkaria Group stands as the preeminent name in Mumbai's luxury real estate landscape. With a legacy of crafting bespoke residential masterpieces, we blend cutting-edge architectural innovation with uncompromising elegance to redefine sophisticated urban living.
                             </div>
                         </div>
                     </div>
 
-                    <!-- Column 2 (3 Items) -->
-                    <div class="space-y-4">
-                        <!-- FAQ Item 4 -->
-                        <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
-                            <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
-                                <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">What is your expertise in Redevelopment & SRA?</span>
-                                <span class="faq-icon transform transition-transform duration-300">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 8L10 13L15 8" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
-                                <div class="px-8 py-6 text-gray-600 leading-relaxed">
-                                    With decades of experience, S. Lashkaria Group is a trusted pioneer in Urban Redevelopment and Slum Rehabilitation Authority (SRA) projects, delivering modern, structured communities.
-                                </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
+                        <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
+                            <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">Where is the corporate headquarters of S. Lashkaria Group?</span>
+                            <span class="faq-icon transform transition-transform duration-300">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 8L10 13L15 8" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
+                            <div class="px-8 py-6 text-gray-600 leading-relaxed">
+                                Our corporate headquarters is strategically situated in the heart of Mumbai's premium business district. You can find us at Unit no. 111, 1st Floor, Juhu Azad Nagar CHS, C.D. Barfiwala Road, Andheri (W), Mumbai 400053, where our visionary team orchestrates our landmark developments.
                             </div>
                         </div>
+                    </div>
 
-                        <!-- FAQ Item 5 -->
-                        <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
-                            <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
-                                <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">Are your projects RERA registered?</span>
-                                <span class="faq-icon transform transition-transform duration-300">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 8L10 13L15 8" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
-                                <div class="px-8 py-6 text-gray-600 leading-relaxed">
-                                    Yes, all our ongoing and upcoming residential and commercial projects are fully registered under the Real Estate Regulatory Authority (RERA). RERA numbers are displayed on each project's page.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 6 -->
-                        <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
-                            <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
-                                <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">Can I customize the interiors of my home?</span>
-                                <span class="faq-icon transform transition-transform duration-300">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 8L10 13L15 8" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
-                                <div class="px-8 py-6 text-gray-600 leading-relaxed">
-                                    Yes! Depending on the construction phase, we offer bespoke customization choices for floor layouts, premium fittings, and interior finishes to match your style.
-                                </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-white rounded-none md:rounded-xl shadow-sm border-b md:border border-gray-100 overflow-hidden">
+                        <button class="faq-toggle w-full px-8 py-6 text-left flex justify-between items-center group">
+                            <span class="text-brandNavy font-bold text-lg group-hover:text-brandCyan transition-colors">What is S. Lashkaria Group's track record regarding construction quality and delivery timelines?</span>
+                            <span class="faq-icon transform transition-transform duration-300">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 8L10 13L15 8" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
+                            <div class="px-8 py-6 text-gray-600 leading-relaxed">
+                                We pride ourselves on an impeccable track record built on the pillars of absolute transparency, superior construction standards, and punctual delivery. Our ISO-certified processes ensure that every project not only meets but exceeds industry benchmarks, guaranteeing our residents a flawless transition into their new homes.
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
+            </div></div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-col brand-col">
-                <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
+                <img src="assets/logo/logo-footer.svg" alt="S. Lashkaria Group" class="footer-logo">
                 <div class="footer-iso-icons">
                     <img src="assets/ISO/iso-9001-2015.png" alt="ISO 9001" class="iso-img">
                     <img src="assets/ISO/iso-14001-2015.png" alt="ISO 14001" class="iso-img">
@@ -384,40 +333,32 @@
             </div>
             <div class="footer-col links-col">
                 <ul class="footer-links">
-                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/">Home <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    <li><a href="/about">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/projects">Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
                     <li><a href="#">Download Profile <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
-<<<<<<< HEAD
-=======
-                    <li class="iso-text" style="margin-top: 30px; font-size: 14px; font-weight: 700; color: #4CA3D4; letter-spacing: 0.05em; display: flex; align-items: center; justify-content: flex-start; opacity: 0.9;">ISO 9001 : 2015</li>
->>>>>>> e4fc8c2adb80bdbbbab584c0c30047c436562c99
                 </ul>
             </div>
             <div class="footer-col links-col">
                 <ul class="footer-links">
-                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/projects#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/projects#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/projects">Upcoming Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="careers.html">Careers <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    <li><a href="/careers">Careers <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
-<<<<<<< HEAD
-=======
-                    <li class="iso-text" style="margin-top: 30px; font-size: 14px; font-weight: 700; color: #4CA3D4; letter-spacing: 0.05em; display: flex; align-items: center; justify-content: flex-start; opacity: 0.9;">ISO 14001 : 2015</li>
->>>>>>> e4fc8c2adb80bdbbbab584c0c30047c436562c99
                 </ul>
             </div>
             <div class="footer-col contact-col">
@@ -462,8 +403,8 @@
             <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
                     Nexora</a></p>
             <div class="social-links">
-                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/company/110608272" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="http://facebook.com/slashkariagroup" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
                 <!-- <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
             </div>
@@ -526,8 +467,8 @@
                 html: `
             <div class="marker-container active label-right">
                 <div class="marker-label">
-                    <img src="assets/logo/logo-header.svg" alt="Lashkaria Logo">
-                    <span>Lashkaria Office</span>
+                    <img src="assets/logo/logo-header.svg" alt="S. Lashkaria Logo">
+                    <span>S. Lashkaria Office</span>
                 </div>
                 <div class="hexagon-pin"></div>
             </div>

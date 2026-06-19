@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Lashkaria Group</title>
+    <title>Projects | S. Lashkaria Group | Premium Real Estate Mumbai</title>
     <meta name="description"
-        content="Discover thoughtfully designed developments in prime locations, built for those who expect more.">
+        content="Explore ongoing, completed, and upcoming premium residential and commercial projects by S. Lashkaria Group in prime locations across Mumbai.">
     <meta name="theme-color" content="#192954">
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap"
@@ -16,29 +15,39 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        if (window.location.pathname.endsWith('.html')) {
+            var cleanUrl = window.location.href.replace(/\.html/, '');
+            if (cleanUrl.endsWith('/index')) cleanUrl = cleanUrl.replace(/\/index/, '/');
+            window.history.replaceState(null, '', cleanUrl);
+        }
+    </script>
+    <link rel="icon" href="https://slashkariagroup.com/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://slashkariagroup.com/apple-touch-icon.png">
 </head>
 
 <body>
 
     <header id="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo/header-logo1.svg" alt="Lashkaria Group Logo" id="logo-header">
+            <a href="/" class="logo">
+                <img src="assets/logo/header-logo1.svg" alt="S. Lashkaria Group Logo" id="logo-header">
             </a>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html#home" class="nav-link">HOME</a></li>
-                    <li><a href="about.html" class="nav-link">ABOUT US</a></li>
-                    <li><a href="projects.html" class="nav-link active">PROJECTS</a></li>
-                    <li><a href="blog.html" class="nav-link">INSIGHTS</a></li>
-                    <li><a href="careers.html" class="nav-link">CAREERS</a></li>
+                    <li><a href="/" class="nav-link">HOME</a></li>
+                    <li><a href="/about" class="nav-link">ABOUT US</a></li>
+                    <li><a href="/projects" class="nav-link active">PROJECTS</a></li>
+                    <li><a href="/blog" class="nav-link">INSIGHTS</a></li>
+                    <li><a href="/careers" class="nav-link">CAREERS</a></li>
                     <li class="mobile-nav-item"><a href="#" class="nav-link">DOWNLOAD PROFILE</a></li>
-                    <li class="mobile-nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                    <li class="mobile-nav-item"><a href="/contact" class="nav-link">CONTACT US</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
                 <a href="#" class="btn-outline-header">DOWNLOAD PROFILE</a>
-                <a href="contact.html" class="cta-button">
+                <a href="/contact" class="cta-button">
                     <span>CONTACT US</span>
                 </a>
             </div>
@@ -60,7 +69,7 @@
                     <p class="projects-hero-subtitle">We develop iconic spaces that inspire, endure,<br>and elevate the
                         way people live and work.</p>
                     <div class="hero-btns">
-                        <!--     <a href="contact.html" class="btn btn-hero btn-schedule-visit">Schedule Visit</a> -->
+                        <!--     <a href="/contact" class="btn btn-hero btn-schedule-visit">Schedule Visit</a> -->
                     </div>
                 </div>
             </div>
@@ -379,11 +388,11 @@
             <div class="container">
                 <h2 class="watermark-title reveal-fade-up">ONGOING PROJECTS</h2>
                 <div class="detailed-projects-grid" id="ongoing-projects-grid">
-                    <!-- Lashkaria Solitaire -->
+                    <!-- S. Lashkaria Solitaire -->
                     <div id="project-lashkaria-solitaire" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
                             <img src="assets/projects/11. Lashkaria Solitaire (Andheri West).jpg"
-                                alt="Lashkaria Solitaire">
+                                alt="S. Lashkaria Solitaire">
                         </div>
                         <div class="card-content-wrap">
                             <h3 class="detailed-card-title">LASHKARIA SOLITAIRE</h3>
@@ -431,10 +440,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Amann Solitaire -->
+                    <!-- lashkaria vikas -->
                     <div id="project-lashkaria-vikas" class="detailed-project-card reveal-fade-up">
                         <div class="card-image-wrap">
-                            <img src="assets/projects/Lashkaria Vikas (Borivali West).jpg" alt="Lashkaria Vikas">
+                            <img src="assets/projects/Lashkaria Vikas (Borivali West).jpg" alt="S. Lashkaria Vikas">
                         </div>
                         <div class="card-content-wrap">
                             <h3 class="detailed-card-title">LASHKARIA VIKAS</h3>
@@ -481,8 +490,11 @@
                 <div class="cta-text reveal-fade-left">
                     <h2 class="cta-title">FIND YOUR<br>PERFECT SPACE TODAY</h2>
                     <div class="accent-line-light"></div>
-                    <p class="cta-subtitle desktop-cta-subtitle">Exclusive Residences. Thoughtful Design.<br>Spaces that elevate the way you live</p>
-                    <p class="cta-subtitle mobile-cta-subtitle" style="font-size: 16px; font-weight: 400; line-height: 1.5; margin-bottom: 25px;">Discover thoughtfully designed developments in prime locations, built for those who expect more.</p>
+                    <p class="cta-subtitle desktop-cta-subtitle">Exclusive Residences. Thoughtful Design.<br>Spaces that
+                        elevate the way you live</p>
+                    <p class="cta-subtitle mobile-cta-subtitle"
+                        style="font-size: 16px; font-weight: 400; line-height: 1.5; margin-bottom: 25px;">Discover
+                        thoughtfully designed developments in prime locations, built for those who expect more.</p>
                 </div>
 
                 <!-- RIGHT: Contact Form Card Ã¢â‚¬â€ exact Figma 519Ãƒâ€”645px -->
@@ -519,7 +531,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-col brand-col">
-                <img src="assets/logo/logo-footer.svg" alt="Lashkaria Group" class="footer-logo">
+                <img src="assets/logo/logo-footer.svg" alt="S. Lashkaria Group" class="footer-logo">
                 <div class="footer-iso-icons">
                     <img src="assets/ISO/iso-9001-2015.png" alt="ISO 9001" class="iso-img">
                     <img src="assets/ISO/iso-14001-2015.png" alt="ISO 14001" class="iso-img">
@@ -527,14 +539,13 @@
             </div>
             <div class="footer-col links-col">
                 <ul class="footer-links">
-                    <li><a href="index.html#home">Home <img src="assets/icons/right.svg" alt=""
-                                class="footer-arrow"></a></li>
+                    <li><a href="/">Home <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="about.html">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    <li><a href="/about">About Us <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Projects <img src="assets/icons/right.svg" alt=""
-                                class="footer-arrow"></a></li>
+                    <li><a href="/projects">Projects <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    </li>
                     <li class="link-divider"></li>
                     <li><a href="#">Download Profile <img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
@@ -542,16 +553,16 @@
             </div>
             <div class="footer-col links-col">
                 <ul class="footer-links">
-                    <li><a href="projects.html#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/projects#completed">Completed Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/projects#ongoing">Ongoing Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="projects.html">Upcoming Projects <img src="assets/icons/right.svg" alt=""
+                    <li><a href="/projects">Upcoming Projects <img src="assets/icons/right.svg" alt=""
                                 class="footer-arrow"></a></li>
                     <li class="link-divider"></li>
-                    <li><a href="careers.html">Careers<img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
+                    <li><a href="/careers">Careers<img src="assets/icons/right.svg" alt="" class="footer-arrow"></a>
                     </li>
                 </ul>
             </div>
@@ -598,8 +609,10 @@
             <p class="credits">Professionally Crafted by <a href="https://www.eaznexora.com" target="_blank">Eaz
                     Nexora</a></p>
             <div class="social-links">
-                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/company/110608272" target="_blank"><img
+                        src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="http://facebook.com/slashkariagroup" target="_blank"><img src="assets/icons/facebook.svg"
+                        alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
                 <!--  <a href="#"><img src="assets/icons/youtube.png" alt="YouTube"></a> -->
             </div>
@@ -636,7 +649,3 @@
 </body>
 
 </html>
-
-
-
-

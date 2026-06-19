@@ -1,0 +1,327 @@
+/* --- Product Detail Explicit Framework overrides --- */
+.product-detail-body {
+    padding-bottom: 110px;
+}
+
+.product-nav-header {
+    width: 100%;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    z-index: 1000;
+    transition: var(--transition-premium);
+}
+
+.product-nav-header.header-hidden {
+    transform: translateY(-100px) !important;
+}
+
+.p-header-container {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-circle-btn {
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-green);
+    border: none;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.nav-circle-btn:active {
+    transform: scale(0.9);
+}
+
+.nav-btn-svg {
+    width: 18px;
+    height: 18px;
+    fill: #FFFFFF;
+}
+
+.right-actions-cluster {
+    display: flex;
+    gap: 8px;
+}
+
+/* Page Streams Shifts for Product layouts */
+.product-view-offset {
+    margin-top: 65px !important;
+}
+
+/* Gallery Module Layout */
+.product-gallery-card {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--border-light);
+}
+
+.product-hero-display {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+}
+
+/* Green Promo Ribbon */
+.promo-pill-bar {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 12px;
+    height: 28px;
+    background-color: var(--primary-green);
+    border-radius: 47px;
+    color: #FFFFFF;
+}
+
+.tag-icon-svg {
+    width: 15px;
+    height: 15px;
+    fill: #FFFFFF;
+}
+
+.promo-bar-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Title Block Container */
+.product-title-card {
+    background-color: var(--card-green-bg);
+    border: 1px solid #BEE2C4;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main-product-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.main-product-description {
+    font-size: 12px;
+    line-height: 15px;
+    color: #5C5C5C;
+    font-weight: 400;
+}
+
+/* Variant Multi Switcher Track */
+.variant-selector-strip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.selector-lbl {
+    font-size: 12px;
+    font-weight: 400;
+    color: #242323;
+    white-space: nowrap;
+}
+
+.variant-scroll-track {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 2px 0;
+}
+
+.variant-scroll-track::-webkit-scrollbar {
+    display: none;
+}
+
+.variant-pill-card {
+    min-width: 65px;
+    height: 54px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--primary-green);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 12px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    user-select: none;
+}
+
+.variant-pill-card .v-weight {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.variant-pill-card .v-price {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* Active State Engine Hooks */
+.active-variant {
+    background-color: var(--primary-green) !important;
+}
+
+.active-variant .v-weight, 
+.active-variant .v-price {
+    color: #FFFFFF !important;
+}
+
+/* Metadata Parameters Specification Card */
+.specification-meta-table {
+    background-color: #FAFAFA;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.table-heading-lbl {
+    font-size: 12px;
+    font-weight: 400;
+    color: #1E1E1E;
+}
+
+.table-separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: #E8E8E8;
+}
+
+.spec-data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* Bottom Action Checkout Engine Bar Layout (Figma Frame 214 alternate) */
+.sticky-action-checkout-strip {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+    transition: var(--transition-premium);
+    will-change: transform;
+}
+
+.sticky-action-checkout-strip.footer-hidden {
+    transform: translateY(100px) !important;
+}
+
+.checkout-strip-inner {
+    max-width: 420px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.price-summary-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.dynamic-total-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.1;
+}
+
+.tax-descriptor-lbl {
+    font-size: 12px;
+    color: #555555;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.primary-cta-checkout-btn {
+    width: 180px;
+    height: 44px;
+    background-color: var(--primary-green);
+    border: none;
+    border-radius: 48px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.primary-cta-checkout-btn:aria-disabled,
+.primary-cta-checkout-btn:active {
+    transform: scale(0.95);
+}
+
+/* Desktop Responsiveness multipliers for Product view overrides */
+@media (min-width: 768px) {
+    .product-nav-header {
+        background-color: #FFFFFF;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        top: 0;
+    }
+    .p-header-container {
+        max-width: 1120px;
+        padding: 15px 24px;
+    }
+    .product-view-offset {
+        margin-top: 100px !important;
+    }
+    .product-gallery-card {
+        padding: 24px;
+    }
+    .sticky-action-checkout-strip {
+        bottom: 20px;
+        background: transparent;
+        box-shadow: none;
+        pointer-events: none;
+    }
+    .checkout-strip-inner {
+        max-width: 1120px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 50px;
+        height: 70px;
+        padding: 0 35px;
+        pointer-events: auto;
+    }
+}
