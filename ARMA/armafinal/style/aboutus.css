@@ -1,0 +1,2828 @@
+/* Color System & Global Variables */
+:root {
+    --primary: #00965e;
+    /* Brand Teal/Green */
+    --primary-dark: #007d4e;
+    --primary-light: #e6f5ef;
+    --accent: #e31837;
+    /* Brand Red */
+    --accent-dark: #c1102b;
+    --accent-light: #fce8ea;
+    --dark: #1e293b;
+    /* Dark Slate */
+    --light: #f8fafc;
+    /* Light Gray Background */
+    --gray: #64748b;
+    /* Cool Gray */
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Main Website Wrapper */
+#main-content {
+    opacity: 1;
+}
+
+/* ================= PREMIUM HEADER SECTION ================= */
+.arma-header-section {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Top Bar (Dark Green) --- */
+.top-bar {
+    background-color: #013824;
+    /* Deep premium green */
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 8px 0;
+}
+
+.top-bar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tb-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.tb-link:hover {
+    color: #4ade80;
+}
+
+.tb-divider {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.tb-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 10px;
+}
+
+.tb-socials a {
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.tb-socials a:hover {
+    color: #4ade80;
+    transform: translateY(-2px);
+}
+
+/* --- Main Navigation - STABLE FIX FOR BREAKER Turn 20 --- */
+.main-navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    /* Items ko left, center, right balanced rakhega */
+    align-items: center;
+    flex-wrap: nowrap !important;
+    /* Forces ONE line always, never wraps */
+    gap: 10px;
+    /* Added general safety gap */
+}
+
+/* Logo Setup - FIXED: Takes only needed space far left */
+.nav-logo {
+    flex: 0 0 auto !important;
+    /* Fixed width behavior */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-logo img {
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Desktop Menu Links - STABLE CENTERING & GAP REDUCED */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    /* <-- Reduced further from 12px for maximum fit */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    /* Middle section occupies remaining space */
+    flex-shrink: 1;
+    /* Allows shrinking on narrower desktop screens */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 10px;
+    /* <-- Reduced Turn 20 padding horizontally further (16px -> 10px) to prevent breaks */
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* tight gap inside button */
+    white-space: nowrap !important;
+    /* NO text wrapping inside button */
+}
+
+.nav-link i {
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.nav-link:hover {
+    color: #00965e;
+}
+
+/* Active Pill State */
+.nav-link.active {
+    background-color: #f0fdf4;
+    color: #00965e;
+}
+
+/* Right Side Actions - FIXED: Takes only needed space far right */
+.nav-actions {
+    flex: 0 0 auto !important;
+    /* Fixed width behavior */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Desktop Contact Button */
+.btn-contact-desktop {
+    background: linear-gradient(135deg, #007d4e 0%, #00965e 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 150, 94, 0.2);
+    white-space: nowrap !important;
+    /* Crucial safety to keep "Contact Us" on one line */
+}
+
+.btn-contact-desktop:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 150, 94, 0.3);
+}
+
+.mobile-actions {
+    display: none;
+}
+
+/* ================= RESPONSIVE DESIGN (MOBILE LAYOUT) ================= */
+@media (max-width: 1024px) {
+
+    /* Hide Desktop Menu and Contact Button */
+    .nav-menu,
+    .btn-contact-desktop,
+    .desktop-only {
+        display: none;
+    }
+
+    /* Top Bar Mobile Tweaks */
+    .tb-text {
+        display: none;
+        /* Hides text, shows only icons like image_cf05e2 */
+    }
+
+    .top-bar-right {
+        gap: 20px;
+        /* Spreads icons out slightly */
+    }
+
+    .tb-socials {
+        margin-left: 0;
+        gap: 15px;
+    }
+
+    /* Enable Mobile Actions */
+    .mobile-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Mobile Square Chat Button */
+    .btn-contact-mobile {
+        background-color: #007d4e;
+        color: #ffffff;
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        /* Squircle shape */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 150, 94, 0.2);
+    }
+
+    /* Hamburger Menu Icon - CLICK FIX */
+    .hamburger-menu {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        padding: 5px;
+        position: relative;
+        z-index: 9999;
+        /* Forces button to the absolute top layer */
+        -webkit-tap-highlight-color: transparent;
+        /* Removes blue tap box on mobile */
+    }
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #1e293b;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* Prevents the lines from stealing the click from the button */
+}
+
+/* ================= PREMIUM DESKTOP DROPDOWN ================= */
+.has-dropdown {
+    position: relative;
+}
+
+.desktop-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    /* Centers below the button and pushes down */
+    background-color: #ffffff;
+    width: 380px;
+    /* Exact width to fit image + text nicely */
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f5f9;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+/* Show dropdown on hover */
+.has-dropdown:hover .desktop-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.dd-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+.dd-item:last-child {
+    border-bottom: none;
+}
+
+.dd-item:hover {
+    background-color: #f8fafc;
+}
+
+/* Product Image Box */
+.dd-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.dd-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Product Text */
+.dd-text {
+    flex-grow: 1;
+    padding: 0 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+.dd-text sup {
+    font-size: 0.6rem;
+}
+
+/* Arrow Icon inside Light Green Circle */
+.dd-arrow {
+    width: 28px;
+    height: 28px;
+    background-color: #f0fdf4;
+    /* Very light green */
+    color: #00965e;
+    /* Brand green */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+/* Arrow fills with green on row hover */
+.dd-item:hover .dd-arrow {
+    background-color: #00965e;
+    color: #ffffff;
+}
+
+/* ================= MOBILE HIDE FIX ================= */
+/* Tu chahta tha sirf desktop me rahe, toh mobile pe hide kar diya */
+@media (max-width: 1024px) {
+    .desktop-dropdown-menu {
+        display: none !important;
+    }
+}
+
+
+
+/* ================= MOBILE MENU DRAWER CSS ================= */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(1, 56, 36, 0.6);
+    /* Dark green blur */
+    backdrop-filter: blur(4px);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+/* ================= MOBILE MENU DRAWER CSS (FULL SCREEN FIX) ================= */
+.mobile-menu-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    /* Pura screen cover karega (Pehle 85% tha) */
+    max-width: 100%;
+    /* Limit hata di */
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 2000;
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Scroll Lock Class */
+body.menu-open {
+    overflow: hidden !important;
+    /* Menu khulne pe background scroll block karega */
+}
+
+/* Active Classes for JS */
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-drawer.active {
+    right: 0;
+}
+
+/* Drawer Header */
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.drawer-logo {
+    height: 35px;
+    object-fit: contain;
+}
+
+.close-drawer-btn {
+    background: #f4f7f9;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #475569;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.close-drawer-btn:hover {
+    background: #fecdd3;
+    color: #e11d48;
+}
+
+/* Drawer Body & Links */
+.drawer-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.m-nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border-bottom: 1px solid #f8fafc;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.m-nav-link.active,
+.m-nav-link:hover {
+    color: #00965e;
+    background-color: #f0fdf4;
+}
+
+/* Mobile Dropdown Styling */
+.m-dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f8fafc;
+    display: none;
+    /* Hidden by default */
+}
+
+.m-dropdown-menu li a {
+    display: block;
+    padding: 12px 25px 12px 40px;
+    /* Extra left padding */
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.m-dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.m-dropdown-menu li a:hover {
+    color: #00965e;
+    padding-left: 45px;
+    transition: all 0.3s ease;
+}
+
+.toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.m-has-dropdown.open .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Drawer Footer */
+.drawer-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.btn-contact-drawer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #007d4e 0%, #00965e 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 150, 94, 0.2);
+}
+
+/* Hide drawer fully on desktop */
+@media (min-width: 1025px) {
+
+    .mobile-menu-overlay,
+    .mobile-menu-drawer {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   🔥 HAMBURGER MENU CONSISTENCY FIX (LIKE IMAGE 2) 🔥
+========================================================= */
+
+@media (max-width: 1024px) {
+    .hamburger-menu {
+        background: transparent !important;
+        border: none !important;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Spreads the 3 bars evenly */
+        width: 28px !important;
+        /* Fixed width */
+        height: 20px !important;
+        /* Fixed height forces equal gaps */
+        cursor: pointer;
+        padding: 0 !important;
+        z-index: 9999;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .hamburger-menu .bar {
+        display: block !important;
+        width: 100% !important;
+        /* Forces ALL 3 bars to be exactly the same length */
+        height: 3px !important;
+        background-color: #1e293b !important;
+        /* Dark color */
+        border-radius: 3px !important;
+        transition: all 0.3s ease-in-out;
+        margin: 0 !important;
+        /* Removes any default weird margins */
+    }
+}
+
+/* ================= PREMIUM ABOUT US HERO SECTION (FULL WIDTH) ================= */
+.about-hero-section.full-width-hero {
+    /* Background aur box-shadow ab outer section pe hai */
+    background: linear-gradient(135deg, #095a40 0%, #053b28 100%);
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero-container {
+    /* Box hat gaya, ab yeh sirf ek transparent wrapper hai */
+    display: flex;
+    align-items: center;
+    max-width: 1350px;
+    width: 100%;
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Background Abstract Shapes */
+.hero-bg-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.shape-circle-left {
+    position: absolute;
+    top: -20%;
+    left: -5%;
+    width: 600px;
+    height: 600px;
+    background: rgba(0, 210, 122, 0.08);
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.shape-dots-top {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 2px, transparent 2px);
+    background-size: 15px 15px;
+}
+
+.shape-dots-bottom {
+    position: absolute;
+    bottom: 50px;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 2px, transparent 2px);
+    background-size: 15px 15px;
+}
+
+.shape-eye-right {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 50px solid rgba(0, 210, 122, 0.03);
+    box-shadow: inset 0 0 80px rgba(0, 210, 122, 0.05);
+}
+
+/* Circular Image with Outer Ring & Glowing Dot */
+.hero-image-wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-outer-ring {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: spinSlow 20s linear infinite;
+}
+
+.ring-dot {
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #ffffff;
+}
+
+.hero-eye-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 12px solid #ffffff;
+    box-shadow: 0 0 50px rgba(0, 210, 122, 0.25);
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes spinSlow {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Right Content Structure */
+.hero-text-content {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    z-index: 2;
+    flex-grow: 1;
+}
+
+/* Pill Badge */
+.commitment-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(0, 210, 122, 0.4);
+    background: rgba(0, 210, 122, 0.1);
+    padding: 6px 14px;
+    border-radius: 30px;
+    color: #00d27a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    width: max-content;
+}
+
+/* Heading */
+.hero-quote {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.highlight-green {
+    color: #00d27a;
+}
+
+/* Small divider line */
+.hero-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #00d27a;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+/* Subtext */
+.hero-subtext {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 85%;
+}
+
+/* Bottom Features List */
+.hero-features {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 210, 122, 0.1);
+    border: 1px solid rgba(0, 210, 122, 0.25);
+    color: #00d27a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.feature-text {
+    font-size: 0.95rem;
+    line-height: 1.3;
+    color: #f1f5f9;
+    font-weight: 500;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1200px) {
+    .about-hero-container {
+        gap: 50px;
+    }
+
+    .hero-quote {
+        font-size: 2.8rem;
+    }
+
+    .hero-image-wrapper {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-hero-section.full-width-hero {
+        padding: 60px 5%;
+    }
+
+    .about-hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text-content {
+        align-items: center;
+    }
+
+    .hero-quote {
+        font-size: 2.4rem;
+    }
+
+    .hero-subtext {
+        text-align: center;
+        margin: 0 auto 30px auto;
+    }
+
+    .hero-features {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero-section.full-width-hero {
+        padding: 40px 5%;
+    }
+
+    .hero-image-wrapper {
+        width: 260px;
+        height: 260px;
+    }
+
+    .hero-quote {
+        font-size: 2rem;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .feature-item {
+        width: 100%;
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+
+/* ================= ACCURATE ABOUT DETAILS SECTION ================= */
+.about-details-section {
+    padding: 80px 6%;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Top-Right Dots */
+.bg-dots-pattern {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 100px;
+    height: 150px;
+    background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
+    background-size: 15px 15px;
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Section Header */
+.about-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-overline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #00965e;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-overline .line {
+    width: 30px;
+    height: 1px;
+    background-color: #00965e;
+    opacity: 0.5;
+}
+
+.about-main-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.about-main-title span {
+    color: #00965e;
+}
+
+.about-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.header-underline {
+    width: 60px;
+    height: 3px;
+    background-color: #00965e;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Main Container Layout */
+.about-content-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Visual Column */
+.about-visual-column {
+    position: relative;
+    padding-left: 15px;
+    padding-bottom: 30px;
+}
+
+.visual-decor-line {
+    position: absolute;
+    top: -40px;
+    left: 20%;
+    width: 180px;
+    z-index: 0;
+}
+
+.about-main-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 8px solid #ffffff;
+    z-index: 1;
+}
+
+.about-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Promise Floating Badge */
+.promise-badge {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 18px 25px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #ffffff;
+    box-shadow: 0 15px 30px rgba(5, 150, 105, 0.3);
+    z-index: 3;
+    max-width: 85%;
+}
+
+.promise-icon {
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    color: #059669;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.promise-text h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.promise-text p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Right Text Column */
+.about-text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.company-name {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #00965e;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.company-tagline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.vertical-bar {
+    width: 2px;
+    height: 18px;
+    background-color: #e31837;
+    /* The red bar from screenshot */
+}
+
+.company-tagline em {
+    font-size: 1.05rem;
+    color: #475569;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.content-divider {
+    width: 45px;
+    height: 3px;
+    background-color: #00965e;
+    margin-bottom: 25px;
+}
+
+.company-description p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.75;
+    margin-bottom: 20px;
+}
+
+/* Stats Container (Bottom 4 cards) */
+.company-stats-grid {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 15px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 120px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 150, 94, 0.06);
+    border-color: #dcfce7;
+}
+
+.stat-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f0fdf4;
+    color: #00965e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    border: 1px solid #dcfce7;
+}
+
+.stat-info h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.stat-info p {
+    font-size: 0.7rem;
+    color: #64748b;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+    .about-content-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about-visual-column {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .company-stats-grid {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-details-section {
+        padding: 60px 5%;
+    }
+
+    .about-main-title {
+        font-size: 2.2rem;
+    }
+
+    .promise-badge {
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: none;
+        justify-content: center;
+    }
+
+    .about-visual-column {
+        padding-bottom: 40px;
+    }
+
+    .company-name {
+        font-size: 1.9rem;
+    }
+}
+
+
+/* ================= PREMIUM VISION & MISSION SECTION ================= */
+.vision-mission-section {
+    padding: 30px 5%;
+    background-color: #f8fafc;
+}
+
+.vm-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.vm-card {
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------------- 1. VISION CARD (LIGHT) ---------------- */
+.vision-card {
+    background-color: #ffffff;
+    align-items: stretch;
+}
+
+.vm-dots-pattern {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 60px;
+    height: 100px;
+    background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
+    background-size: 14px 14px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.vm-content-left {
+    flex: 1.1;
+    padding: 70px 40px 60px 70px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vm-overline {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #00965e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mission-overline {
+    color: #00d27a;
+}
+
+.vm-overline::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0.5;
+}
+
+.vm-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+.vm-title span {
+    color: #00965e;
+}
+
+.vm-text {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 95%;
+}
+
+/* Features Grid */
+.vm-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: auto;
+}
+
+.vmf-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.vmf-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #f0fdf4;
+    color: #00965e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.vmf-info h4 {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.vmf-info p {
+    font-size: 0.7rem;
+    color: #64748b;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Right Side Image & Angle Cut */
+.vm-visual-right {
+    flex: 0.9;
+    position: relative;
+    background-color: #00965e;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%);
+}
+
+.vision-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%);
+    overflow: hidden;
+}
+
+.vision-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fake HUD Graphics overlay */
+.hud-rings {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.03), 0 0 0 45px rgba(255, 255, 255, 0.02);
+}
+
+.hud-rings::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 270px 0 #fff;
+}
+
+/* Floating Glass Badge */
+.vision-floating-badge {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.badge-icon {
+    font-size: 1.8rem;
+    color: #00965e;
+    margin-bottom: 8px;
+}
+
+.badge-text h4 {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.badge-text p {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.badge-line {
+    width: 20px;
+    height: 2px;
+    background-color: #00965e;
+    border-radius: 2px;
+}
+
+/* ---------------- 2. MISSION CARD (DARK) - FIXED IMAGE ---------------- */
+.mission-card {
+    background-color: #06111a;
+    color: #ffffff;
+    align-items: stretch;
+}
+
+.vm-visual-left {
+    flex: 0.8;
+    position: relative;
+    background-color: #030b12;
+    overflow: hidden;
+}
+
+/* MISSION IMAGE FIX (No glow, direct image with overlay) */
+.mission-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mission-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.mission-card:hover .mission-img {
+    transform: scale(1.05);
+    /* Hover zoom */
+}
+
+/* Gradient overlay to fade image into dark background */
+.mission-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, #06111a 100%),
+        linear-gradient(to top, rgba(6, 17, 26, 0.8) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.vm-content-right {
+    flex: 1.2;
+    padding: 70px 70px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.mission-card .vm-title {
+    color: #ffffff;
+}
+
+.mission-card .mission-highlight {
+    color: #00d27a;
+}
+
+.mission-card .vm-text {
+    color: #94a3b8;
+}
+
+.mission-features .vmf-info h4 {
+    color: #ffffff;
+}
+
+.mission-features .vmf-info p {
+    color: #94a3b8;
+}
+
+.vmf-icon-outline {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #00d27a;
+    border: 1px solid rgba(0, 210, 122, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+/* ================= RESPONSIVE FIXES ================= */
+@media (max-width: 1200px) {
+    .vm-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .vm-card {
+        flex-direction: column;
+    }
+
+    .vision-card {
+        flex-direction: column;
+    }
+
+    .mission-card {
+        flex-direction: column-reverse;
+    }
+
+    .vm-visual-right {
+        min-height: 400px;
+        clip-path: none;
+    }
+
+    .vision-image-wrapper {
+        clip-path: none;
+        left: 0;
+        border-top: 8px solid #00965e;
+    }
+
+    .vm-visual-left {
+        min-height: 300px;
+    }
+
+    .vm-content-left,
+    .vm-content-right {
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vm-title {
+        font-size: 2.2rem;
+    }
+
+    .vm-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vmf-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .vision-floating-badge {
+        bottom: 20px;
+        right: 20px;
+        padding: 15px 20px;
+    }
+}
+
+
+/* ================= QUALITY POLICY SECTION (FULL WIDTH) ================= */
+.quality-policy-section {
+    padding: 100px 5%;
+    background-color: #ffffff;
+    /* Pure white background */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background Dotted Pattern Top Left */
+.qp-bg-dots {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    width: 150px;
+    height: 150px;
+    background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
+    background-size: 16px 16px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+/* Full Width Container instead of Box */
+.qp-full-container {
+    max-width: 1440px;
+    /* Wide stretch */
+    width: 100%;
+    display: flex;
+    gap: 80px;
+    /* Increased gap for wide layout */
+    align-items: center;
+    /* Centered vertically */
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Left Side Content --- */
+.qp-content-left {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.qp-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #00965e;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+    background-color: #f0fdf4;
+    padding: 6px 14px;
+    border-radius: 30px;
+    border: 1px solid #dcfce7;
+    width: max-content;
+}
+
+.qp-title {
+    font-size: 3rem;
+    /* Slightly larger for wide screen */
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.qp-title span {
+    color: #00965e;
+}
+
+.qp-divider {
+    width: 50px;
+    height: 4px;
+    background-color: #00965e;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.qp-text {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 45px;
+    max-width: 95%;
+}
+
+/* 4 Features Floating Box */
+.qp-features-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #ffffff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    /* Soft shadow since background is white */
+    border-radius: 20px;
+    padding: 30px 20px;
+    gap: 15px;
+    border: 1px solid #f1f5f9;
+}
+
+.qpf-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.qpf-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #00965e;
+    /* Solid green circle */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(0, 150, 94, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.qpf-item:hover .qpf-icon {
+    transform: translateY(-3px);
+}
+
+.qpf-item h4 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.qpf-item p {
+    font-size: 0.7rem;
+    color: #64748b;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* --- Right Side Visual --- */
+.qp-visual-right {
+    flex: 0.9;
+    background-color: #f0fdf4;
+    /* Light green tint background */
+    border-radius: 30px;
+    position: relative;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qp-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qp-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: contain;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* Overlapping Quote Box */
+.qp-quote-box {
+    position: absolute;
+    bottom: -30px;
+    left: 40px;
+    right: 40px;
+    background: linear-gradient(135deg, #007d4e 0%, #004d30 100%);
+    border-radius: 16px;
+    padding: 22px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 150, 94, 0.3);
+    z-index: 5;
+}
+
+.quote-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    color: #007d4e;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.quote-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.quote-text strong {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.quote-text span {
+    font-size: 0.85rem;
+    color: #d1fae5;
+    font-weight: 500;
+}
+
+/* ================= RESPONSIVE FIXES ================= */
+@media (max-width: 1200px) {
+    .qp-full-container {
+        gap: 50px;
+    }
+
+    .qp-features-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .qp-visual-right {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .qp-full-container {
+        flex-direction: column;
+    }
+
+    .qp-visual-right {
+        width: 100%;
+        min-height: 400px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .qp-quote-box {
+        bottom: -30px;
+        left: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quality-policy-section {
+        padding: 60px 5%;
+    }
+
+    .qp-title {
+        font-size: 2.3rem;
+    }
+
+    .qp-features-wrapper {
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+    }
+
+    .qp-visual-right {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .qp-quote-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 12px;
+    }
+}
+
+/* ================= REFINED MOBILE HEADER & HAMBURGER (IMAGE ACCURATE) ================= */
+@media (max-width: 900px) {
+
+    /* 1. TOP BAR REFINEMENT (Side by Side layout) */
+    .top-bar {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center;
+        padding: 12px 5% !important;
+        gap: 15px;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto !important;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 0;
+    }
+
+    /* Hide email and socials on mobile */
+    .top-bar-right .email-link,
+    .top-bar-right .social-links {
+        display: none !important;
+    }
+
+    /* Create the vertical divider line '|' between Date and Phone */
+    .top-bar-left::after {
+        content: '';
+        display: inline-block;
+        width: 1.5px;
+        height: 14px;
+        background-color: rgba(255, 255, 255, 0.4);
+        margin-left: 15px;
+        margin-right: -5px;
+    }
+
+    .phone-link {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    /* 2. MAIN NAV & LOGO */
+    .main-nav {
+        padding: 15px 5% !important;
+    }
+
+    /* Hide the old quick action buttons, we only want the hamburger */
+    .mobile-quick-actions {
+        display: none !important;
+    }
+
+    /* 3. PREMIUM HAMBURGER BUTTON (Rounded 3D Box) */
+    .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8fafc;
+        /* Very light greyish-white */
+        border: 1px solid #e2e8f0;
+        padding: 0;
+        border-radius: 12px;
+        /* Soft rounded corners */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        /* App-like subtle shadow */
+        width: 48px;
+        height: 48px;
+        margin-left: auto;
+        /* Push strictly to the right */
+        z-index: 1001;
+    }
+
+    .bar {
+        width: 20px;
+        height: 2.5px;
+        margin: 3px auto;
+        background-color: #004d30;
+        /* Dark green bars */
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Keep the smooth X animation when active */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 400px) {
+
+    /* Slightly smaller text for very small screens */
+    .top-bar-left span,
+    .phone-link {
+        font-size: 0.85rem;
+    }
+}
+
+/* ================= MOBILE RESPONSIVENESS FIX (AS PER IMAGE) ================= */
+@media (max-width: 900px) {
+
+    /* 1. TOP BAR REFINEMENT (Side by Side layout) */
+    .top-bar {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center;
+        padding: 12px 5% !important;
+        gap: 15px;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto !important;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 0;
+    }
+
+    /* Hide email and socials on mobile to match image */
+    .top-bar-right .email-link,
+    .top-bar-right .social-links {
+        display: none !important;
+    }
+
+    /* Vertical divider line '|' between Date and Phone */
+    .top-bar-left::after {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-left: 15px;
+        margin-right: -5px;
+    }
+
+    .phone-link {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    /* 2. MAIN NAV & LOGO */
+    .main-nav {
+        padding: 15px 5% !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hide extra mobile buttons if any */
+    .mobile-quick-actions {
+        display: none !important;
+    }
+
+    /* 3. PREMIUM HAMBURGER BUTTON (Rounded 3D Box) */
+    .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8fafc;
+        /* Very light greyish-white */
+        border: 1px solid #f1f5f9;
+        padding: 0;
+        border-radius: 12px;
+        /* Soft rounded corners */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        /* App-like subtle shadow */
+        width: 48px;
+        height: 48px;
+        z-index: 1001;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 22px;
+        height: 2.5px;
+        margin: 3px auto;
+        background-color: #004d30;
+        /* Dark green bars */
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    /* Keep the smooth X animation when active */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 400px) {
+
+    /* Slightly smaller text for very small screens */
+    .top-bar-left span,
+    .phone-link {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= PREMIUM GLOBAL FOOTER - MOBILE OPTIMIZED (CENTER) ================= */
+.arma-footer {
+    background-color: #032b1f;
+    /* Deep Premium Dark Green */
+    background: radial-gradient(circle at bottom right, #053b2a 0%, #021a12 100%);
+    color: #e2e8f0;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 4px solid #00965e;
+}
+
+/* Background Wavy Lines Effect (Pure CSS fallback) */
+.footer-wave-bg {
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 1000px;
+    height: 500px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(74, 222, 128, 0.05),
+        inset 0 0 0 40px transparent, inset 0 0 0 41px rgba(74, 222, 128, 0.03);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.footer-main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 70px 3%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Grid Layout: 5 Columns with vertical borders */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1.3fr 1fr;
+    gap: 0;
+    /* Handled by padding and borders */
+}
+
+.ft-col {
+    padding: 0 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ft-col:first-child {
+    padding-left: 0;
+}
+
+.ft-col:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+/* Titles */
+.ft-title {
+    color: #4ade80;
+    /* Light Green */
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* --- COLUMN 1: BRAND --- */
+/* (Keeping the requested bigger logo for desktop) */
+.ft-logo img {
+    height: 90px;
+    margin-bottom: 15px;
+    object-fit: contain;
+    display: block;
+    /* Important for centering calculations later */
+}
+
+.ft-brand-tagline {
+    color: #4ade80;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.ft-brand-desc {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.ft-brand-divider {
+    width: 30px;
+    height: 2px;
+    background-color: #00965e;
+    margin-bottom: 25px;
+}
+
+/* 4 Feature Boxes */
+.ft-features-row {
+    display: flex;
+    gap: 12px;
+}
+
+.ft-f-box {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    border-radius: 8px;
+    padding: 12px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    transition: all 0.3s ease;
+}
+
+.ft-f-box:hover {
+    background-color: rgba(74, 222, 128, 0.1);
+    border-color: #4ade80;
+    transform: translateY(-3px);
+}
+
+.ft-f-box i {
+    color: #4ade80;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.ft-f-box span {
+    font-size: 0.6rem;
+    color: #cbd5e1;
+    line-height: 1.2;
+}
+
+/* --- COLUMNS 2 & 3: LINKS --- */
+.ft-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ft-links-list li {
+    margin-bottom: 15px;
+}
+
+.ft-links-list a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.ft-links-list a i {
+    font-size: 0.6rem;
+    color: #00965e;
+    transition: transform 0.3s ease;
+}
+
+.ft-links-list a:hover {
+    color: #4ade80;
+}
+
+.ft-links-list a:hover i {
+    transform: translateX(3px);
+    color: #4ade80;
+}
+
+/* --- COLUMN 4: CERTIFICATIONS --- */
+.ft-cert-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cert-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(74, 222, 128, 0.15);
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.cert-icon {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.iso-icon {
+    font-size: 0.8rem;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    color: #004d30;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: -0.5px;
+}
+
+.cert-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-text strong {
+    font-size: 0.85rem;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.cert-text span {
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+.ft-cert-desc {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* --- COLUMN 5: CONTACT US --- */
+.ft-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ft-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ft-contact-list li i {
+    color: #4ade80;
+    font-size: 1.1rem;
+    margin-top: 3px;
+}
+
+.ft-contact-list li div {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* --- FOOTER BOTTOM BAR --- */
+.footer-bottom-bar {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 2;
+}
+
+.fb-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fb-copyright,
+.fb-sustainability {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.fb-sustainability i {
+    color: #4ade80;
+    margin-right: 5px;
+}
+
+.fb-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fb-social span {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin-right: 5px;
+}
+
+.fb-social a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.fb-social a:hover {
+    background-color: #00965e;
+    border-color: #00965e;
+    transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE DESIGN (CENTERED LINKS + LEFT ALIGNED CONTACT UI) ================= */
+@media (max-width: 1200px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 0;
+    }
+
+    .ft-col {
+        border-right: none;
+        padding: 0 15px;
+    }
+
+    .ft-col-1 {
+        grid-column: span 3;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 30px;
+    }
+
+    .ft-logo img {
+        height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .arma-footer {
+        text-align: center !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px 0;
+    }
+
+    /* General Centering for Columns 1 to 4 */
+    .ft-col {
+        grid-column: span 1 !important;
+        padding: 0 15px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 35px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .ft-col:last-child {
+        border-bottom: none;
+        padding-bottom: 0 !important;
+    }
+
+    .ft-title {
+        text-align: center !important;
+        width: 100%;
+    }
+
+    /* Column 1 Centering */
+    .ft-logo img {
+        height: 80px;
+        margin: 0 auto 15px auto !important;
+        display: block;
+    }
+
+    .ft-brand-desc {
+        text-align: center !important;
+        max-width: 90%;
+    }
+
+    .ft-brand-divider {
+        margin: 0 auto 25px auto !important;
+    }
+
+    /* 4 Feature Boxes Centered */
+    .ft-features-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto !important;
+    }
+
+    .ft-f-box {
+        width: 100%;
+    }
+
+    /* Centered 2-Column Links (Products & Quick Links) */
+    .ft-links-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 20px;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto !important;
+    }
+
+    .ft-links-list li {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .ft-links-list a {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        line-height: 1.4;
+    }
+
+    .ft-links-list a i {
+        margin-top: 4px;
+        margin-right: 6px;
+    }
+
+    /* Certifications Column Center Fix */
+    .ft-cert-boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    .cert-box {
+        margin: 0 auto !important;
+        text-align: left;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    /* ========================================================= */
+    /* NEW: CONTACT SECTION EXACTLY AS PER NEW IMAGE             */
+    /* ========================================================= */
+    .ft-contact-col {
+        align-items: flex-start !important;
+        /* Forces left alignment */
+        padding: 0 5% !important;
+    }
+
+    .ft-contact-col .ft-title {
+        text-align: center !important;
+        align-self: center !important;
+        /* Yeh heading ko column ke beech me layega */
+        position: relative;
+        padding-bottom: 12px;
+        margin-bottom: 25px;
+        display: inline-block;
+        width: auto;
+    }
+
+    /* Short Green Underline for Contact Us - CENTERED */
+    .ft-contact-col .ft-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Yeh line ko ekdam heading ke center me fix karega */
+        width: 35px;
+        height: 2px;
+        background-color: #4ade80;
+    }
+
+    .ft-contact-list {
+        width: 100%;
+    }
+
+    .ft-contact-list li {
+        display: flex;
+        align-items: center !important;
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 100% !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        /* Separator Lines */
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Circular Icons - FIXED ALIGNMENT */
+    .ft-contact-list li i {
+        width: 45px;
+        height: 45px;
+        border: 1px solid rgba(74, 222, 128, 0.3);
+        border-radius: 50%;
+        display: flex !important;
+        /* Yeh inline-block ko overpower karega */
+        justify-content: center !important;
+        /* Icon horizontal center */
+        align-items: center !important;
+        /* Icon vertical center */
+        margin-top: 0 !important;
+        margin-right: 20px;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+    }
+
+    /* ========================================================= */
+    /* UPDATED: FOLLOW US & BOTTOM BAR CENTERED FOR MOBILE       */
+    /* ========================================================= */
+    .fb-container {
+        align-items: center !important;
+        /* Changed to center */
+        text-align: center !important;
+        padding: 30px 5% !important;
+        flex-direction: column;
+    }
+
+    .fb-social {
+        display: block !important;
+        text-align: center !important;
+        /* Forces inline items to center */
+        width: 100%;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 30px;
+    }
+
+    .fb-social span {
+        display: block;
+        color: #4ade80;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center !important;
+        /* Text centered */
+    }
+
+    .fb-social a {
+        display: inline-flex !important;
+        margin: 0 10px !important;
+        /* Equal margins to keep them perfectly centered */
+        width: 45px;
+        height: 45px;
+    }
+
+    .fb-copyright,
+    .fb-sustainability {
+        text-align: center !important;
+        /* Text centered */
+        width: 100%;
+        margin-bottom: 12px;
+        justify-content: center;
+    }
+}
+
+
+/* ================= MAKE CONTACT ITEMS CLICKABLE ================= */
+.ft-contact-list li {
+    display: block !important;
+    /* Removes flex from li so the 'a' tag can handle it */
+}
+
+.contact-link {
+    display: flex;
+    align-items: flex-start;
+    /* Desktop alignment */
+    gap: 15px;
+    text-decoration: none;
+    width: 100%;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for clickable links */
+a.contact-link:hover div {
+    color: #4ade80;
+    /* Text turns green on hover */
+}
+
+a.contact-link:hover i {
+    transform: scale(1.1);
+    /* Slight pop effect on icon */
+}
+
+/* Specific fix to keep phone icon flipped on hover */
+a.contact-link:hover i.fa-phone-alt {
+    transform: scaleX(-1) scale(1.1);
+}
+
+/* Mobile Alignment Fix for the Links */
+@media (max-width: 768px) {
+    .contact-link {
+        align-items: center !important;
+        /* Keeps the circle icons centered with text on mobile */
+    }
+}
+
+/* Bas yahan par khatam karna hai, extra '}' hata diya */
+
+
+
+/* =========================================================
+   PRIVACY POLICY LINK FIX
+========================================================= */
+.fb-privacy-link {
+    color: #94a3b8;
+    /* Same color as copyright text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.fb-privacy-link:hover {
+    color: #4ade80;
+    /* Light Green hover */
+    text-decoration: underline;
+}
+
+/* Ensure mobile layout handles the new link correctly */
+@media (max-width: 768px) {
+    .fb-sustainability {
+        flex-direction: column;
+        gap: 8px !important;
+    }
+
+    .fb-divider {
+        display: none;
+        /* Hide the | divider on mobile for a cleaner look */
+    }
+}
